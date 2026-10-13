@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.idea/
+.DS_Store
+.venv/
+基线论文/
+backbones/weights/
+saved_results/
+runs/
+*.log
+*.pth
+*.pt
+*.bundle
+reproduction/spot-diff-official/
+reproduction/server.patch
+*.part

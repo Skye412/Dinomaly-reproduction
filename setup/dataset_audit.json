@@ -1,0 +1,212 @@
+{
+  "sources": {
+    "visa_split": "https://raw.githubusercontent.com/amazon-science/spot-diff/main/split_csv/1cls.csv",
+    "mvtec": "https://www.mvtec.com/research-teaching/datasets/mvtec-ad",
+    "paper": "CVPR 2025 Dinomaly, section 4.1"
+  },
+  "limitations": "Structural/split/integrity audit, not byte-for-byte verification against official image archive.",
+  "visa_split_sha256": "a48557e6033318cb90556f706196bc9d247a776a23ea51aecee5a80dd0332995",
+  "visa_local_split_matches_official": true,
+  "dinomaly_split_matches_official": true,
+  "visa_images_missing": [],
+  "visa_images_extra": [],
+  "visa_masks_missing": [],
+  "visa_masks_extra": [],
+  "visa": {
+    "candle": {
+      "train_good": 900,
+      "test_good": 100,
+      "test_bad": 100,
+      "masks": 100
+    },
+    "capsules": {
+      "train_good": 542,
+      "test_good": 60,
+      "test_bad": 100,
+      "masks": 100
+    },
+    "cashew": {
+      "train_good": 450,
+      "test_good": 50,
+      "test_bad": 100,
+      "masks": 100
+    },
+    "chewinggum": {
+      "train_good": 453,
+      "test_good": 50,
+      "test_bad": 100,
+      "masks": 100
+    },
+    "fryum": {
+      "train_good": 450,
+      "test_good": 50,
+      "test_bad": 100,
+      "masks": 100
+    },
+    "macaroni1": {
+      "train_good": 900,
+      "test_good": 100,
+      "test_bad": 100,
+      "masks": 100
+    },
+    "macaroni2": {
+      "train_good": 900,
+      "test_good": 100,
+      "test_bad": 100,
+      "masks": 100
+    },
+    "pcb1": {
+      "train_good": 904,
+      "test_good": 100,
+      "test_bad": 100,
+      "masks": 100
+    },
+    "pcb2": {
+      "train_good": 901,
+      "test_good": 100,
+      "test_bad": 100,
+      "masks": 100
+    },
+    "pcb3": {
+      "train_good": 905,
+      "test_good": 101,
+      "test_bad": 100,
+      "masks": 100
+    },
+    "pcb4": {
+      "train_good": 904,
+      "test_good": 101,
+      "test_bad": 100,
+      "masks": 100
+    },
+    "pipe_fryum": {
+      "train_good": 450,
+      "test_good": 50,
+      "test_bad": 100,
+      "masks": 100
+    }
+  },
+  "visa_totals": {
+    "train_good": 8659,
+    "test_good": 962,
+    "test_bad": 1200,
+    "masks": 1200
+  },
+  "mvtec": {
+    "bottle": {
+      "train_good": 209,
+      "test_good": 20,
+      "test_bad": 63,
+      "masks": 63,
+      "counts_match": true
+    },
+    "cable": {
+      "train_good": 224,
+      "test_good": 58,
+      "test_bad": 92,
+      "masks": 92,
+      "counts_match": true
+    },
+    "capsule": {
+      "train_good": 219,
+      "test_good": 23,
+      "test_bad": 109,
+      "masks": 109,
+      "counts_match": true
+    },
+    "carpet": {
+      "train_good": 280,
+      "test_good": 28,
+      "test_bad": 89,
+      "masks": 89,
+      "counts_match": true
+    },
+    "grid": {
+      "train_good": 264,
+      "test_good": 21,
+      "test_bad": 57,
+      "masks": 57,
+      "counts_match": true
+    },
+    "hazelnut": {
+      "train_good": 391,
+      "test_good": 40,
+      "test_bad": 70,
+      "masks": 70,
+      "counts_match": true
+    },
+    "leather": {
+      "train_good": 245,
+      "test_good": 32,
+      "test_bad": 92,
+      "masks": 92,
+      "counts_match": true
+    },
+    "metal_nut": {
+      "train_good": 220,
+      "test_good": 22,
+      "test_bad": 93,
+      "masks": 93,
+      "counts_match": true
+    },
+    "pill": {
+      "train_good": 267,
+      "test_good": 26,
+      "test_bad": 141,
+      "masks": 141,
+      "counts_match": true
+    },
+    "screw": {
+      "train_good": 320,
+      "test_good": 41,
+      "test_bad": 119,
+      "masks": 119,
+      "counts_match": true
+    },
+    "tile": {
+      "train_good": 230,
+      "test_good": 33,
+      "test_bad": 84,
+      "masks": 84,
+      "counts_match": true
+    },
+    "toothbrush": {
+      "train_good": 60,
+      "test_good": 12,
+      "test_bad": 30,
+      "masks": 30,
+      "counts_match": true
+    },
+    "transistor": {
+      "train_good": 213,
+      "test_good": 60,
+      "test_bad": 40,
+      "masks": 40,
+      "counts_match": true
+    },
+    "wood": {
+      "train_good": 247,
+      "test_good": 19,
+      "test_bad": 60,
+      "masks": 60,
+      "counts_match": true
+    },
+    "zipper": {
+      "train_good": 240,
+      "test_good": 32,
+      "test_bad": 119,
+      "masks": 119,
+      "counts_match": true
+    }
+  },
+  "mvtec_totals": {
+    "train_good": 3629,
+    "test_good": 467,
+    "test_bad": 1258,
+    "masks": 1258
+  },
+  "verified_image_and_mask_files": 18633,
+  "mask_pairs_checked": 2458,
+  "errors": [],
+  "passed": true
+}

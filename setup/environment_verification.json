@@ -1,0 +1,20 @@
+{
+  "python": "3.8.12",
+  "torch": "1.12.0+cu113",
+  "torchvision": "0.13.0+cu113",
+  "cuda_runtime": "11.3",
+  "cuda_available": true,
+  "training_entry_imports": "passed",
+  "gpu": "Tesla V100-PCIE-16GB",
+  "cuda_matmul": "passed",
+  "mvtec": {
+    "train": 3629,
+    "test_good": 467,
+    "test_bad": 1258
+  },
+  "visa": {
+    "train": 8659,
+    "test_good": 962,
+    "test_bad": 1200
+  }
+}

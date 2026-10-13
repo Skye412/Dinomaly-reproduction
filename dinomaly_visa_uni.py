@@ -31,6 +31,7 @@ import copy
 import logging
 from sklearn.metrics import roc_auc_score, average_precision_score
 import itertools
+from reproduction_runtime import add_arguments, record_run, save_checkpoint, record_metrics
 
 warnings.filterwarnings("ignore")
 
@@ -67,10 +68,10 @@ def setup_seed(seed):
 
 
 def train(item_list):
-    setup_seed(1)
+    setup_seed(args.seed)
 
-    total_iters = 10000
-    batch_size = 16
+    total_iters = args.total_iters
+    batch_size = args.batch_size
     image_size = 448
     crop_size = 392
 
@@ -99,6 +100,7 @@ def train(item_list):
 
     # encoder_name = 'dinov2reg_vit_small_14'
     encoder_name = 'dinov2reg_vit_base_14'
+    record_run(args, encoder_name)
     # encoder_name = 'dinov2reg_vit_large_14'
 
     target_layers = [2, 3, 4, 5, 6, 7, 8, 9]
@@ -168,6 +170,8 @@ def train(item_list):
             p_final = 0.9
             p = min(p_final * it / 1000, p_final)
             loss = global_cosine_hm_percent(en, de, p=p, factor=0.1)
+            if not torch.isfinite(loss).item():
+                raise RuntimeError('Non-finite training loss at step {}'.format(it + 1))
             # loss = global_cosine(en, de)
 
             optimizer.zero_grad()
@@ -178,8 +182,10 @@ def train(item_list):
             loss_list.append(loss.item())
             lr_scheduler.step()
 
-            if (it + 1) % 5000 == 0:
-                # torch.save(model.state_dict(), os.path.join(args.save_dir, args.save_name, 'model.pth'))
+            if (it + 1) % args.checkpoint_interval == 0 and not args.smoke_steps:
+                save_checkpoint(args, model, optimizer, lr_scheduler, it + 1)
+            if ((it + 1) % args.eval_interval == 0 or it + 1 == total_iters) and not args.smoke_steps:
+                save_checkpoint(args, model, optimizer, lr_scheduler, it + 1, 'step_{}.pth'.format(it + 1))
 
                 auroc_sp_list, ap_sp_list, f1_sp_list = [], [], []
                 auroc_px_list, ap_px_list, f1_px_list, aupro_px_list = [], [], [], []
@@ -189,6 +195,7 @@ def train(item_list):
                                                                   num_workers=4)
                     results = evaluation_batch(model, test_dataloader, device, max_ratio=0.01, resize_mask=256)
                     auroc_sp, ap_sp, f1_sp, auroc_px, ap_px, f1_px, aupro_px = results
+                    record_metrics(args, it + 1, item, results)
 
                     auroc_sp_list.append(auroc_sp)
                     ap_sp_list.append(ap_sp)
@@ -207,16 +214,25 @@ def train(item_list):
                         np.mean(auroc_sp_list), np.mean(ap_sp_list), np.mean(f1_sp_list),
                         np.mean(auroc_px_list), np.mean(ap_px_list), np.mean(f1_px_list), np.mean(aupro_px_list)))
 
+                record_metrics(args, it + 1, 'mean', [np.mean(v) for v in
+                    [auroc_sp_list, ap_sp_list, f1_sp_list, auroc_px_list, ap_px_list, f1_px_list, aupro_px_list]])
                 model.train()
 
             it += 1
+            if it == 1 or it % 100 == 0:
+                print_fn('step [{}/{}], loss:{:.6f}, peak_cuda_gib:{:.3f}'.format(
+                    it, total_iters, loss.item(), torch.cuda.max_memory_allocated() / 1024 ** 3))
+            if args.smoke_steps and it >= args.smoke_steps:
+                print_fn('Smoke passed: steps={}, peak_cuda_gib={:.3f}'.format(
+                    it, torch.cuda.max_memory_allocated() / 1024 ** 3))
+                return
             if it == total_iters:
                 break
             if (it + 1) % 100 == 0:
                 print_fn('iter [{}/{}], loss:{:.4f}'.format(it, total_iters, np.mean(loss_list)))
                 loss_list = []
 
-    # torch.save(model.state_dict(), os.path.join(args.save_dir, args.save_name, 'model.pth'))
+    save_checkpoint(args, model, optimizer, lr_scheduler, it, 'final.pth')
 
     return
 
@@ -230,6 +246,7 @@ if __name__ == '__main__':
     parser.add_argument('--save_dir', type=str, default='./saved_results')
     parser.add_argument('--save_name', type=str,
                         default='vitill_visa_uni_dinov2br_c392r_en29_bn4dp2_de8_laelu_md2_i1_it10k_sams2e3_wd1e4_w1hcosa_ghmp09f01w01_b16_ev_s1')
+    add_arguments(parser)
     args = parser.parse_args()
     # vitill_visa_uni_dinov2br_c392r_en29_bn4dp2_de8_elaelu_md2_i1_it10k_sams2e3_wd1e4_w1hcosa_ghmp09f01w01_adev_b16_s1
     item_list = ['candle', 'capsules', 'cashew', 'chewinggum', 'fryum', 'macaroni1', 'macaroni2',
@@ -237,7 +254,7 @@ if __name__ == '__main__':
     logger = get_logger(args.save_name, os.path.join(args.save_dir, args.save_name))
     print_fn = logger.info
 
-    device = 'cuda:1' if torch.cuda.is_available() else 'cpu'
+    device = args.device
     print_fn(device)
 
     train(item_list)
