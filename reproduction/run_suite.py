@@ -30,7 +30,8 @@ def main():
     if status_file.exists():
         raise RuntimeError('Run already exists; use a new run_id')
     status = dict(run_id=args.run_id, runner_pid=os.getpid(), started_at=now(), state='running',
-                  batch_size=args.batch_size, results={})
+                  batch_size=args.batch_size,
+                  results={name: {'state': 'queued'} for name in ['mvtec', 'visa']})
 
     def save():
         status['updated_at'] = now()

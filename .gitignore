@@ -14,3 +14,15 @@ runs/
 reproduction/spot-diff-official/
 reproduction/server.patch
 *.part
+# Legacy setup copies and generated reports on the deployment server.
+/audit_datasets.py
+/configure_server.py
+/verify_environment.py
+/verify_visa_preparation.py
+/reproduction/SETUP_REPORT.md
+/reproduction/dataset_audit.json
+/reproduction/environment.yml
+/reproduction/environment_verification.json
+/reproduction/official_visa_1cls.csv
+/reproduction/requirements-lock.txt
+/reproduction/visa_preparation_verification.json

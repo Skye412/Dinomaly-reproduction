@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-13",
+  "timezone": "Asia/Shanghai",
+  "github_repository": "https://github.com/Skye412/Dinomaly-reproduction",
+  "upstream_commit": "1f252be03a918789b19848f0ca37166e7c28dada",
+  "gpu": "Tesla V100-PCIE-16GB",
+  "backbone": "dinov2reg_vit_base_14",
+  "backbone_url": "https://dl.fbaipublicfiles.com/dinov2/dinov2_vitb14/dinov2_vitb14_reg4_pretrain.pth",
+  "backbone_sha256": "73182a088cf94833c94b1666d1c99e02fe87e2007bff57b564fb6206e25dba71",
+  "batch_size": 16,
+  "seed": 1,
+  "iterations_per_dataset": 10000,
+  "resize": 448,
+  "crop": 392,
+  "order": ["mvtec", "visa"],
+  "mvtec_smoke": {"steps": 3, "first_loss": 0.994871, "peak_cuda_gib": 8.733},
+  "visa_smoke": {"steps": 3, "first_loss": 0.987955, "peak_cuda_gib": 8.733},
+  "run_id": "cvpr2025-b16-s1-20261013"
+}

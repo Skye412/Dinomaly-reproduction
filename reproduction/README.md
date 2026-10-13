@@ -38,3 +38,7 @@ state and process IDs. Dataset outputs contain `config.json`, `metrics.jsonl`,
 Hardware: Tesla V100 16GB rather than the upstream RTX 3090 24GB. A reduced
 batch size, if required, must be recorded as a deviation from the paper.
 Completed smoke checks demonstrate execution, not reproduction of final metrics.
+
+Both datasets passed three optimizer steps with batch 16 on 2026-10-13.
+Peak allocated CUDA memory was 8.733 GiB in each test. The official register-token
+backbone checksum and launch settings are recorded in `launch_record.json`.
