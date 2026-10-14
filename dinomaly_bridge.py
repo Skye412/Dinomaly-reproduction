@@ -173,7 +173,7 @@ if __name__ == '__main__':
     parser.add_argument('--save_dir', default='runs')
     parser.add_argument('--save_name', required=True)
     parser.add_argument('--image_size', type=int, choices=[392], default=392)
-    parser.add_argument('--dataset_profile', choices=['bridge2893','bridge512_balance'], default='bridge2893')
+    parser.add_argument('--dataset_profile', choices=['bridge2893','bridge512_balance','bridge512_balance_repaired'], default='bridge2893')
     parser.add_argument('--split_view', choices=['original','deduplicated'], default='original')
     add_arguments(parser)
     parser.set_defaults(eval_interval=2000)

@@ -1,15 +1,19 @@
 """Read-only verification of Bridge512_balance manifests, RGB masks and split integrity."""
 import csv
+import argparse
 import hashlib
 import json
-from collections import Counter
+from collections import Counter, defaultdict
 from pathlib import Path
 
 import numpy as np
 from PIL import Image
 
 ROOT = Path('/home/skye/data/Skye/databases/Bridge512_balance')
-OUT = Path('/home/skye/data/Skye/Dinomaly/reproduction/audits/bridge512-balance-20261014')
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--output_dir', default='/home/skye/data/Skye/Dinomaly/reproduction/audits/bridge512-balance-20261014')
+args = parser.parse_args()
+OUT = Path(args.output_dir)
 COLORS = {'Crack': (255,0,0), 'Spalling': (0,255,0), 'Corrosion': (0,0,255), 'Efflorescence': (255,255,0)}
 OUT.mkdir(parents=True, exist_ok=True)
 
@@ -38,6 +42,7 @@ for line in (ROOT / 'checksums.sha256').read_text().splitlines():
 report['checksum_files_verified'] = len(hashes)
 print('Checksum files verified:', len(hashes), flush=True)
 parents, sample_ids, image_hashes = {}, {}, {}
+image_occurrences = defaultdict(list)
 allowed = {0, 0xFF0000, 0x00FF00, 0x0000FF, 0xFFFF00}
 for split in ['train','val','test']:
     with (ROOT / (split + '_manifest.csv')).open(newline='') as f:
@@ -60,6 +65,7 @@ for split in ['train','val','test']:
             if h in image_hashes and image_hashes[h] != split:
                 errors.append('Identical image across splits: ' + image_rel)
             image_hashes[h] = split
+            image_occurrences[h].append(dict(split=split, sample=r['sample'], image_path=r['image_path']))
             with Image.open(ROOT / image_rel) as image:
                 image.load()
                 if image.size != (512,512):
@@ -109,6 +115,10 @@ for split, stats in report['splits'].items():
         errors.append('Split category counts mismatch: ' + split)
 report['manifest_sha256'] = {s: hashes[s + '_manifest.csv'] for s in ['train','val','test']}
 report['distinct_images'] = len(image_hashes)
+report['within_split_duplicate_groups'] = sum(any(sum(r['split'] == split for r in records) > 1 for split in ['train','val','test'])
+                                             for records in image_occurrences.values())
+report['cross_split_duplicate_groups'] = sum(len({r['split'] for r in records}) > 1 for records in image_occurrences.values())
+report['duplicate_groups'] = {h: records for h, records in image_occurrences.items() if len(records) > 1}
 report['distinct_parents'] = len(parents)
 report['passed'] = not errors
 (OUT / 'audit.json').write_text(json.dumps(report,indent=2))

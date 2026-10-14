@@ -11,7 +11,7 @@ def main():
                         help='Commit already verified against the GitHub branch by the caller.')
     parser.add_argument('--run_id', default='bridge2893-b16-s1-20261014')
     parser.add_argument('--data_path', default='/home/skye/data/Skye/databases/Bridge2893_split_seed42')
-    parser.add_argument('--dataset_profile', choices=['bridge2893','bridge512_balance'], default='bridge2893')
+    parser.add_argument('--dataset_profile', choices=['bridge2893','bridge512_balance','bridge512_balance_repaired'], default='bridge2893')
     parser.add_argument('--split_view', choices=['original','deduplicated'], default='original')
     args = parser.parse_args()
     if Path(args.run_id).name != args.run_id or args.run_id in {'.', '..'}:

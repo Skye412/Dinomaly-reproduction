@@ -33,8 +33,18 @@
     "threshold": "fixed from validation for the corresponding checkpoint"
   },
   "metrics": {
-    "image": ["AUROC", "AP", "F1-max", "precision/recall/F1 at fixed validation threshold"],
-    "pixel": ["AUROC", "AP", "F1-max", "AUPRO"],
+    "image": [
+      "AUROC",
+      "AP",
+      "F1-max",
+      "precision/recall/F1 at fixed validation threshold"
+    ],
+    "pixel": [
+      "AUROC",
+      "AP",
+      "F1-max",
+      "AUPRO"
+    ],
     "resolution": 256,
     "mask_union": "any nonzero RGB channel before interpolation",
     "mask_binarization": "gt > 0",
@@ -44,5 +54,7 @@
   "original_data_changes": "none; exclusions are stored in the tracked dataset profile",
   "comparison_limit": "The dataset contents and test split differ from Bridge2893, so this is not a controlled improvement on the same test set.",
   "command": "/home/skye/miniconda3/envs/dinomaly/bin/python -u dinomaly_bridge.py --data_path /home/skye/data/Skye/databases/Bridge512_balance --dataset_profile bridge512_balance --split_view deduplicated --save_name bridge512-balance-b16-s1-20261014 --batch_size 16 --seed 1 --total_iters 10000 --eval_interval 2000 --checkpoint_interval 1000",
-  "publication_gate": "Commit and push code, profiles and this plan; verify remote commit and clean matching server checkout; then launch."
+  "publication_gate": "Commit and push code, profiles and this plan; verify remote commit and clean matching server checkout; then launch.",
+  "status": "not_launched_superseded_by_repaired_dataset",
+  "superseded_by": "bridge512-balance-repaired-b16-s1-20261014"
 }

@@ -108,3 +108,21 @@ See `plans/bridge512-balance-b16-s1-20261014.json` and the matching dataset audi
 The same seed, batch size, architecture, optimizer, 10000 steps, checkpoint rule,
 validation selection and final test protocol are retained. Dataset contents and
 test images differ from Bridge2893, so compare these as separate dataset baselines.
+
+### User-repaired dataset (active experiment)
+
+The user repaired `Bridge512_balance` before any full experiment on it was
+launched. The repaired version has 6296 byte-distinct images, no within-split or
+cross-split exact-image duplicates, and disjoint parent groups. Use profile
+`bridge512_balance_repaired` and `--split_view original`: 2211 normal training
+images, 618 validation images (309/309), and 1256 test images (628/628).
+No additional exclusions are needed. Original files remain untouched.
+
+The earlier plan `bridge512-balance-b16-s1-20261014` is superseded and was never
+launched as a full experiment. The active plan is
+`plans/bridge512-balance-repaired-b16-s1-20261014.json`; its manifest fingerprints
+are distinct from the initial dataset's. See the corresponding repaired audit.
+
+```bash
+python reproduction/launch_bridge.py --expected_commit <verified-commit> --run_id bridge512-balance-repaired-b16-s1-20261014 --data_path /home/skye/data/Skye/databases/Bridge512_balance --dataset_profile bridge512_balance_repaired --split_view original
+```
