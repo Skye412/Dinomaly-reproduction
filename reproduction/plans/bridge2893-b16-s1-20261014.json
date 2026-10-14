@@ -1,0 +1,42 @@
+{
+  "run_id": "bridge2893-b16-s1-20261014",
+  "dataset_path": "/home/skye/data/Skye/databases/Bridge2893_split_seed42",
+  "model": "Dinomaly DINOv2-R ViT-B/14",
+  "training": {
+    "normal_only": true,
+    "samples": 1014,
+    "seed": 1,
+    "batch_size": 16,
+    "optimizer_steps": 10000,
+    "optimizer": "StableAdamW AMSGrad",
+    "learning_rate": 0.002,
+    "weight_decay": 0.0001,
+    "bottleneck_dropout": 0.2,
+    "input": "full image resized to 392x392, no spatial crop or new augmentation"
+  },
+  "validation": {
+    "normal": 144,
+    "anomaly": 135,
+    "interval_steps": 2000,
+    "checkpoint_selection": "maximum validation image AUROC; tie-break by pixel AP",
+    "image_threshold": "maximum F1 on validation scores for the selected checkpoint"
+  },
+  "test": {
+    "normal": 289,
+    "anomaly": 293,
+    "usage": "only after training; primary best-validation checkpoint and reference final-step checkpoint",
+    "image_threshold": "fixed from validation, never tuned using test labels"
+  },
+  "metrics": {
+    "image": ["AUROC", "AP", "F1-max", "precision/recall/F1 at validation threshold"],
+    "pixel": ["AUROC", "AP", "F1-max", "AUPRO"],
+    "mask_resolution": 256,
+    "mask_binarization": "gt > 0",
+    "image_score": "mean of top 1% smoothed anomaly-map pixels",
+    "target": "all annotated defects merged as one binary anomaly class"
+  },
+  "preprocessing_deviation_from_cvpr": "Resize the full frame to 392 instead of resize 448 followed by center crop 392, retaining edge defects; model token grid remains 28x28.",
+  "checkpoint_interval": 1000,
+  "command": "/home/skye/miniconda3/envs/dinomaly/bin/python -u dinomaly_bridge.py --save_name bridge2893-b16-s1-20261014 --batch_size 16 --seed 1 --total_iters 10000 --eval_interval 2000 --checkpoint_interval 1000",
+  "publication_gate": "Commit and push this plan and code, verify remote HEAD, synchronize clean server checkout, then launch."
+}

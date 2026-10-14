@@ -32,7 +32,7 @@ def record_run(args, encoder_name):
         raise ValueError('smoke_steps must be non-negative')
     folder = Path(args.save_dir) / args.save_name
     folder.mkdir(parents=True, exist_ok=True)
-    config = dict(vars(args), encoder=encoder_name, resize=448, crop=392,
+    config = dict(vars(args), encoder=encoder_name, resize=getattr(args, 'image_size', 448), crop=392,
                   started_at=datetime.now(timezone.utc).isoformat(),
                   python=platform.python_version(), torch=torch.__version__,
                   cuda_runtime=torch.version.cuda,

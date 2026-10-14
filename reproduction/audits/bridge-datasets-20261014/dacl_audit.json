@@ -1,0 +1,92 @@
+{
+  "official_dataset": "https://doi.org/10.60776/XL7ZRG",
+  "archives": {
+    "dacl10k_v3_images_512.zip": {
+      "size": 1090777963,
+      "expected_size": 1090777963,
+      "md5": "fe4a578197dbdb1ec3143358d2194ed7",
+      "official_md5": "fe4a578197dbdb1ec3143358d2194ed7",
+      "matches_official": true,
+      "zip_crc_error": null,
+      "extracted_files_checked": 9920,
+      "missing": [],
+      "modified": []
+    },
+    "dacl10k_v3_devphase_annotations_512.zip": {
+      "size": 7185826,
+      "expected_size": 7185826,
+      "md5": "ca1bab7849c9f89631e57e5fb013be21",
+      "official_md5": "ca1bab7849c9f89631e57e5fb013be21",
+      "matches_official": true,
+      "zip_crc_error": null,
+      "extracted_files_checked": 7910,
+      "missing": [],
+      "modified": []
+    }
+  },
+  "errors": [],
+  "image_splits": {
+    "train": 6935,
+    "valid": 975,
+    "testdev": 1012,
+    "test": 998
+  },
+  "annotation_splits": {
+    "train": {
+      "files": 6935,
+      "no_annotated_damage": 534,
+      "no_selected_four_defects": 1330,
+      "empty_shapes": 73,
+      "images_per_label": {
+        "Cavity": 1188,
+        "Spalling": 3236,
+        "Hollowareas": 1097,
+        "Rockpocket": 303,
+        "Bearing": 730,
+        "Wetspot": 922,
+        "Drainage": 1028,
+        "Rust": 3446,
+        "Restformwork": 691,
+        "WConccor": 262,
+        "Weathering": 2355,
+        "Efflorescence": 1519,
+        "ExposedRebars": 771,
+        "Graffiti": 793,
+        "JTape": 720,
+        "PEquipment": 1318,
+        "Crack": 1725,
+        "EJoint": 394,
+        "ACrack": 330
+      }
+    },
+    "validation": {
+      "files": 975,
+      "no_annotated_damage": 58,
+      "no_selected_four_defects": 197,
+      "empty_shapes": 6,
+      "images_per_label": {
+        "Restformwork": 133,
+        "Cavity": 167,
+        "JTape": 125,
+        "Crack": 254,
+        "Rust": 465,
+        "PEquipment": 175,
+        "Graffiti": 145,
+        "Wetspot": 141,
+        "Spalling": 474,
+        "Weathering": 339,
+        "Hollowareas": 155,
+        "Drainage": 151,
+        "Efflorescence": 206,
+        "Bearing": 105,
+        "ACrack": 42,
+        "ExposedRebars": 104,
+        "EJoint": 51,
+        "Rockpocket": 47,
+        "WConccor": 39
+      }
+    }
+  },
+  "public_test_annotations_present": false,
+  "passed": true
+}

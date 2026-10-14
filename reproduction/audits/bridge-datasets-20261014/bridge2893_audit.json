@@ -1,0 +1,61 @@
+{
+  "path": "/home/skye/data/Skye/databases/Bridge2893_split_seed42",
+  "errors": [],
+  "splits": {
+    "train": {
+      "samples": 2032,
+      "categories": {
+        "annotated": 1018,
+        "normal": 1014
+      },
+      "sources": {
+        "CODEBRIM": 1549,
+        "S2DS": 483
+      },
+      "parents": 1533
+    },
+    "val": {
+      "samples": 279,
+      "categories": {
+        "annotated": 135,
+        "normal": 144
+      },
+      "sources": {
+        "CODEBRIM": 210,
+        "S2DS": 69
+      },
+      "parents": 219
+    },
+    "test": {
+      "samples": 582,
+      "categories": {
+        "annotated": 293,
+        "normal": 289
+      },
+      "sources": {
+        "CODEBRIM": 444,
+        "S2DS": 138
+      },
+      "parents": 438
+    }
+  },
+  "checksums": {
+    "train_manifest.csv": true,
+    "val_manifest.csv": true,
+    "test_manifest.csv": true,
+    "parent_mapping.csv": true,
+    "split_seed42.json": true,
+    "split_audit.json": true,
+    "split_protocol.json": true,
+    "train/meta.json": true,
+    "val/meta.json": true,
+    "test/meta.json": true
+  },
+  "mask_values_file_counts": {
+    "0": 1446,
+    "255": 1446
+  },
+  "distinct_image_hashes": 2893,
+  "distinct_parents": 2190,
+  "passed": true
+}

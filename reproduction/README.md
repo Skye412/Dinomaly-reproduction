@@ -50,3 +50,34 @@ Before every subsequent full experiment, commit and push its code and run plan,
 verify the published commit, then synchronize the server and start training.
 This also applies to reruns with unchanged code; record a fresh run plan.
 The standing user instruction is recorded in the root `AGENTS.md`.
+
+## Bridge2893 baseline
+
+`dinomaly_bridge.py` trains one binary anomaly model using only the 1,014 normal
+training images in the frozen Bridge2893 seed-42 split. The 1,018 annotated
+training images are excluded. Validation uses 279 images; test uses 582 images.
+The backbone, bottleneck, decoder, loss and optimizer follow the upstream
+Dinomaly-B implementation. The full image is resized to 392x392 to retain edge
+defects, rather than applying the original resize-448/center-crop-392 transform.
+This domain adaptation of preprocessing is explicitly recorded in the run plan.
+
+Train for 10,000 steps with batch 16 and seed 1. Validate every 2,000 steps;
+select the best checkpoint by validation image AUROC, with pixel AP as a tie-break.
+Choose its image-level decision threshold by validation F1, and reuse the fixed
+threshold on test. Only after training, evaluate the selected checkpoint and
+the final-step checkpoint on test. Test F1-max is also reported as an oracle
+metric for comparison with the original paper, separate from the fixed-threshold
+test F1. Binary ground truth combines all annotated defect categories.
+
+```bash
+python dinomaly_bridge.py --save_name bridge2893-smoke-20261014 --smoke_steps 3
+# Publish and synchronize the run plan before launching this full experiment:
+python -u dinomaly_bridge.py --save_name bridge2893-b16-s1-20261014
+```
+
+See `plans/bridge2893-b16-s1-20261014.json` for the frozen protocol. Three smoke
+optimizer steps, evaluation on a normal/defect validation subset, and a complete
+checkpoint save/load succeeded on 2026-10-14. These checks are execution evidence,
+not final baseline performance. Run artifacts are under
+`runs/bridge2893-b16-s1-20261014/`, including status, dataset protocol, validation
+and test image scores, best-checkpoint selection, metrics, and final summary.
