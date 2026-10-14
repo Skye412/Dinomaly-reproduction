@@ -42,3 +42,11 @@ Completed smoke checks demonstrate execution, not reproduction of final metrics.
 Both datasets passed three optimizer steps with batch 16 on 2026-10-13.
 Peak allocated CUDA memory was 8.733 GiB in each test. The official register-token
 backbone checksum and launch settings are recorded in `launch_record.json`.
+
+Completed run records are archived in `results/cvpr2025-b16-s1-20261013/`.
+See that directory's `SUMMARY.md` for the final metrics and server artifact path.
+
+Before every subsequent full experiment, commit and push its code and run plan,
+verify the published commit, then synchronize the server and start training.
+This also applies to reruns with unchanged code; record a fresh run plan.
+The standing user instruction is recorded in the root `AGENTS.md`.

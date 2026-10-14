@@ -1,0 +1,71 @@
+{
+  "run_id": "cvpr2025-b16-s1-20261013",
+  "runner_pid": 681302,
+  "started_at": "2026-10-13T12:05:04.610523+00:00",
+  "state": "completed",
+  "batch_size": 16,
+  "results": {
+    "mvtec": {
+      "state": "completed",
+      "started_at": "2026-10-13T12:05:04.610697+00:00",
+      "command": [
+        "/home/skye/miniconda3/envs/dinomaly/bin/python",
+        "-u",
+        "dinomaly_mvtec_uni.py",
+        "--data_path",
+        "/home/skye/data/Skye/databases/MVTEC",
+        "--save_dir",
+        "/data/Skye/Dinomaly/runs/cvpr2025-b16-s1-20261013",
+        "--save_name",
+        "mvtec",
+        "--device",
+        "cuda:0",
+        "--seed",
+        "1",
+        "--batch_size",
+        "16",
+        "--total_iters",
+        "10000",
+        "--eval_interval",
+        "5000",
+        "--checkpoint_interval",
+        "1000"
+      ],
+      "exit_code": 0,
+      "finished_at": "2026-10-13T14:39:14.111930+00:00"
+    },
+    "visa": {
+      "state": "completed",
+      "started_at": "2026-10-13T14:39:14.113015+00:00",
+      "command": [
+        "/home/skye/miniconda3/envs/dinomaly/bin/python",
+        "-u",
+        "dinomaly_visa_uni.py",
+        "--data_path",
+        "/home/skye/data/Skye/databases/VISA_pytorch/1cls",
+        "--save_dir",
+        "/data/Skye/Dinomaly/runs/cvpr2025-b16-s1-20261013",
+        "--save_name",
+        "visa",
+        "--device",
+        "cuda:0",
+        "--seed",
+        "1",
+        "--batch_size",
+        "16",
+        "--total_iters",
+        "10000",
+        "--eval_interval",
+        "5000",
+        "--checkpoint_interval",
+        "1000"
+      ],
+      "exit_code": 0,
+      "finished_at": "2026-10-13T17:16:22.171184+00:00"
+    }
+  },
+  "updated_at": "2026-10-13T17:16:22.172086+00:00",
+  "current_dataset": "visa",
+  "child_pid": 740503,
+  "finished_at": "2026-10-13T17:16:22.172075+00:00"
+}
