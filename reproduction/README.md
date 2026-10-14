@@ -81,3 +81,8 @@ checkpoint save/load succeeded on 2026-10-14. These checks are execution evidenc
 not final baseline performance. Run artifacts are under
 `runs/bridge2893-b16-s1-20261014/`, including status, dataset protocol, validation
 and test image scores, best-checkpoint selection, metrics, and final summary.
+
+For an SSH-independent background process, after verifying GitHub HEAD and
+synchronizing a clean server checkout, run
+`python reproduction/launch_bridge.py --expected_commit <verified-commit>`.
+The launcher refuses mismatched commits, dirty worktrees and duplicate run logs.
