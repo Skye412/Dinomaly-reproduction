@@ -23,7 +23,10 @@ The user requires a GitHub upload before every subsequent full experiment.
 ## Source and execution
 
 Preserve upstream attribution and LICENSE. The server checkout is
-`/home/skye/data/Skye/Dinomaly`, accessed with SSH host `skye-cong`.
+`/home/skye/data/Skye/Dinomaly`, accessed with SSH host `skye`:
+HostName `172.24.5.200`, Port `22`, User `skye`, IdentityFile `~/.ssh/id_ed25519`.
+The user supplied this connection on 2026-10-14; prefer it over the earlier
+`skye-cong` public-address mapping.
 The conda environment is `/home/skye/miniconda3/envs/dinomaly`.
 Avoid interrupting or restarting running experiments unless required by the
 user's task. Distinguish a completed run from scientific reproduction of all
