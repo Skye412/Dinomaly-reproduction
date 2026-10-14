@@ -1,0 +1,53 @@
+{
+  "splits": {
+    "train": {
+      "split": "train",
+      "samples": 2032,
+      "categories": {
+        "annotated": 1018,
+        "normal": 1014
+      },
+      "sources": {
+        "CODEBRIM": 1549,
+        "S2DS": 483
+      },
+      "parents": 1533
+    },
+    "val": {
+      "split": "val",
+      "samples": 279,
+      "categories": {
+        "annotated": 135,
+        "normal": 144
+      },
+      "sources": {
+        "CODEBRIM": 210,
+        "S2DS": 69
+      },
+      "parents": 219
+    },
+    "test": {
+      "split": "test",
+      "samples": 582,
+      "categories": {
+        "annotated": 293,
+        "normal": 289
+      },
+      "sources": {
+        "CODEBRIM": 444,
+        "S2DS": 138
+      },
+      "parents": 438
+    }
+  },
+  "manifest_sha256": {
+    "train": "db2ef9124641ebb389ff6bd6d2d472906d4cd19b7f621c4325ea0b5a302199b2",
+    "val": "ad9cfea964ac64a4ddd4287fdb75f552135392a48993d53d9fda989a6e99c62a",
+    "test": "e066fb5817d55d35c2c69aa0c8505203f59cb8d05751225f39fe46338eb5adff"
+  },
+  "training_samples": 1014,
+  "train_filter": "category == normal",
+  "input": "full-frame resize to 392x392",
+  "validation_selection": "max image AUROC; tie-break by pixel AP",
+  "test_usage": "after training only"
+}

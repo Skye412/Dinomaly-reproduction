@@ -86,3 +86,25 @@ For an SSH-independent background process, after verifying GitHub HEAD and
 synchronizing a clean server checkout, run
 `python reproduction/launch_bridge.py --expected_commit <verified-commit>`.
 The launcher refuses mismatched commits, dirty worktrees and duplicate run logs.
+
+## Bridge512_balance data-version experiment
+
+The `bridge512_balance` dataset profile fixes original manifest fingerprints and
+split counts (train 2231 normal/2231 defect; val 319/319; test 640/640).
+Use `--split_view deduplicated` to exclude 27 exact duplicate normal training
+samples shared with validation/test; source files and validation/test splits stay
+unchanged. Train on 2204 normal images only. RGB masks are collapsed to the union
+of nonzero pixels before interpolation, making the four colors equally weighted.
+Network input remains full-frame 392x392 and metrics remain at 256, matching the
+previous bridge baseline; 512x512 refers to the source dataset patches.
+
+```bash
+python dinomaly_bridge.py --data_path /home/skye/data/Skye/databases/Bridge512_balance --dataset_profile bridge512_balance --split_view deduplicated --save_name bridge512-balance-smoke-20261014 --smoke_steps 3
+# After publishing the tracked plan and synchronizing a clean server checkout:
+python reproduction/launch_bridge.py --expected_commit <verified-commit> --run_id bridge512-balance-b16-s1-20261014 --data_path /home/skye/data/Skye/databases/Bridge512_balance --dataset_profile bridge512_balance --split_view deduplicated
+```
+
+See `plans/bridge512-balance-b16-s1-20261014.json` and the matching dataset audit.
+The same seed, batch size, architecture, optimizer, 10000 steps, checkpoint rule,
+validation selection and final test protocol are retained. Dataset contents and
+test images differ from Bridge2893, so compare these as separate dataset baselines.

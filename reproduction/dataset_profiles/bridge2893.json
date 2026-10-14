@@ -1,0 +1,22 @@
+{
+  "profile": "bridge2893",
+  "categories": {
+    "train": {
+      "annotated": 1018,
+      "normal": 1014
+    },
+    "val": {
+      "annotated": 135,
+      "normal": 144
+    },
+    "test": {
+      "annotated": 293,
+      "normal": 289
+    }
+  },
+  "manifest_sha256": {
+    "train": "db2ef9124641ebb389ff6bd6d2d472906d4cd19b7f621c4325ea0b5a302199b2",
+    "val": "ad9cfea964ac64a4ddd4287fdb75f552135392a48993d53d9fda989a6e99c62a",
+    "test": "e066fb5817d55d35c2c69aa0c8505203f59cb8d05751225f39fe46338eb5adff"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "profile": "bridge512_balance",
+  "categories": {
+    "train": {
+      "annotated": 2231,
+      "normal": 2231
+    },
+    "val": {
+      "normal": 319,
+      "annotated": 319
+    },
+    "test": {
+      "annotated": 640,
+      "normal": 640
+    }
+  },
+  "manifest_sha256": {
+    "train": "e67fd85ca4277160d62edc1fea3c6429e4d7dd4264a3f77fdcd78794fa910a65",
+    "val": "0ceff5776a0e69776ac5494998707e09b7d0203f0ec8b9eda0d9f7429e04aaab",
+    "test": "64af45bcc52041a9cab30b00899d8685ecfc1f9ea73244ce76b46948ec6ba6b9"
+  },
+  "views": {
+    "deduplicated": {
+      "exclude_samples": {
+        "train": [
+          "codebrim_image_0000492_x3072_y0000__tile_x0512_y0000",
+          "codebrim_image_0000520_x3072_y2048__tile_x0512_y0000",
+          "normal_00072__tile_x0000_y0512",
+          "normal_00284__tile_x0000_y0512",
+          "normal_00336__tile_x0512_y0000",
+          "normal_00382__tile_x0512_y0512",
+          "normal_00430__tile_x0512_y0512",
+          "normal_00473__tile_x0512_y0512",
+          "normal_00604__tile_x0512_y0512",
+          "normal_00715__tile_x0000_y0512",
+          "normal_00747__tile_x0512_y0000",
+          "normal_00803__tile_x0512_y0000",
+          "normal_00811__tile_x0000_y0000",
+          "normal_00826__tile_x0512_y0000",
+          "normal_00839__tile_x0512_y0512",
+          "normal_00940__tile_x0000_y0512",
+          "normal_00943__tile_x0000_y0512",
+          "normal_00976__tile_x0000_y0000",
+          "normal_01080__tile_x0512_y0000",
+          "normal_01111__tile_x0000_y0512",
+          "normal_01113__tile_x0512_y0000",
+          "normal_01158__tile_x0512_y0512",
+          "normal_01175__tile_x0000_y0000",
+          "normal_01224__tile_x0000_y0000",
+          "normal_01252__tile_x0512_y0512",
+          "normal_01316__tile_x0512_y0000",
+          "normal_01344__tile_x0000_y0512"
+        ],
+        "val": [],
+        "test": []
+      },
+      "categories": {
+        "test": {
+          "annotated": 640,
+          "normal": 640
+        },
+        "val": {
+          "normal": 319,
+          "annotated": 319
+        },
+        "train": {
+          "annotated": 2231,
+          "normal": 2204
+        }
+      },
+      "policy": "test unchanged; exclude val overlap with test; exclude train overlap with val or test; retain within-split duplicates"
+    }
+  }
+}

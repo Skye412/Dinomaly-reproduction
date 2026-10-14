@@ -1,0 +1,116 @@
+{
+  "root": "/home/skye/data/Skye/databases/Bridge512_balance",
+  "splits": {
+    "train": {
+      "images": 4462,
+      "categories": {
+        "annotated": 2231,
+        "normal": 2231
+      },
+      "parents": 1522,
+      "sources": {
+        "CODEBRIM": 2901,
+        "S2DS": 1561
+      },
+      "class_images": {
+        "Spalling": 742,
+        "Corrosion": 761,
+        "Crack": 750,
+        "Efflorescence": 551
+      },
+      "class_pixels": {
+        "Crack": 1591846,
+        "Spalling": 61941357,
+        "Corrosion": 14625829,
+        "Efflorescence": 41081019
+      }
+    },
+    "val": {
+      "images": 638,
+      "categories": {
+        "normal": 319,
+        "annotated": 319
+      },
+      "parents": 211,
+      "sources": {
+        "CODEBRIM": 420,
+        "S2DS": 218
+      },
+      "class_images": {
+        "Spalling": 106,
+        "Corrosion": 109,
+        "Efflorescence": 79,
+        "Crack": 107
+      },
+      "class_pixels": {
+        "Crack": 228349,
+        "Spalling": 8894359,
+        "Corrosion": 2104107,
+        "Efflorescence": 5955961
+      }
+    },
+    "test": {
+      "images": 1280,
+      "categories": {
+        "annotated": 640,
+        "normal": 640
+      },
+      "parents": 445,
+      "sources": {
+        "CODEBRIM": 833,
+        "S2DS": 447
+      },
+      "class_images": {
+        "Crack": 214,
+        "Spalling": 212,
+        "Corrosion": 217,
+        "Efflorescence": 158
+      },
+      "class_pixels": {
+        "Crack": 469371,
+        "Spalling": 17606268,
+        "Corrosion": 4164016,
+        "Efflorescence": 11817756
+      }
+    }
+  },
+  "errors": [
+    "Identical image across splits: val/normal/normal_00165__tile_x0512_y0000.jpg",
+    "Identical image across splits: val/normal/normal_00297__tile_x0000_y0512.jpg",
+    "Identical image across splits: val/normal/normal_00586__tile_x0000_y0000.jpg",
+    "Identical image across splits: val/normal/normal_00620__tile_x0512_y0512.jpg",
+    "Identical image across splits: val/normal/normal_00635__tile_x0000_y0512.jpg",
+    "Identical image across splits: val/normal/normal_00663__tile_x0000_y0000.jpg",
+    "Identical image across splits: val/normal/normal_00688__tile_x0512_y0512.jpg",
+    "Identical image across splits: val/normal/normal_00716__tile_x0000_y0000.jpg",
+    "Identical image across splits: val/normal/normal_00767__tile_x0000_y0000.jpg",
+    "Identical image across splits: val/normal/normal_00948__tile_x0000_y0512.jpg",
+    "Identical image across splits: val/normal/normal_01145__tile_x0000_y0000.jpg",
+    "Identical image across splits: val/normal/normal_01219__tile_x0000_y0512.jpg",
+    "Identical image across splits: test/normal/normal_00141__tile_x0000_y0000.jpg",
+    "Identical image across splits: test/normal/normal_00244__tile_x0000_y0512.jpg",
+    "Identical image across splits: test/normal/normal_00349__tile_x0512_y0512.jpg",
+    "Identical image across splits: test/normal/normal_00351__tile_x0000_y0512.jpg",
+    "Identical image across splits: test/normal/normal_00378__tile_x0000_y0000.jpg",
+    "Identical image across splits: test/normal/normal_00384__tile_x0000_y0000.jpg",
+    "Identical image across splits: test/normal/normal_00562__tile_x0512_y0000.jpg",
+    "Identical image across splits: test/normal/normal_00643__tile_x0512_y0000.jpg",
+    "Identical image across splits: test/normal/normal_00685__tile_x0000_y0512.jpg",
+    "Identical image across splits: test/normal/normal_00711__tile_x0000_y0000.jpg",
+    "Identical image across splits: test/normal/normal_00890__tile_x0512_y0000.jpg",
+    "Identical image across splits: test/normal/normal_00922__tile_x0512_y0512.jpg",
+    "Identical image across splits: test/normal/normal_00983__tile_x0512_y0512.jpg",
+    "Identical image across splits: test/normal/normal_01181__tile_x0512_y0512.jpg",
+    "Identical image across splits: test/normal/normal_01415__tile_x0512_y0512.jpg"
+  ],
+  "warnings": [],
+  "checksum_files_verified": 9580,
+  "manifest_sha256": {
+    "train": "e67fd85ca4277160d62edc1fea3c6429e4d7dd4264a3f77fdcd78794fa910a65",
+    "val": "0ceff5776a0e69776ac5494998707e09b7d0203f0ec8b9eda0d9f7429e04aaab",
+    "test": "64af45bcc52041a9cab30b00899d8685ecfc1f9ea73244ce76b46948ec6ba6b9"
+  },
+  "distinct_images": 6279,
+  "distinct_parents": 2178,
+  "passed": false
+}

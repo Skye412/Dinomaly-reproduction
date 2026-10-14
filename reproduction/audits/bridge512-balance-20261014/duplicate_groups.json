@@ -1,0 +1,434 @@
+{
+  "groups": {
+    "0c5fd3433ef1eaaae89ac4447d04d6c7db4fd17d4ffd6fb698bc523b48fae3e5": [
+      {
+        "split": "train",
+        "sample": "codebrim_image_0000492_x3072_y0000__tile_x0512_y0000",
+        "image_path": "normal/codebrim_image_0000492_x3072_y0000__tile_x0512_y0000.jpg",
+        "category": "normal"
+      },
+      {
+        "split": "test",
+        "sample": "normal_00141__tile_x0000_y0000",
+        "image_path": "normal/normal_00141__tile_x0000_y0000.jpg",
+        "category": "normal"
+      }
+    ],
+    "0ea25e15d4a8ab382ea151e93f244d5ec064c0824cdfd400f21614e49cc3aec2": [
+      {
+        "split": "train",
+        "sample": "codebrim_image_0000520_x3072_y2048__tile_x0512_y0000",
+        "image_path": "normal/codebrim_image_0000520_x3072_y2048__tile_x0512_y0000.jpg",
+        "category": "normal"
+      },
+      {
+        "split": "val",
+        "sample": "normal_00767__tile_x0000_y0000",
+        "image_path": "normal/normal_00767__tile_x0000_y0000.jpg",
+        "category": "normal"
+      }
+    ],
+    "95590e76f544d9e13452192dbf6ea6c744f51f2502115319fa21cd722f61da97": [
+      {
+        "split": "train",
+        "sample": "normal_00072__tile_x0000_y0512",
+        "image_path": "normal/normal_00072__tile_x0000_y0512.jpg",
+        "category": "normal"
+      },
+      {
+        "split": "test",
+        "sample": "normal_01181__tile_x0512_y0512",
+        "image_path": "normal/normal_01181__tile_x0512_y0512.jpg",
+        "category": "normal"
+      }
+    ],
+    "0e9a82c2706b0308a5e70e3a693d49b7da8a8173350bd8fca4fb0b3ec8db2647": [
+      {
+        "split": "train",
+        "sample": "normal_00284__tile_x0000_y0512",
+        "image_path": "normal/normal_00284__tile_x0000_y0512.jpg",
+        "category": "normal"
+      },
+      {
+        "split": "val",
+        "sample": "normal_00688__tile_x0512_y0512",
+        "image_path": "normal/normal_00688__tile_x0512_y0512.jpg",
+        "category": "normal"
+      }
+    ],
+    "b0ffefc1a5174825174b538c00e3b53e5620b8654267219557ba05edcbb3ddba": [
+      {
+        "split": "train",
+        "sample": "normal_00336__tile_x0512_y0000",
+        "image_path": "normal/normal_00336__tile_x0512_y0000.jpg",
+        "category": "normal"
+      },
+      {
+        "split": "test",
+        "sample": "normal_00711__tile_x0000_y0000",
+        "image_path": "normal/normal_00711__tile_x0000_y0000.jpg",
+        "category": "normal"
+      }
+    ],
+    "4551c32fa4d3abdcdf2911f42667bc0e14c561ba6efb0e8fa11722434c47f52f": [
+      {
+        "split": "train",
+        "sample": "normal_00382__tile_x0512_y0512",
+        "image_path": "normal/normal_00382__tile_x0512_y0512.jpg",
+        "category": "normal"
+      },
+      {
+        "split": "val",
+        "sample": "normal_00297__tile_x0000_y0512",
+        "image_path": "normal/normal_00297__tile_x0000_y0512.jpg",
+        "category": "normal"
+      }
+    ],
+    "1037e826cc4fef744d7195d12255d86e4514d4e0e871cec852ef7647c41871c2": [
+      {
+        "split": "train",
+        "sample": "normal_00430__tile_x0512_y0512",
+        "image_path": "normal/normal_00430__tile_x0512_y0512.jpg",
+        "category": "normal"
+      },
+      {
+        "split": "val",
+        "sample": "normal_00635__tile_x0000_y0512",
+        "image_path": "normal/normal_00635__tile_x0000_y0512.jpg",
+        "category": "normal"
+      }
+    ],
+    "db4cf946500891f32b0d7eb16c449f43847d21c4d71be1b2f35fd8b7ab8d531b": [
+      {
+        "split": "train",
+        "sample": "normal_00473__tile_x0512_y0512",
+        "image_path": "normal/normal_00473__tile_x0512_y0512.jpg",
+        "category": "normal"
+      },
+      {
+        "split": "val",
+        "sample": "normal_01219__tile_x0000_y0512",
+        "image_path": "normal/normal_01219__tile_x0000_y0512.jpg",
+        "category": "normal"
+      }
+    ],
+    "fda401300bf361e56451f0a70f9963d3729394113b98063e15aba4271e4c4776": [
+      {
+        "split": "train",
+        "sample": "normal_00604__tile_x0512_y0512",
+        "image_path": "normal/normal_00604__tile_x0512_y0512.jpg",
+        "category": "normal"
+      },
+      {
+        "split": "test",
+        "sample": "normal_00244__tile_x0000_y0512",
+        "image_path": "normal/normal_00244__tile_x0000_y0512.jpg",
+        "category": "normal"
+      }
+    ],
+    "0fb6c05c46a4044bf15fd6b9d9714c85f535fa1b373307fe16b609ea48c53173": [
+      {
+        "split": "train",
+        "sample": "normal_00715__tile_x0000_y0512",
+        "image_path": "normal/normal_00715__tile_x0000_y0512.jpg",
+        "category": "normal"
+      },
+      {
+        "split": "test",
+        "sample": "normal_00922__tile_x0512_y0512",
+        "image_path": "normal/normal_00922__tile_x0512_y0512.jpg",
+        "category": "normal"
+      }
+    ],
+    "46aa481fd6a3dbe818eebb856147977b682e08dfaefb6ac54919eff470175c0c": [
+      {
+        "split": "train",
+        "sample": "normal_00747__tile_x0512_y0000",
+        "image_path": "normal/normal_00747__tile_x0512_y0000.jpg",
+        "category": "normal"
+      },
+      {
+        "split": "test",
+        "sample": "normal_00378__tile_x0000_y0000",
+        "image_path": "normal/normal_00378__tile_x0000_y0000.jpg",
+        "category": "normal"
+      }
+    ],
+    "8099632ff8fc7f9de7692f2bcbcdb05dd40a2df0f8228bf04993a36a73fbff5c": [
+      {
+        "split": "train",
+        "sample": "normal_00803__tile_x0512_y0000",
+        "image_path": "normal/normal_00803__tile_x0512_y0000.jpg",
+        "category": "normal"
+      },
+      {
+        "split": "val",
+        "sample": "normal_00663__tile_x0000_y0000",
+        "image_path": "normal/normal_00663__tile_x0000_y0000.jpg",
+        "category": "normal"
+      }
+    ],
+    "d75c25dbce649c419cc73cf1501ec4fbc7aa327d85ed39b1bf1682b349b3e5d5": [
+      {
+        "split": "train",
+        "sample": "normal_00811__tile_x0000_y0000",
+        "image_path": "normal/normal_00811__tile_x0000_y0000.jpg",
+        "category": "normal"
+      },
+      {
+        "split": "val",
+        "sample": "normal_00165__tile_x0512_y0000",
+        "image_path": "normal/normal_00165__tile_x0512_y0000.jpg",
+        "category": "normal"
+      }
+    ],
+    "b50c74e4a5bc366aa37a03cad8179dd6224b09cf53ba4e22192dd95997831c8d": [
+      {
+        "split": "train",
+        "sample": "normal_00826__tile_x0512_y0000",
+        "image_path": "normal/normal_00826__tile_x0512_y0000.jpg",
+        "category": "normal"
+      },
+      {
+        "split": "val",
+        "sample": "normal_01145__tile_x0000_y0000",
+        "image_path": "normal/normal_01145__tile_x0000_y0000.jpg",
+        "category": "normal"
+      }
+    ],
+    "7e00a5ac74b99f62a399ced1449e327a6d195a6fd4993b208dc0878694ab9ebc": [
+      {
+        "split": "train",
+        "sample": "normal_00839__tile_x0512_y0512",
+        "image_path": "normal/normal_00839__tile_x0512_y0512.jpg",
+        "category": "normal"
+      },
+      {
+        "split": "test",
+        "sample": "normal_00351__tile_x0000_y0512",
+        "image_path": "normal/normal_00351__tile_x0000_y0512.jpg",
+        "category": "normal"
+      }
+    ],
+    "b7a589a8cd710ec499b92ffb801bbda99122f9ee77a3ff5f08ae931c8de280ad": [
+      {
+        "split": "train",
+        "sample": "normal_00940__tile_x0000_y0512",
+        "image_path": "normal/normal_00940__tile_x0000_y0512.jpg",
+        "category": "normal"
+      },
+      {
+        "split": "test",
+        "sample": "normal_00983__tile_x0512_y0512",
+        "image_path": "normal/normal_00983__tile_x0512_y0512.jpg",
+        "category": "normal"
+      }
+    ],
+    "9e094777c863408a28eeb46aec4d7bd90db5c5d647130d9ddbcdc8fffb6ad860": [
+      {
+        "split": "train",
+        "sample": "normal_00943__tile_x0000_y0512",
+        "image_path": "normal/normal_00943__tile_x0000_y0512.jpg",
+        "category": "normal"
+      },
+      {
+        "split": "val",
+        "sample": "normal_00620__tile_x0512_y0512",
+        "image_path": "normal/normal_00620__tile_x0512_y0512.jpg",
+        "category": "normal"
+      }
+    ],
+    "8f82c28909b709907f9ba4a3b3dd5a206f2054dd748810931804e443e8069d7f": [
+      {
+        "split": "train",
+        "sample": "normal_00976__tile_x0000_y0000",
+        "image_path": "normal/normal_00976__tile_x0000_y0000.jpg",
+        "category": "normal"
+      },
+      {
+        "split": "test",
+        "sample": "normal_00643__tile_x0512_y0000",
+        "image_path": "normal/normal_00643__tile_x0512_y0000.jpg",
+        "category": "normal"
+      }
+    ],
+    "35d817924211b28e0270e0a9962a55f48b0bfec0864547c77a80aaeda030d14f": [
+      {
+        "split": "train",
+        "sample": "normal_01080__tile_x0512_y0000",
+        "image_path": "normal/normal_01080__tile_x0512_y0000.jpg",
+        "category": "normal"
+      },
+      {
+        "split": "val",
+        "sample": "normal_00716__tile_x0000_y0000",
+        "image_path": "normal/normal_00716__tile_x0000_y0000.jpg",
+        "category": "normal"
+      }
+    ],
+    "f1a13fa27296505fca5baa12fb1b6b249d8dedf72ae43b7d83ec42e4bac54b52": [
+      {
+        "split": "train",
+        "sample": "normal_01111__tile_x0000_y0512",
+        "image_path": "normal/normal_01111__tile_x0000_y0512.jpg",
+        "category": "normal"
+      },
+      {
+        "split": "test",
+        "sample": "normal_00349__tile_x0512_y0512",
+        "image_path": "normal/normal_00349__tile_x0512_y0512.jpg",
+        "category": "normal"
+      }
+    ],
+    "b4fbd98166c375fc476817b55852ca7a23287019a3dd32a7e412b9f4c1ccd613": [
+      {
+        "split": "train",
+        "sample": "normal_01113__tile_x0512_y0000",
+        "image_path": "normal/normal_01113__tile_x0512_y0000.jpg",
+        "category": "normal"
+      },
+      {
+        "split": "test",
+        "sample": "normal_00384__tile_x0000_y0000",
+        "image_path": "normal/normal_00384__tile_x0000_y0000.jpg",
+        "category": "normal"
+      }
+    ],
+    "bd16dd44c7032a4403249122842da9fd23251b957a0df0bcdfee468208554c0a": [
+      {
+        "split": "train",
+        "sample": "normal_01158__tile_x0512_y0512",
+        "image_path": "normal/normal_01158__tile_x0512_y0512.jpg",
+        "category": "normal"
+      },
+      {
+        "split": "val",
+        "sample": "normal_00948__tile_x0000_y0512",
+        "image_path": "normal/normal_00948__tile_x0000_y0512.jpg",
+        "category": "normal"
+      }
+    ],
+    "e37bf03e9849ecc32d85b3fe494c670c84ebb1107f4f28de6680859917827576": [
+      {
+        "split": "train",
+        "sample": "normal_01175__tile_x0000_y0000",
+        "image_path": "normal/normal_01175__tile_x0000_y0000.jpg",
+        "category": "normal"
+      },
+      {
+        "split": "test",
+        "sample": "normal_00890__tile_x0512_y0000",
+        "image_path": "normal/normal_00890__tile_x0512_y0000.jpg",
+        "category": "normal"
+      }
+    ],
+    "f9e54cf17ba47c0f3735304a6e9640ae99708e544ab26ce931c935f53113537b": [
+      {
+        "split": "train",
+        "sample": "normal_01224__tile_x0000_y0000",
+        "image_path": "normal/normal_01224__tile_x0000_y0000.jpg",
+        "category": "normal"
+      },
+      {
+        "split": "test",
+        "sample": "normal_00562__tile_x0512_y0000",
+        "image_path": "normal/normal_00562__tile_x0512_y0000.jpg",
+        "category": "normal"
+      }
+    ],
+    "f8af1fccaafcc95617d586f57008be671fdb8341e93c55238fcc809986173cf1": [
+      {
+        "split": "train",
+        "sample": "normal_01252__tile_x0512_y0512",
+        "image_path": "normal/normal_01252__tile_x0512_y0512.jpg",
+        "category": "normal"
+      },
+      {
+        "split": "test",
+        "sample": "normal_00685__tile_x0000_y0512",
+        "image_path": "normal/normal_00685__tile_x0000_y0512.jpg",
+        "category": "normal"
+      }
+    ],
+    "044fa79b34b77f11ccf2ea3d0ce13ea1bdfba83e93954d81a7b031ae30cdeae7": [
+      {
+        "split": "train",
+        "sample": "normal_01316__tile_x0512_y0000",
+        "image_path": "normal/normal_01316__tile_x0512_y0000.jpg",
+        "category": "normal"
+      },
+      {
+        "split": "val",
+        "sample": "normal_00586__tile_x0000_y0000",
+        "image_path": "normal/normal_00586__tile_x0000_y0000.jpg",
+        "category": "normal"
+      }
+    ],
+    "397b20da58018959fce7342a31ad0c6053a98cd7af98d347e7edaf74b95dcd6a": [
+      {
+        "split": "train",
+        "sample": "normal_01344__tile_x0000_y0512",
+        "image_path": "normal/normal_01344__tile_x0000_y0512.jpg",
+        "category": "normal"
+      },
+      {
+        "split": "test",
+        "sample": "normal_01415__tile_x0512_y0512",
+        "image_path": "normal/normal_01415__tile_x0512_y0512.jpg",
+        "category": "normal"
+      }
+    ]
+  },
+  "cross_split_hash_groups": 27,
+  "duplicate_categories": {
+    "normal": 54
+  },
+  "exclusion_policy": "test unchanged; exclude val overlap with test; exclude train overlap with val or test; retain within-split duplicates",
+  "exclude_samples": {
+    "train": [
+      "codebrim_image_0000492_x3072_y0000__tile_x0512_y0000",
+      "codebrim_image_0000520_x3072_y2048__tile_x0512_y0000",
+      "normal_00072__tile_x0000_y0512",
+      "normal_00284__tile_x0000_y0512",
+      "normal_00336__tile_x0512_y0000",
+      "normal_00382__tile_x0512_y0512",
+      "normal_00430__tile_x0512_y0512",
+      "normal_00473__tile_x0512_y0512",
+      "normal_00604__tile_x0512_y0512",
+      "normal_00715__tile_x0000_y0512",
+      "normal_00747__tile_x0512_y0000",
+      "normal_00803__tile_x0512_y0000",
+      "normal_00811__tile_x0000_y0000",
+      "normal_00826__tile_x0512_y0000",
+      "normal_00839__tile_x0512_y0512",
+      "normal_00940__tile_x0000_y0512",
+      "normal_00943__tile_x0000_y0512",
+      "normal_00976__tile_x0000_y0000",
+      "normal_01080__tile_x0512_y0000",
+      "normal_01111__tile_x0000_y0512",
+      "normal_01113__tile_x0512_y0000",
+      "normal_01158__tile_x0512_y0512",
+      "normal_01175__tile_x0000_y0000",
+      "normal_01224__tile_x0000_y0000",
+      "normal_01252__tile_x0512_y0512",
+      "normal_01316__tile_x0512_y0000",
+      "normal_01344__tile_x0000_y0512"
+    ],
+    "val": [],
+    "test": []
+  },
+  "view_categories": {
+    "test": {
+      "annotated": 640,
+      "normal": 640
+    },
+    "val": {
+      "normal": 319,
+      "annotated": 319
+    },
+    "train": {
+      "annotated": 2231,
+      "normal": 2204
+    }
+  }
+}

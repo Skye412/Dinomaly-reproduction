@@ -10,6 +10,9 @@ def main():
     parser.add_argument('--expected_commit', required=True,
                         help='Commit already verified against the GitHub branch by the caller.')
     parser.add_argument('--run_id', default='bridge2893-b16-s1-20261014')
+    parser.add_argument('--data_path', default='/home/skye/data/Skye/databases/Bridge2893_split_seed42')
+    parser.add_argument('--dataset_profile', choices=['bridge2893','bridge512_balance'], default='bridge2893')
+    parser.add_argument('--split_view', choices=['original','deduplicated'], default='original')
     args = parser.parse_args()
     if Path(args.run_id).name != args.run_id or args.run_id in {'.', '..'}:
         raise ValueError('run_id must be a directory name')
@@ -24,6 +27,8 @@ def main():
     if (folder / 'status.json').exists():
         raise RuntimeError('Run already has status; do not launch twice')
     command = [sys.executable, '-u', 'dinomaly_bridge.py', '--save_name', args.run_id,
+               '--data_path', args.data_path, '--dataset_profile', args.dataset_profile,
+               '--split_view', args.split_view,
                '--batch_size', '16', '--seed', '1', '--total_iters', '10000',
                '--eval_interval', '2000', '--checkpoint_interval', '1000']
     with (folder / 'console.log').open('x') as log:
