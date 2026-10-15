@@ -1,0 +1,12 @@
+{
+  "bridge512-balance-repaired-b16-s1-20261014": {
+    "peak_allocated_gib_logged": 8.732,
+    "source": "/home/skye/data/Skye/Dinomaly/runs/bridge512-balance-repaired-b16-s1-20261014/console.log",
+    "log_line": "step [10000/10000], loss:0.062330, peak_cuda_gib:8.732"
+  },
+  "dacl-v3-seed42-b16-s1-20261015": {
+    "peak_allocated_gib_logged": 8.732,
+    "source": "/home/skye/data/Skye/Dinomaly/runs/dacl-v3-seed42-b16-s1-20261015/training_console.log",
+    "log_line": "step [10000/10000], loss:0.056499, peak_cuda_gib:8.732"
+  }
+}

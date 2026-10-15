@@ -1,0 +1,31 @@
+{
+  "run_id": "v1-amcm-dacl-b16-s1-20261015",
+  "publication_stage": "awaiting_dacl_publication_commit",
+  "publication_branch": "codex/v1-amcm-dacl",
+  "version": "V1 Dinomaly + one official AMCM",
+  "order": 2,
+  "preceding_run": "v1-amcm-bridge512-b16-s1-20261015",
+  "baseline_run": "dacl-v3-seed42-b16-s1-20261015",
+  "baseline_lock_commit": "2ca74b144b23f829f63b6778168442762342df9e",
+  "dataset_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42",
+  "dataset_profile": "dacl_v3_seed42",
+  "split_view": "original",
+  "manifest_sha256": {
+    "train": "2e8ada7e96fbc098e248c46cebdb83d189698c0b8b77bf487dae43a258ba4c43",
+    "val": "2fdcc2fe375325f28c2ec024fb883504fe5737f76496766d7376965f8fa6202f",
+    "test": "455ee1ee784410cbbe51409fc25e503b60f44f147421c0204206adf43d5dd279"
+  },
+  "training": {"normal_images": 413, "normal_only": true, "batch_size": 16, "seed": 1, "optimizer_steps": 10000, "drop_last": true, "optimizer": "StableAdamW AMSGrad", "learning_rate": 0.002, "final_learning_rate": 0.0002, "warmup_steps": 100, "weight_decay": 0.0001, "betas": [0.9,0.999], "eps": 1e-10, "bottleneck_dropout": 0.2, "gradient_clip_norm": 0.1, "loss": "unchanged global_cosine_hm_percent; p=min(0.9*step/1000,0.9), factor=0.1"},
+  "amcm": {"upstream": "https://github.com/zhxhzy/SCRWKV", "commit": "f3a1063f6043c769ef828c2ae95edf1029d76c40", "source": "models/AMCM.py", "source_sha256": "2b40458a9f59b2a501de27fef61f2287e847188ed1b55631a2044d7eceeb6e5d", "dim": 768, "sa_grid_size": 5, "sa_reduction": 2, "multiscale_kernels": [5,7,9,11], "insertion": "last bottleneck module, before original decoder", "token_policy": "encoder-configured CLS/register prefix unchanged; only 28x28 patches processed", "outer_residual": false},
+  "initialization": "Independent fresh pretrained encoder and seed1 reconstruction/AMCM. Never initialize from Bridge V1 or either trained V0.",
+  "input": "512 full frame resized to 392; no spatial crop",
+  "validation": {"normal": 103, "anomaly": 1284, "interval_steps": 2000, "checkpoint_selection": "maximum image AUROC; tie pixel AP", "threshold_selection": "maximum validation image F1 per corresponding checkpoint"},
+  "test": {"normal": 55, "anomaly": 920, "usage": "after complete training, best validation checkpoint and reference final", "selection_on_test": false},
+  "evaluation": "unchanged historical 256 evaluator and 14-damage-label union; later corrected evaluator must re-evaluate V0 and V1 together",
+  "checkpoint_interval": 1000,
+  "smoke_steps": 0,
+  "independent_checks": "No smoke, subset training or short-run selection; full-run guards retained",
+  "gpu_policy": "After completed Bridge, wait for GPU0 free >=14500 MiB; never stop another job",
+  "command": "/home/skye/miniconda3/envs/dinomaly/bin/python -u dinomaly_bridge.py --model_variant v1_amcm --data_path /home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42 --dataset_profile dacl_v3_seed42 --split_view original --save_name v1-amcm-dacl-b16-s1-20261015 --batch_size 16 --seed 1 --total_iters 10000 --eval_interval 2000 --checkpoint_interval 1000",
+  "publication_gate": "Dedicated updated plan commit and published codex/v1-amcm-dacl ref before launch; model/execution code identical to Bridge publication commit. Clean immutable server checkout, same implementation; no tuning or retries."
+}
