@@ -52,9 +52,12 @@ Additional seeds are future runs, not results already obtained.
 Bridge512 baseline training commit:
 `f3865c383001055917b22e57d3f8be762a6fbab5`; selected step 10000.
 Raw results are in `results/bridge512-balance-repaired-b16-s1-20261014/`.
-DACL baseline is planned/queued; no DACL full-run metrics are available yet.
-Its actual launch commit, parameters, status and metrics are recorded under
-`runs/dacl-v3-seed42-b16-s1-20261015/` on the server and archived upon completion.
+DACL baseline completed 10000 steps on 2026-10-15, with step 10000 selected by
+validation. Training commit: `a1c8073fbd3a002a806b3876e24f10d2a17456be`.
+Raw results are in `results/dacl-v3-seed42-b16-s1-20261015/`.
+Test image AUROC is 58.86%, pixel AUROC 67.04%, pixel AP 39.21%, and AUPRO
+28.46%. The validation-F1 threshold yields 54 false positives among 55 normals;
+its 97.15% image F1 must be interpreted alongside 98.18% FPR.
 
 Every full run requires its own committed plan, GitHub push, remote HEAD
 verification and clean matching server checkout before launch. Smoke checks

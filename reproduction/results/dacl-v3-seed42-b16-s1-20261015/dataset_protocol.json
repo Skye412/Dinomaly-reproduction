@@ -1,0 +1,61 @@
+{
+  "splits": {
+    "train": {
+      "split": "train",
+      "samples": 5548,
+      "categories": {
+        "annotated": 5135,
+        "normal": 413
+      },
+      "sources": {
+        "officialtrain": 5548
+      },
+      "content_groups": 5547,
+      "group_unit": "exact JPEG/RGB content, not bridge/session"
+    },
+    "val": {
+      "split": "val",
+      "samples": 1387,
+      "categories": {
+        "normal": 103,
+        "annotated": 1284
+      },
+      "sources": {
+        "officialtrain": 1387
+      },
+      "content_groups": 1387,
+      "group_unit": "exact JPEG/RGB content, not bridge/session"
+    },
+    "test": {
+      "split": "test",
+      "samples": 975,
+      "categories": {
+        "annotated": 920,
+        "normal": 55
+      },
+      "sources": {
+        "validation": 975
+      },
+      "content_groups": 975,
+      "group_unit": "exact JPEG/RGB content, not bridge/session"
+    }
+  },
+  "manifest_sha256": {
+    "train": "2e8ada7e96fbc098e248c46cebdb83d189698c0b8b77bf487dae43a258ba4c43",
+    "val": "2fdcc2fe375325f28c2ec024fb883504fe5737f76496766d7376965f8fa6202f",
+    "test": "455ee1ee784410cbbe51409fc25e503b60f44f147421c0204206adf43d5dd279"
+  },
+  "dataset_profile": "dacl_v3_seed42",
+  "split_view": "original",
+  "excluded_samples": {
+    "train": [],
+    "val": [],
+    "test": []
+  },
+  "training_samples": 413,
+  "mask_conversion": "union of 14 native-resolution damage polygons; exclude five object labels",
+  "train_filter": "category == normal",
+  "input": "full-frame resize to 392x392",
+  "validation_selection": "max image AUROC; tie-break by pixel AP",
+  "test_usage": "after training only"
+}
