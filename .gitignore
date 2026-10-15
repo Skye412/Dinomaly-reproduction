@@ -4,10 +4,11 @@ __pycache__/
 .DS_Store
 .venv/
 基线论文/
-backbones/weights/
+/backbones/weights
 saved_results/
 runs/
 *.log
+!/reproduction/results/**/*.log
 *.pth
 *.pt
 *.bundle

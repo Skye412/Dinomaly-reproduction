@@ -42,3 +42,14 @@ This experiment retains the historical 256 evaluator for V0/V1 comparison.
 Ground-truth resizing corrections are deferred to one consistent re-evaluation
 of both versions. A single seed is screening evidence; no additional runs
 are scheduled from its outcome.
+
+Startup-only revision launchfix1 (2026-10-16): the prior queue was verified
+waiting with no training child/status and superseded before training. Replacement
+sequence ID is `v1-amcm-seed1-20261015-launchfix1`; original run IDs stay fixed.
+The tracked `/backbones/weights` ignore rule covers directory symlinks. In the
+trainer, a busy shared GPU lock is retried with logged waiting status; after
+acquisition memory is checked again under that lock. Insufficient memory releases
+the lock and continues waiting before any model initialization. Query/launch
+errors retain logged failure status. `console.log`, `log.txt` and other `.log` /
+`.txt` training logs are archived alongside raw metrics, with result `.log` files
+explicitly allowed by Git ignore rules. No model, loss, budget or evaluator changes.

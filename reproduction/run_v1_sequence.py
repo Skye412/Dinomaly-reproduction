@@ -24,7 +24,7 @@ def archive_run(checkout, run_id, archive_root):
     target = archive_root / run_id
     target.mkdir(parents=True, exist_ok=True)
     for source in (checkout / 'runs' / run_id).iterdir():
-        if source.suffix in {'.json', '.jsonl', '.csv'}:
+        if source.suffix in {'.json', '.jsonl', '.csv', '.log', '.txt'}:
             shutil.copy2(str(source), str(target / source.name))
 
 
@@ -32,7 +32,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--bridge_commit', required=True)
     parser.add_argument('--dacl_commit', required=True)
-    parser.add_argument('--sequence_id', default='v1-amcm-seed1-20261015')
+    parser.add_argument('--sequence_id', default='v1-amcm-seed1-20261015-launchfix1')
     args = parser.parse_args()
     repo = Path(__file__).resolve().parent.parent
     folder = repo / 'runs' / args.sequence_id
@@ -49,6 +49,7 @@ def main():
         tmp = folder / 'status.tmp'
         tmp.write_text(json.dumps(status, indent=2))
         tmp.replace(folder / 'status.json')
+        print(json.dumps(dict(timestamp=status['updated_at'], **kwargs)), flush=True)
 
     runs = [dict(run_id='v1-amcm-bridge512-b16-s1-20261015', profile='bridge512_balance_repaired',
                  dataset='Bridge512_balance', commit=args.bridge_commit),
@@ -99,7 +100,7 @@ def main():
                        '--total_iters', '10000', '--eval_interval', '2000', '--checkpoint_interval', '1000']
             (run_folder / 'launch.json').write_text(json.dumps(dict(command=command, published_commit=run['commit'],
                                                                   order=index + 1, full_run=True), indent=2))
-            update(state='training_running', command=command, current_commit=run['commit'])
+            update(state='training_process_running', command=command, current_commit=run['commit'])
             with (run_folder / 'console.log').open('x') as log:
                 process = subprocess.Popen(command, cwd=str(checkout), stdin=subprocess.DEVNULL,
                                            stdout=log, stderr=subprocess.STDOUT)

@@ -1,5 +1,7 @@
 """Detach the approved full-only AMCM sequence after publication verification."""
 import argparse
+import json
+import os
 from pathlib import Path
 import subprocess
 import sys
@@ -9,6 +11,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--bridge_commit', required=True)
     parser.add_argument('--dacl_commit', required=True)
+    parser.add_argument('--sequence_id', default='v1-amcm-seed1-20261015-launchfix1')
     args = parser.parse_args()
     repo = Path(__file__).resolve().parent.parent
     head = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=str(repo), text=True).strip()
@@ -17,12 +20,24 @@ def main():
         raise RuntimeError('Synchronize clean published sequence checkout before submission')
     for commit in [args.bridge_commit, args.dacl_commit]:
         subprocess.run(['git', 'cat-file', '-e', commit + '^{commit}'], cwd=str(repo), check=True)
-    folder = repo / 'runs' / 'v1-amcm-seed1-20261015'
+    if Path(args.sequence_id).name != args.sequence_id or args.sequence_id in {'.', '..'}:
+        raise ValueError('sequence_id must be a directory name')
+    # Refuse a second live queue, even if submitted with a different sequence ID.
+    for previous in (repo / 'runs').glob('v1-amcm-*/status.json'):
+        record = json.loads(previous.read_text())
+        if record['state'] not in {'completed', 'failed', 'superseded_before_training'}:
+            try:
+                os.kill(record['pid'], 0)
+            except ProcessLookupError:
+                continue
+            raise RuntimeError('Another active V1 queue exists: ' + str(previous))
+    folder = repo / 'runs' / args.sequence_id
     folder.mkdir(parents=True, exist_ok=True)
     if (folder / 'status.json').exists():
         raise RuntimeError('Sequence already submitted')
     command = [sys.executable, '-u', 'reproduction/run_v1_sequence.py',
-               '--bridge_commit', args.bridge_commit, '--dacl_commit', args.dacl_commit]
+               '--bridge_commit', args.bridge_commit, '--dacl_commit', args.dacl_commit,
+               '--sequence_id', args.sequence_id]
     with (folder / 'console.log').open('x') as log:
         process = subprocess.Popen(command, cwd=str(repo), stdin=subprocess.DEVNULL,
                                    stdout=log, stderr=subprocess.STDOUT,

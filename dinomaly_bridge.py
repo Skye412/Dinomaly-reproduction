@@ -1,6 +1,5 @@
 """Normal-only Dinomaly baseline on frozen bridge dataset splits."""
 import argparse
-import fcntl
 import hashlib
 import json
 import os
@@ -23,6 +22,7 @@ from dinov1.utils import trunc_normal_
 from optimizers import StableAdamW
 from utils import global_cosine_hm_percent, WarmCosineScheduler
 from reproduction_runtime import add_arguments, record_run, save_checkpoint, record_metrics, METRIC_NAMES
+from reproduction_gpu import acquire_gpu_lock
 
 
 def build_model(device, variant='v0'):
@@ -56,20 +56,25 @@ def build_model(device, variant='v0'):
 def main(args):
     folder = Path(args.save_dir) / args.save_name
     folder.mkdir(parents=True, exist_ok=True)
-    lock = (Path(args.save_dir) / 'gpu0.lock').open('a')
-    fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
     if (folder / 'status.json').exists():
         raise RuntimeError('Run already exists; choose a new save_name')
     logger = get_logger(args.save_name, str(folder))
-    status = dict(state='running', pid=os.getpid(), step=0, mode='smoke' if args.smoke_steps else 'full',
-                  started_at=time.time())
+    status = dict(state='waiting_for_gpu_lock', pid=os.getpid(), step=0,
+                  mode='smoke' if args.smoke_steps else 'full', queued_at=time.time())
     def state(**updates):
         status.update(updates, updated_at=time.time())
         temporary = folder / 'status.tmp'
         temporary.write_text(json.dumps(status, indent=2))
         temporary.replace(folder / 'status.json')
     state()
+    lock = None
     try:
+        def gpu_event(**event):
+            logger.info('GPU startup: %s', event)
+            state(**event)
+        lock = acquire_gpu_lock(Path(args.save_dir) / 'gpu0.lock', gpu_event,
+                                minimum_free_mib=14500 if args.model_variant == 'v1_amcm' else 12288)
+        state(state='running', started_at=time.time())
         setup_seed(args.seed)
         protocol = check_split_protocol(args.data_path, args.dataset_profile, args.split_view)
         _, exclusions, _ = load_profile(args.dataset_profile, args.split_view)
@@ -202,6 +207,9 @@ def main(args):
         state(state='failed', error=str(exc))
         logger.exception('Bridge baseline failed')
         raise
+    finally:
+        if lock is not None:
+            lock.close()
 
 
 if __name__ == '__main__':
