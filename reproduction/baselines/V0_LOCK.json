@@ -1,0 +1,33 @@
+{
+  "baselines": [
+    {
+      "profile": "bridge512_balance_repaired",
+      "evidence_sha256": {
+        "best_selection.json": "3ae2782288901666698a434c5006c158343ee8e9799a7f2766d2beef13f7812d",
+        "config.json": "e21f9278d4cc61166b60a71f9635c93561b76fccea75a5012fe7ff02fa3fe4ec",
+        "test_final_scores.csv": "920058524609fd27dbbe8952d9d77a404fa15f0aa34ab8b246790a1aa7666891",
+        "metrics.jsonl": "243bf2746154f6d13143cbf922eca3d68b2aeb3c11fdb1bfea1457e39182b916",
+        "summary.json": "ecd704fc7429174e09cbbd76d92cc13faaa99dfcf9b661963bceee1f30d910eb",
+        "dataset_protocol.json": "68bc71d93f6155a1bc3525faea04c414dc63e0bc65afd74a064aa5be6efd4ecd"
+      },
+      "profile_sha256": "fa78664ded5cd122e0f3f31d3529fd592801cce1f7c78616c022c65d8fb1cbe0",
+      "run_id": "bridge512-balance-repaired-b16-s1-20261014"
+    },
+    {
+      "profile": "dacl_v3_seed42",
+      "evidence_sha256": {
+        "best_selection.json": "c9afe304912433c554aadac10e44a01ca669494b3e299e7eaae41a7d32a0735a",
+        "config.json": "196bc09d2dd20d25d0534989de96c4088410dbfa1e185aad12f9e75ad1f8e084",
+        "test_final_scores.csv": "427a05c73aca916758c39db5e0949cd44c78f577271d4679a75e871988feef96",
+        "metrics.jsonl": "ab955b002a49cd7bc87b79b050ff72fb99d7d64f6975bd152f8fdafdff830517",
+        "summary.json": "4ddbf22b468b5b2efeaae857985dd6bdff3bbda97216fff6b3585451d1a841ce",
+        "dataset_protocol.json": "f7d6e96810b7b762d99968eab0b082b12228e2dfa3caa95a33a0e2f30899f25a"
+      },
+      "profile_sha256": "f28cfbcd910b516058be1b4aa5f1208013777d58525bd26ca050742a6d8fe461",
+      "run_id": "dacl-v3-seed42-b16-s1-20261015"
+    }
+  ],
+  "archive_commit": "a3aba1c8fbd6110bf3490813a6d8ae9085fb3d30",
+  "version": "V0",
+  "purpose": "Frozen seed-1 reference evidence before V1 AMCM. Preserve original 392-input/256-metric protocol for both versions."
+}
