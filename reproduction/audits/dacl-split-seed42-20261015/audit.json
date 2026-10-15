@@ -1,0 +1,164 @@
+{
+  "root": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42",
+  "source_root": "/home/skye/data/Skye/databases/dacl10k_v3_512",
+  "splits": {
+    "train": {
+      "samples": 5548,
+      "normal_candidates": 413,
+      "anomaly_positives": 5135,
+      "source_splits": {
+        "officialtrain": 5548
+      },
+      "class_presence_marginals": {
+        "Spalling": 2589,
+        "Hollowareas": 878,
+        "Cavity": 950,
+        "Rockpocket": 242,
+        "Bearing": 584,
+        "Rust": 2757,
+        "Wetspot": 738,
+        "Drainage": 822,
+        "Restformwork": 553,
+        "WConccor": 210,
+        "Weathering": 1884,
+        "Efflorescence": 1215,
+        "ExposedRebars": 617,
+        "Crack": 1380,
+        "PEquipment": 1054,
+        "JTape": 576,
+        "Graffiti": 634,
+        "ACrack": 264,
+        "EJoint": 315
+      }
+    },
+    "val": {
+      "samples": 1387,
+      "normal_candidates": 103,
+      "anomaly_positives": 1284,
+      "source_splits": {
+        "officialtrain": 1387
+      },
+      "class_presence_marginals": {
+        "Bearing": 146,
+        "Rust": 689,
+        "Graffiti": 159,
+        "Drainage": 206,
+        "Spalling": 647,
+        "Hollowareas": 219,
+        "JTape": 144,
+        "Weathering": 471,
+        "EJoint": 79,
+        "Wetspot": 184,
+        "Restformwork": 138,
+        "Efflorescence": 304,
+        "Cavity": 238,
+        "Crack": 345,
+        "Rockpocket": 61,
+        "ACrack": 66,
+        "PEquipment": 264,
+        "WConccor": 52,
+        "ExposedRebars": 154
+      }
+    },
+    "test": {
+      "samples": 975,
+      "normal_candidates": 55,
+      "anomaly_positives": 920,
+      "source_splits": {
+        "validation": 975
+      },
+      "class_presence_marginals": {
+        "Cavity": 167,
+        "Crack": 254,
+        "JTape": 125,
+        "Rust": 465,
+        "Restformwork": 133,
+        "PEquipment": 175,
+        "Graffiti": 145,
+        "Spalling": 474,
+        "Wetspot": 141,
+        "Weathering": 339,
+        "Hollowareas": 155,
+        "Drainage": 151,
+        "Bearing": 105,
+        "Efflorescence": 206,
+        "ACrack": 42,
+        "ExposedRebars": 104,
+        "EJoint": 51,
+        "Rockpocket": 47,
+        "WConccor": 39
+      }
+    }
+  },
+  "anomaly_labels": [
+    "ACrack",
+    "Cavity",
+    "Crack",
+    "Efflorescence",
+    "ExposedRebars",
+    "Graffiti",
+    "Hollowareas",
+    "Restformwork",
+    "Rockpocket",
+    "Rust",
+    "Spalling",
+    "WConccor",
+    "Weathering",
+    "Wetspot"
+  ],
+  "errors": [],
+  "cross_split_overlap_groups": {
+    "group_id": 0,
+    "image_sha256": 0,
+    "rgb_pixel_sha256": 0
+  },
+  "within_split_image_duplicate_groups": {
+    "c448a114b5a1db38438c77215ab5f196e7a34d4ea690ee4744d7a139c21b1e96": [
+      {
+        "split": "train",
+        "image_path": "train/images/00304.jpg",
+        "annotation_path": "train/annotations/dacl10k_v3_train_00304.json",
+        "anomaly": 1
+      },
+      {
+        "split": "train",
+        "image_path": "train/images/01861.jpg",
+        "annotation_path": "train/annotations/dacl10k_v3_train_01861.json",
+        "anomaly": 1
+      }
+    ]
+  },
+  "within_split_rgb_duplicate_groups": {
+    "eaf947601564560f6a9547a92bde4ee01527dc3eb4782d1ba19f892438e38084": [
+      {
+        "split": "train",
+        "image_path": "train/images/00304.jpg",
+        "annotation_path": "train/annotations/dacl10k_v3_train_00304.json",
+        "anomaly": 1
+      },
+      {
+        "split": "train",
+        "image_path": "train/images/01861.jpg",
+        "annotation_path": "train/annotations/dacl10k_v3_train_01861.json",
+        "anomaly": 1
+      }
+    ]
+  },
+  "checksum_files_verified": 15826,
+  "source_pairs_verified": 7910,
+  "manifest_sha256": {
+    "train": "2e8ada7e96fbc098e248c46cebdb83d189698c0b8b77bf487dae43a258ba4c43",
+    "val": "2fdcc2fe375325f28c2ec024fb883504fe5737f76496766d7376965f8fa6202f",
+    "test": "455ee1ee784410cbbe51409fc25e503b60f44f147421c0204206adf43d5dd279"
+  },
+  "source_donors": {
+    "dacl10k_v3_images_512.zip": true,
+    "dacl10k_v3_devphase_annotations_512.zip": true
+  },
+  "passed": true,
+  "limitations": [
+    "Normal candidates are annotation-defined, not certified healthy.",
+    "Content groups do not certify bridge/session independence or absence of near duplicates.",
+    "Mask rasterization is needed before pixel evaluation; files contain raw polygons."
+  ]
+}

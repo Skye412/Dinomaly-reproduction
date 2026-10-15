@@ -1,0 +1,93 @@
+{
+  "passed": true,
+  "device": "cpu",
+  "dacl": {
+    "train": {
+      "split": "train",
+      "samples": 5548,
+      "categories": {
+        "annotated": 5135,
+        "normal": 413
+      },
+      "sources": {
+        "officialtrain": 5548
+      },
+      "content_groups": 5547,
+      "group_unit": "exact JPEG/RGB content, not bridge/session"
+    },
+    "val": {
+      "split": "val",
+      "samples": 1387,
+      "categories": {
+        "normal": 103,
+        "annotated": 1284
+      },
+      "sources": {
+        "officialtrain": 1387
+      },
+      "content_groups": 1387,
+      "group_unit": "exact JPEG/RGB content, not bridge/session"
+    },
+    "test": {
+      "split": "test",
+      "samples": 975,
+      "categories": {
+        "annotated": 920,
+        "normal": 55
+      },
+      "sources": {
+        "validation": 975
+      },
+      "content_groups": 975,
+      "group_unit": "exact JPEG/RGB content, not bridge/session"
+    }
+  },
+  "bridge_protocol_unchanged": {
+    "train": {
+      "split": "train",
+      "samples": 4422,
+      "categories": {
+        "annotated": 2211,
+        "normal": 2211
+      },
+      "sources": {
+        "CODEBRIM": 2861,
+        "S2DS": 1561
+      },
+      "parents": 1517
+    },
+    "val": {
+      "split": "val",
+      "samples": 618,
+      "categories": {
+        "normal": 309,
+        "annotated": 309
+      },
+      "sources": {
+        "CODEBRIM": 400,
+        "S2DS": 218
+      },
+      "parents": 211
+    },
+    "test": {
+      "split": "test",
+      "samples": 1256,
+      "categories": {
+        "annotated": 628,
+        "normal": 628
+      },
+      "sources": {
+        "CODEBRIM": 809,
+        "S2DS": 447
+      },
+      "parents": 444
+    }
+  },
+  "normal_training_images": 413,
+  "empty_positive_metric_masks": {
+    "val": 0,
+    "test": 0
+  },
+  "polygon_fixture": "damage union includes WConccor, excludes object class and retains overlap",
+  "gpu_training_smoke": "not run by this CPU check"
+}

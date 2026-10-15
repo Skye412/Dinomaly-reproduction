@@ -13,7 +13,7 @@ import torch
 from torch import nn
 from torch.utils.data import DataLoader, Subset
 
-from bridge_dataset import BridgeDataset, check_split_protocol, load_profile
+from bridge_dataset import dataset_class, check_split_protocol, load_profile
 from bridge_evaluation import evaluate
 from dinomaly_mvtec_uni import setup_seed, get_logger
 from models import vit_encoder
@@ -64,6 +64,7 @@ def main(args):
         setup_seed(args.seed)
         protocol = check_split_protocol(args.data_path, args.dataset_profile, args.split_view)
         _, exclusions, _ = load_profile(args.dataset_profile, args.split_view)
+        DatasetClass = dataset_class(args.dataset_profile)
         record_run(args, 'dinov2reg_vit_base_14')
         manifests = {s: hashlib.sha256((Path(args.data_path) / (s + '_manifest.csv')).read_bytes()).hexdigest()
                      for s in ['train','val','test']}
@@ -71,11 +72,12 @@ def main(args):
                     dataset_profile=args.dataset_profile,
                     split_view=args.split_view, excluded_samples=exclusions,
                     training_samples=protocol['train']['categories']['normal'],
-                    mask_conversion='union of nonzero RGB pixels before resizing',
+                    mask_conversion=('union of 14 native-resolution damage polygons; exclude five object labels'
+                                     if args.dataset_profile == 'dacl_v3_seed42' else 'union of nonzero RGB pixels before resizing'),
                     train_filter='category == normal', input='full-frame resize to 392x392',
                     validation_selection='max image AUROC; tie-break by pixel AP', test_usage='after training only'), indent=2))
-        train = BridgeDataset(args.data_path, 'train', normal_only=True, image_size=args.image_size, exclude_samples=exclusions['train'])
-        val = BridgeDataset(args.data_path, 'val', image_size=args.image_size, exclude_samples=exclusions['val'])
+        train = DatasetClass(args.data_path, 'train', normal_only=True, image_size=args.image_size, exclude_samples=exclusions['train'])
+        val = DatasetClass(args.data_path, 'val', image_size=args.image_size, exclude_samples=exclusions['val'])
         train_loader = DataLoader(train, batch_size=args.batch_size, shuffle=True, drop_last=True, num_workers=4)
         if not len(train_loader):
             raise ValueError('Training loader is empty')
@@ -142,7 +144,7 @@ def main(args):
                 if step == args.total_iters:
                     break
         save_checkpoint(args, model, optimizer, scheduler, step, 'final.pth')
-        test = BridgeDataset(args.data_path, 'test', image_size=args.image_size, exclude_samples=exclusions['test'])
+        test = DatasetClass(args.data_path, 'test', image_size=args.image_size, exclude_samples=exclusions['test'])
         test_loader = DataLoader(test, batch_size=args.batch_size, num_workers=4)
         summary = dict(best_validation_step=best_step, final_step=step)
         final_values, final_cal = evaluate(model, test_loader, args.device, folder / 'test_final_scores.csv', last_threshold)
@@ -173,7 +175,7 @@ if __name__ == '__main__':
     parser.add_argument('--save_dir', default='runs')
     parser.add_argument('--save_name', required=True)
     parser.add_argument('--image_size', type=int, choices=[392], default=392)
-    parser.add_argument('--dataset_profile', choices=['bridge2893','bridge512_balance','bridge512_balance_repaired'], default='bridge2893')
+    parser.add_argument('--dataset_profile', choices=['bridge2893','bridge512_balance','bridge512_balance_repaired','dacl_v3_seed42'], default='bridge2893')
     parser.add_argument('--split_view', choices=['original','deduplicated'], default='original')
     add_arguments(parser)
     parser.set_defaults(eval_interval=2000)

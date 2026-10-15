@@ -1,5 +1,14 @@
 # Project instructions
 
+## Fixed bridge anomaly benchmarks
+
+For every subsequent model improvement, evaluate independently on the frozen
+`Bridge512_balance` repaired split (`bridge512_balance_repaired`) and
+`DACL10k_v3_512_split_seed42` (`dacl_v3_seed42`). Follow
+`reproduction/BENCHMARKS.md` for the shared protocol, dataset fingerprints,
+reference runs and comparison limits. Publish a run plan before each full run.
+Do not change the datasets or select checkpoints/thresholds on test scores.
+
 ## Full experiment publication rule
 
 The user requires a GitHub upload before every subsequent full experiment.

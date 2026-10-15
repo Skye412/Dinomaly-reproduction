@@ -72,12 +72,21 @@ def load_profile(profile, split_view='original'):
     return metadata, view['exclude_samples'], view['categories']
 
 
+def dataset_class(profile):
+    metadata, _, _ = load_profile(profile)
+    if metadata.get('format') == 'dacl_json':
+        from dacl_dataset import DaclDataset
+        return DaclDataset
+    return BridgeDataset
+
+
 def check_split_protocol(root, profile='bridge2893', split_view='original'):
     expected_profile, exclusions, expected = load_profile(profile, split_view)
+    DatasetClass = dataset_class(profile)
     groups = []
     summaries = {}
     for split in ['train', 'val', 'test']:
-        data = BridgeDataset(root, split, exclude_samples=exclusions[split])
+        data = DatasetClass(root, split, exclude_samples=exclusions[split])
         if data.original_categories != expected_profile['categories'][split]:
             raise RuntimeError('Original dataset counts changed since audit')
         groups.append({r['parent_id'] for r in data.rows})

@@ -42,6 +42,14 @@ def evaluate(model, loader, device, output_csv, threshold=None):
     calibrated = dict(threshold=float(threshold), image_precision=float(precision), image_recall=float(recall),
                       image_f1=float(f1), samples=len(y), normal=int((y == 0).sum()), anomaly=int((y == 1).sum()),
                       positive_images_with_empty_resized_mask=int(((y == 1) & ~gt.reshape(len(y), -1).any(1)).sum()))
+    tp = int(((y == 1) & predictions).sum())
+    fp = int(((y == 0) & predictions).sum())
+    tn = int(((y == 0) & ~predictions).sum())
+    fn = int(((y == 1) & ~predictions).sum())
+    specificity = tn / max(tn + fp, 1)
+    calibrated.update(tp=tp, fp=fp, tn=tn, fn=fn,
+                      false_positive_rate=fp / max(tn + fp, 1), specificity=specificity,
+                      balanced_accuracy=(float(recall) + specificity) / 2)
     with Path(output_csv).open('w', newline='') as f:
         writer = csv.writer(f)
         writer.writerow(['image_path', 'label', 'score', 'prediction_at_validation_threshold'])

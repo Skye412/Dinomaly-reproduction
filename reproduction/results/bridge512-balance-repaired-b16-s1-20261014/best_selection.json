@@ -1,0 +1,22 @@
+{
+  "step": 10000,
+  "metrics": {
+    "image_auroc": 0.7564751102313548,
+    "image_ap": 0.7015087000577007,
+    "image_f1_max": 0.7383797656841458,
+    "pixel_auroc": 0.8286617549639771,
+    "pixel_ap": 0.2924029739970869,
+    "pixel_f1_max": 0.4084615714413351,
+    "pixel_aupro": 0.5075333236352306
+  },
+  "calibration": {
+    "threshold": 0.07547985762357712,
+    "image_precision": 0.6261261261261262,
+    "image_recall": 0.8996763754045307,
+    "image_f1": 0.7383798140770252,
+    "samples": 618,
+    "normal": 309,
+    "anomaly": 309,
+    "positive_images_with_empty_resized_mask": 0
+  }
+}

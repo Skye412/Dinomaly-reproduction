@@ -1,0 +1,14 @@
+{
+  "profile": "dacl_v3_seed42",
+  "format": "dacl_json",
+  "categories": {
+    "train": {"normal": 413, "annotated": 5135},
+    "val": {"normal": 103, "annotated": 1284},
+    "test": {"normal": 55, "annotated": 920}
+  },
+  "manifest_sha256": {
+    "train": "2e8ada7e96fbc098e248c46cebdb83d189698c0b8b77bf487dae43a258ba4c43",
+    "val": "2fdcc2fe375325f28c2ec024fb883504fe5737f76496766d7376965f8fa6202f",
+    "test": "455ee1ee784410cbbe51409fc25e503b60f44f147421c0204206adf43d5dd279"
+  }
+}
