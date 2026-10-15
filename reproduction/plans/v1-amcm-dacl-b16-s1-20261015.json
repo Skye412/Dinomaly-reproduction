@@ -1,10 +1,10 @@
 {
   "run_id": "v1-amcm-dacl-b16-s1-20261015",
-  "publication_stage": "awaiting_launchfix1_dacl_publication",
+  "publication_stage": "ready",
   "startup_revision": "launchfix1; model, hyperparameters, loss and evaluator unchanged",
   "sequence_id": "v1-amcm-seed1-20261015-launchfix1",
   "startup_guards": "Retry busy GPU lock; recheck >=14500 MiB free under acquired lock; log waiting/errors; archive console.log and log.txt",
-  "bridge_publication_commit": "0dbedefcf87f946044b2dd64dbcd90f5a78a3dd4",
+  "bridge_publication_commit": "68d63ec4a4c80d1ddd586b2146ba65a7b72dc1c5",
   "publication_branch": "codex/v1-amcm-dacl",
   "version": "V1 Dinomaly + one official AMCM",
   "order": 2,
