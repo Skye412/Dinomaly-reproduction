@@ -1,0 +1,12 @@
+{
+  "clean_batches": 1,
+  "perturbed_batches": 0,
+  "attempted_images": 0,
+  "effective_images": 0,
+  "unchanged_images": 0,
+  "normal_images": 0,
+  "scar_images": 0,
+  "changed_pixels": 0,
+  "extra_encoder_batches": 0,
+  "extra_encoder_seconds": 0.0
+}

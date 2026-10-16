@@ -1,0 +1,12 @@
+GPU startup: {'state': 'gpu_lock_acquired', 'free_mib': 14570, 'message': 'Shared GPU lock acquired; free memory rechecked under lock'}
+Model provenance: {'variant': 'v2_paired', 'added_parameters': 0, 'trainable_parameters': 61425408, 'encoder_frozen': True, 'initialization': 'fresh pretrained encoder and V0 reconstruction initialization; AMCM only for v1_amcm', 'amcm': None}
+Normal-only train=2211; val=618; test=1256; batch=16
+step [1/10000], loss:1.009333, peak_cuda_gib:7.748
+Paired training: {'clean_batches': 1, 'perturbed_batches': 0, 'attempted_images': 0, 'effective_images': 0, 'unchanged_images': 0, 'normal_images': 0, 'scar_images': 0, 'changed_pixels': 0, 'extra_encoder_batches': 0, 'extra_encoder_seconds': 0.0}
+Bridge baseline failed
+Traceback (most recent call last):
+  File "dinomaly_bridge.py", line 135, in main
+    clean, context, perturbed = pairing(image)
+  File "/data/Skye/Dinomaly/runs/v2-paired-seed1-20261016/checkout-bridge512_balance_repaired/paired_denoising.py", line 58, in __call__
+    assert torch.isfinite(augmented).all() and augmented.min() >= 0 and augmented.max() <= 1
+AssertionError

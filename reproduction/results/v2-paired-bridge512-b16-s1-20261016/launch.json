@@ -1,0 +1,30 @@
+{
+  "command": [
+    "/home/skye/miniconda3/envs/dinomaly/bin/python",
+    "-u",
+    "dinomaly_bridge.py",
+    "--model_variant",
+    "v2_paired",
+    "--data_path",
+    "/home/skye/data/Skye/databases/Bridge512_balance",
+    "--dataset_profile",
+    "bridge512_balance_repaired",
+    "--split_view",
+    "original",
+    "--save_name",
+    "v2-paired-bridge512-b16-s1-20261016",
+    "--batch_size",
+    "16",
+    "--seed",
+    "1",
+    "--total_iters",
+    "10000",
+    "--eval_interval",
+    "2000",
+    "--checkpoint_interval",
+    "1000"
+  ],
+  "published_commit": "f58964c46ba22c5d97002de2fff06412f570b019",
+  "order": 1,
+  "full_run": true
+}

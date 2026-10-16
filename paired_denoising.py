@@ -55,7 +55,13 @@ class PairedInput:
             self.stats['unchanged_images'] += int(changed == 0)
             self.stats['changed_pixels'] += changed
         assert torch.equal(clean, self.normalize(batch.clone())), 'Clean target modified during synthesis'
-        assert torch.isfinite(augmented).all() and augmented.min() >= 0 and augmented.max() <= 1
+        # Floating RGB jitter/rotation may overshoot an endpoint by roundoff.
+        # Reject material violations before restoring the required RGB range.
+        low, high = float(augmented.min()), float(augmented.max())
+        assert torch.isfinite(augmented).all(), 'Non-finite synthesized RGB'
+        assert low >= -1e-6 and high <= 1 + 1e-6, (
+            'Synthesized RGB outside roundoff tolerance: min={}, max={}'.format(low, high))
+        augmented.clamp_(0, 1)
         return clean, self.normalize(augmented), True
 
     def save(self, path):

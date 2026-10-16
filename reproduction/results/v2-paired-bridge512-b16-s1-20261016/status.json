@@ -1,0 +1,13 @@
+{
+  "state": "failed",
+  "pid": 1234189,
+  "step": 1,
+  "mode": "full",
+  "queued_at": 1792133338.071756,
+  "updated_at": 1792133452.0429502,
+  "free_mib": 14570,
+  "message": "Shared GPU lock acquired; free memory rechecked under lock",
+  "started_at": 1792133338.1128268,
+  "loss": 1.0093326568603516,
+  "error": ""
+}
