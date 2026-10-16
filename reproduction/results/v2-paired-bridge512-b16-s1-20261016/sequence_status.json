@@ -1,0 +1,53 @@
+{
+  "pid": 1234163,
+  "state": "failed",
+  "submitted_at": 1792133335.0650668,
+  "smoke_tests": false,
+  "tuning_restarts": false,
+  "runs": [
+    {
+      "run_id": "v2-paired-bridge512-b16-s1-20261016",
+      "profile": "bridge512_balance_repaired",
+      "dataset": "Bridge512_balance",
+      "commit": "f58964c46ba22c5d97002de2fff06412f570b019"
+    },
+    {
+      "run_id": "v2-paired-dacl-b16-s1-20261016",
+      "profile": "dacl_v3_seed42",
+      "dataset": "DACL10k_v3_512_split_seed42",
+      "commit": "327462fa0879543171c8196077838466eb3ccb1e"
+    }
+  ],
+  "updated_at": 1792133452.9240859,
+  "current_run": "v2-paired-bridge512-b16-s1-20261016",
+  "free_mib": 14570,
+  "required_free_mib": 14500,
+  "command": [
+    "/home/skye/miniconda3/envs/dinomaly/bin/python",
+    "-u",
+    "dinomaly_bridge.py",
+    "--model_variant",
+    "v2_paired",
+    "--data_path",
+    "/home/skye/data/Skye/databases/Bridge512_balance",
+    "--dataset_profile",
+    "bridge512_balance_repaired",
+    "--split_view",
+    "original",
+    "--save_name",
+    "v2-paired-bridge512-b16-s1-20261016",
+    "--batch_size",
+    "16",
+    "--seed",
+    "1",
+    "--total_iters",
+    "10000",
+    "--eval_interval",
+    "2000",
+    "--checkpoint_interval",
+    "1000"
+  ],
+  "current_commit": "f58964c46ba22c5d97002de2fff06412f570b019",
+  "training_pid": 1234189,
+  "error": "Full training failed with code 1; no retry or next dataset"
+}

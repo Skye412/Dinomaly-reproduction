@@ -20,7 +20,7 @@ def main():
              '|---|---|---:|---:|---:|---:|---:|---:|---|---:|---:|---:|---:|']
     for name, baseline_id, variant_id in pairs:
         comparison = {}
-        for version, run_id in [('V0', baseline_id), ('V1', variant_id), ('V2', 'v2-paired-' + ('bridge512' if name == 'Bridge512' else 'dacl') + '-b16-s1-20261016')]:
+        for version, run_id in [('V0', baseline_id), ('V1', variant_id), ('V2', 'v2-paired-' + ('bridge512' if name == 'Bridge512' else 'dacl') + '-b16-s1-20261016-r1')]:
             folder = args.results_root / run_id
             summary = json.loads((folder / 'summary.json').read_text())
             status = json.loads((folder / 'status.json').read_text())
@@ -60,7 +60,7 @@ def main():
     lines += deltas + ['V0 memory peaks are original server log values rounded to 0.001 GiB; V1 retains raw JSON values.',
               'DACL image F1/AP are prevalence sensitive; assess image AUROC, pixel AP/AUPRO and recall with false positives.',
               'A single seed is module-screening evidence, not a stability claim. No further experiments are launched.']
-    out = args.results_root / 'v2-paired-seed1-20261016'
+    out = args.results_root / 'v2-paired-seed1-20261016-r1'
     out.mkdir(exist_ok=True)
     (out / 'COMPARISON.md').write_text('\n'.join(lines) + '\n')
     (out / 'comparison.json').write_text(json.dumps(records, indent=2))

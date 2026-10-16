@@ -1,0 +1,15 @@
+{"timestamp": 1792133335.065074, "runs": [{"run_id": "v2-paired-bridge512-b16-s1-20261016", "profile": "bridge512_balance_repaired", "dataset": "Bridge512_balance", "commit": "f58964c46ba22c5d97002de2fff06412f570b019"}, {"run_id": "v2-paired-dacl-b16-s1-20261016", "profile": "dacl_v3_seed42", "dataset": "DACL10k_v3_512_split_seed42", "commit": "327462fa0879543171c8196077838466eb3ccb1e"}]}
+准备工作区（分离头指针 f58964c）
+HEAD 现在位于 f58964c Add V2 paired feature denoising and publish full Bridge experiment
+准备工作区（分离头指针 327462f）
+HEAD 现在位于 327462f Publish independent full DACL V2 paired denoising plan
+{"timestamp": 1792133335.3844063, "state": "waiting_for_gpu", "current_run": "v2-paired-bridge512-b16-s1-20261016", "free_mib": 14570, "required_free_mib": 14500}
+{"timestamp": 1792133335.437078, "state": "training_process_running", "command": ["/home/skye/miniconda3/envs/dinomaly/bin/python", "-u", "dinomaly_bridge.py", "--model_variant", "v2_paired", "--data_path", "/home/skye/data/Skye/databases/Bridge512_balance", "--dataset_profile", "bridge512_balance_repaired", "--split_view", "original", "--save_name", "v2-paired-bridge512-b16-s1-20261016", "--batch_size", "16", "--seed", "1", "--total_iters", "10000", "--eval_interval", "2000", "--checkpoint_interval", "1000"], "current_commit": "f58964c46ba22c5d97002de2fff06412f570b019"}
+{"timestamp": 1792133335.440027, "training_pid": 1234189}
+{"timestamp": 1792133452.9240859, "state": "failed", "error": "Full training failed with code 1; no retry or next dataset"}
+Traceback (most recent call last):
+  File "reproduction/run_v2_sequence.py", line 122, in <module>
+    main()
+  File "reproduction/run_v2_sequence.py", line 108, in main
+    raise RuntimeError('Full training failed with code {}; no retry or next dataset'.format(code))
+RuntimeError: Full training failed with code 1; no retry or next dataset

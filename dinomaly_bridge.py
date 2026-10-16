@@ -73,7 +73,7 @@ def main(args):
             logger.info('GPU startup: %s', event)
             state(**event)
         lock = acquire_gpu_lock(Path(args.save_dir) / 'gpu0.lock', gpu_event,
-                                minimum_free_mib=14500 if args.model_variant == 'v1_amcm' else 12288)
+                                minimum_free_mib=14500 if args.model_variant in {'v1_amcm', 'v2_paired'} else 12288)
         state(state='running', started_at=time.time())
         setup_seed(args.seed)
         protocol = check_split_protocol(args.data_path, args.dataset_profile, args.split_view)
@@ -92,11 +92,11 @@ def main(args):
                     validation_selection='max image AUROC; tie-break by pixel AP', test_usage='after training only'), indent=2))
         train = DatasetClass(args.data_path, 'train', normal_only=True, image_size=args.image_size, exclude_samples=exclusions['train'])
         if args.model_variant == 'v2_paired':
-            from paired_denoising import raw_transform, PairedInput
+            from paired_denoising import raw_transform, PairedInput, IndexedTrainingDataset
             train.transform = raw_transform()
-            pairing = PairedInput()
+            pairing = PairedInput(folder, logger)
         val = DatasetClass(args.data_path, 'val', image_size=args.image_size, exclude_samples=exclusions['val'])
-        train_loader = DataLoader(train, batch_size=args.batch_size, shuffle=True, drop_last=True, num_workers=4)
+        train_loader = DataLoader(IndexedTrainingDataset(train) if args.model_variant == 'v2_paired' else train, batch_size=args.batch_size, shuffle=True, drop_last=True, num_workers=4)
         if not len(train_loader):
             raise ValueError('Training loader is empty')
         if args.model_variant in {'v1_amcm', 'v2_paired'} and args.smoke_steps:
@@ -128,11 +128,14 @@ def main(args):
         step = 0
         while step < args.total_iters:
             model.train()
-            for image, label in train_loader:
+            for training_batch in train_loader:
+                image, label = training_batch[:2]
                 if label.any():
                     raise RuntimeError('Anomaly label encountered in training')
                 if args.model_variant == 'v2_paired':
-                    clean, context, perturbed = pairing(image)
+                    samples = [dict(sample=train.rows[int(i)]['sample'], image_path=train.rows[int(i)]['image_path'])
+                               for i in training_batch[2]]
+                    clean, context, perturbed = pairing(image, step + 1, samples)
                     clean = clean.to(args.device)
                     if perturbed:
                         # Timing is training instrumentation, not an extra experiment.

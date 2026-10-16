@@ -60,3 +60,17 @@ V0/V1/V2 tables and paired training-cost records. console.log/log.txt, configs,
 raw scores and masks' protocol are archived, excluding weights. Deferred ground
 truth resizing fixes must re-evaluate V0/V1/V2 together. No V3 or tuning follows
 automatically, whatever the outcome.
+
+## Authorized r1 restart
+
+The initial Bridge attempt failed a raw RGB range assertion after recorded
+step 1, before any validation; DACL did not start. It is an implementation
+failure record, excluded from comparison. The original cause is unconfirmed.
+The r1 runs use fresh seed-1 initialization and new run/sequence IDs ending
+`-r1`. The 1e-6 guard checks finite values and range before clamping.
+First endpoint events log step, min/max, dtype and element count immediately;
+paired_stats records cumulative corrected batches/elements. Severe events
+record manifest sample/image identities, Normal/Scar metadata and local
+range_failure.pt tensors (never uploaded). The index-carrying dataset wrapper
+preserves sample order and random operations. No standalone runtime checks.
+Only completed r1 summaries enter comparison; failure stops the sequence.

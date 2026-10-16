@@ -11,7 +11,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--bridge_commit', required=True)
     parser.add_argument('--dacl_commit', required=True)
-    parser.add_argument('--sequence_id', default='v2-paired-seed1-20261016')
+    parser.add_argument('--sequence_id', default='v2-paired-seed1-20261016-r1')
     args = parser.parse_args()
     repo = Path(__file__).resolve().parent.parent
     head = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=str(repo), text=True).strip()

@@ -32,7 +32,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--bridge_commit', required=True)
     parser.add_argument('--dacl_commit', required=True)
-    parser.add_argument('--sequence_id', default='v2-paired-seed1-20261016')
+    parser.add_argument('--sequence_id', default='v2-paired-seed1-20261016-r1')
     args = parser.parse_args()
     repo = Path(__file__).resolve().parent.parent
     folder = repo / 'runs' / args.sequence_id
@@ -51,9 +51,9 @@ def main():
         tmp.replace(folder / 'status.json')
         print(json.dumps(dict(timestamp=status['updated_at'], **kwargs)), flush=True)
 
-    runs = [dict(run_id='v2-paired-bridge512-b16-s1-20261016', profile='bridge512_balance_repaired',
+    runs = [dict(run_id='v2-paired-bridge512-b16-s1-20261016-r1', profile='bridge512_balance_repaired',
                  dataset='Bridge512_balance', commit=args.bridge_commit),
-            dict(run_id='v2-paired-dacl-b16-s1-20261016', profile='dacl_v3_seed42',
+            dict(run_id='v2-paired-dacl-b16-s1-20261016-r1', profile='dacl_v3_seed42',
                  dataset='DACL10k_v3_512_split_seed42', commit=args.dacl_commit)]
     try:
         update(runs=runs)
