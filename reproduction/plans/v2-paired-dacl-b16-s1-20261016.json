@@ -1,6 +1,6 @@
 {
   "run_id": "v2-paired-dacl-b16-s1-20261016",
-  "publication_stage": "awaiting_dacl_publication",
+  "publication_stage": "ready",
   "sequence_id": "v2-paired-seed1-20261016",
   "startup_guards": "Retry busy GPU lock; recheck >=14500 MiB free under acquired lock; log waiting/errors; archive console.log and log.txt",
   "publication_branch": "codex/v2-paired-dacl",
@@ -97,5 +97,6 @@
   "reference_sha256": {
     "synthesis.py": "014296e700e2783ae8242613e25397ede9248eff7c669d116fc87b1281ec4a59",
     "train.py": "eeb37ff606109075c7d00742be3aa6aa130366323df309d87abd1319ffa903d6"
-  }
+  },
+  "bridge_publication_commit": "f58964c46ba22c5d97002de2fff06412f570b019"
 }
