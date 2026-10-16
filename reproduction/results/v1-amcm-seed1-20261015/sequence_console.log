@@ -1,0 +1,50 @@
+{"timestamp": 1792077298.859832, "runs": [{"run_id": "v1-amcm-bridge512-b16-s1-20261015", "profile": "bridge512_balance_repaired", "dataset": "Bridge512_balance", "commit": "68d63ec4a4c80d1ddd586b2146ba65a7b72dc1c5"}, {"run_id": "v1-amcm-dacl-b16-s1-20261015", "profile": "dacl_v3_seed42", "dataset": "DACL10k_v3_512_split_seed42", "commit": "b2fcd11ba172373550a19d073792f673c3a807c3"}]}
+准备工作区（分离头指针 68d63ec）
+HEAD 现在位于 68d63ec Fix V1 GPU lock waiting, symlink ignores and training log archive
+准备工作区（分离头指针 b2fcd11）
+HEAD 现在位于 b2fcd11 Publish DACL V1 plan with corrected full-run startup
+{"timestamp": 1792077299.1130724, "state": "waiting_for_gpu", "current_run": "v1-amcm-bridge512-b16-s1-20261015", "free_mib": 10502, "required_free_mib": 14500}
+{"timestamp": 1792077329.196327, "state": "waiting_for_gpu", "current_run": "v1-amcm-bridge512-b16-s1-20261015", "free_mib": 10502, "required_free_mib": 14500}
+{"timestamp": 1792077359.2433925, "state": "waiting_for_gpu", "current_run": "v1-amcm-bridge512-b16-s1-20261015", "free_mib": 10502, "required_free_mib": 14500}
+{"timestamp": 1792077389.3108804, "state": "waiting_for_gpu", "current_run": "v1-amcm-bridge512-b16-s1-20261015", "free_mib": 10502, "required_free_mib": 14500}
+{"timestamp": 1792077419.3774076, "state": "waiting_for_gpu", "current_run": "v1-amcm-bridge512-b16-s1-20261015", "free_mib": 10502, "required_free_mib": 14500}
+{"timestamp": 1792077449.4348896, "state": "waiting_for_gpu", "current_run": "v1-amcm-bridge512-b16-s1-20261015", "free_mib": 10502, "required_free_mib": 14500}
+{"timestamp": 1792077479.507548, "state": "waiting_for_gpu", "current_run": "v1-amcm-bridge512-b16-s1-20261015", "free_mib": 10502, "required_free_mib": 14500}
+{"timestamp": 1792077509.5873554, "state": "waiting_for_gpu", "current_run": "v1-amcm-bridge512-b16-s1-20261015", "free_mib": 10502, "required_free_mib": 14500}
+{"timestamp": 1792077539.643442, "state": "waiting_for_gpu", "current_run": "v1-amcm-bridge512-b16-s1-20261015", "free_mib": 10502, "required_free_mib": 14500}
+{"timestamp": 1792077569.7137997, "state": "waiting_for_gpu", "current_run": "v1-amcm-bridge512-b16-s1-20261015", "free_mib": 10502, "required_free_mib": 14500}
+{"timestamp": 1792077599.7898984, "state": "waiting_for_gpu", "current_run": "v1-amcm-bridge512-b16-s1-20261015", "free_mib": 10502, "required_free_mib": 14500}
+{"timestamp": 1792077629.8519464, "state": "waiting_for_gpu", "current_run": "v1-amcm-bridge512-b16-s1-20261015", "free_mib": 10502, "required_free_mib": 14500}
+{"timestamp": 1792077659.92843, "state": "waiting_for_gpu", "current_run": "v1-amcm-bridge512-b16-s1-20261015", "free_mib": 10502, "required_free_mib": 14500}
+{"timestamp": 1792077690.0036366, "state": "waiting_for_gpu", "current_run": "v1-amcm-bridge512-b16-s1-20261015", "free_mib": 10502, "required_free_mib": 14500}
+{"timestamp": 1792077720.0796773, "state": "waiting_for_gpu", "current_run": "v1-amcm-bridge512-b16-s1-20261015", "free_mib": 10502, "required_free_mib": 14500}
+{"timestamp": 1792077750.1629887, "state": "waiting_for_gpu", "current_run": "v1-amcm-bridge512-b16-s1-20261015", "free_mib": 10502, "required_free_mib": 14500}
+{"timestamp": 1792077780.2255826, "state": "waiting_for_gpu", "current_run": "v1-amcm-bridge512-b16-s1-20261015", "free_mib": 10502, "required_free_mib": 14500}
+{"timestamp": 1792077810.2971642, "state": "waiting_for_gpu", "current_run": "v1-amcm-bridge512-b16-s1-20261015", "free_mib": 10502, "required_free_mib": 14500}
+{"timestamp": 1792077840.366832, "state": "waiting_for_gpu", "current_run": "v1-amcm-bridge512-b16-s1-20261015", "free_mib": 10502, "required_free_mib": 14500}
+{"timestamp": 1792077870.42864, "state": "waiting_for_gpu", "current_run": "v1-amcm-bridge512-b16-s1-20261015", "free_mib": 10502, "required_free_mib": 14500}
+{"timestamp": 1792077900.5007622, "state": "waiting_for_gpu", "current_run": "v1-amcm-bridge512-b16-s1-20261015", "free_mib": 10502, "required_free_mib": 14500}
+{"timestamp": 1792077930.5882676, "state": "waiting_for_gpu", "current_run": "v1-amcm-bridge512-b16-s1-20261015", "free_mib": 10502, "required_free_mib": 14500}
+{"timestamp": 1792077960.6578975, "state": "waiting_for_gpu", "current_run": "v1-amcm-bridge512-b16-s1-20261015", "free_mib": 10502, "required_free_mib": 14500}
+{"timestamp": 1792077990.7327468, "state": "waiting_for_gpu", "current_run": "v1-amcm-bridge512-b16-s1-20261015", "free_mib": 10502, "required_free_mib": 14500}
+{"timestamp": 1792078020.8108144, "state": "waiting_for_gpu", "current_run": "v1-amcm-bridge512-b16-s1-20261015", "free_mib": 10502, "required_free_mib": 14500}
+{"timestamp": 1792078050.889868, "state": "waiting_for_gpu", "current_run": "v1-amcm-bridge512-b16-s1-20261015", "free_mib": 10502, "required_free_mib": 14500}
+{"timestamp": 1792078080.9688523, "state": "waiting_for_gpu", "current_run": "v1-amcm-bridge512-b16-s1-20261015", "free_mib": 10502, "required_free_mib": 14500}
+{"timestamp": 1792078111.0420365, "state": "waiting_for_gpu", "current_run": "v1-amcm-bridge512-b16-s1-20261015", "free_mib": 10502, "required_free_mib": 14500}
+{"timestamp": 1792078141.1205783, "state": "waiting_for_gpu", "current_run": "v1-amcm-bridge512-b16-s1-20261015", "free_mib": 10502, "required_free_mib": 14500}
+{"timestamp": 1792078171.1908338, "state": "waiting_for_gpu", "current_run": "v1-amcm-bridge512-b16-s1-20261015", "free_mib": 10502, "required_free_mib": 14500}
+{"timestamp": 1792078201.3106635, "state": "waiting_for_gpu", "current_run": "v1-amcm-bridge512-b16-s1-20261015", "free_mib": 13094, "required_free_mib": 14500}
+{"timestamp": 1792078231.3826895, "state": "waiting_for_gpu", "current_run": "v1-amcm-bridge512-b16-s1-20261015", "free_mib": 13094, "required_free_mib": 14500}
+{"timestamp": 1792078261.4826024, "state": "waiting_for_gpu", "current_run": "v1-amcm-bridge512-b16-s1-20261015", "free_mib": 13094, "required_free_mib": 14500}
+{"timestamp": 1792078291.556731, "state": "waiting_for_gpu", "current_run": "v1-amcm-bridge512-b16-s1-20261015", "free_mib": 13094, "required_free_mib": 14500}
+{"timestamp": 1792078321.6304667, "state": "waiting_for_gpu", "current_run": "v1-amcm-bridge512-b16-s1-20261015", "free_mib": 13094, "required_free_mib": 14500}
+{"timestamp": 1792078351.7021382, "state": "waiting_for_gpu", "current_run": "v1-amcm-bridge512-b16-s1-20261015", "free_mib": 13094, "required_free_mib": 14500}
+{"timestamp": 1792078381.7750065, "state": "waiting_for_gpu", "current_run": "v1-amcm-bridge512-b16-s1-20261015", "free_mib": 15822, "required_free_mib": 14500}
+{"timestamp": 1792078381.7929482, "state": "training_process_running", "command": ["/home/skye/miniconda3/envs/dinomaly/bin/python", "-u", "dinomaly_bridge.py", "--model_variant", "v1_amcm", "--data_path", "/home/skye/data/Skye/databases/Bridge512_balance", "--dataset_profile", "bridge512_balance_repaired", "--split_view", "original", "--save_name", "v1-amcm-bridge512-b16-s1-20261015", "--batch_size", "16", "--seed", "1", "--total_iters", "10000", "--eval_interval", "2000", "--checkpoint_interval", "1000"], "current_commit": "68d63ec4a4c80d1ddd586b2146ba65a7b72dc1c5"}
+{"timestamp": 1792078381.7949767, "training_pid": 846512}
+{"timestamp": 1792089182.8591297, "completed_runs": ["v1-amcm-bridge512-b16-s1-20261015"]}
+{"timestamp": 1792089182.9572437, "state": "waiting_for_gpu", "current_run": "v1-amcm-dacl-b16-s1-20261015", "free_mib": 15822, "required_free_mib": 14500}
+{"timestamp": 1792089182.972899, "state": "training_process_running", "command": ["/home/skye/miniconda3/envs/dinomaly/bin/python", "-u", "dinomaly_bridge.py", "--model_variant", "v1_amcm", "--data_path", "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42", "--dataset_profile", "dacl_v3_seed42", "--split_view", "original", "--save_name", "v1-amcm-dacl-b16-s1-20261015", "--batch_size", "16", "--seed", "1", "--total_iters", "10000", "--eval_interval", "2000", "--checkpoint_interval", "1000"], "current_commit": "b2fcd11ba172373550a19d073792f673c3a807c3"}
+{"timestamp": 1792089182.9770126, "training_pid": 921416}
+{"timestamp": 1792102563.7395225, "completed_runs": ["v1-amcm-bridge512-b16-s1-20261015", "v1-amcm-dacl-b16-s1-20261015"]}
+{"timestamp": 1792102563.8629458, "state": "completed", "finished_at": 1792102563.86293}

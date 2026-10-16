@@ -1,0 +1,57 @@
+{
+  "pid": 838213,
+  "state": "completed",
+  "submitted_at": 1792077298.8598244,
+  "smoke_tests": false,
+  "tuning_restarts": false,
+  "runs": [
+    {
+      "run_id": "v1-amcm-bridge512-b16-s1-20261015",
+      "profile": "bridge512_balance_repaired",
+      "dataset": "Bridge512_balance",
+      "commit": "68d63ec4a4c80d1ddd586b2146ba65a7b72dc1c5"
+    },
+    {
+      "run_id": "v1-amcm-dacl-b16-s1-20261015",
+      "profile": "dacl_v3_seed42",
+      "dataset": "DACL10k_v3_512_split_seed42",
+      "commit": "b2fcd11ba172373550a19d073792f673c3a807c3"
+    }
+  ],
+  "updated_at": 1792102563.8629458,
+  "current_run": "v1-amcm-dacl-b16-s1-20261015",
+  "free_mib": 15822,
+  "required_free_mib": 14500,
+  "command": [
+    "/home/skye/miniconda3/envs/dinomaly/bin/python",
+    "-u",
+    "dinomaly_bridge.py",
+    "--model_variant",
+    "v1_amcm",
+    "--data_path",
+    "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42",
+    "--dataset_profile",
+    "dacl_v3_seed42",
+    "--split_view",
+    "original",
+    "--save_name",
+    "v1-amcm-dacl-b16-s1-20261015",
+    "--batch_size",
+    "16",
+    "--seed",
+    "1",
+    "--total_iters",
+    "10000",
+    "--eval_interval",
+    "2000",
+    "--checkpoint_interval",
+    "1000"
+  ],
+  "current_commit": "b2fcd11ba172373550a19d073792f673c3a807c3",
+  "training_pid": 921416,
+  "completed_runs": [
+    "v1-amcm-bridge512-b16-s1-20261015",
+    "v1-amcm-dacl-b16-s1-20261015"
+  ],
+  "finished_at": 1792102563.86293
+}

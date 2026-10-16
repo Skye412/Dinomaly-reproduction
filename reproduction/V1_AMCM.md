@@ -53,3 +53,23 @@ the lock and continues waiting before any model initialization. Query/launch
 errors retain logged failure status. `console.log`, `log.txt` and other `.log` /
 `.txt` training logs are archived alongside raw metrics, with result `.log` files
 explicitly allowed by Git ignore rules. No model, loss, budget or evaluator changes.
+
+## Completed seed-1 result
+
+Both full runs completed 10000 steps; both validation-selected steps were 10000.
+Archived comparison: `results/v1-amcm-seed1-20261015/COMPARISON.md` with raw
+records and logs in the two dataset run folders. Runtime configs confirm clean
+published commits and `smoke_steps=0`.
+
+Bridge changes (percentage points): image AUROC +0.48, pixel AP +0.88,
+AUPRO +1.31. Fixed-threshold recall fell from 93.15% to 92.04%, while normal
+false positives fell from 329/628 to 302/628.
+DACL changes: image AUROC -0.27, pixel AP -0.05, AUPRO -1.41. Normal false
+positives stayed at 54/55 while recall fell from 100% to 99.67%.
+Thus this single-seed result shows a modest Bridge improvement, not a consistent
+benefit across both frozen benchmarks. No follow-up tuning was launched.
+
+AMCM adds 2,718,964 parameters. Peak allocated memory rose from the logged V0
+8.732 GiB to V1 9.604 GiB. End-to-end run times including validation/test were
+approximately 3.00 hours (Bridge V1) and 3.72 hours (DACL V1), versus V0
+2.71 and 3.42 hours. Evaluation remains the original historical 256 protocol.

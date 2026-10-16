@@ -1,0 +1,86 @@
+[
+  {
+    "dataset": "Bridge512",
+    "version": "V0",
+    "run_id": "bridge512-balance-repaired-b16-s1-20261014",
+    "metrics": {
+      "image_auroc": 0.800052740476287,
+      "image_ap": 0.7340670014524375,
+      "image_f1_max": 0.7700606389665055,
+      "pixel_auroc": 0.8224667009385003,
+      "pixel_ap": 0.2913031886586693,
+      "pixel_f1_max": 0.4084998465451057,
+      "pixel_aupro": 0.5161782401529478
+    },
+    "recall": 0.9315286624203821,
+    "normal_false_positives": 329,
+    "normal_images": 628,
+    "best_step": 10000,
+    "total_seconds": 9739.403272628784,
+    "peak_cuda_allocated_gib": 8.732,
+    "added_parameters": 0
+  },
+  {
+    "dataset": "Bridge512",
+    "version": "V1",
+    "run_id": "v1-amcm-bridge512-b16-s1-20261015",
+    "metrics": {
+      "image_auroc": 0.8048044545417664,
+      "image_ap": 0.7361792092794714,
+      "image_f1_max": 0.7739307046492934,
+      "pixel_auroc": 0.8276249710200373,
+      "pixel_ap": 0.3000938071611356,
+      "pixel_f1_max": 0.41490665812699545,
+      "pixel_aupro": 0.5292471360899385
+    },
+    "recall": 0.9203821656050956,
+    "normal_false_positives": 302,
+    "normal_images": 628,
+    "best_step": 10000,
+    "total_seconds": 10795.903987646103,
+    "peak_cuda_allocated_gib": 9.603768825531006,
+    "added_parameters": 2718964
+  },
+  {
+    "dataset": "DACL",
+    "version": "V0",
+    "run_id": "dacl-v3-seed42-b16-s1-20261015",
+    "metrics": {
+      "image_auroc": 0.5885770750988141,
+      "image_ap": 0.9591414363859392,
+      "image_f1_max": 0.9714888623954513,
+      "pixel_auroc": 0.670428295844016,
+      "pixel_ap": 0.3920981120048737,
+      "pixel_f1_max": 0.4534036653015916,
+      "pixel_aupro": 0.2845740678802516
+    },
+    "recall": 1.0,
+    "normal_false_positives": 54,
+    "normal_images": 55,
+    "best_step": 10000,
+    "total_seconds": 12296.346532821655,
+    "peak_cuda_allocated_gib": 8.732,
+    "added_parameters": 0
+  },
+  {
+    "dataset": "DACL",
+    "version": "V1",
+    "run_id": "v1-amcm-dacl-b16-s1-20261015",
+    "metrics": {
+      "image_auroc": 0.5859090909090909,
+      "image_ap": 0.9594053673152457,
+      "image_f1_max": 0.9714888623954513,
+      "pixel_auroc": 0.6695424092901389,
+      "pixel_ap": 0.39162739712253575,
+      "pixel_f1_max": 0.45255499411635564,
+      "pixel_aupro": 0.270462863489894
+    },
+    "recall": 0.9967391304347826,
+    "normal_false_positives": 54,
+    "normal_images": 55,
+    "best_step": 10000,
+    "total_seconds": 13377.386657714844,
+    "peak_cuda_allocated_gib": 9.603768825531006,
+    "added_parameters": 2718964
+  }
+]

@@ -1,0 +1,82 @@
+{
+  "best_validation_step": 10000,
+  "final_step": 10000,
+  "model_info": {
+    "variant": "v1_amcm",
+    "added_parameters": 2718964,
+    "trainable_parameters": 64144372,
+    "encoder_frozen": true,
+    "initialization": "fresh pretrained encoder; original V0 reconstruction initialization then official AMCM defaults",
+    "amcm": {
+      "dim": 768,
+      "sa_grid_size": 5,
+      "sa_reduction": 2,
+      "multiscale_kernels": [
+        5,
+        7,
+        9,
+        11
+      ]
+    }
+  },
+  "training_seconds": 12861.818702697754,
+  "peak_cuda_allocated_gib": 9.603768825531006,
+  "peak_cuda_reserved_gib": 10.865234375,
+  "test_final": {
+    "metrics": {
+      "image_auroc": 0.5859090909090909,
+      "image_ap": 0.9594053673152457,
+      "image_f1_max": 0.9714888623954513,
+      "pixel_auroc": 0.6695424092901389,
+      "pixel_ap": 0.39162739712253575,
+      "pixel_f1_max": 0.45255499411635564,
+      "pixel_aupro": 0.270462863489894
+    },
+    "calibrated": {
+      "threshold": 0.10765701532363892,
+      "image_precision": 0.9443872296601442,
+      "image_recall": 0.9967391304347826,
+      "image_f1": 0.9698572184029614,
+      "samples": 975,
+      "normal": 55,
+      "anomaly": 920,
+      "positive_images_with_empty_resized_mask": 0,
+      "tp": 917,
+      "fp": 54,
+      "tn": 1,
+      "fn": 3,
+      "false_positive_rate": 0.9818181818181818,
+      "specificity": 0.01818181818181818,
+      "balanced_accuracy": 0.5074604743083003
+    }
+  },
+  "test_best_val": {
+    "metrics": {
+      "image_auroc": 0.5859090909090909,
+      "image_ap": 0.9594053673152457,
+      "image_f1_max": 0.9714888623954513,
+      "pixel_auroc": 0.6695424092901389,
+      "pixel_ap": 0.39162739712253575,
+      "pixel_f1_max": 0.45255499411635564,
+      "pixel_aupro": 0.270462863489894
+    },
+    "calibrated": {
+      "threshold": 0.10765701532363892,
+      "image_precision": 0.9443872296601442,
+      "image_recall": 0.9967391304347826,
+      "image_f1": 0.9698572184029614,
+      "samples": 975,
+      "normal": 55,
+      "anomaly": 920,
+      "positive_images_with_empty_resized_mask": 0,
+      "tp": 917,
+      "fp": 54,
+      "tn": 1,
+      "fn": 3,
+      "false_positive_rate": 0.9818181818181818,
+      "specificity": 0.01818181818181818,
+      "balanced_accuracy": 0.5074604743083003
+    }
+  },
+  "total_seconds": 13377.385806560516
+}

@@ -1,0 +1,105 @@
+{
+  "state": "completed",
+  "pid": 846512,
+  "step": 10000,
+  "mode": "full",
+  "queued_at": 1792078385.5674965,
+  "updated_at": 1792089181.508815,
+  "free_mib": 15822,
+  "message": "Shared GPU lock acquired; free memory rechecked under lock",
+  "started_at": 1792078385.6048248,
+  "loss": 0.05578091740608215,
+  "best_step": 10000,
+  "validation": {
+    "image_auroc": 0.7601512342769765,
+    "image_ap": 0.7087971291711108,
+    "image_f1_max": 0.7344172954954092,
+    "pixel_auroc": 0.8357225419108715,
+    "pixel_ap": 0.30241595422489936,
+    "pixel_f1_max": 0.4147662693762424,
+    "pixel_aupro": 0.5051368940712231
+  },
+  "finished_at": 1792089181.5088124,
+  "summary": {
+    "best_validation_step": 10000,
+    "final_step": 10000,
+    "model_info": {
+      "variant": "v1_amcm",
+      "added_parameters": 2718964,
+      "trainable_parameters": 64144372,
+      "encoder_frozen": true,
+      "initialization": "fresh pretrained encoder; original V0 reconstruction initialization then official AMCM defaults",
+      "amcm": {
+        "dim": 768,
+        "sa_grid_size": 5,
+        "sa_reduction": 2,
+        "multiscale_kernels": [
+          5,
+          7,
+          9,
+          11
+        ]
+      }
+    },
+    "training_seconds": 10297.583097219467,
+    "peak_cuda_allocated_gib": 9.603768825531006,
+    "peak_cuda_reserved_gib": 10.865234375,
+    "test_final": {
+      "metrics": {
+        "image_auroc": 0.8048044545417664,
+        "image_ap": 0.7361792092794714,
+        "image_f1_max": 0.7739307046492934,
+        "pixel_auroc": 0.8276249710200373,
+        "pixel_ap": 0.3000938071611356,
+        "pixel_f1_max": 0.41490665812699545,
+        "pixel_aupro": 0.5292471360899385
+      },
+      "calibrated": {
+        "threshold": 0.0689302533864975,
+        "image_precision": 0.6568181818181819,
+        "image_recall": 0.9203821656050956,
+        "image_f1": 0.7665782493368701,
+        "samples": 1256,
+        "normal": 628,
+        "anomaly": 628,
+        "positive_images_with_empty_resized_mask": 0,
+        "tp": 578,
+        "fp": 302,
+        "tn": 326,
+        "fn": 50,
+        "false_positive_rate": 0.48089171974522293,
+        "specificity": 0.5191082802547771,
+        "balanced_accuracy": 0.7197452229299364
+      }
+    },
+    "test_best_val": {
+      "metrics": {
+        "image_auroc": 0.8048044545417664,
+        "image_ap": 0.7361792092794714,
+        "image_f1_max": 0.7739307046492934,
+        "pixel_auroc": 0.8276249710200373,
+        "pixel_ap": 0.3000938071611356,
+        "pixel_f1_max": 0.41490665812699545,
+        "pixel_aupro": 0.5292471360899385
+      },
+      "calibrated": {
+        "threshold": 0.0689302533864975,
+        "image_precision": 0.6568181818181819,
+        "image_recall": 0.9203821656050956,
+        "image_f1": 0.7665782493368701,
+        "samples": 1256,
+        "normal": 628,
+        "anomaly": 628,
+        "positive_images_with_empty_resized_mask": 0,
+        "tp": 578,
+        "fp": 302,
+        "tn": 326,
+        "fn": 50,
+        "false_positive_rate": 0.48089171974522293,
+        "specificity": 0.5191082802547771,
+        "balanced_accuracy": 0.7197452229299364
+      }
+    },
+    "total_seconds": 10795.903126001358
+  }
+}
