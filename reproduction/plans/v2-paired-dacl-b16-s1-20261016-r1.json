@@ -1,6 +1,6 @@
 {
   "run_id": "v2-paired-dacl-b16-s1-20261016-r1",
-  "publication_stage": "pending",
+  "publication_stage": "ready",
   "sequence_id": "v2-paired-seed1-20261016-r1",
   "startup_guards": "Retry busy GPU lock; recheck >=14500 MiB free under acquired lock; log waiting/errors; archive console.log and log.txt",
   "publication_branch": "codex/v2-paired-dacl-r1",
@@ -105,5 +105,6 @@
     "order": "finite and magnitude checks before clamp",
     "logging": "first event immediate; cumulative batch/element counts; severe sample identities and tensor snapshot"
   },
-  "reason": "implementation failure; original cause unconfirmed"
+  "reason": "implementation failure; original cause unconfirmed",
+  "bridge_publication_commit": "3be2fcfc0ba1b4541b940fed143396d360d5a106"
 }
