@@ -1,0 +1,100 @@
+{
+  "run_id": "v2-paired-bridge512-b16-s1-20261016",
+  "publication_stage": "ready",
+  "sequence_id": "v2-paired-seed1-20261016",
+  "startup_guards": "Retry busy GPU lock; recheck >=14500 MiB free under acquired lock; log waiting/errors; archive console.log and log.txt",
+  "publication_branch": "codex/v2-paired-bridge512",
+  "version": "V2 V0 Dinomaly + paired feature denoising; no AMCM",
+  "order": 1,
+  "baseline_run": "bridge512-balance-repaired-b16-s1-20261014",
+  "baseline_lock_commit": "2ca74b144b23f829f63b6778168442762342df9e",
+  "dataset_path": "/home/skye/data/Skye/databases/Bridge512_balance",
+  "dataset_profile": "bridge512_balance_repaired",
+  "split_view": "original",
+  "manifest_sha256": {
+    "train": "75b3e3eb38409f3e92828910ca9ad37594fc2369418d9bedcf3e4cd05ab21620",
+    "val": "a719cdc212759e1171bebacf7bf1ae553c78ddec80b81e9098076f9910ace997",
+    "test": "014a2b6bb51ebab8f8d423b880a38ca0f7aa4383be10d29a1eb712766f6a49a8"
+  },
+  "training": {
+    "normal_images": 2211,
+    "normal_only": true,
+    "batch_size": 16,
+    "seed": 1,
+    "optimizer_steps": 10000,
+    "drop_last": true,
+    "optimizer": "StableAdamW AMSGrad",
+    "learning_rate": 0.002,
+    "final_learning_rate": 0.0002,
+    "warmup_steps": 100,
+    "weight_decay": 0.0001,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-10,
+    "bottleneck_dropout": 0.2,
+    "gradient_clip_norm": 0.1,
+    "loss": "unchanged global_cosine_hm_percent; p=min(0.9*step/1000,0.9), factor=0.1"
+  },
+  "initialization": "Fresh pretrained DINOv2 and V0 seed1 reconstruction; no trained checkpoint reuse",
+  "input": "512 full frame resized to 392; no spatial crop",
+  "validation": {
+    "normal": 309,
+    "anomaly": 309,
+    "interval_steps": 2000,
+    "checkpoint_selection": "maximum image AUROC; tie pixel AP",
+    "threshold_selection": "maximum validation image F1 per corresponding checkpoint"
+  },
+  "test": {
+    "normal": 628,
+    "anomaly": 628,
+    "usage": "after complete training, best validation checkpoint and reference final",
+    "selection_on_test": false
+  },
+  "evaluation": "Unchanged V0/V1 historical 256 evaluator; no scoring or threshold change",
+  "checkpoint_interval": 1000,
+  "smoke_steps": 0,
+  "independent_checks": "Static AST/source review only; no smoke, subset, short-run training or model forward checks.",
+  "gpu_policy": "Wait for GPU0 free >=14500 MiB; do not stop any existing job",
+  "command": "/home/skye/miniconda3/envs/dinomaly/bin/python -u dinomaly_bridge.py --model_variant v2_paired --data_path /home/skye/data/Skye/databases/Bridge512_balance --dataset_profile bridge512_balance_repaired --save_name v2-paired-bridge512-b16-s1-20261016 --batch_size 16 --seed 1 --total_iters 10000 --eval_interval 2000 --checkpoint_interval 1000",
+  "publication_gate": "Dedicated plan/code commit pushed and remote ref verified before launch; clean immutable server checkout records actual commit. Bridge completes before independently initialized DACL. No smoke or tuning.",
+  "paired_training": {
+    "reference_commit": "89ca4dc3709ae517b47eba880a615cb032bcd7aa",
+    "reference": "https://github.com/ymxlzgy/FoundAD",
+    "perturbed_batch_probability": 0.5,
+    "normal_vs_scar_probability": 0.5,
+    "area_ratio": [
+      0.02,
+      0.25
+    ],
+    "aspect_ratio": [
+      0.3,
+      3.3333333333333335
+    ],
+    "scar_width": [
+      2,
+      16
+    ],
+    "scar_height": [
+      10,
+      25
+    ],
+    "rotation": [
+      -45,
+      45
+    ],
+    "colorJitter": 0.5,
+    "raw_rgb_resolution": 392,
+    "donor": "same normal training image",
+    "foreground": "full image; no industrial foreground rules or defect masks",
+    "target": "stopgrad encoder-only grouped features of paired clean image; clean batches reuse forward targets",
+    "decoder_batches_per_step": 1,
+    "added_inference_parameters": 0
+  },
+  "ssh_host": "skye-cong",
+  "reference_sha256": {
+    "synthesis.py": "014296e700e2783ae8242613e25397ede9248eff7c669d116fc87b1281ec4a59",
+    "train.py": "eeb37ff606109075c7d00742be3aa6aa130366323df309d87abd1319ffa903d6"
+  }
+}

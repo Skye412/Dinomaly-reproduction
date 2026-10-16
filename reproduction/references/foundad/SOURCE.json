@@ -1,0 +1,10 @@
+{
+  "repository": "https://github.com/ymxlzgy/FoundAD",
+  "commit": "89ca4dc3709ae517b47eba880a615cb032bcd7aa",
+  "sha256": {
+    "synthesis.py": "014296e700e2783ae8242613e25397ede9248eff7c669d116fc87b1281ec4a59",
+    "train.py": "eeb37ff606109075c7d00742be3aa6aa130366323df309d87abd1319ffa903d6"
+  },
+  "license": "MIT; licenses/FoundAD-LICENSE.txt",
+  "purpose": "Reference only; not imported or executed"
+}

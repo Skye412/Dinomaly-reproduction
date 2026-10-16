@@ -91,11 +91,15 @@ def main(args):
                     train_filter='category == normal', input='full-frame resize to 392x392',
                     validation_selection='max image AUROC; tie-break by pixel AP', test_usage='after training only'), indent=2))
         train = DatasetClass(args.data_path, 'train', normal_only=True, image_size=args.image_size, exclude_samples=exclusions['train'])
+        if args.model_variant == 'v2_paired':
+            from paired_denoising import raw_transform, PairedInput
+            train.transform = raw_transform()
+            pairing = PairedInput()
         val = DatasetClass(args.data_path, 'val', image_size=args.image_size, exclude_samples=exclusions['val'])
         train_loader = DataLoader(train, batch_size=args.batch_size, shuffle=True, drop_last=True, num_workers=4)
         if not len(train_loader):
             raise ValueError('Training loader is empty')
-        if args.model_variant == 'v1_amcm' and args.smoke_steps:
+        if args.model_variant in {'v1_amcm', 'v2_paired'} and args.smoke_steps:
             raise ValueError('V1 is authorized for full runs only; smoke_steps must be zero')
         model, trainable = build_model(args.device, args.model_variant)
         optimizer = StableAdamW([{'params': trainable.parameters()}], lr=2e-3, betas=(0.9,0.999),
@@ -111,7 +115,7 @@ def main(args):
                           added_parameters=sum(p.numel() for p in added.parameters()) if added else 0,
                           trainable_parameters=sum(p.numel() for p in trainable.parameters()),
                           encoder_frozen=not any(p.requires_grad for p in model.encoder.parameters()),
-                          initialization='fresh pretrained encoder; original V0 reconstruction initialization then official AMCM defaults',
+                          initialization='fresh pretrained encoder and V0 reconstruction initialization; AMCM only for v1_amcm',
                           amcm=dict(dim=768, sa_grid_size=5, sa_reduction=2, multiscale_kernels=[5,7,9,11]) if added else None)
         (folder / 'model_info.json').write_text(json.dumps(model_info, indent=2))
         logger.info('Model provenance: %s', model_info)
@@ -127,7 +131,24 @@ def main(args):
             for image, label in train_loader:
                 if label.any():
                     raise RuntimeError('Anomaly label encountered in training')
-                en, de = model(image.to(args.device))
+                if args.model_variant == 'v2_paired':
+                    clean, context, perturbed = pairing(image)
+                    clean = clean.to(args.device)
+                    if perturbed:
+                        # Timing is training instrumentation, not an extra experiment.
+                        torch.cuda.synchronize()
+                        target_start = time.perf_counter()
+                        en = model.target_features(clean)
+                        torch.cuda.synchronize()
+                        pairing.stats['extra_encoder_seconds'] += time.perf_counter() - target_start
+                        pairing.stats['extra_encoder_batches'] += 1
+                        _, de = model(context.to(args.device))
+                    else:
+                        en, de = model(clean)
+                    assert all(not target.requires_grad for target in en)
+                    assert all(target.shape == pred.shape for target, pred in zip(en, de))
+                else:
+                    en, de = model(image.to(args.device))
                 loss = global_cosine_hm_percent(en, de, p=min(0.9 * step / 1000, 0.9), factor=0.1)
                 if not torch.isfinite(loss).item():
                     raise RuntimeError('Non-finite loss at step {}'.format(step + 1))
@@ -145,6 +166,9 @@ def main(args):
                     logger.info('step [%d/%d], loss:%.6f, peak_cuda_gib:%.3f', step, args.total_iters,
                                 loss.item(), torch.cuda.max_memory_allocated() / 1024 ** 3)
                     state(step=step, loss=loss.item())
+                    if args.model_variant == 'v2_paired':
+                        pairing.save(folder / 'paired_stats.json')
+                        logger.info('Paired training: %s', pairing.stats)
                 if args.smoke_steps and step >= args.smoke_steps:
                     indices = [next(i for i, row in enumerate(val.rows) if row['category'] == kind)
                                for kind in ['normal', 'annotated']]
@@ -197,6 +221,9 @@ def main(args):
             best_values, best_cal = final_values, final_cal
         record_metrics(args, best_step, 'test_best_val', best_values)
         summary['test_best_val'] = dict(metrics=dict(zip(METRIC_NAMES,best_values)), calibrated=best_cal)
+        if args.model_variant == 'v2_paired':
+            pairing.save(folder / 'paired_stats.json')
+            summary['paired_training'] = pairing.stats
         summary.update(total_seconds=time.time() - status['started_at'],
                        peak_cuda_allocated_gib=torch.cuda.max_memory_allocated() / 1024 ** 3,
                        peak_cuda_reserved_gib=torch.cuda.max_memory_reserved() / 1024 ** 3)
@@ -218,7 +245,7 @@ if __name__ == '__main__':
     parser.add_argument('--data_path', default='/home/skye/data/Skye/databases/Bridge2893_split_seed42')
     parser.add_argument('--save_dir', default='runs')
     parser.add_argument('--save_name', required=True)
-    parser.add_argument('--model_variant', choices=['v0', 'v1_amcm'], default='v0')
+    parser.add_argument('--model_variant', choices=['v0', 'v1_amcm', 'v2_paired'], default='v0')
     parser.add_argument('--image_size', type=int, choices=[392], default=392)
     parser.add_argument('--dataset_profile', choices=['bridge2893','bridge512_balance','bridge512_balance_repaired','dacl_v3_seed42'], default='bridge2893')
     parser.add_argument('--split_view', choices=['original','deduplicated'], default='original')

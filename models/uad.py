@@ -34,7 +34,7 @@ class ViTill(nn.Module):
             self.encoder.num_register_tokens = 0
         self.mask_neighbor_size = mask_neighbor_size
 
-    def forward(self, x):
+    def encode_tokens(self, x):
         x = self.encoder.prepare_tokens(x)
         en_list = []
         for i, blk in enumerate(self.encoder.blocks):
@@ -48,6 +48,22 @@ class ViTill(nn.Module):
                 continue
             if i in self.target_layers:
                 en_list.append(x)
+        return en_list
+
+    def target_features(self, clean):
+        # Encoder-only clean target: no bottleneck or decoder is executed.
+        with torch.no_grad():
+            tokens = self.encode_tokens(clean)
+            side = int(math.sqrt(tokens[0].shape[1] - 1 - self.encoder.num_register_tokens))
+            groups = [self.fuse_feature([tokens[i] for i in indices])
+                      for indices in self.fuse_layer_encoder]
+            if not self.remove_class_token:
+                groups = [g[:, 1 + self.encoder.num_register_tokens:] for g in groups]
+            return [g.transpose(1, 2).reshape(clean.shape[0], -1, side, side).contiguous().detach()
+                    for g in groups]
+
+    def forward(self, x):
+        en_list = self.encode_tokens(x)
         side = int(math.sqrt(en_list[0].shape[1] - 1 - self.encoder.num_register_tokens))
 
         if self.remove_class_token:
