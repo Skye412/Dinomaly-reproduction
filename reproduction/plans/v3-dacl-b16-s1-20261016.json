@@ -1,0 +1,88 @@
+{
+  "run_id": "v3-dacl-b16-s1-20261016",
+  "version": "V3 opt-in Dinomaly improvement; code-only publication, training not launched",
+  "status": "code_ready_not_launched",
+  "datasets": [
+    "bridge512_balance_repaired",
+    "dacl_v3_seed42"
+  ],
+  "seed": 1,
+  "intended_changes": [
+    "448 full-frame input",
+    "context-aware recentering by same-layer CLS, excluding registers",
+    "normal-only geometric training augmentation",
+    "validation top-z selection 0.1/0.25/0.5/1 percent",
+    "validation normal-image FPR=10 percent threshold",
+    "fp16 frozen encoder opt-in with fp32 reconstruction/loss",
+    "numerical failure diagnostics"
+  ],
+  "unchanged": [
+    "DINOv2-registers ViT-B/14",
+    "original bottleneck and decoder",
+    "StableAdamW AMSGrad",
+    "loss and clipping",
+    "10000 steps",
+    "batch16",
+    "validation every 2000",
+    "checkpoint every 1000",
+    "frozen benchmark manifests"
+  ],
+  "flags": "--model_variant v3 --image_size 448 --context_recenter --train_augment --encoder_fp16 --fp32_reconstruction --v3_evaluation",
+  "evaluation": "V3 evaluator reports z candidates, validation-selected checkpoint/z, FPR10 and legacy validation-F1 thresholds, 256 metrics, pixel prevalence and stratified image bootstrap CI; no test selection",
+  "training": {
+    "normal_images": 413,
+    "normal_only": true,
+    "batch_size": 16,
+    "seed": 1,
+    "optimizer_steps": 10000,
+    "drop_last": true,
+    "optimizer": "StableAdamW AMSGrad",
+    "learning_rate": 0.002,
+    "final_learning_rate": 0.0002,
+    "warmup_steps": 100,
+    "weight_decay": 0.0001,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-10,
+    "bottleneck_dropout": 0.2,
+    "gradient_clip_norm": 0.1,
+    "loss": "unchanged global_cosine_hm_percent; p=min(0.9*step/1000,0.9), factor=0.1"
+  },
+  "ssh_host": "skye-cong",
+  "server_repo": "/home/skye/data/Skye/Dinomaly",
+  "source_plan": "Dinomaly 桥梁缺陷检测改进方案（V3–Final）.md",
+  "dataset": "dacl_v3_seed42",
+  "dataset_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42",
+  "manifest_sha256": {
+    "train": "2e8ada7e96fbc098e248c46cebdb83d189698c0b8b77bf487dae43a258ba4c43",
+    "val": "2fdcc2fe375325f28c2ec024fb883504fe5737f76496766d7376965f8fa6202f",
+    "test": "455ee1ee784410cbbe51409fc25e503b60f44f147421c0204206adf43d5dd279"
+  },
+  "validation": {
+    "normal": 103,
+    "anomaly": 1284,
+    "interval_steps": 2000,
+    "checkpoint_selection": "max joint checkpoint/z image AUROC; tie pixel AP; exact ties retain earliest checkpoint and first z",
+    "threshold_selection": "maximum validation image F1 per corresponding checkpoint",
+    "z_candidates": [
+      0.001,
+      0.0025,
+      0.005,
+      0.01
+    ],
+    "primary_threshold": "np.percentile(normal validation scores,90); >=; report actual FPR",
+    "legacy_threshold": "validation maximum F1"
+  },
+  "test": {
+    "normal": 55,
+    "anomaly": 920,
+    "usage": "after complete training, best validation checkpoint and reference final",
+    "selection_on_test": false
+  },
+  "retention_rule": "Human review after both full runs: validation Image AUROC and Pixel AP non-decreasing on both datasets and at least one clear improvement; clear-improvement magnitude not specified by proposal, no automatic promote/rollback",
+  "no_auto_launch": true,
+  "protocol_note": "Compare 448 and 392 as bundled changed protocol, not a matched single-component claim; unified re-evaluation required for z/FPR/native512 comparison",
+  "command": "/home/skye/miniconda3/envs/dinomaly/bin/python -u dinomaly_bridge.py --data_path /home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42 --dataset_profile dacl_v3_seed42 --save_name v3-dacl-b16-s1-20261016 --model_variant v3 --image_size 448 --context_recenter --train_augment --encoder_fp16 --fp32_reconstruction --v3_evaluation --v3_native_512 --batch_size 16 --seed 1 --total_iters 10000 --eval_interval 2000 --checkpoint_interval 1000"
+}

@@ -5,6 +5,7 @@ import torch.nn.functional as F
 from torch.nn.modules.batchnorm import _BatchNorm
 from sklearn.cluster import KMeans
 import math
+from contextlib import nullcontext
 
 
 class ViTill(nn.Module):
@@ -32,9 +33,29 @@ class ViTill(nn.Module):
 
         if not hasattr(self.encoder, 'num_register_tokens'):
             self.encoder.num_register_tokens = 0
+        self.context_recenter = False
+        self.encoder_fp16 = False
+        self.reconstruction_fp32 = False
         self.mask_neighbor_size = mask_neighbor_size
 
     def encode_tokens(self, x):
+        enabled = self.encoder_fp16 and x.is_cuda
+        with torch.cuda.amp.autocast(enabled=True, dtype=torch.float16) if enabled else nullcontext():
+            if self.encoder_fp16:
+                with torch.no_grad():
+                    features = self._encode_tokens(x)
+            else:
+                features = self._encode_tokens(x)
+        if self.reconstruction_fp32:
+            features = [feature.float() for feature in features]
+        if self.context_recenter:
+            assert not self.encoder_require_grad_layer, 'Recentering expects frozen encoder'
+            prefix = 1 + self.encoder.num_register_tokens
+            features = [torch.cat((f[:, :prefix], f[:, prefix:] - f[:, :1]), dim=1)
+                        for f in features]
+        return features
+
+    def _encode_tokens(self, x):
         x = self.encoder.prepare_tokens(x)
         en_list = []
         for i, blk in enumerate(self.encoder.blocks):

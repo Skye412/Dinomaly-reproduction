@@ -13,7 +13,7 @@ from dataset import get_data_transforms
 
 
 class BridgeDataset(Dataset):
-    def __init__(self, root, split, normal_only=False, image_size=392, exclude_samples=()):
+    def __init__(self, root, split, normal_only=False, image_size=392, exclude_samples=(), mask_size=None):
         self.root = Path(root)
         self.split = split
         self.normal_only = normal_only
@@ -27,7 +27,10 @@ class BridgeDataset(Dataset):
             raise ValueError('Excluded sample is not in the manifest')
         rows = [r for r in rows if r['sample'] not in exclude_samples]
         self.rows = [r for r in rows if r['category'] == 'normal'] if normal_only else rows
-        self.transform, self.mask_transform = get_data_transforms(image_size, 392)
+        self.transform, self.mask_transform = get_data_transforms(image_size, image_size)
+        if mask_size is not None:
+            _, self.mask_transform = get_data_transforms(mask_size, mask_size)
+        self.mask_size = mask_size or image_size
         for r in self.rows:
             if not (self.root / split / r['image_path']).is_file():
                 raise FileNotFoundError(r['image_path'])
@@ -59,7 +62,7 @@ class BridgeDataset(Dataset):
                 foreground = np.any(np.asarray(mask.convert('RGB')) != 0, axis=2)
                 mask = self.mask_transform(Image.fromarray(foreground.astype('uint8') * 255))
         else:
-            mask = torch.zeros(1, 392, 392)
+            mask = torch.zeros(1, self.mask_size, self.mask_size)
         return image, mask, label, str(path)
 
 

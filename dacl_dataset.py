@@ -23,9 +23,12 @@ def damage_mask(annotation):
 
 
 class DaclDataset(Dataset):
-    def __init__(self, root, split, normal_only=False, image_size=392, exclude_samples=()):
+    def __init__(self, root, split, normal_only=False, image_size=392, exclude_samples=(), mask_size=None):
         self.root, self.split, self.normal_only = Path(root), split, normal_only
-        self.transform, self.mask_transform = get_data_transforms(image_size, 392)
+        self.transform, self.mask_transform = get_data_transforms(image_size, image_size)
+        if mask_size is not None:
+            _, self.mask_transform = get_data_transforms(mask_size, mask_size)
+        self.mask_size = mask_size or image_size
         with (self.root/(split+'_manifest.csv')).open(newline='') as f:
             rows = list(csv.DictReader(f))
         for row in rows:
@@ -72,5 +75,5 @@ class DaclDataset(Dataset):
                 raise ValueError('DACL polygon labels changed since manifest creation')
             mask = self.mask_transform(damage_mask(annotation))
         else:
-            mask = torch.zeros(1,392,392)
+            mask = torch.zeros(1,self.mask_size,self.mask_size)
         return image, mask, label, str(path)

@@ -9,7 +9,7 @@ from sklearn.metrics import roc_auc_score, average_precision_score, precision_re
 from utils import cal_anomaly_maps, get_gaussian_kernel, compute_pro, f1_score_max
 
 
-def evaluate(model, loader, device, output_csv, threshold=None):
+def evaluate(model, loader, device, output_csv, threshold=None, top_fraction=0.01, return_scores=False, metric_size=256):
     model.eval()
     masks, maps, labels, scores, paths = [], [], [], [], []
     kernel = get_gaussian_kernel(kernel_size=5, sigma=4).to(device)
@@ -17,10 +17,10 @@ def evaluate(model, loader, device, output_csv, threshold=None):
         for image, gt, label, names in loader:
             en, de = model(image.to(device))
             amap, _ = cal_anomaly_maps(en, de, image.shape[-1])
-            amap = F.interpolate(amap, size=256, mode='bilinear', align_corners=False)
-            gt = F.interpolate(gt, size=256, mode='nearest').bool()
+            amap = F.interpolate(amap, size=metric_size, mode='bilinear', align_corners=False)
+            gt = F.interpolate(gt, size=metric_size, mode='nearest').bool()
             amap = kernel(amap)
-            score = torch.sort(amap.flatten(1), dim=1, descending=True)[0][:, :int(256 * 256 * 0.01)].mean(1)
+            score = torch.sort(amap.flatten(1), dim=1, descending=True)[0][:, :max(1, int(metric_size * metric_size * top_fraction))].mean(1)
             masks.append(gt[:, 0].cpu().numpy())
             maps.append(amap[:, 0].cpu().numpy())
             labels.extend(label.tolist())
@@ -54,4 +54,6 @@ def evaluate(model, loader, device, output_csv, threshold=None):
         writer = csv.writer(f)
         writer.writerow(['image_path', 'label', 'score', 'prediction_at_validation_threshold'])
         writer.writerows(zip(paths, y.tolist(), s.tolist(), predictions.astype(int).tolist()))
+    if return_scores:
+        return metrics, calibrated, y, s, gt, pr
     return metrics, calibrated

@@ -38,6 +38,9 @@ def record_run(args, encoder_name):
                   cuda_runtime=torch.version.cuda,
                   gpu=torch.cuda.get_device_name(torch.device(args.device)) if args.device.startswith('cuda') else None,
                   mask_binarization='gt > 0', pixel_metric_resolution=256)
+    if getattr(args, 'model_variant', None) == 'v3':
+        config.update(crop=args.image_size, spatial_crop='none in evaluation; opt-in RRC in training',
+                      metric_mask_path='historical 392-to-256; optional native512 supplementary')
     config['git_commit'] = subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip()
     config['git_dirty'] = bool(subprocess.check_output(['git', 'status', '--porcelain'], text=True).strip())
     (folder / 'config.json').write_text(json.dumps(config, indent=2), encoding='utf-8')

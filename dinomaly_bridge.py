@@ -73,9 +73,15 @@ def main(args):
             logger.info('GPU startup: %s', event)
             state(**event)
         lock = acquire_gpu_lock(Path(args.save_dir) / 'gpu0.lock', gpu_event,
-                                minimum_free_mib=14500 if args.model_variant in {'v1_amcm', 'v2_paired'} else 12288)
+                                minimum_free_mib=14500 if args.model_variant in {'v1_amcm', 'v2_paired', 'v3'} else 12288)
         state(state='running', started_at=time.time())
         setup_seed(args.seed)
+        if args.encoder_fp16 and not args.fp32_reconstruction:
+            raise ValueError('encoder_fp16 requires fp32_reconstruction')
+        if args.v3_evaluation and args.bootstrap_samples <= 0:
+            raise ValueError('bootstrap_samples must be positive')
+        if args.model_variant == 'v2_paired' and (args.train_augment or args.image_size != 392):
+            raise ValueError('V2 paired implementation requires its original 392 raw transform')
         protocol = check_split_protocol(args.data_path, args.dataset_profile, args.split_view)
         _, exclusions, _ = load_profile(args.dataset_profile, args.split_view)
         DatasetClass = dataset_class(args.dataset_profile)
@@ -88,20 +94,31 @@ def main(args):
                     training_samples=protocol['train']['categories']['normal'],
                     mask_conversion=('union of 14 native-resolution damage polygons; exclude five object labels'
                                      if args.dataset_profile == 'dacl_v3_seed42' else 'union of nonzero RGB pixels before resizing'),
-                    train_filter='category == normal', input='full-frame resize to 392x392',
+                    train_filter='category == normal', input='full-frame resize to {}x{}'.format(args.image_size, args.image_size),
                     validation_selection='max image AUROC; tie-break by pixel AP', test_usage='after training only'), indent=2))
         train = DatasetClass(args.data_path, 'train', normal_only=True, image_size=args.image_size, exclude_samples=exclusions['train'])
+        if args.train_augment:
+            from v3_components import training_transform
+            train.transform = training_transform(args.image_size)
         if args.model_variant == 'v2_paired':
             from paired_denoising import raw_transform, PairedInput, IndexedTrainingDataset
             train.transform = raw_transform()
             pairing = PairedInput(folder, logger)
-        val = DatasetClass(args.data_path, 'val', image_size=args.image_size, exclude_samples=exclusions['val'])
-        train_loader = DataLoader(IndexedTrainingDataset(train) if args.model_variant == 'v2_paired' else train, batch_size=args.batch_size, shuffle=True, drop_last=True, num_workers=4)
+        if args.model_variant == 'v3':
+            from paired_denoising import IndexedTrainingDataset
+        val = DatasetClass(args.data_path, 'val', image_size=args.image_size, exclude_samples=exclusions['val'], **({'mask_size': 392} if args.v3_evaluation else {}))
+        train_loader = DataLoader(IndexedTrainingDataset(train) if args.model_variant in {'v2_paired', 'v3'} else train, batch_size=args.batch_size, shuffle=True, drop_last=True, num_workers=4)
         if not len(train_loader):
             raise ValueError('Training loader is empty')
-        if args.model_variant in {'v1_amcm', 'v2_paired'} and args.smoke_steps:
+        if args.model_variant in {'v1_amcm', 'v2_paired', 'v3'} and args.smoke_steps:
             raise ValueError('V1 is authorized for full runs only; smoke_steps must be zero')
         model, trainable = build_model(args.device, args.model_variant)
+        model.context_recenter = args.context_recenter
+        model.encoder_fp16 = args.encoder_fp16
+        model.reconstruction_fp32 = args.fp32_reconstruction
+        if args.v3_evaluation:
+            from v3_evaluation import V3Evaluator
+            v3_evaluator = V3Evaluator(args, folder)
         optimizer = StableAdamW([{'params': trainable.parameters()}], lr=2e-3, betas=(0.9,0.999),
                                 weight_decay=1e-4, amsgrad=True, eps=1e-10)
         scheduler = WarmCosineScheduler(optimizer, base_value=2e-3, final_value=2e-4,
@@ -117,6 +134,11 @@ def main(args):
                           encoder_frozen=not any(p.requires_grad for p in model.encoder.parameters()),
                           initialization='fresh pretrained encoder and V0 reconstruction initialization; AMCM only for v1_amcm',
                           amcm=dict(dim=768, sa_grid_size=5, sa_reduction=2, multiscale_kernels=[5,7,9,11]) if added else None)
+        if args.model_variant == 'v3':
+            model_info['v3'] = dict(context_recenter=args.context_recenter, encoder_fp16=args.encoder_fp16,
+                fp32_reconstruction=args.fp32_reconstruction, train_augment=args.train_augment,
+                input_size=args.image_size, z_candidates=[0.001,0.0025,0.005,0.01] if args.v3_evaluation else [0.01],
+                hard_mining='Existing V0 p=min(0.9*zero_based_step/1000,0.9); low-loss gradients scaled by 0.1, not removed')
         (folder / 'model_info.json').write_text(json.dumps(model_info, indent=2))
         logger.info('Model provenance: %s', model_info)
         torch.cuda.reset_peak_memory_stats()
@@ -126,6 +148,7 @@ def main(args):
         best_step, best_threshold = 0, None
         last_threshold = None
         step = 0
+        last_gradient_norm = None
         while step < args.total_iters:
             model.train()
             for training_batch in train_loader:
@@ -154,6 +177,10 @@ def main(args):
                     en, de = model(image.to(args.device))
                 loss = global_cosine_hm_percent(en, de, p=min(0.9 * step / 1000, 0.9), factor=0.1)
                 if not torch.isfinite(loss).item():
+                    if args.model_variant == 'v3':
+                        from v3_diagnostics import save_failure
+                        save_failure(folder, train, training_batch, image, en, de, optimizer, step + 1, last_gradient_norm)
+                        save_checkpoint(args, model, optimizer, scheduler, step, 'failure.pth')
                     raise RuntimeError('Non-finite loss at step {}'.format(step + 1))
                 optimizer.zero_grad()
                 loss.backward()
@@ -161,7 +188,13 @@ def main(args):
                     assert all(p.grad is not None for p in added.parameters() if p.requires_grad), 'AMCM missing gradients'
                 grad_norm = nn.utils.clip_grad_norm_(trainable.parameters(), max_norm=0.1)
                 if not torch.isfinite(grad_norm).item():
+                    if args.model_variant == 'v3':
+                        from v3_diagnostics import save_failure
+                        save_failure(folder, train, training_batch, image, en, de, optimizer, step + 1, float(grad_norm))
+                        save_checkpoint(args, model, optimizer, scheduler, step, 'failure.pth')
                     raise RuntimeError('Non-finite gradient norm at step {}'.format(step + 1))
+                if args.model_variant == 'v3':
+                    last_gradient_norm = float(grad_norm)
                 optimizer.step()
                 scheduler.step()
                 step += 1
@@ -189,8 +222,11 @@ def main(args):
                 if step % args.checkpoint_interval == 0:
                     save_checkpoint(args, model, optimizer, scheduler, step)
                 if step % args.eval_interval == 0 or step == args.total_iters:
-                    values, calibrated = evaluate(model, DataLoader(val, batch_size=args.batch_size, num_workers=4),
-                                                   args.device, folder / ('val_scores_{}.csv'.format(step)))
+                    if args.v3_evaluation:
+                        values, calibrated = v3_evaluator.validation(model, DataLoader(val, batch_size=args.batch_size, num_workers=4), step)
+                    else:
+                        values, calibrated = evaluate(model, DataLoader(val, batch_size=args.batch_size, num_workers=4),
+                                                       args.device, folder / ('val_scores_{}.csv'.format(step)))
                     record_metrics(args, step, 'val', values)
                     last_threshold = calibrated['threshold']
                     key = (values[0], values[4])
@@ -205,25 +241,35 @@ def main(args):
                 if step == args.total_iters:
                     break
         save_checkpoint(args, model, optimizer, scheduler, step, 'final.pth')
-        test = DatasetClass(args.data_path, 'test', image_size=args.image_size, exclude_samples=exclusions['test'])
+        test = DatasetClass(args.data_path, 'test', image_size=args.image_size, exclude_samples=exclusions['test'], **({'mask_size': 392} if args.v3_evaluation else {}))
         test_loader = DataLoader(test, batch_size=args.batch_size, num_workers=4)
         training_finished_at = time.time()
         summary = dict(best_validation_step=best_step, final_step=step, model_info=model_info,
                        training_seconds=training_finished_at - status['started_at'],
                        peak_cuda_allocated_gib=torch.cuda.max_memory_allocated() / 1024 ** 3,
                        peak_cuda_reserved_gib=torch.cuda.max_memory_reserved() / 1024 ** 3)
-        final_values, final_cal = evaluate(model, test_loader, args.device, folder / 'test_final_scores.csv', last_threshold)
+        if args.v3_evaluation:
+            final_values, final_cal = v3_evaluator.test(model, test_loader, 'final', step)
+        else:
+            final_values, final_cal = evaluate(model, test_loader, args.device, folder / 'test_final_scores.csv', last_threshold)
         record_metrics(args, step, 'test_final', final_values)
         summary['test_final'] = dict(metrics=dict(zip(METRIC_NAMES,final_values)), calibrated=final_cal)
         if best_step != step:
             checkpoint = torch.load(folder / 'best_val.pth', map_location='cpu')
             model.load_state_dict(checkpoint['model'])
             del checkpoint
-            best_values, best_cal = evaluate(model, test_loader, args.device, folder / 'test_best_val_scores.csv', best_threshold)
+            if args.v3_evaluation:
+                best_values, best_cal = v3_evaluator.test(model, test_loader, 'best_val', best_step)
+            else:
+                best_values, best_cal = evaluate(model, test_loader, args.device, folder / 'test_best_val_scores.csv', best_threshold)
         else:
             best_values, best_cal = final_values, final_cal
         record_metrics(args, best_step, 'test_best_val', best_values)
         summary['test_best_val'] = dict(metrics=dict(zip(METRIC_NAMES,best_values)), calibrated=best_cal)
+        if args.v3_evaluation and args.v3_native_512:
+            native_test = DatasetClass(args.data_path, 'test', image_size=args.image_size,
+                                      exclude_samples=exclusions['test'], mask_size=512)
+            v3_evaluator.native_test(model, DataLoader(native_test, batch_size=args.batch_size, num_workers=4), best_step)
         if args.model_variant == 'v2_paired':
             pairing.save(folder / 'paired_stats.json')
             summary['paired_training'] = pairing.stats
@@ -248,8 +294,15 @@ if __name__ == '__main__':
     parser.add_argument('--data_path', default='/home/skye/data/Skye/databases/Bridge2893_split_seed42')
     parser.add_argument('--save_dir', default='runs')
     parser.add_argument('--save_name', required=True)
-    parser.add_argument('--model_variant', choices=['v0', 'v1_amcm', 'v2_paired'], default='v0')
-    parser.add_argument('--image_size', type=int, choices=[392], default=392)
+    parser.add_argument('--model_variant', choices=['v0', 'v1_amcm', 'v2_paired', 'v3'], default='v0')
+    parser.add_argument('--image_size', type=int, choices=[392,448], default=392)
+    parser.add_argument('--context_recenter', action='store_true')
+    parser.add_argument('--train_augment', action='store_true')
+    parser.add_argument('--encoder_fp16', action='store_true')
+    parser.add_argument('--fp32_reconstruction', action='store_true')
+    parser.add_argument('--v3_evaluation', action='store_true')
+    parser.add_argument('--v3_native_512', action='store_true')
+    parser.add_argument('--bootstrap_samples', type=int, default=2000)
     parser.add_argument('--dataset_profile', choices=['bridge2893','bridge512_balance','bridge512_balance_repaired','dacl_v3_seed42'], default='bridge2893')
     parser.add_argument('--split_view', choices=['original','deduplicated'], default='original')
     add_arguments(parser)
