@@ -1,0 +1,19 @@
+{
+  "protocol": "v3_shared_z_fpr_256_v2",
+  "datasets": [
+    "bridge512_balance_repaired",
+    "dacl_v3_seed42"
+  ],
+  "checkpoint": "frozen V0 best_val step10000",
+  "z_candidates": [
+    0.001,
+    0.0025,
+    0.005,
+    0.01,
+    0.02,
+    0.05,
+    0.1
+  ],
+  "purpose": "replace prelaunch V0 reference for V3 retention; evaluation only; no training",
+  "output": "runs/v3-prelaunch-20261017-zgrid-v2/v0-{dataset}"
+}

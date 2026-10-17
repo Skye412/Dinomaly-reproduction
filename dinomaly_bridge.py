@@ -143,7 +143,7 @@ def main(args):
         if args.model_variant == 'v3':
             model_info['v3'] = dict(context_recenter=args.context_recenter, encoder_fp16=args.encoder_fp16,
                 fp32_reconstruction=args.fp32_reconstruction, train_augment=args.train_augment,
-                input_size=args.image_size, z_candidates=[0.001,0.0025,0.005,0.01] if args.v3_evaluation else [0.01],
+                input_size=args.image_size, z_candidates=[0.001,0.0025,0.005,0.01,0.02,0.05,0.10] if args.v3_evaluation else [0.01],
                 hard_mining='Existing V0 p=min(0.9*zero_based_step/1000,0.9); low-loss gradients scaled by 0.1, not removed')
         (folder / 'model_info.json').write_text(json.dumps(model_info, indent=2))
         logger.info('Model provenance: %s', model_info)

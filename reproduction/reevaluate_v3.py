@@ -22,7 +22,7 @@ def paired_comparison(reference_csv, candidate_csv, repeats, seed):
     if reference_csv.name != 'test_best_val_scores.csv' or not provenance_path.is_file():
         raise ValueError('Use shared-protocol V0 reevaluation/test_best_val_scores.csv, not historical CSV')
     provenance = json.loads(provenance_path.read_text(encoding='utf-8'))
-    if provenance.get('protocol') != 'v3_shared_z_fpr_256_v1':
+    if provenance.get('protocol') != 'v3_shared_z_fpr_256_v2':
         raise ValueError('Reference was not produced by shared V3 reevaluation protocol')
     if provenance.get('original_config', {}).get('model_variant', 'v0') != 'v0':
         raise ValueError('Paired reference must be reevaluated V0')
@@ -78,7 +78,7 @@ def main():
                           batch_size=config['batch_size'], num_workers=4)
     evaluator.validation(model, loader('val',392), step)
     metrics, calibrated = evaluator.test(model, loader('test',392), 'best_val', step)
-    report = dict(protocol='v3_shared_z_fpr_256_v1',
+    report = dict(protocol='v3_shared_z_fpr_256_v2',
                   validation_selection=evaluator.selections[step], original_config=config, checkpoint=str(args.checkpoint.resolve()), step=step,
                   metrics=metrics, calibrated=calibrated,
                   note='Fixed supplied checkpoint; z/thresholds calibrated only on validation; no training')

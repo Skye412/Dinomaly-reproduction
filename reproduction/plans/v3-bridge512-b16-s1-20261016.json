@@ -11,10 +11,10 @@
     "448 full-frame input",
     "context-aware recentering by same-layer CLS, excluding registers",
     "normal-only geometric training augmentation",
-    "validation top-z selection 0.1/0.25/0.5/1 percent",
     "validation normal-image FPR=10 percent threshold",
     "numerical failure diagnostics",
-    "FP32 encoder, recentering, reconstruction and loss"
+    "FP32 encoder, recentering, reconstruction and loss",
+    "validation top-z selection 0.1/0.25/0.5/1/2/5/10 percent"
   ],
   "unchanged": [
     "DINOv2-registers ViT-B/14",
@@ -70,7 +70,10 @@
       0.001,
       0.0025,
       0.005,
-      0.01
+      0.01,
+      0.02,
+      0.05,
+      0.1
     ],
     "primary_threshold": "np.percentile(normal validation scores,90); >=; report actual FPR",
     "legacy_threshold": "validation maximum F1"
@@ -82,7 +85,7 @@
     "selection_on_test": false
   },
   "retention_rule": {
-    "reference": "V0 best_val checkpoint reevaluated with reproduction/reevaluate_v3.py; same four validation z candidates, mask path and FPR/F1 calibration",
+    "reference": "V0 best_val checkpoint reevaluated with reproduction/reevaluate_v3.py; same seven validation z candidates, mask path and FPR/F1 calibration",
     "metrics": [
       "image_auroc",
       "pixel_ap"
@@ -108,5 +111,6 @@
   ],
   "smoke_command": "/home/skye/miniconda3/envs/dinomaly/bin/python -u dinomaly_bridge.py --data_path /home/skye/data/Skye/databases/Bridge512_balance --dataset_profile bridge512_balance_repaired --save_name v3-bridge512-b16-s1-20261016-smoke50 --model_variant v3 --image_size 448 --context_recenter --train_augment --v3_evaluation --batch_size 16 --seed 1 --total_iters 10000 --eval_interval 2000 --checkpoint_interval 1000 --smoke_steps 50",
   "native512_policy": "Separate post-training reproduction/reevaluate_v3.py --native_512 output directory; failure must not change completed training status/summary",
-  "paired_reference_policy": "Use reevaluated V0 output/test_best_val_scores.csv and its reevaluation.json provenance; original V0 CSV is not a valid paired reference"
+  "paired_reference_policy": "Use reevaluated V0 output/test_best_val_scores.csv and its reevaluation.json provenance; original V0 CSV is not a valid paired reference",
+  "z_grid_version": "v3_shared_z_fpr_256_v2"
 }

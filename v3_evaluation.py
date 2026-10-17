@@ -40,14 +40,14 @@ def bootstrap_auc(y, scores, repeats=2000, seed=1, baseline=None):
 
 
 class V3Evaluator:
-    fractions = (0.001, 0.0025, 0.005, 0.01)
+    fractions = (0.001, 0.0025, 0.005, 0.01, 0.02, 0.05, 0.10)
 
     def __init__(self, args, folder):
         self.args, self.folder = args, folder
         self.selections = {}
 
     def validation(self, model, loader, step):
-        # One model pass. Pixel maps/metrics shared by all z; never four forwards.
+        # One model pass. Pixel maps/metrics shared by all z; never one forward per fraction.
         metrics, _, y, _, gt, maps = evaluate(model, loader, self.args.device,
             self.folder / ('val_scores_{}.csv'.format(step)), return_scores=True)
         original_rows = list(csv.DictReader((self.folder / ('val_scores_{}.csv'.format(step))).open()))
