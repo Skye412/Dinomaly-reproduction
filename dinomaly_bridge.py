@@ -76,6 +76,12 @@ def main(args):
                                 minimum_free_mib=14500 if args.model_variant in {'v1_amcm', 'v2_paired', 'v3'} else 12288)
         state(state='running', started_at=time.time())
         setup_seed(args.seed)
+        if args.model_variant == 'v3' and not args.v3_evaluation:
+            raise ValueError('model_variant v3 requires --v3_evaluation (historical 392-to-256 masks)')
+        if args.model_variant == 'v3' and args.encoder_fp16:
+            raise ValueError('V3 requires FP32 encoder/recentering; omit --encoder_fp16')
+        if args.v3_native_512:
+            raise ValueError('Native 512 evaluation is post-training only: use reproduction/reevaluate_v3.py --native_512')
         if args.encoder_fp16 and not args.fp32_reconstruction:
             raise ValueError('encoder_fp16 requires fp32_reconstruction')
         if args.v3_evaluation and args.bootstrap_samples <= 0:
@@ -110,8 +116,8 @@ def main(args):
         train_loader = DataLoader(IndexedTrainingDataset(train) if args.model_variant in {'v2_paired', 'v3'} else train, batch_size=args.batch_size, shuffle=True, drop_last=True, num_workers=4)
         if not len(train_loader):
             raise ValueError('Training loader is empty')
-        if args.model_variant in {'v1_amcm', 'v2_paired', 'v3'} and args.smoke_steps:
-            raise ValueError('V1 is authorized for full runs only; smoke_steps must be zero')
+        if args.model_variant in {'v1_amcm', 'v2_paired'} and args.smoke_steps:
+            raise ValueError('V1/V2 are authorized for full runs only; smoke_steps must be zero')
         model, trainable = build_model(args.device, args.model_variant)
         model.context_recenter = args.context_recenter
         model.encoder_fp16 = args.encoder_fp16
@@ -217,7 +223,9 @@ def main(args):
                         raise RuntimeError('Checkpoint roundtrip failed')
                     del checkpoint
                     logger.info('Smoke passed: steps=%d, validation pipeline and checkpoint verified', step)
-                    state(state='completed', step=step, smoke_calibration=calibrated)
+                    state(state='completed', step=step, smoke_calibration=calibrated,
+                          peak_cuda_allocated_gib=torch.cuda.max_memory_allocated() / 1024 ** 3,
+                          experiment_result=False)
                     return
                 if step % args.checkpoint_interval == 0:
                     save_checkpoint(args, model, optimizer, scheduler, step)
@@ -266,10 +274,6 @@ def main(args):
             best_values, best_cal = final_values, final_cal
         record_metrics(args, best_step, 'test_best_val', best_values)
         summary['test_best_val'] = dict(metrics=dict(zip(METRIC_NAMES,best_values)), calibrated=best_cal)
-        if args.v3_evaluation and args.v3_native_512:
-            native_test = DatasetClass(args.data_path, 'test', image_size=args.image_size,
-                                      exclude_samples=exclusions['test'], mask_size=512)
-            v3_evaluator.native_test(model, DataLoader(native_test, batch_size=args.batch_size, num_workers=4), best_step)
         if args.model_variant == 'v2_paired':
             pairing.save(folder / 'paired_stats.json')
             summary['paired_training'] = pairing.stats

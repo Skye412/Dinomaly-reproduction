@@ -17,6 +17,15 @@ import csv
 
 
 def paired_comparison(reference_csv, candidate_csv, repeats, seed):
+    reference_csv = Path(reference_csv)
+    provenance_path = reference_csv.parent / 'reevaluation.json'
+    if reference_csv.name != 'test_best_val_scores.csv' or not provenance_path.is_file():
+        raise ValueError('Use shared-protocol V0 reevaluation/test_best_val_scores.csv, not historical CSV')
+    provenance = json.loads(provenance_path.read_text(encoding='utf-8'))
+    if provenance.get('protocol') != 'v3_shared_z_fpr_256_v1':
+        raise ValueError('Reference was not produced by shared V3 reevaluation protocol')
+    if provenance.get('original_config', {}).get('model_variant', 'v0') != 'v0':
+        raise ValueError('Paired reference must be reevaluated V0')
     def rows(path):
         records = list(csv.DictReader(Path(path).open(newline='')))
         # Native recorded paths must match. No basename-based guesses or dropped rows.
@@ -47,7 +56,7 @@ def main():
     args = parser.parse_args()
     if args.output.exists():
         raise ValueError('Use a new output directory; original results must remain untouched')
-    config = json.loads(args.config.read_text())
+    config = json.loads(args.config.read_text(encoding='utf-8'))
     if args.bootstrap_samples <= 0:
         raise ValueError('bootstrap_samples must be positive')
     check_split_protocol(config['data_path'], config['dataset_profile'], config.get('split_view','original'))
@@ -69,15 +78,16 @@ def main():
                           batch_size=config['batch_size'], num_workers=4)
     evaluator.validation(model, loader('val',392), step)
     metrics, calibrated = evaluator.test(model, loader('test',392), 'best_val', step)
-    report = dict(original_config=config, checkpoint=str(args.checkpoint.resolve()), step=step,
+    report = dict(protocol='v3_shared_z_fpr_256_v1',
+                  validation_selection=evaluator.selections[step], original_config=config, checkpoint=str(args.checkpoint.resolve()), step=step,
                   metrics=metrics, calibrated=calibrated,
                   note='Fixed supplied checkpoint; z/thresholds calibrated only on validation; no training')
     if args.paired_reference_csv:
         report['paired_auc_delta_ci95'] = paired_comparison(args.paired_reference_csv,
             args.output / 'test_best_val_scores.csv', args.bootstrap_samples, args.seed)
+    (args.output/'reevaluation.json').write_text(json.dumps(report,indent=2), encoding='utf-8')
     if args.native_512:
         evaluator.native_test(model, loader('test',512), step)
-    (args.output/'reevaluation.json').write_text(json.dumps(report,indent=2))
 
 
 if __name__ == '__main__':

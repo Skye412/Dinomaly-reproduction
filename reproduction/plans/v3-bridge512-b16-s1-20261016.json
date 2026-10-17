@@ -13,8 +13,8 @@
     "normal-only geometric training augmentation",
     "validation top-z selection 0.1/0.25/0.5/1 percent",
     "validation normal-image FPR=10 percent threshold",
-    "fp16 frozen encoder opt-in with fp32 reconstruction/loss",
-    "numerical failure diagnostics"
+    "numerical failure diagnostics",
+    "FP32 encoder, recentering, reconstruction and loss"
   ],
   "unchanged": [
     "DINOv2-registers ViT-B/14",
@@ -27,7 +27,7 @@
     "checkpoint every 1000",
     "frozen benchmark manifests"
   ],
-  "flags": "--model_variant v3 --image_size 448 --context_recenter --train_augment --encoder_fp16 --fp32_reconstruction --v3_evaluation",
+  "flags": "--model_variant v3 --image_size 448 --context_recenter --train_augment --v3_evaluation",
   "evaluation": "V3 evaluator reports z candidates, validation-selected checkpoint/z, FPR10 and legacy validation-F1 thresholds, 256 metrics, pixel prevalence and stratified image bootstrap CI; no test selection",
   "training": {
     "normal_images": 2211,
@@ -52,7 +52,7 @@
   },
   "ssh_host": "skye-cong",
   "server_repo": "/home/skye/data/Skye/Dinomaly",
-  "source_plan": "Dinomaly «≈¡∫»±œ›ºÏ≤‚∏ƒΩ¯∑Ω∞∏£®V3®CFinal£©.md",
+  "source_plan": "Dinomaly Ê°•Ê¢ÅÁº∫Èô∑Ê£ÄÊµãÊîπËøõÊñπÊ°àÔºàV3‚ÄìFinalÔºâ.md",
   "dataset": "bridge512_balance_repaired",
   "dataset_path": "/home/skye/data/Skye/databases/Bridge512_balance",
   "manifest_sha256": {
@@ -81,8 +81,32 @@
     "usage": "after complete training, best validation checkpoint and reference final",
     "selection_on_test": false
   },
-  "retention_rule": "Human review after both full runs: validation Image AUROC and Pixel AP non-decreasing on both datasets and at least one clear improvement; clear-improvement magnitude not specified by proposal, no automatic promote/rollback",
+  "retention_rule": {
+    "reference": "V0 best_val checkpoint reevaluated with reproduction/reevaluate_v3.py; same four validation z candidates, mask path and FPR/F1 calibration",
+    "metrics": [
+      "image_auroc",
+      "pixel_ap"
+    ],
+    "datasets": [
+      "bridge512_balance_repaired",
+      "dacl_v3_seed42"
+    ],
+    "all_four_validation_deltas_minimum": -0.005,
+    "at_least_one_validation_delta_minimum": 0.01,
+    "units": "absolute metric fractions; -0.005=-0.5 percentage points; +0.01=+1.0 percentage points",
+    "test_usage": "report only; never used for retention",
+    "decision": "human review; no automatic launch/promotion"
+  },
   "no_auto_launch": true,
   "protocol_note": "Compare 448 and 392 as bundled changed protocol, not a matched single-component claim; unified re-evaluation required for z/FPR/native512 comparison",
-  "command": "/home/skye/miniconda3/envs/dinomaly/bin/python -u dinomaly_bridge.py --data_path /home/skye/data/Skye/databases/Bridge512_balance --dataset_profile bridge512_balance_repaired --save_name v3-bridge512-b16-s1-20261016 --model_variant v3 --image_size 448 --context_recenter --train_augment --encoder_fp16 --fp32_reconstruction --v3_evaluation --v3_native_512 --batch_size 16 --seed 1 --total_iters 10000 --eval_interval 2000 --checkpoint_interval 1000"
+  "command": "/home/skye/miniconda3/envs/dinomaly/bin/python -u dinomaly_bridge.py --data_path /home/skye/data/Skye/databases/Bridge512_balance --dataset_profile bridge512_balance_repaired --save_name v3-bridge512-b16-s1-20261016 --model_variant v3 --image_size 448 --context_recenter --train_augment --v3_evaluation --batch_size 16 --seed 1 --total_iters 10000 --eval_interval 2000 --checkpoint_interval 1000",
+  "precision": "FP32 end to end; no encoder autocast",
+  "prelaunch_sequence": [
+    "After reviewer approval: reevaluate both frozen V0 best_val checkpoints under shared V3 evaluator",
+    "Then independently smoke 50 steps per dataset; diagnostics only, not performance results",
+    "Then publish/verify full run commits and launch only with user approval"
+  ],
+  "smoke_command": "/home/skye/miniconda3/envs/dinomaly/bin/python -u dinomaly_bridge.py --data_path /home/skye/data/Skye/databases/Bridge512_balance --dataset_profile bridge512_balance_repaired --save_name v3-bridge512-b16-s1-20261016-smoke50 --model_variant v3 --image_size 448 --context_recenter --train_augment --v3_evaluation --batch_size 16 --seed 1 --total_iters 10000 --eval_interval 2000 --checkpoint_interval 1000 --smoke_steps 50",
+  "native512_policy": "Separate post-training reproduction/reevaluate_v3.py --native_512 output directory; failure must not change completed training status/summary",
+  "paired_reference_policy": "Use reevaluated V0 output/test_best_val_scores.csv and its reevaluation.json provenance; original V0 CSV is not a valid paired reference"
 }
