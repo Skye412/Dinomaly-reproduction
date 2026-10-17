@@ -1,0 +1,9 @@
+{
+  "estimate": -0.009167461154610868,
+  "lower": -0.019192493863848338,
+  "upper": 0.0001426908799546784,
+  "repeats": 2000,
+  "seed": 1,
+  "method": "image-stratified paired bootstrap",
+  "unit": "image; not bridge/session; not across training seeds"
+}

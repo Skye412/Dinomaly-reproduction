@@ -1,0 +1,9 @@
+{
+  "pid": 1866753,
+  "state": "completed",
+  "no_training": true,
+  "updated_at": 1792254044.0857162,
+  "dataset": "dacl",
+  "free_mib": 15822,
+  "message": "Both full runs and protocol-v3 V0 reevaluations complete; ready for archive/comparison/publication"
+}

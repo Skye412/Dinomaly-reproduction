@@ -1,0 +1,32 @@
+{
+  "command": [
+    "/home/skye/miniconda3/envs/dinomaly/bin/python",
+    "-u",
+    "dinomaly_bridge.py",
+    "--data_path",
+    "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42",
+    "--dataset_profile",
+    "dacl_v3_seed42",
+    "--save_name",
+    "v3-dacl-b16-s1-20261016",
+    "--model_variant",
+    "v3",
+    "--image_size",
+    "448",
+    "--context_recenter",
+    "--train_augment",
+    "--v3_evaluation",
+    "--batch_size",
+    "16",
+    "--seed",
+    "1",
+    "--total_iters",
+    "10000",
+    "--eval_interval",
+    "2000",
+    "--checkpoint_interval",
+    "1000"
+  ],
+  "published_commit": "003fdbc29040c33994d99311eb94a80c9041d768",
+  "full_run": true
+}

@@ -1,0 +1,28 @@
+{
+  "variant": "v3",
+  "added_parameters": 0,
+  "trainable_parameters": 61425408,
+  "encoder_frozen": true,
+  "initialization": "fresh pretrained encoder and V0 reconstruction initialization; AMCM only for v1_amcm",
+  "amcm": null,
+  "v3": {
+    "context_recenter": true,
+    "encoder_fp16": false,
+    "fp32_reconstruction": false,
+    "train_augment": true,
+    "input_size": 448,
+    "z_candidates": [
+      0.001,
+      0.0025,
+      0.005,
+      0.01,
+      0.02,
+      0.05,
+      0.1,
+      0.2,
+      0.5,
+      1.0
+    ],
+    "hard_mining": "Existing V0 p=min(0.9*zero_based_step/1000,0.9); low-loss gradients scaled by 0.1, not removed"
+  }
+}

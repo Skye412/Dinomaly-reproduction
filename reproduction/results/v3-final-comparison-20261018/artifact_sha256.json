@@ -1,0 +1,12 @@
+[
+  {
+    "file": "comparison.json",
+    "bytes": 29987,
+    "sha256": "ab066cead7b205b6e2bb86b58847ffcf2cd2d298ed75d5656252c781fb8e921d"
+  },
+  {
+    "file": "COMPARISON.md",
+    "bytes": 535,
+    "sha256": "390028522f115f1f5c6256b28dd023f3d666c2514b03d0ab912cd77b53f90d38"
+  }
+]

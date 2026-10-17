@@ -1,0 +1,8 @@
+{}
+{"state": "waiting_gpu", "dataset": "bridge512"}
+{"state": "gpu_lock_acquired", "free_mib": 15822, "message": "Shared GPU lock acquired; free memory rechecked under lock"}
+{"state": "evaluating", "dataset": "bridge512"}
+{"state": "waiting_gpu", "dataset": "dacl"}
+{"state": "gpu_lock_acquired", "free_mib": 15822, "message": "Shared GPU lock acquired; free memory rechecked under lock"}
+{"state": "evaluating", "dataset": "dacl"}
+{"state": "completed", "message": "Both full runs and protocol-v3 V0 reevaluations complete; ready for archive/comparison/publication"}

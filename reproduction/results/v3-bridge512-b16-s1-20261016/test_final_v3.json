@@ -1,0 +1,49 @@
+{
+  "step": 10000,
+  "top_fraction": 0.1,
+  "primary_fpr10": {
+    "threshold": 0.025083407014608382,
+    "image_precision": 0.7546296296296297,
+    "image_recall": 0.25955414012738853,
+    "image_f1": 0.3862559241706161,
+    "tp": 163,
+    "fp": 53,
+    "tn": 575,
+    "fn": 465,
+    "normal": 628,
+    "anomaly": 628,
+    "samples": 1256,
+    "false_positive_rate": 0.08439490445859872,
+    "specificity": 0.9156050955414012,
+    "balanced_accuracy": 0.5875796178343948
+  },
+  "legacy_f1": {
+    "threshold": 0.020261568948626518,
+    "image_precision": 0.6524741081703107,
+    "image_recall": 0.9028662420382165,
+    "image_f1": 0.7575150300601202,
+    "samples": 1256,
+    "normal": 628,
+    "anomaly": 628,
+    "positive_images_with_empty_resized_mask": 0,
+    "tp": 567,
+    "fp": 302,
+    "tn": 326,
+    "fn": 61,
+    "false_positive_rate": 0.48089171974522293,
+    "specificity": 0.5191082802547771,
+    "balanced_accuracy": 0.7109872611464968
+  },
+  "pixel_anomaly_prevalence": 0.10174908000192824,
+  "pixel_metric_resolution": 256,
+  "image_auc_ci95": {
+    "estimate": 0.7922849304231407,
+    "lower": 0.7660751957483062,
+    "upper": 0.8169000263702381,
+    "repeats": 2000,
+    "seed": 1,
+    "method": "image-stratified bootstrap",
+    "unit": "image; not bridge/session; not across training seeds"
+  },
+  "threshold_note": "90th normal-validation percentile, >= comparison; empirical FPR need not equal 10%"
+}
