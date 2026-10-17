@@ -204,7 +204,7 @@ def main(args):
                 optimizer.step()
                 scheduler.step()
                 step += 1
-                if step == 1 or step % 100 == 0:
+                if step == 1 or step % 100 == 0 or (args.smoke_steps and step == args.smoke_steps):
                     logger.info('step [%d/%d], loss:%.6f, peak_cuda_gib:%.3f', step, args.total_iters,
                                 loss.item(), torch.cuda.max_memory_allocated() / 1024 ** 3)
                     state(step=step, loss=loss.item())
