@@ -40,7 +40,7 @@ def bootstrap_auc(y, scores, repeats=2000, seed=1, baseline=None):
 
 
 class V3Evaluator:
-    fractions = (0.001, 0.0025, 0.005, 0.01, 0.02, 0.05, 0.10)
+    fractions = (0.001, 0.0025, 0.005, 0.01, 0.02, 0.05, 0.10, 0.20, 0.50, 1.0)
 
     def __init__(self, args, folder):
         self.args, self.folder = args, folder

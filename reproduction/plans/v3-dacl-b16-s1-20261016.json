@@ -1,7 +1,7 @@
 {
   "run_id": "v3-dacl-b16-s1-20261016",
   "version": "V3 opt-in Dinomaly improvement; code-only publication, training not launched",
-  "status": "code_ready_not_launched",
+  "status": "launch_commit_awaiting_review",
   "datasets": [
     "bridge512_balance_repaired",
     "dacl_v3_seed42"
@@ -14,7 +14,7 @@
     "validation normal-image FPR=10 percent threshold",
     "numerical failure diagnostics",
     "FP32 encoder, recentering, reconstruction and loss",
-    "validation top-z selection 0.1/0.25/0.5/1/2/5/10 percent"
+    "validation top-z selection 0.1/0.25/0.5/1/2/5/10/20/50/100 percent"
   ],
   "unchanged": [
     "DINOv2-registers ViT-B/14",
@@ -73,10 +73,14 @@
       0.01,
       0.02,
       0.05,
-      0.1
+      0.1,
+      0.2,
+      0.5,
+      1.0
     ],
     "primary_threshold": "np.percentile(normal validation scores,90); >=; report actual FPR",
-    "legacy_threshold": "validation maximum F1"
+    "legacy_threshold": "validation maximum F1",
+    "aupro_policy": "Keep existing AUPRO computation during scheduled validation; no optional skip change in this commit"
   },
   "test": {
     "normal": 55,
@@ -85,7 +89,7 @@
     "selection_on_test": false
   },
   "retention_rule": {
-    "reference": "V0 best_val checkpoint reevaluated with reproduction/reevaluate_v3.py; same seven validation z candidates, mask path and FPR/F1 calibration",
+    "reference": "V0 best_val checkpoint reevaluated with reproduction/reevaluate_v3.py; same ten validation z candidates, mask path and FPR/F1 calibration; reevaluation deferred until both V3 full runs complete, without concurrent GPU evaluation",
     "metrics": [
       "image_auroc",
       "pixel_ap"
@@ -105,12 +109,15 @@
   "command": "/home/skye/miniconda3/envs/dinomaly/bin/python -u dinomaly_bridge.py --data_path /home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42 --dataset_profile dacl_v3_seed42 --save_name v3-dacl-b16-s1-20261016 --model_variant v3 --image_size 448 --context_recenter --train_augment --v3_evaluation --batch_size 16 --seed 1 --total_iters 10000 --eval_interval 2000 --checkpoint_interval 1000",
   "precision": "FP32 end to end; no encoder autocast",
   "prelaunch_sequence": [
-    "After reviewer approval: reevaluate both frozen V0 best_val checkpoints under shared V3 evaluator",
-    "Then independently smoke 50 steps per dataset; diagnostics only, not performance results",
-    "Then publish/verify full run commits and launch only with user approval"
+    "Already passed: original V3 50-step smoke on each dataset; no repeat for scoring-only grid update",
+    "Publish and review this full-grid launch commit; verify remote ref and clean server worktrees",
+    "After launch approval: make repository private; train Bridge then independently DACL for 10000 steps each",
+    "After both V3 runs complete: reevaluate frozen V0 best_val checkpoints with protocol v3; no concurrent evaluation/training",
+    "Only then compare validation retention deltas and report test; no automatic further experiments"
   ],
   "smoke_command": "/home/skye/miniconda3/envs/dinomaly/bin/python -u dinomaly_bridge.py --data_path /home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42 --dataset_profile dacl_v3_seed42 --save_name v3-dacl-b16-s1-20261016-smoke50 --model_variant v3 --image_size 448 --context_recenter --train_augment --v3_evaluation --batch_size 16 --seed 1 --total_iters 10000 --eval_interval 2000 --checkpoint_interval 1000 --smoke_steps 50",
   "native512_policy": "Separate post-training reproduction/reevaluate_v3.py --native_512 output directory; failure must not change completed training status/summary",
   "paired_reference_policy": "Use reevaluated V0 output/test_best_val_scores.csv and its reevaluation.json provenance; original V0 CSV is not a valid paired reference",
-  "z_grid_version": "v3_shared_z_fpr_256_v2"
+  "z_grid_version": "v3_shared_z_fpr_256_v3",
+  "full_run_order": 2
 }
