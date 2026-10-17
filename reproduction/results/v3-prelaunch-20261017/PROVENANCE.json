@@ -1,0 +1,5 @@
+{
+  "reevaluation_initial_commit": "7478fae4300429b042344301b847bd3e1ea132cf",
+  "smoke_commit": "6e9c764f1c0e0132535096ed9f8e410acacd6dc0",
+  "note": "Only logging condition changed between commits. Sequence status initial commit refers to initial evaluator; smoke config records actual commit. Fixed-z sanity captured from same returned maps. No full training."
+}

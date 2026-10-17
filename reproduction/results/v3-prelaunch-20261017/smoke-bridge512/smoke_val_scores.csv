@@ -1,0 +1,3 @@
+image_path,label,score,prediction_at_validation_threshold
+/home/skye/data/Skye/databases/Bridge512_balance/val/normal/codebrim_image_0000217_x3072_y2976__tile_x0000_y0512.jpg,0,0.12967191636562347,1
+/home/skye/data/Skye/databases/Bridge512_balance/val/annotated/codebrim_image_0000217_x3072_y2976__tile_x0512_y0000.jpg,1,0.12557359039783478,1

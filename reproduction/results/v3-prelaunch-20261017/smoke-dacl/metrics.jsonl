@@ -1,0 +1,1 @@
+{"step": 50, "category": "smoke_val_subset", "image_auroc": 0.0, "image_ap": 0.5, "image_f1_max": 0.6666666222222252, "pixel_auroc": 0.5723984189020641, "pixel_ap": 0.05470783909597775, "pixel_f1_max": 0.18181813296857507, "pixel_aupro": 0.4648063066714717}

@@ -1,0 +1,9 @@
+{"state": "waiting_for_gpu", "stage": "v0_reevaluation", "dataset": "bridge512"}
+{"state": "gpu_lock_acquired", "free_mib": 15822, "message": "Shared GPU lock acquired; free memory rechecked under lock"}
+{"state": "evaluating", "dataset": "bridge512"}
+{"state": "waiting_for_gpu", "stage": "v0_reevaluation", "dataset": "dacl"}
+{"state": "gpu_lock_acquired", "free_mib": 15822, "message": "Shared GPU lock acquired; free memory rechecked under lock"}
+{"state": "evaluating", "dataset": "dacl"}
+{"state": "smoke_running", "stage": "v3_smoke", "dataset": "bridge512", "run_id": "v3-bridge512-b16-s1-20261017-smoke50"}
+{"state": "smoke_running", "stage": "v3_smoke", "dataset": "dacl", "run_id": "v3-dacl-b16-s1-20261017-smoke50"}
+{"state": "completed", "message": "Two V0 reevaluations and two 50-step smoke checks only; no full training"}

@@ -1,0 +1,6 @@
+GPU startup: {'state': 'gpu_lock_acquired', 'free_mib': 15822, 'message': 'Shared GPU lock acquired; free memory rechecked under lock'}
+Model provenance: {'variant': 'v3', 'added_parameters': 0, 'trainable_parameters': 61425408, 'encoder_frozen': True, 'initialization': 'fresh pretrained encoder and V0 reconstruction initialization; AMCM only for v1_amcm', 'amcm': None, 'v3': {'context_recenter': True, 'encoder_fp16': False, 'fp32_reconstruction': False, 'train_augment': True, 'input_size': 448, 'z_candidates': [0.001, 0.0025, 0.005, 0.01], 'hard_mining': 'Existing V0 p=min(0.9*zero_based_step/1000,0.9); low-loss gradients scaled by 0.1, not removed'}}
+Normal-only train=2211; val=618; test=1256; batch=16
+step [1/10000], loss:0.988707, peak_cuda_gib:9.873
+step [50/10000], loss:0.075689, peak_cuda_gib:10.938
+Smoke passed: steps=50, validation pipeline and checkpoint verified

@@ -1,0 +1,3 @@
+image_path,label,score,prediction_at_validation_threshold
+/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/val/images/00007.jpg,0,0.1472693532705307,1
+/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/val/images/00011.jpg,1,0.14214330911636353,1

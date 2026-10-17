@@ -1,0 +1,31 @@
+{
+  "state": "completed",
+  "pid": 1811492,
+  "step": 50,
+  "mode": "smoke",
+  "queued_at": 1792218217.8354533,
+  "updated_at": 1792218279.288947,
+  "free_mib": 15822,
+  "message": "Shared GPU lock acquired; free memory rechecked under lock",
+  "started_at": 1792218217.878232,
+  "loss": 0.09246242046356201,
+  "smoke_calibration": {
+    "threshold": 0.14214330911636353,
+    "image_precision": 0.5,
+    "image_recall": 1.0,
+    "image_f1": 0.6666666666666666,
+    "samples": 2,
+    "normal": 1,
+    "anomaly": 1,
+    "positive_images_with_empty_resized_mask": 0,
+    "tp": 1,
+    "fp": 1,
+    "tn": 0,
+    "fn": 0,
+    "false_positive_rate": 1.0,
+    "specificity": 0.0,
+    "balanced_accuracy": 0.5
+  },
+  "peak_cuda_allocated_gib": 10.9375638961792,
+  "experiment_result": false
+}

@@ -1,0 +1,12 @@
+{
+  "state": "completed",
+  "pid": 1793710,
+  "commit": "7478fae4300429b042344301b847bd3e1ea132cf",
+  "full_training_authorized": false,
+  "stage": "v3_smoke",
+  "dataset": "dacl",
+  "updated_at": 1792218280.2596338,
+  "free_mib": 15822,
+  "message": "Two V0 reevaluations and two 50-step smoke checks only; no full training",
+  "run_id": "v3-dacl-b16-s1-20261017-smoke50"
+}
