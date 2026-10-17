@@ -1,0 +1,7 @@
+{"state": "waiting_for_gpu", "stage": "v0_reevaluation", "dataset": "bridge512"}
+{"state": "gpu_lock_acquired", "free_mib": 15822, "message": "Shared GPU lock acquired; free memory rechecked under lock"}
+{"state": "evaluating", "dataset": "bridge512"}
+{"state": "waiting_for_gpu", "stage": "v0_reevaluation", "dataset": "dacl"}
+{"state": "gpu_lock_acquired", "free_mib": 15822, "message": "Shared GPU lock acquired; free memory rechecked under lock"}
+{"state": "evaluating", "dataset": "dacl"}
+{"state": "completed", "message": "Two V0 reevaluations with zgrid-v2 only; no smoke or training"}

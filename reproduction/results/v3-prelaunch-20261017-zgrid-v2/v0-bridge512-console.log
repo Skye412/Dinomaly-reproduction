@@ -1,0 +1,6 @@
+/data/Skye/Dinomaly/runs/v3-prelaunch-20261017-checkout/dinov2/layers/swiglu_ffn.py:51: UserWarning: xFormers is not available (SwiGLU)
+  warnings.warn("xFormers is not available (SwiGLU)")
+/data/Skye/Dinomaly/runs/v3-prelaunch-20261017-checkout/dinov2/layers/attention.py:33: UserWarning: xFormers is not available (Attention)
+  warnings.warn("xFormers is not available (Attention)")
+/data/Skye/Dinomaly/runs/v3-prelaunch-20261017-checkout/dinov2/layers/block.py:38: UserWarning: xFormers is not available (Block)
+  warnings.warn("xFormers is not available (Block)")

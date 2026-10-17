@@ -1,0 +1,11 @@
+{
+  "state": "completed",
+  "pid": 1838721,
+  "commit": "5000c757f5ab325e58bf506e64290e02587ca089",
+  "full_training_authorized": false,
+  "stage": "v0_reevaluation",
+  "dataset": "dacl",
+  "updated_at": 1792224179.7535408,
+  "free_mib": 15822,
+  "message": "Two V0 reevaluations with zgrid-v2 only; no smoke or training"
+}
