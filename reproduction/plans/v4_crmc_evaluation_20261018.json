@@ -1,0 +1,46 @@
+{
+  "status": "awaiting_code_review_do_not_launch",
+  "model_variant": "v0_plus_crmc",
+  "datasets": [
+    "codebrim512",
+    "s2ds512",
+    "dacl_v3_seed42"
+  ],
+  "main_k": 16,
+  "main_context_retrieval": true,
+  "input_size": 392,
+  "metric_size": 256,
+  "seed": 1,
+  "training": false,
+  "selection": "validation Image AUROC then Pixel AP; test never used",
+  "retention": "CODEBRIM and DACL; no validation Image AUROC or Pixel AP drop >=0.5pp and at least one >=1.0pp improvement",
+  "runs": {
+    "codebrim512": {
+      "config": "runs/codebrim512-v0-b16-s1-review20261018/config.json",
+      "checkpoint": "runs/codebrim512-v0-b16-s1-review20261018/best_val.pth",
+      "output": "runs/v4-crmc-codebrim512-eval-review"
+    },
+    "s2ds512": {
+      "config": "runs/s2ds512-v0-b16-s1-review20261018/config.json",
+      "checkpoint": "runs/s2ds512-v0-b16-s1-review20261018/best_val.pth",
+      "output": "runs/v4-crmc-s2ds512-eval-review"
+    },
+    "dacl_v3_seed42": {
+      "config": "runs/dacl-v3-seed42-b16-s1-20261015/config.json",
+      "checkpoint": "runs/dacl-v3-seed42-b16-s1-20261015/best_val.pth",
+      "output": "runs/v4-crmc-dacl-eval-review"
+    }
+  },
+  "ablations": [
+    "K4",
+    "K16",
+    "K64",
+    "context",
+    "full_bank",
+    "weighted_sum",
+    "gated",
+    "reconstruction_only",
+    "memory_only"
+  ],
+  "launch_gate": "User review required; publish this plan and verify server checkout before evaluation; no training."
+}

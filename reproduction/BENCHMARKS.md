@@ -122,3 +122,23 @@ primary operating threshold; validation maximum-F1 remains a secondary threshold
 CODEBRIM and DACL validation metrics determine future retention; S2DS is reporting
 only. Historical Bridge results remain archived. V3b, CRMC and seeds2/3 are deferred.
 No training or checkpoint evaluation is authorized before this code review.
+
+
+## V4 CRMC evaluation (review-gated)
+
+V4 is an evaluation-only memory-bank comparison on the three completed V0
+checkpoints: `codebrim512`, `s2ds512`, and `dacl_v3_seed42`. It uses normal
+training images only to build an fp16 CPU bank, retrieves exact nearest patch
+features using layer-9 CLS context, and keeps the V0 checkpoint frozen. The main
+setting is K=16 with context retrieval; K=4/64, full-bank retrieval, weighted
+sum, gated fusion, reconstruction-only and memory-only rows are recorded as
+evaluation ablations. Fusion and z are selected on validation Image AUROC then
+Pixel AP. No test score selects a configuration.
+
+DACL non-damage attribution uses Bearing, Drainage, EJoint, JTape and PEquipment
+polygons from the original annotations. The frozen S2DS manifest has no object
+mask field; the original S2DS directory can be matched to 60/73 frozen test
+normal tiles by source ID and crop coordinates, while 13 remain uncovered.
+Attribution coverage is reported rather than treating uncovered tiles as clean
+background. V4 launch remains review-gated and must publish its run plan and
+commit before evaluation.
