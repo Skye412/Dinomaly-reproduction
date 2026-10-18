@@ -5,6 +5,7 @@ from pathlib import Path
 import numpy as np
 from sklearn.metrics import roc_auc_score, average_precision_score, precision_recall_curve
 from bridge_evaluation import evaluate
+from stratified_evaluation import stratified_metrics
 from utils import f1_score_max
 
 
@@ -98,12 +99,15 @@ class V3Evaluator:
             pixel_anomaly_prevalence=float(gt.mean()), pixel_metric_resolution=256,
             image_auc_ci95=bootstrap_auc(y, scores, self.args.bootstrap_samples, self.args.seed),
             threshold_note='90th normal-validation percentile, >= comparison; empirical FPR need not equal 10%')
+        if self.args.__dict__.get('dataset_profile') in {'codebrim512', 's2ds512', 'dacl_v3_seed42'}:
+            details['stratified'] = stratified_metrics(loader.dataset, rows, y, scores, selected['fpr_threshold'])
+        details['positive_images_with_empty_resized_mask'] = legacy['positive_images_with_empty_resized_mask']
         (self.folder / ('test_{}_v3.json'.format(name))).write_text(json.dumps(details, indent=2))
         return metrics, dict(primary_fpr10=primary, legacy_f1=legacy, **legacy)
 
     def native_test(self, model, loader, step):
         selected = self.selections[step]
-        values, _, _, _, gt, _ = evaluate(model, loader, self.args.device,
+        values, calibrated, _, _, gt, _ = evaluate(model, loader, self.args.device,
             self.folder / 'test_best_val_native512_scores.csv',
             threshold=selected['threshold'], top_fraction=selected['top_fraction'],
             return_scores=True, metric_size=512)
@@ -111,6 +115,7 @@ class V3Evaluator:
         from reproduction_runtime import METRIC_NAMES
         record = dict(step=step, metric_resolution=512, mask_resolution=512,
                       pixel_anomaly_prevalence=float(gt.mean()),
+                      positive_images_with_empty_resized_mask=calibrated['positive_images_with_empty_resized_mask'],
                       metrics=dict(zip(METRIC_NAMES[3:], values[3:])),
                       note='Pixel-only supplementary protocol; no checkpoint/threshold selection; compare versions using same evaluator')
         (self.folder / 'test_best_val_native512.json').write_text(json.dumps(record, indent=2))

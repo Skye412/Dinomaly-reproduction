@@ -1,5 +1,6 @@
 """Normal-only Dinomaly baseline on frozen bridge dataset splits."""
 import argparse
+import shutil
 import hashlib
 import json
 import os
@@ -272,6 +273,9 @@ def main(args):
                 best_values, best_cal = evaluate(model, test_loader, args.device, folder / 'test_best_val_scores.csv', best_threshold)
         else:
             best_values, best_cal = final_values, final_cal
+            if v3_evaluator is not None:
+                for suffix in ("scores.csv", "fpr10_scores.csv", "v3.json"):
+                    shutil.copyfile(folder / ("test_final_" + suffix), folder / ("test_best_val_" + suffix))
         record_metrics(args, best_step, 'test_best_val', best_values)
         summary['test_best_val'] = dict(metrics=dict(zip(METRIC_NAMES,best_values)), calibrated=best_cal)
         if args.model_variant == 'v2_paired':
@@ -307,7 +311,7 @@ if __name__ == '__main__':
     parser.add_argument('--v3_evaluation', action='store_true')
     parser.add_argument('--v3_native_512', action='store_true')
     parser.add_argument('--bootstrap_samples', type=int, default=2000)
-    parser.add_argument('--dataset_profile', choices=['bridge2893','bridge512_balance','bridge512_balance_repaired','dacl_v3_seed42'], default='bridge2893')
+    parser.add_argument('--dataset_profile', choices=['bridge2893','bridge512_balance','bridge512_balance_repaired','dacl_v3_seed42','codebrim512','s2ds512'], default='bridge2893')
     parser.add_argument('--split_view', choices=['original','deduplicated'], default='original')
     add_arguments(parser)
     parser.set_defaults(eval_interval=2000)

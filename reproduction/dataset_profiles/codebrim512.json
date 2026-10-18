@@ -1,0 +1,28 @@
+{
+  "profile": "codebrim512",
+  "source_dataset": "Bridge512_balance_CODEBRIM",
+  "native_resolution": [
+    512,
+    512
+  ],
+  "categories": {
+    "train": {
+      "normal": 1944,
+      "annotated": 917
+    },
+    "val": {
+      "normal": 277,
+      "annotated": 123
+    },
+    "test": {
+      "normal": 555,
+      "annotated": 254
+    }
+  },
+  "manifest_sha256": {
+    "train": "b551f69c0fdea10f51c552de5ef3753978565fbccca85b7ab4b7834ec552cd1f",
+    "val": "39ccad5653bbcfac749491b4b3185373e60aaa366bad70f71e726d250002d4af",
+    "test": "49a98cf680679d06d58dc748b46c982fe09ad86962802be2f3622d26fbd12b10"
+  },
+  "views": {}
+}

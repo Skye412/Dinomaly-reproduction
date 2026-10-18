@@ -11,7 +11,7 @@ def main():
                         help='Commit already verified against the GitHub branch by the caller.')
     parser.add_argument('--run_id', default='bridge2893-b16-s1-20261014')
     parser.add_argument('--data_path', default='/home/skye/data/Skye/databases/Bridge2893_split_seed42')
-    parser.add_argument('--dataset_profile', choices=['bridge2893','bridge512_balance','bridge512_balance_repaired','dacl_v3_seed42'], default='bridge2893')
+    parser.add_argument('--dataset_profile', choices=['bridge2893','bridge512_balance','bridge512_balance_repaired','dacl_v3_seed42','codebrim512','s2ds512'], default='bridge2893')
     parser.add_argument('--split_view', choices=['original','deduplicated'], default='original')
     parser.add_argument('--wait_for_gpu', action='store_true', help='Queue until GPU has at least 12 GiB free.')
     parser.add_argument('--smoke_first', action='store_true', help='Require a separate three-step smoke before the full run.')

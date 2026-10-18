@@ -69,6 +69,7 @@ def main():
     model.load_state_dict(checkpoint['model'], strict=True)
     step = int(checkpoint['step'])
     args.seed = config['seed']
+    args.dataset_profile = config['dataset_profile']
     args.output.mkdir(parents=True)
     evaluator = V3Evaluator(args, args.output)
     cls = dataset_class(config['dataset_profile'])
@@ -86,6 +87,8 @@ def main():
         report['paired_auc_delta_ci95'] = paired_comparison(args.paired_reference_csv,
             args.output / 'test_best_val_scores.csv', args.bootstrap_samples, args.seed)
     (args.output/'reevaluation.json').write_text(json.dumps(report,indent=2), encoding='utf-8')
+    (args.output/'best_selection.json').write_text(json.dumps(evaluator.selections[step], indent=2), encoding='utf-8')
+    (args.output/'summary.json').write_text(json.dumps(dict(report, experiment_kind='evaluation_only', training_performed=False), indent=2), encoding='utf-8')
     if args.native_512:
         evaluator.native_test(model, loader('test',512), step)
 
