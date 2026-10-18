@@ -108,7 +108,9 @@ def nearest_memory_maps(query_cls, query_groups, cls_bank, patch_banks, ks=(4, 1
     device = query_cls.device
     descriptors = F.normalize(cls_bank.to(device).float(), dim=-1)
     similarities = F.normalize(query_cls.float(), dim=-1) @ descriptors.T
-    ranking = torch.argsort(similarities, descending=True, dim=1, stable=True).cpu()
+    # NumPy stable sorting preserves bank order on ties on older PyTorch too.
+    ranking = torch.from_numpy(np.argsort(
+        -similarities.detach().cpu().numpy(), axis=1, kind="mergesort"))
     accumulated = {str(k): [] for k in ks}
     if include_global:
         accumulated['global'] = []

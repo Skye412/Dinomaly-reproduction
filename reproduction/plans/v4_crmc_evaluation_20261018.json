@@ -18,23 +18,23 @@
     "codebrim512": {
       "config": "runs/codebrim512-v0-b16-s1-review20261018/config.json",
       "checkpoint": "runs/codebrim512-v0-b16-s1-review20261018/best_val.pth",
-      "output": "runs/v4-crmc-codebrim512-eval-20261018",
+      "output": "runs/v4-crmc-codebrim512-eval-20261019-r1",
       "baseline_dir": "reproduction/results/three-v0-20261018/codebrim512-v0-b16-s1-review20261018",
-      "command": "python -u crmc_evaluate.py --config runs/codebrim512-v0-b16-s1-review20261018/config.json --checkpoint runs/codebrim512-v0-b16-s1-review20261018/best_val.pth --output runs/v4-crmc-codebrim512-eval-20261018 --baseline_dir reproduction/results/three-v0-20261018/codebrim512-v0-b16-s1-review20261018"
+      "command": "python -u crmc_evaluate.py --config runs/codebrim512-v0-b16-s1-review20261018/config.json --checkpoint runs/codebrim512-v0-b16-s1-review20261018/best_val.pth --output runs/v4-crmc-codebrim512-eval-20261019-r1 --baseline_dir reproduction/results/three-v0-20261018/codebrim512-v0-b16-s1-review20261018"
     },
     "s2ds512": {
       "config": "runs/s2ds512-v0-b16-s1-review20261018/config.json",
       "checkpoint": "runs/s2ds512-v0-b16-s1-review20261018/best_val.pth",
-      "output": "runs/v4-crmc-s2ds512-eval-20261018",
+      "output": "runs/v4-crmc-s2ds512-eval-20261019-r1",
       "baseline_dir": "reproduction/results/three-v0-20261018/s2ds512-v0-b16-s1-review20261018",
-      "command": "python -u crmc_evaluate.py --config runs/s2ds512-v0-b16-s1-review20261018/config.json --checkpoint runs/s2ds512-v0-b16-s1-review20261018/best_val.pth --output runs/v4-crmc-s2ds512-eval-20261018 --baseline_dir reproduction/results/three-v0-20261018/s2ds512-v0-b16-s1-review20261018"
+      "command": "python -u crmc_evaluate.py --config runs/s2ds512-v0-b16-s1-review20261018/config.json --checkpoint runs/s2ds512-v0-b16-s1-review20261018/best_val.pth --output runs/v4-crmc-s2ds512-eval-20261019-r1 --baseline_dir reproduction/results/three-v0-20261018/s2ds512-v0-b16-s1-review20261018"
     },
     "dacl_v3_seed42": {
       "config": "runs/dacl-v3-seed42-b16-s1-20261015/config.json",
       "checkpoint": "runs/dacl-v3-seed42-b16-s1-20261015/best_val.pth",
-      "output": "runs/v4-crmc-dacl-eval-20261018",
+      "output": "runs/v4-crmc-dacl-eval-20261019-r1",
       "baseline_dir": "reproduction/results/three-v0-20261018/dacl-v0-strata-review20261018",
-      "command": "python -u crmc_evaluate.py --config runs/dacl-v3-seed42-b16-s1-20261015/config.json --checkpoint runs/dacl-v3-seed42-b16-s1-20261015/best_val.pth --output runs/v4-crmc-dacl-eval-20261018 --baseline_dir reproduction/results/three-v0-20261018/dacl-v0-strata-review20261018"
+      "command": "python -u crmc_evaluate.py --config runs/dacl-v3-seed42-b16-s1-20261015/config.json --checkpoint runs/dacl-v3-seed42-b16-s1-20261015/best_val.pth --output runs/v4-crmc-dacl-eval-20261019-r1 --baseline_dir reproduction/results/three-v0-20261018/dacl-v0-strata-review20261018"
     }
   },
   "ablations": [
@@ -48,8 +48,8 @@
     "reconstruction_only",
     "memory_only"
   ],
-  "launch_gate": "User approved gate fix and V0 consistency; sequential evaluation, no training, no automatic retry",
-  "sequence_id": "v4-crmc-sequence-20261018",
+  "launch_gate": "Compatibility rerun after server PyTorch argsort stable argument failure; sequential evaluation, no training, no automatic retry",
+  "sequence_id": "v4-crmc-sequence-20261019",
   "gate": "raw nonnegative reconstruction * sigmoid(standardized memory)",
   "v0_consistency": "match archived exact AUROC to 1e-12; fail otherwise",
   "paired_bootstrap": 2000
