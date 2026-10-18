@@ -83,15 +83,13 @@ benchmark splits. Manifest SHA256 values are frozen in dataset_profiles/*.json.
 Both colored datasets use the same RGB palette: black (0,0,0) background,
 red (255,0,0) Crack, green (0,255,0) Spalling, blue (0,0,255) Corrosion,
 yellow (255,255,0) Efflorescence. All anomalous masks were scanned; no other
-colors occurred. The intended structural-damage taxonomy maps exposed rebar to
-Corrosion, vegetation and control points to background. The loader unions all
-nonzero RGB pixels; it does not relabel or alter existing frozen files.
-Source remapping semantics cannot be reconstructed solely from already-converted
-masks; this taxonomy must be confirmed against the dataset preparation provenance.
-DACL retains its historical 14-label union, including Graffiti/Wetspot and other
-labels beyond the four-class taxonomy. It is area-stratified only. Thus the
-frozen DACL definition is not strictly identical to the structural-only taxonomy;
-changing it would require a new profile and cannot be silently applied to V0.
+colors occurred. Unified anomaly definition: each dataset's official damage
+categories are anomalous; non-damage components, attachments and markers are
+normal. Exposed rebar maps to Corrosion; vegetation and control points are
+background in the colored datasets. Already-converted masks cannot independently
+prove the original source remapping; this provenance limitation is retained.
+DACL keeps its original 14 damage labels, including Graffiti and Wetspot, with
+area-only stratification. No labels, training samples or frozen splits change.
 
 The tile manifest records crop_x/crop_y in {0,512} x {0,512}, representing
 512-square tiles in the inherited 1024-coordinate source tile frame; parent_id
