@@ -29,7 +29,7 @@ approximate index.
 The reconstruction map and memory map are independently standardized with mean and
 standard deviation computed from validation normal images. Weighted fusion is
 `(1-alpha)*A_rec + alpha*A_mem`, with alpha in `{0,.25,.5,.75,1}`. Gated fusion is
-`A_rec * sigmoid(A_mem)` and is evaluated as a separate family.
+`raw_nonnegative_A_rec * sigmoid(standardized_A_mem)` and is evaluated as a separate family.
 
 ## Selection and outputs
 
@@ -65,3 +65,5 @@ Compare V4 to the archived V0 using CODEBRIM and DACL validation evidence: neith
 validation Image AUROC nor Pixel AP may drop by 0.5 percentage points or more, and
 at least one dataset/metric must improve by at least 1.0 percentage point. S2DS is
 reported only because its validation normal set has 32 images.
+
+User approved execution after gate correction and archived V0 AUROC consistency check. Main and validation paired bootstrap use 2000 image-stratified resamples. Object attribution includes area random baseline, enrichment, and object-containing-only normals. Full-bank search remains chunked CPU-to-GPU exact retrieval; no runtime speed guarantee.
