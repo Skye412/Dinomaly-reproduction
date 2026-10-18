@@ -1,0 +1,1808 @@
+{
+  "object_containing_normals": {
+    "images": 3,
+    "mean_overlap": {
+      "before": 0.43562340966921126,
+      "after": 0.4290076335877863
+    },
+    "mean_enrichment": {
+      "before": 0.8691782957528681,
+      "after": 0.8372366765894759
+    }
+  },
+  "top_fraction": 0.01,
+  "top_pixels": 655,
+  "normals": 73,
+  "covered_normals": 60,
+  "uncovered_normals": 13,
+  "records": [
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/normal_00151__tile_x0512_y0512.jpg",
+      "status": "uncovered_external_background"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/normal_00208__tile_x0000_y0000.jpg",
+      "status": "uncovered_external_background"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/normal_00335__tile_x0000_y0512.jpg",
+      "status": "uncovered_external_background"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/normal_00533__tile_x0512_y0000.jpg",
+      "status": "uncovered_external_background"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/normal_00608__tile_x0000_y0512.jpg",
+      "status": "uncovered_external_background"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/normal_00651__tile_x0512_y0000.jpg",
+      "status": "uncovered_external_background"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/normal_00732__tile_x0000_y0512.jpg",
+      "status": "uncovered_external_background"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/normal_00758__tile_x0000_y0000.jpg",
+      "status": "uncovered_external_background"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/normal_01016__tile_x0000_y0512.jpg",
+      "status": "uncovered_external_background"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/normal_01075__tile_x0512_y0000.jpg",
+      "status": "uncovered_external_background"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/normal_01163__tile_x0512_y0512.jpg",
+      "status": "uncovered_external_background"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/normal_01340__tile_x0000_y0512.jpg",
+      "status": "uncovered_external_background"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/normal_01369__tile_x0000_y0512.jpg",
+      "status": "uncovered_external_background"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_test_680__tile_x0000_y0512.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/test/masks/680_lab.png",
+      "crop": [
+        0,
+        512,
+        512,
+        1024
+      ],
+      "source_image_mae": 1.9653549194335938,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_test_692__tile_x0000_y0512.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/test/masks/692_lab.png",
+      "crop": [
+        0,
+        512,
+        512,
+        1024
+      ],
+      "source_image_mae": 1.0171915292739868,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_test_729__tile_x0000_y0512.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/test/masks/729_lab.png",
+      "crop": [
+        0,
+        512,
+        512,
+        1024
+      ],
+      "source_image_mae": 0.8412221074104309,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_012__tile_x0512_y0000.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/012_lab.png",
+      "crop": [
+        512,
+        0,
+        1024,
+        512
+      ],
+      "source_image_mae": 1.3783708810806274,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_029__tile_x0512_y0512.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/029_lab.png",
+      "crop": [
+        512,
+        512,
+        1024,
+        1024
+      ],
+      "source_image_mae": 1.5301069021224976,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_035__tile_x0512_y0000.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/035_lab.png",
+      "crop": [
+        512,
+        0,
+        1024,
+        512
+      ],
+      "source_image_mae": 1.1875534057617188,
+      "object_area_fraction_native512": 0.7805404663085938,
+      "before": {
+        "Vegetation": 0.983206106870229,
+        "ControlPoint": 0.0,
+        "union": 0.983206106870229
+      },
+      "random_baseline_area_fraction_256": 0.7802734375,
+      "enrichment": {
+        "before": 1.2600789154381908,
+        "after": 1.265948848274083
+      },
+      "after": {
+        "Vegetation": 0.9877862595419847,
+        "ControlPoint": 0.0,
+        "union": 0.9877862595419847
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_042__tile_x0000_y0512.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/042_lab.png",
+      "crop": [
+        0,
+        512,
+        512,
+        1024
+      ],
+      "source_image_mae": 1.8151715993881226,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_059__tile_x0512_y0512.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/059_lab.png",
+      "crop": [
+        512,
+        512,
+        1024,
+        1024
+      ],
+      "source_image_mae": 1.2606645822525024,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_077__tile_x0000_y0512.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/077_lab.png",
+      "crop": [
+        0,
+        512,
+        512,
+        1024
+      ],
+      "source_image_mae": 1.1839853525161743,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_092__tile_x0512_y0000.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/092_lab.png",
+      "crop": [
+        512,
+        0,
+        1024,
+        512
+      ],
+      "source_image_mae": 1.0501912832260132,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_126__tile_x0512_y0000.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/126_lab.png",
+      "crop": [
+        512,
+        0,
+        1024,
+        512
+      ],
+      "source_image_mae": 1.2018318176269531,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_131__tile_x0000_y0000.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/131_lab.png",
+      "crop": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "source_image_mae": 1.301817536354065,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_157__tile_x0512_y0000.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/157_lab.png",
+      "crop": [
+        512,
+        0,
+        1024,
+        512
+      ],
+      "source_image_mae": 1.036176085472107,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_185__tile_x0512_y0000.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/185_lab.png",
+      "crop": [
+        512,
+        0,
+        1024,
+        512
+      ],
+      "source_image_mae": 1.3476587533950806,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_200__tile_x0512_y0512.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/200_lab.png",
+      "crop": [
+        512,
+        512,
+        1024,
+        1024
+      ],
+      "source_image_mae": 1.4613622426986694,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_211__tile_x0000_y0512.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/211_lab.png",
+      "crop": [
+        0,
+        512,
+        512,
+        1024
+      ],
+      "source_image_mae": 1.1787389516830444,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_230__tile_x0000_y0512.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/230_lab.png",
+      "crop": [
+        0,
+        512,
+        512,
+        1024
+      ],
+      "source_image_mae": 1.6810060739517212,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_246__tile_x0512_y0512.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/246_lab.png",
+      "crop": [
+        512,
+        512,
+        1024,
+        1024
+      ],
+      "source_image_mae": 1.8734525442123413,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_247__tile_x0000_y0512.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/247_lab.png",
+      "crop": [
+        0,
+        512,
+        512,
+        1024
+      ],
+      "source_image_mae": 1.3137474060058594,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_258__tile_x0000_y0000.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/258_lab.png",
+      "crop": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "source_image_mae": 1.474230408668518,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_268__tile_x0512_y0512.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/268_lab.png",
+      "crop": [
+        512,
+        512,
+        1024,
+        1024
+      ],
+      "source_image_mae": 1.2942352294921875,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_272__tile_x0512_y0512.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/272_lab.png",
+      "crop": [
+        512,
+        512,
+        1024,
+        1024
+      ],
+      "source_image_mae": 1.2198333740234375,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_280__tile_x0000_y0512.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/280_lab.png",
+      "crop": [
+        0,
+        512,
+        512,
+        1024
+      ],
+      "source_image_mae": 1.3170942068099976,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_290__tile_x0512_y0512.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/290_lab.png",
+      "crop": [
+        512,
+        512,
+        1024,
+        1024
+      ],
+      "source_image_mae": 1.3660888671875,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_294__tile_x0000_y0512.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/294_lab.png",
+      "crop": [
+        0,
+        512,
+        512,
+        1024
+      ],
+      "source_image_mae": 1.2452608346939087,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_307__tile_x0000_y0512.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/307_lab.png",
+      "crop": [
+        0,
+        512,
+        512,
+        1024
+      ],
+      "source_image_mae": 1.3697547912597656,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_308__tile_x0512_y0000.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/308_lab.png",
+      "crop": [
+        512,
+        0,
+        1024,
+        512
+      ],
+      "source_image_mae": 0.9728648066520691,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_318__tile_x0512_y0512.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/318_lab.png",
+      "crop": [
+        512,
+        512,
+        1024,
+        1024
+      ],
+      "source_image_mae": 1.7401338815689087,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_324__tile_x0512_y0512.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/324_lab.png",
+      "crop": [
+        512,
+        512,
+        1024,
+        1024
+      ],
+      "source_image_mae": 0.9672698974609375,
+      "object_area_fraction_native512": 0.23877716064453125,
+      "before": {
+        "Vegetation": 0.3236641221374046,
+        "ControlPoint": 0.0,
+        "union": 0.3236641221374046
+      },
+      "random_baseline_area_fraction_256": 0.240203857421875,
+      "enrichment": {
+        "before": 1.3474559718204133,
+        "after": 1.2457611814943443
+      },
+      "after": {
+        "Vegetation": 0.29923664122137406,
+        "ControlPoint": 0.0,
+        "union": 0.29923664122137406
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_329__tile_x0512_y0000.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/329_lab.png",
+      "crop": [
+        512,
+        0,
+        1024,
+        512
+      ],
+      "source_image_mae": 1.2861429452896118,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_335__tile_x0000_y0000.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/335_lab.png",
+      "crop": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "source_image_mae": 1.44329833984375,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_339__tile_x0000_y0000.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/339_lab.png",
+      "crop": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "source_image_mae": 1.1806691884994507,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_341__tile_x0512_y0000.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/341_lab.png",
+      "crop": [
+        512,
+        0,
+        1024,
+        512
+      ],
+      "source_image_mae": 0.9564170837402344,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_346__tile_x0512_y0000.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/346_lab.png",
+      "crop": [
+        512,
+        0,
+        1024,
+        512
+      ],
+      "source_image_mae": 1.3147557973861694,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_357__tile_x0512_y0512.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/357_lab.png",
+      "crop": [
+        512,
+        512,
+        1024,
+        1024
+      ],
+      "source_image_mae": 0.9631550908088684,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_361__tile_x0512_y0512.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/361_lab.png",
+      "crop": [
+        512,
+        512,
+        1024,
+        1024
+      ],
+      "source_image_mae": 1.2773284912109375,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_363__tile_x0000_y0512.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/363_lab.png",
+      "crop": [
+        0,
+        512,
+        512,
+        1024
+      ],
+      "source_image_mae": 0.949011504650116,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_364__tile_x0000_y0000.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/364_lab.png",
+      "crop": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "source_image_mae": 1.3674468994140625,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_373__tile_x0512_y0000.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/373_lab.png",
+      "crop": [
+        512,
+        0,
+        1024,
+        512
+      ],
+      "source_image_mae": 1.2830657958984375,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_386__tile_x0000_y0512.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/386_lab.png",
+      "crop": [
+        0,
+        512,
+        512,
+        1024
+      ],
+      "source_image_mae": 1.6308517456054688,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_389__tile_x0512_y0000.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/389_lab.png",
+      "crop": [
+        512,
+        0,
+        1024,
+        512
+      ],
+      "source_image_mae": 1.2991575002670288,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_390__tile_x0512_y0000.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/390_lab.png",
+      "crop": [
+        512,
+        0,
+        1024,
+        512
+      ],
+      "source_image_mae": 1.4106992483139038,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_401__tile_x0512_y0512.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/401_lab.png",
+      "crop": [
+        512,
+        512,
+        1024,
+        1024
+      ],
+      "source_image_mae": 1.2007598876953125,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_412__tile_x0512_y0512.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/412_lab.png",
+      "crop": [
+        512,
+        512,
+        1024,
+        1024
+      ],
+      "source_image_mae": 1.283307433128357,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_429__tile_x0512_y0000.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/429_lab.png",
+      "crop": [
+        512,
+        0,
+        1024,
+        512
+      ],
+      "source_image_mae": 1.4274965524673462,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_436__tile_x0000_y0512.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/436_lab.png",
+      "crop": [
+        0,
+        512,
+        512,
+        1024
+      ],
+      "source_image_mae": 1.325897216796875,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_488__tile_x0512_y0000.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/488_lab.png",
+      "crop": [
+        512,
+        0,
+        1024,
+        512
+      ],
+      "source_image_mae": 1.0336633920669556,
+      "object_area_fraction_native512": 0.6727714538574219,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.6718292236328125,
+      "enrichment": {
+        "before": 0.0,
+        "after": 0.0
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_497__tile_x0000_y0512.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/497_lab.png",
+      "crop": [
+        0,
+        512,
+        512,
+        1024
+      ],
+      "source_image_mae": 1.467175841331482,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_501__tile_x0000_y0512.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/501_lab.png",
+      "crop": [
+        0,
+        512,
+        512,
+        1024
+      ],
+      "source_image_mae": 1.6789029836654663,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_514__tile_x0000_y0512.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/514_lab.png",
+      "crop": [
+        0,
+        512,
+        512,
+        1024
+      ],
+      "source_image_mae": 1.4525871276855469,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_551__tile_x0512_y0512.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/551_lab.png",
+      "crop": [
+        512,
+        512,
+        1024,
+        1024
+      ],
+      "source_image_mae": 1.7975730895996094,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_554__tile_x0512_y0000.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/554_lab.png",
+      "crop": [
+        512,
+        0,
+        1024,
+        512
+      ],
+      "source_image_mae": 1.325775146484375,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_558__tile_x0512_y0512.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/558_lab.png",
+      "crop": [
+        512,
+        512,
+        1024,
+        1024
+      ],
+      "source_image_mae": 1.1979116201400757,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_561__tile_x0000_y0512.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/train/masks/561_lab.png",
+      "crop": [
+        0,
+        512,
+        512,
+        1024
+      ],
+      "source_image_mae": 1.3449186086654663,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_val_574__tile_x0512_y0000.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/val/masks/574_lab.png",
+      "crop": [
+        512,
+        0,
+        1024,
+        512
+      ],
+      "source_image_mae": 1.1547927856445312,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_val_588__tile_x0512_y0512.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/val/masks/588_lab.png",
+      "crop": [
+        512,
+        512,
+        1024,
+        1024
+      ],
+      "source_image_mae": 1.1299654245376587,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_val_626__tile_x0512_y0512.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/val/masks/626_lab.png",
+      "crop": [
+        512,
+        512,
+        1024,
+        1024
+      ],
+      "source_image_mae": 1.2368990182876587,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_val_633__tile_x0512_y0512.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/val/masks/633_lab.png",
+      "crop": [
+        512,
+        512,
+        1024,
+        1024
+      ],
+      "source_image_mae": 1.5807698965072632,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_val_639__tile_x0000_y0000.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/val/masks/639_lab.png",
+      "crop": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "source_image_mae": 1.3500099182128906,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_val_646__tile_x0512_y0000.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/S2DS/val/masks/646_lab.png",
+      "crop": [
+        512,
+        0,
+        1024,
+        512
+      ],
+      "source_image_mae": 1.1581319570541382,
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Vegetation": 0.0,
+        "ControlPoint": 0.0,
+        "union": 0.0
+      }
+    }
+  ],
+  "top20_indices": {
+    "before": [
+      428,
+      89,
+      100,
+      217,
+      253,
+      4,
+      235,
+      211,
+      169,
+      10,
+      111,
+      270,
+      247,
+      346,
+      25,
+      137,
+      149,
+      264,
+      273,
+      6
+    ],
+    "after": [
+      428,
+      89,
+      100,
+      211,
+      217,
+      235,
+      169,
+      253,
+      111,
+      247,
+      270,
+      25,
+      346,
+      10,
+      264,
+      6,
+      137,
+      4,
+      232,
+      149
+    ]
+  },
+  "overlay_scale": {
+    "low": -4.000453472137451,
+    "high": 9.075922012329102,
+    "shared": true
+  },
+  "mean_union_fraction": {
+    "before": 0.021781170483460562,
+    "after": 0.021450381679389317
+  },
+  "note": "Descriptive diagnostic only; conditional on annotation coverage; lower overlap alone does not prove lower absolute false positives"
+}

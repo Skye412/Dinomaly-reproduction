@@ -1,0 +1,2296 @@
+{
+  "object_containing_normals": {
+    "images": 0,
+    "mean_overlap": {
+      "before": null,
+      "after": null
+    },
+    "mean_enrichment": {
+      "before": null,
+      "after": null
+    }
+  },
+  "top_fraction": 0.01,
+  "top_pixels": 655,
+  "normals": 555,
+  "covered_normals": 0,
+  "uncovered_normals": 555,
+  "records": [
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/codebrim_image_0000260_x3072_y0000__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/codebrim_image_0000295_x1024_y1024__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/codebrim_image_0000295_x1024_y2976__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/codebrim_image_0000310_x3072_y2048__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/codebrim_image_0000310_x3072_y2976__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/codebrim_image_0000313_x0000_y0000__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/codebrim_image_0000313_x1024_y0000__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/codebrim_image_0000316_x3072_y2048__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/codebrim_image_0000352_x2048_y2048__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/codebrim_image_0000352_x4096_y2048__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/codebrim_image_0000398_x3072_y2048__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/codebrim_image_0000398_x3072_y2432__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/codebrim_image_0000403_x0000_y1024__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/codebrim_image_0000403_x3584_y1024__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/codebrim_image_0000408_x0000_y2048__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/codebrim_image_0000408_x3072_y2048__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/codebrim_image_0000467_x2048_y2048__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/codebrim_image_0000467_x3072_y1024__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/codebrim_image_0000477_x2048_y1024__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/codebrim_image_0000477_x2048_y1024__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/codebrim_image_0000483_x1024_y2048__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/codebrim_image_0000483_x2048_y1024__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/codebrim_image_0000512_x1024_y1024__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/codebrim_image_0000512_x3072_y1024__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/codebrim_image_0000519_x1024_y2048__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/codebrim_image_0000519_x1024_y2048__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/codebrim_image_0000526_x0000_y0000__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/codebrim_image_0000526_x3072_y0000__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/codebrim_image_0000528_x2048_y1024__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/codebrim_image_0000528_x3584_y1024__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/codebrim_image_0000533_x1024_y0000__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/codebrim_image_0000533_x1024_y1024__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/codebrim_image_0000536_x2048_y1024__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/codebrim_image_0000536_x2048_y1024__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/codebrim_image_0000543_x2048_y2432__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/codebrim_image_0000543_x3072_y2048__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/codebrim_image_0000577_x1024_y1024__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/codebrim_image_0000577_x1088_y0000__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/codebrim_image_0000614_x0000_y0680__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/codebrim_image_0000614_x1248_y0680__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/codebrim_image_0000636_x0256_y0000__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/codebrim_image_0000696_x0000_y0000__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/codebrim_image_0000696_x1088_y0000__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/codebrim_image_0000714_x1024_y0000__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/codebrim_image_0000714_x1024_y0812__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/codebrim_image_0000719_x0000_y0812__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/codebrim_image_0000719_x1024_y0000__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00002__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00002__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00006__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00006__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00011__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00011__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00015__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00015__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00018__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00018__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00022__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00022__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00025__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00025__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00031__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00031__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00046__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00046__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00056__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00056__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00059__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00059__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00063__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00063__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00069__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00069__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00071__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00071__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00077__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00077__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00096__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00096__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00102__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00102__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00110__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00110__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00112__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00119__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00120__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00120__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00124__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00128__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00128__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00130__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00132__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00132__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00134__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00134__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00136__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00136__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00141__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00141__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00142__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00146__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00150__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00150__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00154__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00154__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00161__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00161__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00163__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00163__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00167__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00167__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00173__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00173__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00177__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00177__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00183__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00183__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00190__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00190__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00194__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00194__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00195__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00198__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00198__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00202__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00202__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00213__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00217__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00219__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00219__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00228__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00228__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00231__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00231__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00234__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00234__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00244__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00244__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00248__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00248__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00249__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00253__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00253__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00275__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00275__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00282__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00282__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00283__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00283__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00285__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00285__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00291__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00291__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00298__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00319__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00319__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00320__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00325__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00325__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00329__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00329__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00339__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00339__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00342__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00342__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00344__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00344__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00347__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00347__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00349__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00349__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00351__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00351__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00353__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00353__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00361__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00361__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00366__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00366__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00367__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00367__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00378__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00378__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00379__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00379__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00380__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00380__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00384__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00384__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00386__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00386__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00387__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00387__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00395__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00395__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00398__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00398__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00400__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00400__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00404__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00404__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00406__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00406__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00411__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00411__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00412__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00415__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00415__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00416__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00416__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00424__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00424__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00428__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00428__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00443__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00444__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00444__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00445__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00445__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00455__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00458__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00458__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00459__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00459__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00460__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00460__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00464__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00464__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00468__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00468__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00476__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00477__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00477__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00480__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00480__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00481__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00481__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00483__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00483__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00492__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00492__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00499__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00499__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00500__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00500__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00503__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00503__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00512__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00512__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00519__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00520__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00520__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00531__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00546__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00546__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00547__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00547__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00556__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00556__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00561__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00561__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00562__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00562__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00563__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00563__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00570__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00570__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00573__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00573__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00576__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00576__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00589__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00589__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00593__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00593__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00595__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00599__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00599__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00607__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00607__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00616__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00616__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00628__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00628__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00629__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00629__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00630__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00630__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00643__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00643__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00650__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00650__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00652__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00652__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00656__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00660__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00662__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00662__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00670__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00670__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00674__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00674__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00676__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00676__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00677__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00685__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00685__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00686__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00686__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00687__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00687__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00697__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00697__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00698__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00698__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00699__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00699__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00706__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00711__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00711__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00712__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00712__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00717__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00726__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00726__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00730__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00730__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00735__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00735__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00738__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00757__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00757__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00769__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00769__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00772__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00774__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00774__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00779__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00779__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00785__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00785__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00786__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00791__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00801__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00801__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00808__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00808__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00810__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00815__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00815__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00824__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00824__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00827__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00828__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00828__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00841__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00841__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00846__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00846__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00862__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00862__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00867__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00867__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00872__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00872__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00873__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00873__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00879__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00879__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00886__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00886__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00890__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00890__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00892__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00892__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00893__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00893__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00902__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00902__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00912__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00912__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00914__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00914__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00916__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00921__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00921__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00922__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00922__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00926__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00926__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00930__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00930__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00937__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00937__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00938__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00938__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00945__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00946__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00946__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00950__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00950__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00955__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00955__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00965__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00965__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00967__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00967__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00975__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00975__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00978__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00983__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00983__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00986__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00986__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00990__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00990__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00991__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_00991__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01002__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01002__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01007__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01007__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01011__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01019__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01019__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01028__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01031__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01031__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01032__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01032__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01036__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01036__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01039__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01039__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01043__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01044__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01044__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01046__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01047__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01050__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01050__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01052__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01052__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01062__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01062__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01070__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01081__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01094__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01094__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01096__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01096__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01097__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01097__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01100__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01100__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01107__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01108__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01108__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01114__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01114__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01120__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01120__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01121__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01121__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01134__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01135__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01136__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01136__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01138__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01138__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01139__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01139__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01140__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01140__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01143__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01143__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01148__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01148__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01171__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01173__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01173__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01181__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01189__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01189__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01195__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01198__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01198__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01199__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01199__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01209__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01222__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01222__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01230__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01230__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01234__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01234__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01242__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01242__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01245__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01245__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01247__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01247__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01268__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01268__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01281__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01281__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01286__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01286__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01288__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01288__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01289__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01289__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01291__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01291__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01292__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01292__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01301__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01301__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01326__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01326__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01329__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01329__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01334__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01334__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01336__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01336__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01345__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01345__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01366__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01381__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01381__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01382__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01382__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01391__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01391__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01397__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01397__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01398__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01398__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01410__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01410__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01415__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01415__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01417__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01419__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01419__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01423__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01427__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01428__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01428__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01433__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01433__tile_x0512_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01439__tile_x0000_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01439__tile_x0512_y0512.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM/test/normal/normal_01446__tile_x0000_y0000.jpg",
+      "status": "unavailable_no_object_taxonomy"
+    }
+  ],
+  "top20_indices": {
+    "before": [
+      518,
+      594,
+      236,
+      593,
+      353,
+      531,
+      627,
+      515,
+      530,
+      438,
+      461,
+      628,
+      400,
+      401,
+      732,
+      333,
+      607,
+      393,
+      323,
+      449
+    ],
+    "after": [
+      236,
+      518,
+      593,
+      594,
+      353,
+      627,
+      628,
+      401,
+      515,
+      449,
+      393,
+      530,
+      732,
+      780,
+      531,
+      762,
+      626,
+      400,
+      605,
+      544
+    ]
+  },
+  "overlay_scale": {
+    "low": -3.429332971572876,
+    "high": 20.812471389770508,
+    "shared": true
+  },
+  "mean_union_fraction": {
+    "before": null,
+    "after": null
+  },
+  "note": "Descriptive diagnostic only; conditional on annotation coverage; lower overlap alone does not prove lower absolute false positives"
+}

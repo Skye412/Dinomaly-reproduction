@@ -1,0 +1,49 @@
+{"state": "waiting_for_gpu", "git_commit": "402fbbfbd4f96a66493ef47741b29713ef047e13"}
+{"state": "gpu_lock_acquired", "free_mib": 15822, "message": "Shared GPU lock acquired; free memory rechecked under lock"}
+{"state": "building_bank"}
+{"state": "validation"}
+{"phase": "retrieving_val", "batch": 1, "samples": 16}
+{"phase": "retrieving_val", "batch": 2, "samples": 32}
+{"phase": "retrieving_val", "batch": 3, "samples": 48}
+{"phase": "retrieving_val", "batch": 4, "samples": 64}
+{"phase": "retrieving_val", "batch": 5, "samples": 80}
+{"phase": "retrieving_val", "batch": 6, "samples": 96}
+{"phase": "retrieving_val", "batch": 7, "samples": 112}
+{"phase": "retrieving_val", "batch": 8, "samples": 128}
+{"phase": "retrieving_val", "batch": 9, "samples": 144}
+{"phase": "retrieving_val", "batch": 10, "samples": 160}
+{"phase": "retrieving_val", "batch": 11, "samples": 176}
+{"phase": "retrieving_val", "batch": 12, "samples": 192}
+{"phase": "retrieving_val", "batch": 13, "samples": 208}
+{"phase": "retrieving_val", "batch": 14, "samples": 218}
+{"state": "test"}
+{"phase": "retrieving_test", "batch": 1, "samples": 16}
+{"phase": "retrieving_test", "batch": 2, "samples": 32}
+{"phase": "retrieving_test", "batch": 3, "samples": 48}
+{"phase": "retrieving_test", "batch": 4, "samples": 64}
+{"phase": "retrieving_test", "batch": 5, "samples": 80}
+{"phase": "retrieving_test", "batch": 6, "samples": 96}
+{"phase": "retrieving_test", "batch": 7, "samples": 112}
+{"phase": "retrieving_test", "batch": 8, "samples": 128}
+{"phase": "retrieving_test", "batch": 9, "samples": 144}
+{"phase": "retrieving_test", "batch": 10, "samples": 160}
+{"phase": "retrieving_test", "batch": 11, "samples": 176}
+{"phase": "retrieving_test", "batch": 12, "samples": 192}
+{"phase": "retrieving_test", "batch": 13, "samples": 208}
+{"phase": "retrieving_test", "batch": 14, "samples": 224}
+{"phase": "retrieving_test", "batch": 15, "samples": 240}
+{"phase": "retrieving_test", "batch": 16, "samples": 256}
+{"phase": "retrieving_test", "batch": 17, "samples": 272}
+{"phase": "retrieving_test", "batch": 18, "samples": 288}
+{"phase": "retrieving_test", "batch": 19, "samples": 304}
+{"phase": "retrieving_test", "batch": 20, "samples": 320}
+{"phase": "retrieving_test", "batch": 21, "samples": 336}
+{"phase": "retrieving_test", "batch": 22, "samples": 352}
+{"phase": "retrieving_test", "batch": 23, "samples": 368}
+{"phase": "retrieving_test", "batch": 24, "samples": 384}
+{"phase": "retrieving_test", "batch": 25, "samples": 400}
+{"phase": "retrieving_test", "batch": 26, "samples": 416}
+{"phase": "retrieving_test", "batch": 27, "samples": 432}
+{"phase": "retrieving_test", "batch": 28, "samples": 447}
+{"state": "diagnostics"}
+{"state": "completed", "elapsed_seconds": 2910.3576986789703}

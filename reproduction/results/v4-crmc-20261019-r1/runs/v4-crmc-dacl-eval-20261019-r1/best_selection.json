@@ -1,0 +1,11 @@
+{
+  "step": 10000,
+  "selected": {
+    "k": "16",
+    "mode": "weighted_sum",
+    "alpha": 1.0,
+    "top_fraction": 1.0,
+    "image_auroc": 0.8240933974533466,
+    "pixel_ap": 0.38922666010909346
+  }
+}

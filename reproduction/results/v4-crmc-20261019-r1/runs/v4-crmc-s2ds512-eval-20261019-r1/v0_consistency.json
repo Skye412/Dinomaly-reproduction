@@ -1,0 +1,7 @@
+{
+  "expected_image_auroc": 0.6653725001831368,
+  "observed_image_auroc": 0.6653725001831368,
+  "absolute_delta": 0.0,
+  "maximum_score_difference": 2.9802322387695312e-08,
+  "passed": true
+}

@@ -1,0 +1,12 @@
+{
+  "pid": 2790870,
+  "state": "completed",
+  "git_commit": "402fbbfbd4f96a66493ef47741b29713ef047e13",
+  "updated_at": 1792351704.1248102,
+  "free_mib": 15822,
+  "message": "Shared GPU lock acquired; free memory rechecked under lock",
+  "phase": "retrieving_test",
+  "batch": 28,
+  "samples": 447,
+  "elapsed_seconds": 2910.3576986789703
+}

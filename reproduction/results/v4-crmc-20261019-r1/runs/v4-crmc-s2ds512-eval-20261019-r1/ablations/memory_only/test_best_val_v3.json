@@ -1,0 +1,5482 @@
+{
+  "protocol": "crmc_eval_v1",
+  "model_variant": "v0_plus_crmc",
+  "step": 6000,
+  "selected": {
+    "k": "16",
+    "mode": "weighted_sum",
+    "alpha": 1.0,
+    "top_fraction": 0.02,
+    "image_auroc": 0.7602486559139786,
+    "pixel_ap": 0.5436591567954977
+  },
+  "validation_metrics": {
+    "image_auroc": 0.7602486559139786,
+    "image_ap": 0.9443503784542009,
+    "image_f1_max": 0.9269520912562126,
+    "pixel_auroc": 0.8676664073562327,
+    "pixel_ap": 0.5436591567954977,
+    "pixel_f1_max": 0.597291736841742,
+    "pixel_aupro": 0.5416427014668246
+  },
+  "metrics": {
+    "image_auroc": 0.7026225184968133,
+    "image_ap": 0.9201740333013724,
+    "image_f1_max": 0.9133088636846832,
+    "pixel_auroc": 0.8755775774405242,
+    "pixel_ap": 0.4681713577682925,
+    "pixel_f1_max": 0.5395519215127663,
+    "pixel_aupro": 0.5353840908864549
+  },
+  "primary_fpr10": {
+    "threshold": 2.5872896671295167,
+    "image_precision": 0.9269662921348315,
+    "image_recall": 0.4411764705882353,
+    "image_f1": 0.5978260869565218,
+    "tp": 165,
+    "fp": 13,
+    "tn": 60,
+    "fn": 209,
+    "normal": 73,
+    "anomaly": 374,
+    "samples": 447,
+    "false_positive_rate": 0.1780821917808219,
+    "specificity": 0.821917808219178,
+    "balanced_accuracy": 0.6315471394037067
+  },
+  "legacy_f1": {
+    "threshold": 1.0525981187820435,
+    "image_precision": 0.8406862745098039,
+    "image_recall": 0.9171122994652406,
+    "image_f1": 0.8772378516624041,
+    "tp": 343,
+    "fp": 65,
+    "tn": 8,
+    "fn": 31,
+    "normal": 73,
+    "anomaly": 374,
+    "samples": 447,
+    "false_positive_rate": 0.8904109589041096,
+    "specificity": 0.1095890410958904,
+    "balanced_accuracy": 0.5133506702805655
+  },
+  "validation_fpr10": {
+    "threshold": 2.5872896671295167,
+    "image_precision": 0.9574468085106383,
+    "image_recall": 0.4838709677419355,
+    "image_f1": 0.6428571428571429,
+    "tp": 90,
+    "fp": 4,
+    "tn": 28,
+    "fn": 96,
+    "normal": 32,
+    "anomaly": 186,
+    "samples": 218,
+    "false_positive_rate": 0.125,
+    "specificity": 0.875,
+    "balanced_accuracy": 0.6794354838709677
+  },
+  "top_fraction": 0.02,
+  "pixel_metric_resolution": 256,
+  "positive_images_with_empty_resized_mask": 0,
+  "stratified": {
+    "protocol": "native512_test_strata_v1",
+    "definition": "All normal test images plus relevant anomalous images; fixed validation-normal FPR10 threshold; lower-inclusive upper-exclusive area bins",
+    "area_bins": {
+      "lt_0.1pct": {
+        "normal": 73,
+        "anomaly": 41,
+        "image_auroc": 0.49582358837287005,
+        "recall_fpr10": 0.12195121951219512,
+        "false_positive_normal": 13,
+        "threshold": 2.5872896671295167,
+        "undefined_reason": null
+      },
+      "0.1_0.5pct": {
+        "normal": 73,
+        "anomaly": 93,
+        "image_auroc": 0.4838709677419355,
+        "recall_fpr10": 0.12903225806451613,
+        "false_positive_normal": 13,
+        "threshold": 2.5872896671295167,
+        "undefined_reason": null
+      },
+      "0.5_1pct": {
+        "normal": 73,
+        "anomaly": 37,
+        "image_auroc": 0.5723805997778602,
+        "recall_fpr10": 0.1891891891891892,
+        "false_positive_normal": 13,
+        "threshold": 2.5872896671295167,
+        "undefined_reason": null
+      },
+      "1_5pct": {
+        "normal": 73,
+        "anomaly": 52,
+        "image_auroc": 0.7926765015806112,
+        "recall_fpr10": 0.46153846153846156,
+        "false_positive_normal": 13,
+        "threshold": 2.5872896671295167,
+        "undefined_reason": null
+      },
+      "ge_5pct": {
+        "normal": 73,
+        "anomaly": 151,
+        "image_auroc": 0.8944026127188606,
+        "recall_fpr10": 0.7748344370860927,
+        "false_positive_normal": 13,
+        "threshold": 2.5872896671295167,
+        "undefined_reason": null
+      }
+    },
+    "classes": {
+      "Crack": {
+        "normal": 73,
+        "anomaly": 139,
+        "image_auroc": 0.47255346407805265,
+        "recall_fpr10": 0.1223021582733813,
+        "false_positive_normal": 13,
+        "threshold": 2.5872896671295167,
+        "undefined_reason": null
+      },
+      "Spalling": {
+        "normal": 73,
+        "anomaly": 108,
+        "image_auroc": 0.8834348046676814,
+        "recall_fpr10": 0.7962962962962963,
+        "false_positive_normal": 13,
+        "threshold": 2.5872896671295167,
+        "undefined_reason": null
+      },
+      "Corrosion": {
+        "normal": 73,
+        "anomaly": 148,
+        "image_auroc": 0.8616253239540911,
+        "recall_fpr10": 0.7094594594594594,
+        "false_positive_normal": 13,
+        "threshold": 2.5872896671295167,
+        "undefined_reason": null
+      },
+      "Efflorescence": {
+        "normal": 73,
+        "anomaly": 70,
+        "image_auroc": 0.7937377690802349,
+        "recall_fpr10": 0.44285714285714284,
+        "false_positive_normal": 13,
+        "threshold": 2.5872896671295167,
+        "undefined_reason": null
+      }
+    },
+    "per_image": [
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/normal_00151__tile_x0512_y0512.jpg",
+        "score": 1.4656565189361572,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/normal_00208__tile_x0000_y0000.jpg",
+        "score": 1.87327241897583,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/normal_00335__tile_x0000_y0512.jpg",
+        "score": 1.5143146514892578,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/normal_00533__tile_x0512_y0000.jpg",
+        "score": 2.179374933242798,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/normal_00608__tile_x0000_y0512.jpg",
+        "score": 2.063115119934082,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/normal_00651__tile_x0512_y0000.jpg",
+        "score": 1.7710689306259155,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/normal_00732__tile_x0000_y0512.jpg",
+        "score": 2.511239767074585,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/normal_00758__tile_x0000_y0000.jpg",
+        "score": 2.013417959213257,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/normal_01016__tile_x0000_y0512.jpg",
+        "score": 1.919208288192749,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/normal_01075__tile_x0512_y0000.jpg",
+        "score": 0.5956236124038696,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/normal_01163__tile_x0512_y0512.jpg",
+        "score": 2.1759705543518066,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/normal_01340__tile_x0000_y0512.jpg",
+        "score": 1.9333984851837158,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/normal_01369__tile_x0000_y0512.jpg",
+        "score": 0.7780039310455322,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.8747940063476562,
+        "defect_pixels": 229322,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_test_657__tile_x0000_y0000.jpg",
+        "score": 4.170948505401611,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.8047103881835938,
+        "defect_pixels": 210950,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_test_657__tile_x0000_y0512.jpg",
+        "score": 4.006465435028076,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.9725723266601562,
+        "defect_pixels": 254954,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_test_657__tile_x0512_y0000.jpg",
+        "score": 4.152143955230713,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.205810546875,
+        "defect_pixels": 53952,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_test_657__tile_x0512_y0512.jpg",
+        "score": 3.572772979736328,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.16054534912109375,
+        "defect_pixels": 42086,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_test_658__tile_x0000_y0000.jpg",
+        "score": 3.8241963386535645,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.010555267333984375,
+        "defect_pixels": 2767,
+        "classes": [
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_test_658__tile_x0000_y0512.jpg",
+        "score": 1.8002612590789795,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.050472259521484375,
+        "defect_pixels": 13231,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_test_658__tile_x0512_y0000.jpg",
+        "score": 3.906836986541748,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.01013946533203125,
+        "defect_pixels": 2658,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_test_658__tile_x0512_y0512.jpg",
+        "score": 2.4529452323913574,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.03369903564453125,
+        "defect_pixels": 8834,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_test_669__tile_x0000_y0000.jpg",
+        "score": 2.3764734268188477,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.017086029052734375,
+        "defect_pixels": 4479,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_test_669__tile_x0000_y0512.jpg",
+        "score": 1.9463589191436768,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.00067901611328125,
+        "defect_pixels": 178,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_test_669__tile_x0512_y0000.jpg",
+        "score": 1.2090264558792114,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.114044189453125,
+        "defect_pixels": 29896,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_test_669__tile_x0512_y0512.jpg",
+        "score": 2.2867887020111084,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_test_680__tile_x0000_y0512.jpg",
+        "score": 2.724346399307251,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.005706787109375,
+        "defect_pixels": 1496,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_test_680__tile_x0512_y0512.jpg",
+        "score": 2.312803268432617,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.09888839721679688,
+        "defect_pixels": 25923,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_test_685__tile_x0000_y0000.jpg",
+        "score": 2.7915303707122803,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.13355636596679688,
+        "defect_pixels": 35011,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_test_685__tile_x0000_y0512.jpg",
+        "score": 2.808091402053833,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.06569671630859375,
+        "defect_pixels": 17222,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_test_685__tile_x0512_y0000.jpg",
+        "score": 2.8215177059173584,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.17268753051757812,
+        "defect_pixels": 45269,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_test_685__tile_x0512_y0512.jpg",
+        "score": 2.7443220615386963,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.001476287841796875,
+        "defect_pixels": 387,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_test_692__tile_x0000_y0000.jpg",
+        "score": 2.2118754386901855,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_test_692__tile_x0000_y0512.jpg",
+        "score": 1.353090763092041,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.014255523681640625,
+        "defect_pixels": 3737,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_test_692__tile_x0512_y0000.jpg",
+        "score": 2.297396421432495,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.0213165283203125,
+        "defect_pixels": 5588,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_test_692__tile_x0512_y0512.jpg",
+        "score": 2.8763175010681152,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.49793243408203125,
+        "defect_pixels": 130530,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_test_704__tile_x0000_y0000.jpg",
+        "score": 2.629263401031494,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.5176658630371094,
+        "defect_pixels": 135703,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_test_704__tile_x0000_y0512.jpg",
+        "score": 2.4916086196899414,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.2633705139160156,
+        "defect_pixels": 69041,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_test_704__tile_x0512_y0000.jpg",
+        "score": 2.559513568878174,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.03692626953125,
+        "defect_pixels": 9680,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_test_704__tile_x0512_y0512.jpg",
+        "score": 1.9690709114074707,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.08826446533203125,
+        "defect_pixels": 23138,
+        "classes": [
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_test_709__tile_x0000_y0000.jpg",
+        "score": 2.2823660373687744,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.1280975341796875,
+        "defect_pixels": 33580,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_test_709__tile_x0000_y0512.jpg",
+        "score": 2.787609100341797,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.284454345703125,
+        "defect_pixels": 74568,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_test_709__tile_x0512_y0000.jpg",
+        "score": 3.0728728771209717,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.2266998291015625,
+        "defect_pixels": 59428,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_test_709__tile_x0512_y0512.jpg",
+        "score": 3.0032968521118164,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.25832366943359375,
+        "defect_pixels": 67718,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_test_719__tile_x0000_y0000.jpg",
+        "score": 2.8184409141540527,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.13711166381835938,
+        "defect_pixels": 35943,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_test_719__tile_x0000_y0512.jpg",
+        "score": 3.7113139629364014,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.22115707397460938,
+        "defect_pixels": 57975,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_test_719__tile_x0512_y0000.jpg",
+        "score": 3.015476703643799,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.027019500732421875,
+        "defect_pixels": 7083,
+        "classes": [
+          "Corrosion",
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_test_719__tile_x0512_y0512.jpg",
+        "score": 2.7604596614837646,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.002105712890625,
+        "defect_pixels": 552,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_test_723__tile_x0000_y0000.jpg",
+        "score": 1.8867433071136475,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.00054168701171875,
+        "defect_pixels": 142,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_test_723__tile_x0000_y0512.jpg",
+        "score": 1.5772591829299927,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.003719329833984375,
+        "defect_pixels": 975,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_test_723__tile_x0512_y0000.jpg",
+        "score": 1.7359309196472168,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.0020294189453125,
+        "defect_pixels": 532,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_test_723__tile_x0512_y0512.jpg",
+        "score": 2.409571886062622,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.02260589599609375,
+        "defect_pixels": 5926,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_test_728__tile_x0000_y0000.jpg",
+        "score": 1.9479408264160156,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.052036285400390625,
+        "defect_pixels": 13641,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_test_728__tile_x0000_y0512.jpg",
+        "score": 1.991833209991455,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_test_729__tile_x0000_y0512.jpg",
+        "score": 1.945336937904358,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.0315399169921875,
+        "defect_pixels": 8268,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_test_729__tile_x0512_y0000.jpg",
+        "score": 2.577242374420166,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.016742706298828125,
+        "defect_pixels": 4389,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_test_729__tile_x0512_y0512.jpg",
+        "score": 3.1267313957214355,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.047969818115234375,
+        "defect_pixels": 12575,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_test_736__tile_x0000_y0000.jpg",
+        "score": 2.3815627098083496,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.12085342407226562,
+        "defect_pixels": 31681,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_test_736__tile_x0000_y0512.jpg",
+        "score": 3.3167312145233154,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.014850616455078125,
+        "defect_pixels": 3893,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_test_736__tile_x0512_y0000.jpg",
+        "score": 1.8190867900848389,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.08390045166015625,
+        "defect_pixels": 21994,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_test_736__tile_x0512_y0512.jpg",
+        "score": 2.683067798614502,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.004138946533203125,
+        "defect_pixels": 1085,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_test_742__tile_x0000_y0000.jpg",
+        "score": 2.527709484100342,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.00501251220703125,
+        "defect_pixels": 1314,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_test_742__tile_x0000_y0512.jpg",
+        "score": 2.270918846130371,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.001628875732421875,
+        "defect_pixels": 427,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_test_742__tile_x0512_y0000.jpg",
+        "score": 2.096069574356079,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.00051116943359375,
+        "defect_pixels": 134,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_test_742__tile_x0512_y0512.jpg",
+        "score": 2.0404696464538574,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.08547592163085938,
+        "defect_pixels": 22407,
+        "classes": [
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_003__tile_x0000_y0000.jpg",
+        "score": 2.585498094558716,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.04277801513671875,
+        "defect_pixels": 11214,
+        "classes": [
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_003__tile_x0000_y0512.jpg",
+        "score": 2.2316198348999023,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.05663299560546875,
+        "defect_pixels": 14846,
+        "classes": [
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_003__tile_x0512_y0000.jpg",
+        "score": 2.3738043308258057,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.07349395751953125,
+        "defect_pixels": 19266,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_003__tile_x0512_y0512.jpg",
+        "score": 2.8022539615631104,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.003261566162109375,
+        "defect_pixels": 855,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_004__tile_x0000_y0000.jpg",
+        "score": 1.1523560285568237,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.000179290771484375,
+        "defect_pixels": 47,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_004__tile_x0000_y0512.jpg",
+        "score": 1.982295274734497,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.00348663330078125,
+        "defect_pixels": 914,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_004__tile_x0512_y0000.jpg",
+        "score": 1.4977567195892334,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.0240325927734375,
+        "defect_pixels": 6300,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_004__tile_x0512_y0512.jpg",
+        "score": 3.013470411300659,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 1.0,
+        "defect_pixels": 262144,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_009__tile_x0000_y0000.jpg",
+        "score": 2.9329869747161865,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 1.0,
+        "defect_pixels": 262144,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_009__tile_x0000_y0512.jpg",
+        "score": 2.8207809925079346,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 1.0,
+        "defect_pixels": 262144,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_009__tile_x0512_y0000.jpg",
+        "score": 3.366506814956665,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 1.0,
+        "defect_pixels": 262144,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_009__tile_x0512_y0512.jpg",
+        "score": 3.1709680557250977,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.016376495361328125,
+        "defect_pixels": 4293,
+        "classes": [
+          "Corrosion",
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_012__tile_x0000_y0000.jpg",
+        "score": 2.8684966564178467,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.055751800537109375,
+        "defect_pixels": 14615,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_012__tile_x0000_y0512.jpg",
+        "score": 2.4925155639648438,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_012__tile_x0512_y0000.jpg",
+        "score": 1.802498459815979,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.014430999755859375,
+        "defect_pixels": 3783,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_012__tile_x0512_y0512.jpg",
+        "score": 3.0005757808685303,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.002178192138671875,
+        "defect_pixels": 571,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_024__tile_x0000_y0000.jpg",
+        "score": 1.663490891456604,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.006595611572265625,
+        "defect_pixels": 1729,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_024__tile_x0000_y0512.jpg",
+        "score": 1.938468337059021,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.00428009033203125,
+        "defect_pixels": 1122,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_024__tile_x0512_y0000.jpg",
+        "score": 2.047438621520996,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.0012664794921875,
+        "defect_pixels": 332,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_024__tile_x0512_y0512.jpg",
+        "score": 1.818058729171753,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.002735137939453125,
+        "defect_pixels": 717,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_029__tile_x0000_y0000.jpg",
+        "score": 1.8625717163085938,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.006801605224609375,
+        "defect_pixels": 1783,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_029__tile_x0000_y0512.jpg",
+        "score": 2.194166421890259,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_029__tile_x0512_y0512.jpg",
+        "score": 1.4851157665252686,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.000759124755859375,
+        "defect_pixels": 199,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_035__tile_x0000_y0000.jpg",
+        "score": 2.970303535461426,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.001201629638671875,
+        "defect_pixels": 315,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_035__tile_x0000_y0512.jpg",
+        "score": 2.619955539703369,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_035__tile_x0512_y0000.jpg",
+        "score": 3.6097800731658936,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.18355941772460938,
+        "defect_pixels": 48119,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_042__tile_x0000_y0000.jpg",
+        "score": 3.377969264984131,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_042__tile_x0000_y0512.jpg",
+        "score": 1.7222893238067627,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.17963790893554688,
+        "defect_pixels": 47091,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_042__tile_x0512_y0000.jpg",
+        "score": 3.6217572689056396,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.005214691162109375,
+        "defect_pixels": 1367,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_053__tile_x0000_y0000.jpg",
+        "score": 1.672807216644287,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.00252532958984375,
+        "defect_pixels": 662,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_053__tile_x0000_y0512.jpg",
+        "score": 2.168628692626953,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.0010223388671875,
+        "defect_pixels": 268,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_053__tile_x0512_y0000.jpg",
+        "score": 2.0668296813964844,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.0002899169921875,
+        "defect_pixels": 76,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_053__tile_x0512_y0512.jpg",
+        "score": 1.6147053241729736,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.0009613037109375,
+        "defect_pixels": 252,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_059__tile_x0000_y0000.jpg",
+        "score": 1.410682201385498,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.00154876708984375,
+        "defect_pixels": 406,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_059__tile_x0000_y0512.jpg",
+        "score": 1.8996469974517822,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.00025177001953125,
+        "defect_pixels": 66,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_059__tile_x0512_y0000.jpg",
+        "score": 2.002504825592041,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_059__tile_x0512_y0512.jpg",
+        "score": 2.506983995437622,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.0027313232421875,
+        "defect_pixels": 716,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_077__tile_x0000_y0000.jpg",
+        "score": 3.2158665657043457,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_077__tile_x0000_y0512.jpg",
+        "score": 1.4759198427200317,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.0015716552734375,
+        "defect_pixels": 412,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_077__tile_x0512_y0000.jpg",
+        "score": 2.1630377769470215,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.001171112060546875,
+        "defect_pixels": 307,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_077__tile_x0512_y0512.jpg",
+        "score": 1.604749321937561,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.021793365478515625,
+        "defect_pixels": 5713,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_088__tile_x0000_y0000.jpg",
+        "score": 3.6564908027648926,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.00220489501953125,
+        "defect_pixels": 578,
+        "classes": [
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_088__tile_x0000_y0512.jpg",
+        "score": 0.9508537650108337,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.21990585327148438,
+        "defect_pixels": 57647,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_088__tile_x0512_y0000.jpg",
+        "score": 4.2223992347717285,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.0277862548828125,
+        "defect_pixels": 7284,
+        "classes": [
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_088__tile_x0512_y0512.jpg",
+        "score": 1.9990019798278809,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.004703521728515625,
+        "defect_pixels": 1233,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_092__tile_x0000_y0000.jpg",
+        "score": 3.027456521987915,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.002197265625,
+        "defect_pixels": 576,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_092__tile_x0000_y0512.jpg",
+        "score": 2.2929983139038086,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_092__tile_x0512_y0000.jpg",
+        "score": 2.8999056816101074,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.001796722412109375,
+        "defect_pixels": 471,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_092__tile_x0512_y0512.jpg",
+        "score": 2.719040870666504,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.5077476501464844,
+        "defect_pixels": 133103,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_096__tile_x0000_y0000.jpg",
+        "score": 3.187361001968384,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.3957252502441406,
+        "defect_pixels": 103737,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_096__tile_x0000_y0512.jpg",
+        "score": 3.202831745147705,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.5100784301757812,
+        "defect_pixels": 133714,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_096__tile_x0512_y0000.jpg",
+        "score": 3.2134993076324463,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.15052413940429688,
+        "defect_pixels": 39459,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_096__tile_x0512_y0512.jpg",
+        "score": 2.168111562728882,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.10187911987304688,
+        "defect_pixels": 26707,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_099__tile_x0000_y0000.jpg",
+        "score": 2.7205634117126465,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.13199615478515625,
+        "defect_pixels": 34602,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_099__tile_x0000_y0512.jpg",
+        "score": 2.659806728363037,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.12545394897460938,
+        "defect_pixels": 32887,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_099__tile_x0512_y0000.jpg",
+        "score": 3.4439215660095215,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.2399749755859375,
+        "defect_pixels": 62908,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_099__tile_x0512_y0512.jpg",
+        "score": 3.6713345050811768,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.20201873779296875,
+        "defect_pixels": 52958,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_116__tile_x0000_y0000.jpg",
+        "score": 4.098672389984131,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.12787246704101562,
+        "defect_pixels": 33521,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_116__tile_x0000_y0512.jpg",
+        "score": 4.415410995483398,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.31917572021484375,
+        "defect_pixels": 83670,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_116__tile_x0512_y0000.jpg",
+        "score": 3.2962756156921387,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.08815383911132812,
+        "defect_pixels": 23109,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_116__tile_x0512_y0512.jpg",
+        "score": 4.963929176330566,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.002079010009765625,
+        "defect_pixels": 545,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_117__tile_x0000_y0000.jpg",
+        "score": 2.0687317848205566,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.0001983642578125,
+        "defect_pixels": 52,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_117__tile_x0000_y0512.jpg",
+        "score": 2.446899890899658,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.034854888916015625,
+        "defect_pixels": 9137,
+        "classes": [
+          "Corrosion",
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_123__tile_x0000_y0000.jpg",
+        "score": 2.1859538555145264,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.00534820556640625,
+        "defect_pixels": 1402,
+        "classes": [
+          "Corrosion",
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_123__tile_x0000_y0512.jpg",
+        "score": 3.9279680252075195,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.7328414916992188,
+        "defect_pixels": 192110,
+        "classes": [
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_124__tile_x0000_y0000.jpg",
+        "score": 3.337604284286499,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 1.0,
+        "defect_pixels": 262144,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_124__tile_x0000_y0512.jpg",
+        "score": 3.242302417755127,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.5701141357421875,
+        "defect_pixels": 149452,
+        "classes": [
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_124__tile_x0512_y0000.jpg",
+        "score": 3.4146246910095215,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.3851966857910156,
+        "defect_pixels": 100977,
+        "classes": [
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_124__tile_x0512_y0512.jpg",
+        "score": 2.7738587856292725,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.002765655517578125,
+        "defect_pixels": 725,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_126__tile_x0000_y0000.jpg",
+        "score": 2.3717126846313477,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.001827239990234375,
+        "defect_pixels": 479,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_126__tile_x0000_y0512.jpg",
+        "score": 2.282106637954712,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_126__tile_x0512_y0000.jpg",
+        "score": 2.2544772624969482,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.00460052490234375,
+        "defect_pixels": 1206,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_126__tile_x0512_y0512.jpg",
+        "score": 2.7197625637054443,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_131__tile_x0000_y0000.jpg",
+        "score": 2.0912625789642334,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.00045013427734375,
+        "defect_pixels": 118,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_131__tile_x0000_y0512.jpg",
+        "score": 1.3127965927124023,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.05213165283203125,
+        "defect_pixels": 13666,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_131__tile_x0512_y0000.jpg",
+        "score": 2.411062479019165,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.00321197509765625,
+        "defect_pixels": 842,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_131__tile_x0512_y0512.jpg",
+        "score": 1.8097790479660034,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.002696990966796875,
+        "defect_pixels": 707,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_149__tile_x0512_y0000.jpg",
+        "score": 2.2090604305267334,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.025241851806640625,
+        "defect_pixels": 6617,
+        "classes": [
+          "Crack",
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_149__tile_x0512_y0512.jpg",
+        "score": 2.670706272125244,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.21795654296875,
+        "defect_pixels": 57136,
+        "classes": [
+          "Corrosion",
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_151__tile_x0000_y0000.jpg",
+        "score": 2.7335903644561768,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.23814010620117188,
+        "defect_pixels": 62427,
+        "classes": [
+          "Corrosion",
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_151__tile_x0000_y0512.jpg",
+        "score": 2.379049777984619,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.055904388427734375,
+        "defect_pixels": 14655,
+        "classes": [
+          "Corrosion",
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_151__tile_x0512_y0000.jpg",
+        "score": 2.225578784942627,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.239959716796875,
+        "defect_pixels": 62904,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_151__tile_x0512_y0512.jpg",
+        "score": 2.402503252029419,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.000675201416015625,
+        "defect_pixels": 177,
+        "classes": [
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_157__tile_x0000_y0000.jpg",
+        "score": 2.4545772075653076,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.20473098754882812,
+        "defect_pixels": 53669,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_157__tile_x0000_y0512.jpg",
+        "score": 3.6506693363189697,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_157__tile_x0512_y0000.jpg",
+        "score": 2.0891408920288086,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.12741470336914062,
+        "defect_pixels": 33401,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_157__tile_x0512_y0512.jpg",
+        "score": 3.1797468662261963,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.00518035888671875,
+        "defect_pixels": 1358,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_164__tile_x0000_y0000.jpg",
+        "score": 4.118383407592773,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.005847930908203125,
+        "defect_pixels": 1533,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_164__tile_x0000_y0512.jpg",
+        "score": 2.149805784225464,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.000972747802734375,
+        "defect_pixels": 255,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_164__tile_x0512_y0000.jpg",
+        "score": 3.211855888366699,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.0002593994140625,
+        "defect_pixels": 68,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_164__tile_x0512_y0512.jpg",
+        "score": 2.0364508628845215,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 1.0,
+        "defect_pixels": 262144,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_169__tile_x0000_y0000.jpg",
+        "score": 3.5631492137908936,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 1.0,
+        "defect_pixels": 262144,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_169__tile_x0000_y0512.jpg",
+        "score": 3.455399751663208,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.9602622985839844,
+        "defect_pixels": 251727,
+        "classes": [
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_169__tile_x0512_y0000.jpg",
+        "score": 3.256317138671875,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 1.0,
+        "defect_pixels": 262144,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_169__tile_x0512_y0512.jpg",
+        "score": 3.251042127609253,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.8944091796875,
+        "defect_pixels": 234464,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_171__tile_x0000_y0000.jpg",
+        "score": 3.578688621520996,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.09864044189453125,
+        "defect_pixels": 25858,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_171__tile_x0000_y0512.jpg",
+        "score": 3.579272985458374,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 1.0,
+        "defect_pixels": 262144,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_171__tile_x0512_y0000.jpg",
+        "score": 2.748593330383301,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.91778564453125,
+        "defect_pixels": 240592,
+        "classes": [
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_171__tile_x0512_y0512.jpg",
+        "score": 2.6808321475982666,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.9717445373535156,
+        "defect_pixels": 254737,
+        "classes": [
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_180__tile_x0000_y0000.jpg",
+        "score": 3.442147970199585,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 1.0,
+        "defect_pixels": 262144,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_180__tile_x0000_y0512.jpg",
+        "score": 2.8347697257995605,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.9723663330078125,
+        "defect_pixels": 254900,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_180__tile_x0512_y0000.jpg",
+        "score": 3.4480206966400146,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.7037544250488281,
+        "defect_pixels": 184485,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_180__tile_x0512_y0512.jpg",
+        "score": 3.5402112007141113,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.10043716430664062,
+        "defect_pixels": 26329,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_185__tile_x0000_y0000.jpg",
+        "score": 3.2914600372314453,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.13131332397460938,
+        "defect_pixels": 34423,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_185__tile_x0000_y0512.jpg",
+        "score": 3.844648599624634,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_185__tile_x0512_y0000.jpg",
+        "score": 3.2256059646606445,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.002033233642578125,
+        "defect_pixels": 533,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_189__tile_x0512_y0000.jpg",
+        "score": 1.6453410387039185,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.002071380615234375,
+        "defect_pixels": 543,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_189__tile_x0512_y0512.jpg",
+        "score": 1.8401795625686646,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.002254486083984375,
+        "defect_pixels": 591,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_200__tile_x0000_y0000.jpg",
+        "score": 0.8160852193832397,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.00232696533203125,
+        "defect_pixels": 610,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_200__tile_x0000_y0512.jpg",
+        "score": 0.9205644726753235,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_200__tile_x0512_y0512.jpg",
+        "score": 1.4109911918640137,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.7934112548828125,
+        "defect_pixels": 207988,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_211__tile_x0000_y0000.jpg",
+        "score": 3.127687692642212,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_211__tile_x0000_y0512.jpg",
+        "score": 1.9740880727767944,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.9941864013671875,
+        "defect_pixels": 260620,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_211__tile_x0512_y0000.jpg",
+        "score": 3.1593942642211914,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.19143295288085938,
+        "defect_pixels": 50183,
+        "classes": [
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_211__tile_x0512_y0512.jpg",
+        "score": 3.348482131958008,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.004840850830078125,
+        "defect_pixels": 1269,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_230__tile_x0000_y0000.jpg",
+        "score": 0.31530892848968506,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_230__tile_x0000_y0512.jpg",
+        "score": -0.1348431259393692,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.003551483154296875,
+        "defect_pixels": 931,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_230__tile_x0512_y0000.jpg",
+        "score": 0.6385957598686218,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.00146484375,
+        "defect_pixels": 384,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_230__tile_x0512_y0512.jpg",
+        "score": 0.05743247643113136,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.08225250244140625,
+        "defect_pixels": 21562,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_238__tile_x0000_y0000.jpg",
+        "score": 2.8753530979156494,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.454315185546875,
+        "defect_pixels": 119096,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_238__tile_x0000_y0512.jpg",
+        "score": 3.3569653034210205,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.03949737548828125,
+        "defect_pixels": 10354,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_238__tile_x0512_y0000.jpg",
+        "score": 1.9736714363098145,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.08354568481445312,
+        "defect_pixels": 21901,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_238__tile_x0512_y0512.jpg",
+        "score": 3.002640724182129,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.002986907958984375,
+        "defect_pixels": 783,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_246__tile_x0000_y0000.jpg",
+        "score": 1.2747092247009277,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.006381988525390625,
+        "defect_pixels": 1673,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_246__tile_x0000_y0512.jpg",
+        "score": 1.8531324863433838,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.0034332275390625,
+        "defect_pixels": 900,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_246__tile_x0512_y0000.jpg",
+        "score": 1.4169392585754395,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_246__tile_x0512_y0512.jpg",
+        "score": 1.3911449909210205,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.00763702392578125,
+        "defect_pixels": 2002,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_247__tile_x0000_y0000.jpg",
+        "score": 2.2283549308776855,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_247__tile_x0000_y0512.jpg",
+        "score": 1.9083973169326782,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.0047149658203125,
+        "defect_pixels": 1236,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_247__tile_x0512_y0000.jpg",
+        "score": 1.6280862092971802,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 1.0,
+        "defect_pixels": 262144,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_251__tile_x0000_y0000.jpg",
+        "score": 2.981100559234619,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 1.0,
+        "defect_pixels": 262144,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_251__tile_x0000_y0512.jpg",
+        "score": 2.9388716220855713,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 1.0,
+        "defect_pixels": 262144,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_251__tile_x0512_y0000.jpg",
+        "score": 3.2511096000671387,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 1.0,
+        "defect_pixels": 262144,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_251__tile_x0512_y0512.jpg",
+        "score": 3.4492835998535156,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_258__tile_x0000_y0000.jpg",
+        "score": 1.2504044771194458,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.001636505126953125,
+        "defect_pixels": 429,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_258__tile_x0512_y0000.jpg",
+        "score": 0.7727892994880676,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.000698089599609375,
+        "defect_pixels": 183,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_258__tile_x0512_y0512.jpg",
+        "score": 0.9670628905296326,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.012523651123046875,
+        "defect_pixels": 3283,
+        "classes": [
+          "Crack",
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_268__tile_x0000_y0000.jpg",
+        "score": 1.8639580011367798,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.007083892822265625,
+        "defect_pixels": 1857,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_268__tile_x0000_y0512.jpg",
+        "score": 1.2245702743530273,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.024570465087890625,
+        "defect_pixels": 6441,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_268__tile_x0512_y0000.jpg",
+        "score": 3.1005570888519287,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_268__tile_x0512_y0512.jpg",
+        "score": 1.1335939168930054,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.00038909912109375,
+        "defect_pixels": 102,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_271__tile_x0000_y0000.jpg",
+        "score": 0.3122997581958771,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.002941131591796875,
+        "defect_pixels": 771,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_271__tile_x0000_y0512.jpg",
+        "score": 3.7190332412719727,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.00804901123046875,
+        "defect_pixels": 2110,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_271__tile_x0512_y0000.jpg",
+        "score": 1.2800073623657227,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.001674652099609375,
+        "defect_pixels": 439,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_271__tile_x0512_y0512.jpg",
+        "score": 3.618229627609253,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.021327972412109375,
+        "defect_pixels": 5591,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_272__tile_x0000_y0000.jpg",
+        "score": 3.081826686859131,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.0045623779296875,
+        "defect_pixels": 1196,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_272__tile_x0512_y0000.jpg",
+        "score": 3.3350372314453125,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_272__tile_x0512_y0512.jpg",
+        "score": 2.933943033218384,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.325439453125,
+        "defect_pixels": 85312,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_273__tile_x0000_y0000.jpg",
+        "score": 2.8714351654052734,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.5387840270996094,
+        "defect_pixels": 141239,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_273__tile_x0000_y0512.jpg",
+        "score": 2.9093918800354004,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.5570068359375,
+        "defect_pixels": 146016,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_273__tile_x0512_y0000.jpg",
+        "score": 2.7742958068847656,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.132476806640625,
+        "defect_pixels": 34728,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_273__tile_x0512_y0512.jpg",
+        "score": 2.7897918224334717,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.017345428466796875,
+        "defect_pixels": 4547,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_280__tile_x0000_y0000.jpg",
+        "score": 3.244039535522461,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_280__tile_x0000_y0512.jpg",
+        "score": 2.8577051162719727,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.001434326171875,
+        "defect_pixels": 376,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_290__tile_x0000_y0000.jpg",
+        "score": 0.6762894988059998,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.001556396484375,
+        "defect_pixels": 408,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_290__tile_x0000_y0512.jpg",
+        "score": 1.3967187404632568,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_290__tile_x0512_y0512.jpg",
+        "score": 0.6835659742355347,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_294__tile_x0000_y0512.jpg",
+        "score": 1.9566293954849243,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 6.866455078125e-05,
+        "defect_pixels": 18,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_294__tile_x0512_y0000.jpg",
+        "score": 2.457145929336548,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.06020355224609375,
+        "defect_pixels": 15782,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_294__tile_x0512_y0512.jpg",
+        "score": 2.226895570755005,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.0052337646484375,
+        "defect_pixels": 1372,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_307__tile_x0000_y0000.jpg",
+        "score": 1.2226213216781616,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_307__tile_x0000_y0512.jpg",
+        "score": 0.4662761092185974,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.001010894775390625,
+        "defect_pixels": 265,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_307__tile_x0512_y0000.jpg",
+        "score": 1.5776339769363403,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.002655029296875,
+        "defect_pixels": 696,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_307__tile_x0512_y0512.jpg",
+        "score": 1.9878056049346924,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_308__tile_x0512_y0000.jpg",
+        "score": 1.9092971086502075,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.052974700927734375,
+        "defect_pixels": 13887,
+        "classes": [
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_308__tile_x0512_y0512.jpg",
+        "score": 2.9739749431610107,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.004100799560546875,
+        "defect_pixels": 1075,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_318__tile_x0000_y0000.jpg",
+        "score": 2.433180809020996,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.005168914794921875,
+        "defect_pixels": 1355,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_318__tile_x0000_y0512.jpg",
+        "score": 2.2351157665252686,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_318__tile_x0512_y0512.jpg",
+        "score": 2.5086307525634766,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.052951812744140625,
+        "defect_pixels": 13881,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_324__tile_x0000_y0000.jpg",
+        "score": 3.245509386062622,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.016269683837890625,
+        "defect_pixels": 4265,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_324__tile_x0000_y0512.jpg",
+        "score": 2.8716070652008057,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_324__tile_x0512_y0512.jpg",
+        "score": 2.8667871952056885,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.0019378662109375,
+        "defect_pixels": 508,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_326__tile_x0000_y0000.jpg",
+        "score": 2.4697139263153076,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.001995086669921875,
+        "defect_pixels": 523,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_326__tile_x0000_y0512.jpg",
+        "score": 2.446221113204956,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.013919830322265625,
+        "defect_pixels": 3649,
+        "classes": [
+          "Corrosion",
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_326__tile_x0512_y0000.jpg",
+        "score": 2.584852457046509,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.000202178955078125,
+        "defect_pixels": 53,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_326__tile_x0512_y0512.jpg",
+        "score": 1.7032822370529175,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.006259918212890625,
+        "defect_pixels": 1641,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_329__tile_x0000_y0000.jpg",
+        "score": 1.031389832496643,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.000217437744140625,
+        "defect_pixels": 57,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_329__tile_x0000_y0512.jpg",
+        "score": 0.025060394778847694,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_329__tile_x0512_y0000.jpg",
+        "score": 0.7464045882225037,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.004520416259765625,
+        "defect_pixels": 1185,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_329__tile_x0512_y0512.jpg",
+        "score": 0.4481884241104126,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_335__tile_x0000_y0000.jpg",
+        "score": 1.3445440530776978,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.14350128173828125,
+        "defect_pixels": 37618,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_335__tile_x0000_y0512.jpg",
+        "score": 2.492685317993164,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.060192108154296875,
+        "defect_pixels": 15779,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_335__tile_x0512_y0512.jpg",
+        "score": 2.3398048877716064,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_339__tile_x0000_y0000.jpg",
+        "score": 2.7977495193481445,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.00231170654296875,
+        "defect_pixels": 606,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_339__tile_x0000_y0512.jpg",
+        "score": 2.947251319885254,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.005252838134765625,
+        "defect_pixels": 1377,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_339__tile_x0512_y0000.jpg",
+        "score": 1.8573150634765625,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.00244903564453125,
+        "defect_pixels": 642,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_339__tile_x0512_y0512.jpg",
+        "score": 2.501573324203491,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.3683052062988281,
+        "defect_pixels": 96549,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_341__tile_x0000_y0000.jpg",
+        "score": 2.5164663791656494,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.4997520446777344,
+        "defect_pixels": 131007,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_341__tile_x0000_y0512.jpg",
+        "score": 2.5998315811157227,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_341__tile_x0512_y0000.jpg",
+        "score": 2.88750958442688,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 2.6702880859375e-05,
+        "defect_pixels": 7,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_345__tile_x0000_y0000.jpg",
+        "score": 2.0375137329101562,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.000270843505859375,
+        "defect_pixels": 71,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_345__tile_x0000_y0512.jpg",
+        "score": 3.3539226055145264,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.05741119384765625,
+        "defect_pixels": 15050,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_345__tile_x0512_y0000.jpg",
+        "score": 2.4432013034820557,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.00030517578125,
+        "defect_pixels": 80,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_345__tile_x0512_y0512.jpg",
+        "score": 2.5693464279174805,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.08108901977539062,
+        "defect_pixels": 21257,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_346__tile_x0000_y0000.jpg",
+        "score": 2.107715129852295,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.1136016845703125,
+        "defect_pixels": 29780,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_346__tile_x0000_y0512.jpg",
+        "score": 2.542311668395996,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_346__tile_x0512_y0000.jpg",
+        "score": 1.7418731451034546,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.0059967041015625,
+        "defect_pixels": 1572,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_357__tile_x0000_y0000.jpg",
+        "score": 2.7823994159698486,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.006008148193359375,
+        "defect_pixels": 1575,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_357__tile_x0000_y0512.jpg",
+        "score": 2.6926732063293457,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.00616455078125,
+        "defect_pixels": 1616,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_357__tile_x0512_y0000.jpg",
+        "score": 2.2122678756713867,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_357__tile_x0512_y0512.jpg",
+        "score": 2.9326343536376953,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.00966644287109375,
+        "defect_pixels": 2534,
+        "classes": [
+          "Corrosion",
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_361__tile_x0000_y0000.jpg",
+        "score": 1.7711859941482544,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.002750396728515625,
+        "defect_pixels": 721,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_361__tile_x0000_y0512.jpg",
+        "score": 1.9222736358642578,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.00081634521484375,
+        "defect_pixels": 214,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_361__tile_x0512_y0000.jpg",
+        "score": 2.666841983795166,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_361__tile_x0512_y0512.jpg",
+        "score": 2.0919620990753174,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.0131988525390625,
+        "defect_pixels": 3460,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_363__tile_x0000_y0000.jpg",
+        "score": 2.6839919090270996,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_363__tile_x0000_y0512.jpg",
+        "score": 2.596025228500366,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.0074310302734375,
+        "defect_pixels": 1948,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_363__tile_x0512_y0000.jpg",
+        "score": 3.606426954269409,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.01564788818359375,
+        "defect_pixels": 4102,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_363__tile_x0512_y0512.jpg",
+        "score": 3.263864278793335,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_364__tile_x0000_y0000.jpg",
+        "score": 1.8073816299438477,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.000732421875,
+        "defect_pixels": 192,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_364__tile_x0000_y0512.jpg",
+        "score": 2.238630533218384,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.01534271240234375,
+        "defect_pixels": 4022,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_364__tile_x0512_y0512.jpg",
+        "score": 2.7683145999908447,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.001583099365234375,
+        "defect_pixels": 415,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_372__tile_x0000_y0000.jpg",
+        "score": 1.325256586074829,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 8.7738037109375e-05,
+        "defect_pixels": 23,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_372__tile_x0000_y0512.jpg",
+        "score": 1.0481983423233032,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.00051116943359375,
+        "defect_pixels": 134,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_372__tile_x0512_y0000.jpg",
+        "score": 0.4105135202407837,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.001079559326171875,
+        "defect_pixels": 283,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_372__tile_x0512_y0512.jpg",
+        "score": 0.3096846044063568,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.012783050537109375,
+        "defect_pixels": 3351,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_373__tile_x0000_y0000.jpg",
+        "score": 2.759456157684326,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.1629638671875,
+        "defect_pixels": 42720,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_373__tile_x0000_y0512.jpg",
+        "score": 2.9664413928985596,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_373__tile_x0512_y0000.jpg",
+        "score": 1.530531406402588,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.24505996704101562,
+        "defect_pixels": 64241,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_373__tile_x0512_y0512.jpg",
+        "score": 3.4251251220703125,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.00563812255859375,
+        "defect_pixels": 1478,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_384__tile_x0000_y0000.jpg",
+        "score": 1.9166672229766846,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.13097381591796875,
+        "defect_pixels": 34334,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_384__tile_x0000_y0512.jpg",
+        "score": 2.0766851902008057,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.13445281982421875,
+        "defect_pixels": 35246,
+        "classes": [
+          "Crack",
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_384__tile_x0512_y0000.jpg",
+        "score": 2.0962469577789307,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.8844566345214844,
+        "defect_pixels": 231855,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_384__tile_x0512_y0512.jpg",
+        "score": 2.3252158164978027,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.00199127197265625,
+        "defect_pixels": 522,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_386__tile_x0000_y0000.jpg",
+        "score": 1.739793300628662,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_386__tile_x0000_y0512.jpg",
+        "score": 1.0599662065505981,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.00136566162109375,
+        "defect_pixels": 358,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_386__tile_x0512_y0000.jpg",
+        "score": 1.0829410552978516,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.001018524169921875,
+        "defect_pixels": 267,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_386__tile_x0512_y0512.jpg",
+        "score": 1.0107351541519165,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.006046295166015625,
+        "defect_pixels": 1585,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_389__tile_x0000_y0000.jpg",
+        "score": 2.661271810531616,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.002155303955078125,
+        "defect_pixels": 565,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_389__tile_x0000_y0512.jpg",
+        "score": 2.839790105819702,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_389__tile_x0512_y0000.jpg",
+        "score": 1.3625503778457642,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.001644134521484375,
+        "defect_pixels": 431,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_389__tile_x0512_y0512.jpg",
+        "score": 1.6912541389465332,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.000713348388671875,
+        "defect_pixels": 187,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_390__tile_x0000_y0000.jpg",
+        "score": 2.5095598697662354,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.0006561279296875,
+        "defect_pixels": 172,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_390__tile_x0000_y0512.jpg",
+        "score": 0.8411173820495605,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_390__tile_x0512_y0000.jpg",
+        "score": 1.2355475425720215,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.0021514892578125,
+        "defect_pixels": 564,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_390__tile_x0512_y0512.jpg",
+        "score": 1.5984039306640625,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.0822296142578125,
+        "defect_pixels": 21556,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_401__tile_x0000_y0000.jpg",
+        "score": 2.0973927974700928,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_401__tile_x0512_y0512.jpg",
+        "score": 1.3846949338912964,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.0613861083984375,
+        "defect_pixels": 16092,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_403__tile_x0000_y0000.jpg",
+        "score": 3.363729953765869,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.036296844482421875,
+        "defect_pixels": 9515,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_403__tile_x0000_y0512.jpg",
+        "score": 3.0671539306640625,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.4071617126464844,
+        "defect_pixels": 106735,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_403__tile_x0512_y0000.jpg",
+        "score": 3.2595255374908447,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.217864990234375,
+        "defect_pixels": 57112,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_403__tile_x0512_y0512.jpg",
+        "score": 3.8041985034942627,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.064453125,
+        "defect_pixels": 16896,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_405__tile_x0000_y0000.jpg",
+        "score": 3.0786938667297363,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.059131622314453125,
+        "defect_pixels": 15501,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_405__tile_x0000_y0512.jpg",
+        "score": 2.8568644523620605,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.024860382080078125,
+        "defect_pixels": 6517,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_405__tile_x0512_y0000.jpg",
+        "score": 2.90348219871521,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.21861648559570312,
+        "defect_pixels": 57309,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_405__tile_x0512_y0512.jpg",
+        "score": 2.856511116027832,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.014312744140625,
+        "defect_pixels": 3752,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_412__tile_x0000_y0000.jpg",
+        "score": 2.3180601596832275,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_412__tile_x0512_y0512.jpg",
+        "score": 1.4293769598007202,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.4026374816894531,
+        "defect_pixels": 105549,
+        "classes": [
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_420__tile_x0000_y0000.jpg",
+        "score": 2.957301139831543,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.2948036193847656,
+        "defect_pixels": 77281,
+        "classes": [
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_420__tile_x0000_y0512.jpg",
+        "score": 2.7350447177886963,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.6393852233886719,
+        "defect_pixels": 167611,
+        "classes": [
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_420__tile_x0512_y0000.jpg",
+        "score": 3.146145820617676,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.24744415283203125,
+        "defect_pixels": 64866,
+        "classes": [
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_420__tile_x0512_y0512.jpg",
+        "score": 2.9454190731048584,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.000629425048828125,
+        "defect_pixels": 165,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_429__tile_x0000_y0000.jpg",
+        "score": 1.282729983329773,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.001068115234375,
+        "defect_pixels": 280,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_429__tile_x0000_y0512.jpg",
+        "score": 1.6399568319320679,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_429__tile_x0512_y0000.jpg",
+        "score": 2.3551106452941895,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.002582550048828125,
+        "defect_pixels": 677,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_429__tile_x0512_y0512.jpg",
+        "score": 1.7422223091125488,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.0080718994140625,
+        "defect_pixels": 2116,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_436__tile_x0000_y0000.jpg",
+        "score": 4.206581115722656,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_436__tile_x0000_y0512.jpg",
+        "score": 1.2019574642181396,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.15728759765625,
+        "defect_pixels": 41232,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_436__tile_x0512_y0000.jpg",
+        "score": 4.142531394958496,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 6.4849853515625e-05,
+        "defect_pixels": 17,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_436__tile_x0512_y0512.jpg",
+        "score": 1.4952917098999023,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.005985260009765625,
+        "defect_pixels": 1569,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_446__tile_x0000_y0000.jpg",
+        "score": 1.9180030822753906,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.001407623291015625,
+        "defect_pixels": 369,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_446__tile_x0000_y0512.jpg",
+        "score": 1.8678932189941406,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.00533294677734375,
+        "defect_pixels": 1398,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_446__tile_x0512_y0000.jpg",
+        "score": 1.2320408821105957,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.003879547119140625,
+        "defect_pixels": 1017,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_446__tile_x0512_y0512.jpg",
+        "score": 1.8330439329147339,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.0005035400390625,
+        "defect_pixels": 132,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_448__tile_x0000_y0000.jpg",
+        "score": 0.49208521842956543,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.001117706298828125,
+        "defect_pixels": 293,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_448__tile_x0000_y0512.jpg",
+        "score": 0.5916167497634888,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.000942230224609375,
+        "defect_pixels": 247,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_448__tile_x0512_y0000.jpg",
+        "score": 0.3103141486644745,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.001155853271484375,
+        "defect_pixels": 303,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_448__tile_x0512_y0512.jpg",
+        "score": 1.143435001373291,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.01270294189453125,
+        "defect_pixels": 3330,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_452__tile_x0000_y0000.jpg",
+        "score": 2.648040771484375,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.054290771484375,
+        "defect_pixels": 14232,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_452__tile_x0000_y0512.jpg",
+        "score": 2.7213144302368164,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.001007080078125,
+        "defect_pixels": 264,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_452__tile_x0512_y0000.jpg",
+        "score": 1.6608972549438477,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.00186920166015625,
+        "defect_pixels": 490,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_452__tile_x0512_y0512.jpg",
+        "score": -0.13201528787612915,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.027523040771484375,
+        "defect_pixels": 7215,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_465__tile_x0000_y0000.jpg",
+        "score": 2.202169418334961,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.07126617431640625,
+        "defect_pixels": 18682,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_465__tile_x0000_y0512.jpg",
+        "score": 2.7232325077056885,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.2696952819824219,
+        "defect_pixels": 70699,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_465__tile_x0512_y0000.jpg",
+        "score": 3.1819937229156494,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.19997787475585938,
+        "defect_pixels": 52423,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_465__tile_x0512_y0512.jpg",
+        "score": 3.2639265060424805,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.004138946533203125,
+        "defect_pixels": 1085,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_480__tile_x0000_y0000.jpg",
+        "score": 2.683504343032837,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.00501251220703125,
+        "defect_pixels": 1314,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_480__tile_x0000_y0512.jpg",
+        "score": 2.3263156414031982,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.001628875732421875,
+        "defect_pixels": 427,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_480__tile_x0512_y0000.jpg",
+        "score": 2.156980276107788,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.00051116943359375,
+        "defect_pixels": 134,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_480__tile_x0512_y0512.jpg",
+        "score": 2.051694631576538,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.01120758056640625,
+        "defect_pixels": 2938,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_488__tile_x0000_y0000.jpg",
+        "score": 2.559910297393799,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.06377792358398438,
+        "defect_pixels": 16719,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_488__tile_x0000_y0512.jpg",
+        "score": 2.701669931411743,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_488__tile_x0512_y0000.jpg",
+        "score": 2.611140727996826,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.08108139038085938,
+        "defect_pixels": 21255,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_488__tile_x0512_y0512.jpg",
+        "score": 2.1724655628204346,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_497__tile_x0000_y0512.jpg",
+        "score": 1.990290641784668,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.09523391723632812,
+        "defect_pixels": 24965,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_497__tile_x0512_y0512.jpg",
+        "score": 2.8275399208068848,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.00212860107421875,
+        "defect_pixels": 558,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_501__tile_x0000_y0000.jpg",
+        "score": 0.7730201482772827,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_501__tile_x0000_y0512.jpg",
+        "score": 1.2699775695800781,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.000453948974609375,
+        "defect_pixels": 119,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_501__tile_x0512_y0000.jpg",
+        "score": 1.5053839683532715,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.00055694580078125,
+        "defect_pixels": 146,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_501__tile_x0512_y0512.jpg",
+        "score": 1.9609497785568237,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.01140594482421875,
+        "defect_pixels": 2990,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_503__tile_x0000_y0000.jpg",
+        "score": 2.2051608562469482,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.009227752685546875,
+        "defect_pixels": 2419,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_503__tile_x0000_y0512.jpg",
+        "score": 1.7680227756500244,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.000640869140625,
+        "defect_pixels": 168,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_503__tile_x0512_y0000.jpg",
+        "score": 1.8343356847763062,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.0031890869140625,
+        "defect_pixels": 836,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_503__tile_x0512_y0512.jpg",
+        "score": 1.5528440475463867,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.14775466918945312,
+        "defect_pixels": 38733,
+        "classes": [
+          "Corrosion",
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_504__tile_x0000_y0000.jpg",
+        "score": 3.1520843505859375,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.616058349609375,
+        "defect_pixels": 161496,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_504__tile_x0000_y0512.jpg",
+        "score": 3.3625686168670654,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.002307891845703125,
+        "defect_pixels": 605,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_504__tile_x0512_y0000.jpg",
+        "score": 1.5111192464828491,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.003787994384765625,
+        "defect_pixels": 993,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_504__tile_x0512_y0512.jpg",
+        "score": 2.125368356704712,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.033443450927734375,
+        "defect_pixels": 8767,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_509__tile_x0000_y0000.jpg",
+        "score": 2.495943307876587,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.026004791259765625,
+        "defect_pixels": 6817,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_509__tile_x0000_y0512.jpg",
+        "score": 5.019609451293945,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.07024002075195312,
+        "defect_pixels": 18413,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_509__tile_x0512_y0000.jpg",
+        "score": 3.1615536212921143,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.000514984130859375,
+        "defect_pixels": 135,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_509__tile_x0512_y0512.jpg",
+        "score": 4.033787727355957,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_514__tile_x0000_y0512.jpg",
+        "score": 1.9184184074401855,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.005237579345703125,
+        "defect_pixels": 1373,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_514__tile_x0512_y0000.jpg",
+        "score": 1.8542368412017822,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.00252532958984375,
+        "defect_pixels": 662,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_514__tile_x0512_y0512.jpg",
+        "score": 1.9032167196273804,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.16747283935546875,
+        "defect_pixels": 43902,
+        "classes": [
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_529__tile_x0000_y0512.jpg",
+        "score": 2.617494583129883,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.5350532531738281,
+        "defect_pixels": 140261,
+        "classes": [
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_529__tile_x0512_y0512.jpg",
+        "score": 2.6141486167907715,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.036457061767578125,
+        "defect_pixels": 9557,
+        "classes": [
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_540__tile_x0000_y0000.jpg",
+        "score": 2.3155672550201416,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.07801055908203125,
+        "defect_pixels": 20450,
+        "classes": [
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_540__tile_x0000_y0512.jpg",
+        "score": 2.971778392791748,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.020763397216796875,
+        "defect_pixels": 5443,
+        "classes": [
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_540__tile_x0512_y0000.jpg",
+        "score": 1.9700865745544434,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.13668441772460938,
+        "defect_pixels": 35831,
+        "classes": [
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_540__tile_x0512_y0512.jpg",
+        "score": 2.405303716659546,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.018184661865234375,
+        "defect_pixels": 4767,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_543__tile_x0000_y0000.jpg",
+        "score": 2.2817583084106445,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.155914306640625,
+        "defect_pixels": 40872,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_543__tile_x0000_y0512.jpg",
+        "score": 3.0316481590270996,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.004512786865234375,
+        "defect_pixels": 1183,
+        "classes": [
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_543__tile_x0512_y0000.jpg",
+        "score": 1.6156518459320068,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.19739532470703125,
+        "defect_pixels": 51746,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_543__tile_x0512_y0512.jpg",
+        "score": 2.8912782669067383,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.005535125732421875,
+        "defect_pixels": 1451,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_551__tile_x0000_y0000.jpg",
+        "score": 1.6821202039718628,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.005123138427734375,
+        "defect_pixels": 1343,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_551__tile_x0000_y0512.jpg",
+        "score": 2.424917697906494,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.000400543212890625,
+        "defect_pixels": 105,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_551__tile_x0512_y0000.jpg",
+        "score": 2.4593164920806885,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_551__tile_x0512_y0512.jpg",
+        "score": 1.3312418460845947,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.00215911865234375,
+        "defect_pixels": 566,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_554__tile_x0000_y0512.jpg",
+        "score": 1.1610033512115479,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_554__tile_x0512_y0000.jpg",
+        "score": 1.4748631715774536,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.002063751220703125,
+        "defect_pixels": 541,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_554__tile_x0512_y0512.jpg",
+        "score": 0.898978054523468,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.021526336669921875,
+        "defect_pixels": 5643,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_558__tile_x0512_y0000.jpg",
+        "score": 2.4758710861206055,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_558__tile_x0512_y0512.jpg",
+        "score": -0.6797956824302673,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.12859725952148438,
+        "defect_pixels": 33711,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_561__tile_x0000_y0000.jpg",
+        "score": 3.058419704437256,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_train_561__tile_x0000_y0512.jpg",
+        "score": 1.4074689149856567,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.3088645935058594,
+        "defect_pixels": 80967,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_train_561__tile_x0512_y0512.jpg",
+        "score": 3.0584018230438232,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.001796722412109375,
+        "defect_pixels": 471,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_566__tile_x0000_y0000.jpg",
+        "score": 0.8789267539978027,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.002941131591796875,
+        "defect_pixels": 771,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_566__tile_x0000_y0512.jpg",
+        "score": 1.1186507940292358,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.000244140625,
+        "defect_pixels": 64,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_566__tile_x0512_y0000.jpg",
+        "score": 0.808771550655365,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.003192901611328125,
+        "defect_pixels": 837,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_566__tile_x0512_y0512.jpg",
+        "score": 1.1549315452575684,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.0089111328125,
+        "defect_pixels": 2336,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_574__tile_x0000_y0000.jpg",
+        "score": 2.270585775375366,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.25921630859375,
+        "defect_pixels": 67952,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_574__tile_x0000_y0512.jpg",
+        "score": 2.44323468208313,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_val_574__tile_x0512_y0000.jpg",
+        "score": 1.2722057104110718,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.11500930786132812,
+        "defect_pixels": 30149,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_574__tile_x0512_y0512.jpg",
+        "score": 2.8497376441955566,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.001094818115234375,
+        "defect_pixels": 287,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_582__tile_x0000_y0000.jpg",
+        "score": 1.8577234745025635,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.000240325927734375,
+        "defect_pixels": 63,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_582__tile_x0000_y0512.jpg",
+        "score": 1.8305155038833618,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.00151824951171875,
+        "defect_pixels": 398,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_582__tile_x0512_y0000.jpg",
+        "score": 2.30167293548584,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.005435943603515625,
+        "defect_pixels": 1425,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_582__tile_x0512_y0512.jpg",
+        "score": 1.0429058074951172,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.09000396728515625,
+        "defect_pixels": 23594,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_588__tile_x0000_y0000.jpg",
+        "score": 2.9283220767974854,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.07165145874023438,
+        "defect_pixels": 18783,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_588__tile_x0000_y0512.jpg",
+        "score": 2.0771045684814453,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_val_588__tile_x0512_y0512.jpg",
+        "score": 1.9528063535690308,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.2766914367675781,
+        "defect_pixels": 72533,
+        "classes": [
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_590__tile_x0000_y0000.jpg",
+        "score": 2.431851863861084,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.058727264404296875,
+        "defect_pixels": 15395,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_590__tile_x0000_y0512.jpg",
+        "score": 2.650843381881714,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.3505439758300781,
+        "defect_pixels": 91893,
+        "classes": [
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_590__tile_x0512_y0000.jpg",
+        "score": 2.8127710819244385,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.16510772705078125,
+        "defect_pixels": 43282,
+        "classes": [
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_590__tile_x0512_y0512.jpg",
+        "score": 2.7741105556488037,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.00604248046875,
+        "defect_pixels": 1584,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_592__tile_x0000_y0000.jpg",
+        "score": 1.0591882467269897,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.0050506591796875,
+        "defect_pixels": 1324,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_592__tile_x0000_y0512.jpg",
+        "score": 1.865736961364746,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.00116729736328125,
+        "defect_pixels": 306,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_592__tile_x0512_y0512.jpg",
+        "score": 1.0449861288070679,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.033489227294921875,
+        "defect_pixels": 8779,
+        "classes": [
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_605__tile_x0000_y0000.jpg",
+        "score": 1.7584260702133179,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.05500030517578125,
+        "defect_pixels": 14418,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_605__tile_x0000_y0512.jpg",
+        "score": 3.16353702545166,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.13286590576171875,
+        "defect_pixels": 34830,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_605__tile_x0512_y0000.jpg",
+        "score": 2.6378283500671387,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.0420074462890625,
+        "defect_pixels": 11012,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_605__tile_x0512_y0512.jpg",
+        "score": 2.306614875793457,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.011531829833984375,
+        "defect_pixels": 3023,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_608__tile_x0000_y0000.jpg",
+        "score": 1.0310943126678467,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.009246826171875,
+        "defect_pixels": 2424,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_608__tile_x0000_y0512.jpg",
+        "score": 0.9942159056663513,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.00032806396484375,
+        "defect_pixels": 86,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_608__tile_x0512_y0000.jpg",
+        "score": 0.9773172736167908,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.004444122314453125,
+        "defect_pixels": 1165,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_608__tile_x0512_y0512.jpg",
+        "score": 1.9942876100540161,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.0047454833984375,
+        "defect_pixels": 1244,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_619__tile_x0000_y0000.jpg",
+        "score": 2.180582046508789,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.0010223388671875,
+        "defect_pixels": 268,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_619__tile_x0000_y0512.jpg",
+        "score": 1.2752221822738647,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.000102996826171875,
+        "defect_pixels": 27,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_619__tile_x0512_y0000.jpg",
+        "score": 2.1547598838806152,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.003147125244140625,
+        "defect_pixels": 825,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_619__tile_x0512_y0512.jpg",
+        "score": 1.2580828666687012,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.15797042846679688,
+        "defect_pixels": 41411,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_626__tile_x0000_y0000.jpg",
+        "score": 2.7525815963745117,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.15691375732421875,
+        "defect_pixels": 41134,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_626__tile_x0000_y0512.jpg",
+        "score": 2.460397481918335,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.002288818359375,
+        "defect_pixels": 600,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_626__tile_x0512_y0000.jpg",
+        "score": 4.194901943206787,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_val_626__tile_x0512_y0512.jpg",
+        "score": 3.751094341278076,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.051403045654296875,
+        "defect_pixels": 13475,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_631__tile_x0000_y0000.jpg",
+        "score": 3.24691104888916,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.019290924072265625,
+        "defect_pixels": 5057,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_631__tile_x0000_y0512.jpg",
+        "score": 2.8778529167175293,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.00135040283203125,
+        "defect_pixels": 354,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_631__tile_x0512_y0000.jpg",
+        "score": 1.8209350109100342,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.00220489501953125,
+        "defect_pixels": 578,
+        "classes": [
+          "Crack"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_633__tile_x0000_y0512.jpg",
+        "score": 1.2080788612365723,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_val_633__tile_x0512_y0512.jpg",
+        "score": 0.08550257980823517,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.06303787231445312,
+        "defect_pixels": 16525,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_634__tile_x0000_y0000.jpg",
+        "score": 1.5448381900787354,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.18410873413085938,
+        "defect_pixels": 48263,
+        "classes": [
+          "Corrosion",
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_634__tile_x0000_y0512.jpg",
+        "score": 1.9905073642730713,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.006443023681640625,
+        "defect_pixels": 1689,
+        "classes": [
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_634__tile_x0512_y0000.jpg",
+        "score": 1.5184204578399658,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.13622283935546875,
+        "defect_pixels": 35710,
+        "classes": [
+          "Corrosion",
+          "Efflorescence"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_634__tile_x0512_y0512.jpg",
+        "score": 2.142787456512451,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.22284698486328125,
+        "defect_pixels": 58418,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_637__tile_x0000_y0000.jpg",
+        "score": 3.558468818664551,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.14438629150390625,
+        "defect_pixels": 37850,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_637__tile_x0000_y0512.jpg",
+        "score": 3.2900121212005615,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.01873779296875,
+        "defect_pixels": 4912,
+        "classes": [
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_637__tile_x0512_y0000.jpg",
+        "score": 3.251791477203369,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.3333930969238281,
+        "defect_pixels": 87397,
+        "classes": [
+          "Corrosion",
+          "Spalling"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_637__tile_x0512_y0512.jpg",
+        "score": 3.0854103565216064,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_val_639__tile_x0000_y0000.jpg",
+        "score": 1.4433680772781372,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.018932342529296875,
+        "defect_pixels": 4963,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_639__tile_x0512_y0000.jpg",
+        "score": 3.042532205581665,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.04981231689453125,
+        "defect_pixels": 13058,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_646__tile_x0000_y0000.jpg",
+        "score": 2.85707950592041,
+        "prediction_at_fpr10": 1
+      },
+      {
+        "label": 1,
+        "area_fraction": 0.10062408447265625,
+        "defect_pixels": 26378,
+        "classes": [
+          "Corrosion"
+        ],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/annotated/s2ds_val_646__tile_x0000_y0512.jpg",
+        "score": 2.157536029815674,
+        "prediction_at_fpr10": 0
+      },
+      {
+        "label": 0,
+        "area_fraction": 0.0,
+        "defect_pixels": 0,
+        "classes": [],
+        "native_mask_resolution": 512,
+        "image_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS/test/normal/s2ds_val_646__tile_x0512_y0000.jpg",
+        "score": 1.50808846950531,
+        "prediction_at_fpr10": 0
+      }
+    ]
+  }
+}

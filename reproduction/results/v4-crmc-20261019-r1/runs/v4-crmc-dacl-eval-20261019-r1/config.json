@@ -1,0 +1,40 @@
+{
+  "git_commit": "402fbbfbd4f96a66493ef47741b29713ef047e13",
+  "checkpoint_sha256": "2cb04e476dc325ddf53f637e18a018925d9623704db780e9d4982a5c646d97a4",
+  "original_config": {
+    "data_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42",
+    "save_dir": "runs",
+    "save_name": "dacl-v3-seed42-b16-s1-20261015",
+    "image_size": 392,
+    "dataset_profile": "dacl_v3_seed42",
+    "split_view": "original",
+    "device": "cuda:0",
+    "seed": 1,
+    "batch_size": 16,
+    "total_iters": 10000,
+    "eval_interval": 2000,
+    "checkpoint_interval": 1000,
+    "smoke_steps": 0,
+    "encoder": "dinov2reg_vit_base_14",
+    "resize": 392,
+    "crop": 392,
+    "started_at": "2026-10-15T06:38:52.592685+00:00",
+    "python": "3.8.12",
+    "torch": "1.12.0+cu113",
+    "cuda_runtime": "11.3",
+    "gpu": "Tesla V100-PCIE-16GB",
+    "mask_binarization": "gt > 0",
+    "pixel_metric_resolution": 256,
+    "git_commit": "a1c8073fbd3a002a806b3876e24f10d2a17456be",
+    "git_dirty": false
+  },
+  "manifest_sha256": {
+    "train": "2e8ada7e96fbc098e248c46cebdb83d189698c0b8b77bf487dae43a258ba4c43",
+    "val": "2fdcc2fe375325f28c2ec024fb883504fe5737f76496766d7376965f8fa6202f",
+    "test": "455ee1ee784410cbbe51409fc25e503b60f44f147421c0204206adf43d5dd279"
+  },
+  "training": false,
+  "main_k": 16,
+  "retrieval": "exact cosine; CPU fp16 raw bank, FP32 compute",
+  "source_object_root": "/home/skye/data/Skye/databases/S2DS"
+}

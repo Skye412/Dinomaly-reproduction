@@ -1,0 +1,1561 @@
+{
+  "object_containing_normals": {
+    "images": 49,
+    "mean_overlap": {
+      "before": 0.3511761956691074,
+      "after": 0.2940021810250818
+    },
+    "mean_enrichment": {
+      "before": 3.0302619857089255,
+      "after": 3.939529739119045
+    }
+  },
+  "top_fraction": 0.01,
+  "top_pixels": 655,
+  "normals": 55,
+  "covered_normals": 55,
+  "uncovered_normals": 0,
+  "records": [
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/00018.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_00018.json",
+      "object_area_fraction_native512": 0.4793586730957031,
+      "before": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.042748091603053436,
+        "union": 0.042748091603053436
+      },
+      "random_baseline_area_fraction_256": 0.479583740234375,
+      "enrichment": {
+        "before": 0.0891358234584063,
+        "after": 0.0
+      },
+      "after": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/00516.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_00516.json",
+      "object_area_fraction_native512": 0.000423431396484375,
+      "before": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0004425048828125,
+      "enrichment": {
+        "before": 0.0,
+        "after": 0.0
+      },
+      "after": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/00551.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_00551.json",
+      "object_area_fraction_native512": 0.03521728515625,
+      "before": {
+        "Bearing": 0.0,
+        "Drainage": 0.05343511450381679,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.05343511450381679
+      },
+      "random_baseline_area_fraction_256": 0.0355224609375,
+      "enrichment": {
+        "before": 1.5042627423205057,
+        "after": 0.0
+      },
+      "after": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/00811.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_00811.json",
+      "object_area_fraction_native512": 0.6914100646972656,
+      "before": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.433587786259542,
+        "union": 0.433587786259542
+      },
+      "random_baseline_area_fraction_256": 0.69140625,
+      "enrichment": {
+        "before": 0.6271100185448742,
+        "after": 1.3734592659679994
+      },
+      "after": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.9496183206106871,
+        "union": 0.9496183206106871
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/00827.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_00827.json",
+      "object_area_fraction_native512": 0.7195396423339844,
+      "before": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 1.0,
+        "union": 1.0
+      },
+      "random_baseline_area_fraction_256": 0.720458984375,
+      "enrichment": {
+        "before": 1.3880040664181634,
+        "after": 1.248144114687478
+      },
+      "after": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.899236641221374,
+        "union": 0.899236641221374
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/00989.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_00989.json",
+      "object_area_fraction_native512": 0.04732513427734375,
+      "before": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.1450381679389313,
+        "union": 0.1450381679389313
+      },
+      "random_baseline_area_fraction_256": 0.046661376953125,
+      "enrichment": {
+        "before": 3.1083130719574235,
+        "after": 1.3414824836868882
+      },
+      "after": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.06259541984732825,
+        "union": 0.06259541984732825
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/01031.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_01031.json",
+      "object_area_fraction_native512": 0.026401519775390625,
+      "before": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.026611328125,
+      "enrichment": {
+        "before": 0.0,
+        "after": 0.0
+      },
+      "after": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/01364.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_01364.json",
+      "object_area_fraction_native512": 0.30458831787109375,
+      "before": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.4442748091603053,
+        "union": 0.4442748091603053
+      },
+      "random_baseline_area_fraction_256": 0.3049468994140625,
+      "enrichment": {
+        "before": 1.4568923639294356,
+        "after": 3.134070858487377
+      },
+      "after": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.9557251908396946,
+        "union": 0.9557251908396946
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/01467.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_01467.json",
+      "object_area_fraction_native512": 0.37100982666015625,
+      "before": {
+        "Bearing": 0.6122137404580152,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.6122137404580152
+      },
+      "random_baseline_area_fraction_256": 0.37225341796875,
+      "enrichment": {
+        "before": 1.6446154982233352,
+        "after": 1.4354499361051556
+      },
+      "after": {
+        "Bearing": 0.5343511450381679,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.5343511450381679
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/01606.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_01606.json",
+      "object_area_fraction_native512": 0.570892333984375,
+      "before": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.9038167938931297,
+        "union": 0.9038167938931297
+      },
+      "random_baseline_area_fraction_256": 0.569854736328125,
+      "enrichment": {
+        "before": 1.5860477000101791,
+        "after": 0.6617462532137065
+      },
+      "after": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.37709923664122136,
+        "union": 0.37709923664122136
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/01999.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_01999.json",
+      "object_area_fraction_native512": 0.6360702514648438,
+      "before": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.9404580152671755,
+        "union": 0.9404580152671755
+      },
+      "random_baseline_area_fraction_256": 0.63580322265625,
+      "enrichment": {
+        "before": 1.4791652224380727,
+        "after": 1.5632087009856905
+      },
+      "after": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.9938931297709923,
+        "union": 0.9938931297709923
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/02083.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_02083.json",
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/02124.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_02124.json",
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/02174.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_02174.json",
+      "object_area_fraction_native512": 0.058887481689453125,
+      "before": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0587615966796875,
+      "enrichment": {
+        "before": 0.0,
+        "after": 0.0
+      },
+      "after": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/02231.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_02231.json",
+      "object_area_fraction_native512": 0.0346832275390625,
+      "before": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.034698486328125,
+      "enrichment": {
+        "before": 0.0,
+        "after": 0.0
+      },
+      "after": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/02309.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_02309.json",
+      "object_area_fraction_native512": 0.18178558349609375,
+      "before": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.9145038167938931,
+        "union": 0.9145038167938931
+      },
+      "random_baseline_area_fraction_256": 0.1813812255859375,
+      "enrichment": {
+        "before": 5.041887956372893,
+        "after": 2.4409808136029034
+      },
+      "after": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.44274809160305345,
+        "union": 0.44274809160305345
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/02377.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_02377.json",
+      "object_area_fraction_native512": 0.09699630737304688,
+      "before": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.6946564885496184,
+        "union": 0.6946564885496184
+      },
+      "random_baseline_area_fraction_256": 0.0968170166015625,
+      "enrichment": {
+        "before": 7.174942101432276,
+        "after": 3.863430362309687
+      },
+      "after": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.37404580152671757,
+        "union": 0.37404580152671757
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/02381.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_02381.json",
+      "object_area_fraction_native512": 0.12319183349609375,
+      "before": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.08854961832061069,
+        "union": 0.08854961832061069
+      },
+      "random_baseline_area_fraction_256": 0.122833251953125,
+      "enrichment": {
+        "before": 0.7208928927030487,
+        "after": 0.0
+      },
+      "after": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/02549.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_02549.json",
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/02595.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_02595.json",
+      "object_area_fraction_native512": 0.00330352783203125,
+      "before": {
+        "Bearing": 0.08854961832061069,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.08854961832061069
+      },
+      "random_baseline_area_fraction_256": 0.0033416748046875,
+      "enrichment": {
+        "before": 26.498574366481925,
+        "after": 37.920373662379305
+      },
+      "after": {
+        "Bearing": 0.1267175572519084,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.1267175572519084
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/02675.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_02675.json",
+      "object_area_fraction_native512": 0.012325286865234375,
+      "before": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.042748091603053436,
+        "PEquipment": 0.0,
+        "union": 0.042748091603053436
+      },
+      "random_baseline_area_fraction_256": 0.0124053955078125,
+      "enrichment": {
+        "before": 3.445927344769631,
+        "after": 0.0
+      },
+      "after": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/03222.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_03222.json",
+      "object_area_fraction_native512": 0.3191566467285156,
+      "before": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.6870229007633588,
+        "union": 0.6870229007633588
+      },
+      "random_baseline_area_fraction_256": 0.3198394775390625,
+      "enrichment": {
+        "before": 2.1480240839858538,
+        "after": 0.7303281885551903
+      },
+      "after": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.233587786259542,
+        "union": 0.233587786259542
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/03487.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_03487.json",
+      "object_area_fraction_native512": 0.15160369873046875,
+      "before": {
+        "Bearing": 0.0183206106870229,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.0183206106870229
+      },
+      "random_baseline_area_fraction_256": 0.1523590087890625,
+      "enrichment": {
+        "before": 0.12024632368399929,
+        "after": 0.21043106644699874
+      },
+      "after": {
+        "Bearing": 0.03206106870229008,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.03206106870229008
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/03557.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_03557.json",
+      "object_area_fraction_native512": 0.22629165649414062,
+      "before": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.6366412213740458,
+        "union": 0.6366412213740458
+      },
+      "random_baseline_area_fraction_256": 0.22540283203125,
+      "enrichment": {
+        "before": 2.8244597267783282,
+        "after": 0.33189095110824485
+      },
+      "after": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.07480916030534351,
+        "union": 0.07480916030534351
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/03741.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_03741.json",
+      "object_area_fraction_native512": 0.01660919189453125,
+      "before": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0166168212890625,
+      "enrichment": {
+        "before": 0.0,
+        "after": 0.0
+      },
+      "after": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/03814.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_03814.json",
+      "object_area_fraction_native512": 0.006927490234375,
+      "before": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.042748091603053436,
+        "union": 0.042748091603053436
+      },
+      "random_baseline_area_fraction_256": 0.006683349609375,
+      "enrichment": {
+        "before": 6.396207605702534,
+        "after": 9.594311408553802
+      },
+      "after": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.06412213740458016,
+        "union": 0.06412213740458016
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/03951.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_03951.json",
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/04082.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_04082.json",
+      "object_area_fraction_native512": 0.2049560546875,
+      "before": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.2045440673828125,
+      "enrichment": {
+        "before": 0.0,
+        "after": 1.4629446116437128
+      },
+      "after": {
+        "Bearing": 0.29923664122137406,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.29923664122137406
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/04322.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_04322.json",
+      "object_area_fraction_native512": 0.3052406311035156,
+      "before": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.15267175572519084,
+        "union": 0.15267175572519084
+      },
+      "random_baseline_area_fraction_256": 0.304473876953125,
+      "enrichment": {
+        "before": 0.5014280937759902,
+        "after": 0.0
+      },
+      "after": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/04578.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_04578.json",
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/04629.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_04629.json",
+      "object_area_fraction_native512": 0.042163848876953125,
+      "before": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.5267175572519084,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.5267175572519084
+      },
+      "random_baseline_area_fraction_256": 0.04217529296875,
+      "enrichment": {
+        "before": 12.48877056152716,
+        "after": 5.791893593751726
+      },
+      "after": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.24427480916030533,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.24427480916030533
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/05609.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_05609.json",
+      "object_area_fraction_native512": 0.022373199462890625,
+      "before": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.21221374045801528,
+        "union": 0.21221374045801528
+      },
+      "random_baseline_area_fraction_256": 0.0223846435546875,
+      "enrichment": {
+        "before": 9.480326990222556,
+        "after": 4.024023686497344
+      },
+      "after": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0900763358778626,
+        "union": 0.0900763358778626
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/05678.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_05678.json",
+      "object_area_fraction_native512": 0.15902328491210938,
+      "before": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.03206106870229008,
+        "union": 0.03206106870229008
+      },
+      "random_baseline_area_fraction_256": 0.1600494384765625,
+      "enrichment": {
+        "before": 0.20031978248386714,
+        "after": 0.08585133535022878
+      },
+      "after": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.013740458015267175,
+        "union": 0.013740458015267175
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/05820.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_05820.json",
+      "object_area_fraction_native512": 0.05169677734375,
+      "before": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.5068702290076336,
+        "union": 0.5068702290076336
+      },
+      "random_baseline_area_fraction_256": 0.0516204833984375,
+      "enrichment": {
+        "before": 9.819168586533927,
+        "after": 0.50278875292493
+      },
+      "after": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.025954198473282442,
+        "union": 0.025954198473282442
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/05932.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_05932.json",
+      "object_area_fraction_native512": 0.059459686279296875,
+      "before": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.044274809160305344,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.044274809160305344
+      },
+      "random_baseline_area_fraction_256": 0.0594482421875,
+      "enrichment": {
+        "before": 0.7447622928977852,
+        "after": 0.0
+      },
+      "after": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/05937.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_05937.json",
+      "object_area_fraction_native512": 0.02556610107421875,
+      "before": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0254669189453125,
+      "enrichment": {
+        "before": 0.0,
+        "after": 0.0
+      },
+      "after": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/05948.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_05948.json",
+      "object_area_fraction_native512": 0.003986358642578125,
+      "before": {
+        "Bearing": 0.0,
+        "Drainage": 0.004580152671755725,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.004580152671755725
+      },
+      "random_baseline_area_fraction_256": 0.0040130615234375,
+      "enrichment": {
+        "before": 1.141311351696514,
+        "after": 80.65266885322033
+      },
+      "after": {
+        "Bearing": 0.0,
+        "Drainage": 0.3236641221374046,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.3236641221374046
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/06219.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_06219.json",
+      "object_area_fraction_native512": 0.08670806884765625,
+      "before": {
+        "Bearing": 0.6045801526717557,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.6045801526717557
+      },
+      "random_baseline_area_fraction_256": 0.086883544921875,
+      "enrichment": {
+        "before": 6.95851157103902,
+        "after": 7.626247529876099
+      },
+      "after": {
+        "Bearing": 0.6625954198473283,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.6625954198473283
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/06374.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_06374.json",
+      "object_area_fraction_native512": 0.06502914428710938,
+      "before": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0652618408203125,
+      "enrichment": {
+        "before": 0.0,
+        "after": 0.0
+      },
+      "after": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/06480.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_06480.json",
+      "object_area_fraction_native512": 0.3021354675292969,
+      "before": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.27938931297709924,
+        "union": 0.27938931297709924
+      },
+      "random_baseline_area_fraction_256": 0.3028411865234375,
+      "enrichment": {
+        "before": 0.9225604885003867,
+        "after": 0.16636336677875826
+      },
+      "after": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.050381679389312976,
+        "union": 0.050381679389312976
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/07112.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_07112.json",
+      "object_area_fraction_native512": 0.02019500732421875,
+      "before": {
+        "Bearing": 0.007633587786259542,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.007633587786259542
+      },
+      "random_baseline_area_fraction_256": 0.020111083984375,
+      "enrichment": {
+        "before": 0.3795711753871816,
+        "after": 0.0
+      },
+      "after": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/07189.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_07189.json",
+      "object_area_fraction_native512": 0.06525039672851562,
+      "before": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.3251908396946565,
+        "union": 0.3251908396946565
+      },
+      "random_baseline_area_fraction_256": 0.065155029296875,
+      "enrichment": {
+        "before": 4.991032053917801,
+        "after": 1.9448622557520066
+      },
+      "after": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.1267175572519084,
+        "union": 0.1267175572519084
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/07191.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_07191.json",
+      "object_area_fraction_native512": 0.08586502075195312,
+      "before": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.3114503816793893,
+        "union": 0.3114503816793893
+      },
+      "random_baseline_area_fraction_256": 0.0854644775390625,
+      "enrichment": {
+        "before": 3.644208572351448,
+        "after": 2.6795651267290057
+      },
+      "after": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.22900763358778625,
+        "union": 0.22900763358778625
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/07481.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_07481.json",
+      "object_area_fraction_native512": 0.9970741271972656,
+      "before": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 1.0,
+        "union": 1.0
+      },
+      "random_baseline_area_fraction_256": 0.998046875,
+      "enrichment": {
+        "before": 1.0019569471624266,
+        "after": 1.0019569471624266
+      },
+      "after": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 1.0,
+        "union": 1.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/07945.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_07945.json",
+      "object_area_fraction_native512": 0.9221763610839844,
+      "before": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.6244274809160305,
+        "union": 0.6244274809160305
+      },
+      "random_baseline_area_fraction_256": 0.9210662841796875,
+      "enrichment": {
+        "before": 0.677939787441197,
+        "after": 0.7807081659775155
+      },
+      "after": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.7190839694656489,
+        "union": 0.7190839694656489
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/08152.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_08152.json",
+      "object_area_fraction_native512": 0.49623870849609375,
+      "before": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 1.0,
+        "union": 1.0
+      },
+      "random_baseline_area_fraction_256": 0.49560546875,
+      "enrichment": {
+        "before": 2.017733990147783,
+        "after": 1.983848381152935
+      },
+      "after": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.983206106870229,
+        "union": 0.983206106870229
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/08157.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_08157.json",
+      "object_area_fraction_native512": 0.0,
+      "before": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.0
+      },
+      "random_baseline_area_fraction_256": 0.0,
+      "enrichment": {
+        "before": null,
+        "after": null
+      },
+      "after": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/08235.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_08235.json",
+      "object_area_fraction_native512": 0.3693580627441406,
+      "before": {
+        "Bearing": 0.0,
+        "Drainage": 0.05801526717557252,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.05801526717557252
+      },
+      "random_baseline_area_fraction_256": 0.368988037109375,
+      "enrichment": {
+        "before": 0.15722804357035483,
+        "after": 0.0
+      },
+      "after": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/08496.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_08496.json",
+      "object_area_fraction_native512": 0.4934425354003906,
+      "before": {
+        "Bearing": 0.04122137404580153,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.04122137404580153
+      },
+      "random_baseline_area_fraction_256": 0.4921722412109375,
+      "enrichment": {
+        "before": 0.08375395967960468,
+        "after": 1.0763934818082528
+      },
+      "after": {
+        "Bearing": 0.5297709923664122,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.5297709923664122
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/08807.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_08807.json",
+      "object_area_fraction_native512": 0.30136871337890625,
+      "before": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.8900763358778626,
+        "union": 0.8900763358778626
+      },
+      "random_baseline_area_fraction_256": 0.3000335693359375,
+      "enrichment": {
+        "before": 2.9665891648319995,
+        "after": 2.9615006756984967
+      },
+      "after": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.8885496183206106,
+        "union": 0.8885496183206106
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/09113.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_09113.json",
+      "object_area_fraction_native512": 0.111663818359375,
+      "before": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.9465648854961832,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.9465648854961832
+      },
+      "random_baseline_area_fraction_256": 0.11126708984375,
+      "enrichment": {
+        "before": 8.507141571020004,
+        "after": 7.423167080519067
+      },
+      "after": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.8259541984732824,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.8259541984732824
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/09199.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_09199.json",
+      "object_area_fraction_native512": 0.21696853637695312,
+      "before": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.8732824427480916,
+        "union": 0.8732824427480916
+      },
+      "random_baseline_area_fraction_256": 0.2165679931640625,
+      "enrichment": {
+        "before": 4.032370757974983,
+        "after": 4.462396310835952
+      },
+      "after": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.966412213740458,
+        "union": 0.966412213740458
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/09382.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_09382.json",
+      "object_area_fraction_native512": 0.1089630126953125,
+      "before": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.46259541984732827,
+        "union": 0.46259541984732827
+      },
+      "random_baseline_area_fraction_256": 0.1092071533203125,
+      "enrichment": {
+        "before": 4.235944311179894,
+        "after": 1.8593418923660923
+      },
+      "after": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.20305343511450383,
+        "union": 0.20305343511450383
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/09733.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_09733.json",
+      "object_area_fraction_native512": 0.0150909423828125,
+      "before": {
+        "Bearing": 0.04732824427480916,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.04732824427480916
+      },
+      "random_baseline_area_fraction_256": 0.015167236328125,
+      "enrichment": {
+        "before": 3.120426375044158,
+        "after": 0.0
+      },
+      "after": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.0,
+        "union": 0.0
+      }
+    },
+    {
+      "image_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/images/09763.jpg",
+      "status": "covered",
+      "annotation": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42/test/annotations/dacl10k_v3_validation_09763.json",
+      "object_area_fraction_native512": 0.14825820922851562,
+      "before": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.467175572519084,
+        "union": 0.467175572519084
+      },
+      "random_baseline_area_fraction_256": 0.1480712890625,
+      "enrichment": {
+        "before": 3.1550719621404255,
+        "after": 0.7011271026978723
+      },
+      "after": {
+        "Bearing": 0.0,
+        "Drainage": 0.0,
+        "EJoint": 0.0,
+        "JTape": 0.0,
+        "PEquipment": 0.10381679389312977,
+        "union": 0.10381679389312977
+      }
+    }
+  ],
+  "top20_indices": {
+    "before": [
+      798,
+      211,
+      46,
+      43,
+      414,
+      835,
+      1,
+      576,
+      701,
+      771,
+      402,
+      95,
+      444,
+      75,
+      639,
+      262,
+      916,
+      797,
+      166,
+      589
+    ],
+    "after": [
+      211,
+      798,
+      43,
+      46,
+      576,
+      835,
+      262,
+      1,
+      95,
+      444,
+      916,
+      589,
+      797,
+      414,
+      142,
+      383,
+      75,
+      639,
+      402,
+      701
+    ]
+  },
+  "overlay_scale": {
+    "low": -3.7099692821502686,
+    "high": 5.383697509765625,
+    "shared": true
+  },
+  "mean_union_fraction": {
+    "before": 0.3128660652324775,
+    "after": 0.2619292158223455
+  },
+  "note": "Descriptive diagnostic only; conditional on annotation coverage; lower overlap alone does not prove lower absolute false positives"
+}
