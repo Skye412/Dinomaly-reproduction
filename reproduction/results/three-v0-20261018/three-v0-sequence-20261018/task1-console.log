@@ -1,0 +1,116 @@
+/data/Skye/Dinomaly/dinov2/layers/swiglu_ffn.py:51: UserWarning: xFormers is not available (SwiGLU)
+  warnings.warn("xFormers is not available (SwiGLU)")
+/data/Skye/Dinomaly/dinov2/layers/attention.py:33: UserWarning: xFormers is not available (Attention)
+  warnings.warn("xFormers is not available (Attention)")
+/data/Skye/Dinomaly/dinov2/layers/block.py:38: UserWarning: xFormers is not available (Block)
+  warnings.warn("xFormers is not available (Block)")
+GPU startup: {'state': 'gpu_lock_acquired', 'free_mib': 15822, 'message': 'Shared GPU lock acquired; free memory rechecked under lock'}
+Model provenance: {'variant': 'v0', 'added_parameters': 0, 'trainable_parameters': 61425408, 'encoder_frozen': True, 'initialization': 'fresh pretrained encoder and V0 reconstruction initialization; AMCM only for v1_amcm', 'amcm': None}
+Normal-only train=267; val=218; test=447; batch=16
+step [1/10000], loss:1.001387, peak_cuda_gib:7.720
+step [100/10000], loss:0.172637, peak_cuda_gib:8.732
+step [200/10000], loss:0.121970, peak_cuda_gib:8.732
+step [300/10000], loss:0.111113, peak_cuda_gib:8.732
+step [400/10000], loss:0.103436, peak_cuda_gib:8.732
+step [500/10000], loss:0.094236, peak_cuda_gib:8.732
+step [600/10000], loss:0.087892, peak_cuda_gib:8.732
+step [700/10000], loss:0.083552, peak_cuda_gib:8.732
+step [800/10000], loss:0.083074, peak_cuda_gib:8.732
+step [900/10000], loss:0.078536, peak_cuda_gib:8.732
+step [1000/10000], loss:0.075678, peak_cuda_gib:8.732
+step [1100/10000], loss:0.074783, peak_cuda_gib:8.732
+step [1200/10000], loss:0.076386, peak_cuda_gib:8.732
+step [1300/10000], loss:0.074184, peak_cuda_gib:8.732
+step [1400/10000], loss:0.071918, peak_cuda_gib:8.732
+step [1500/10000], loss:0.073893, peak_cuda_gib:8.732
+step [1600/10000], loss:0.073668, peak_cuda_gib:8.732
+step [1700/10000], loss:0.069632, peak_cuda_gib:8.732
+step [1800/10000], loss:0.068997, peak_cuda_gib:8.732
+step [1900/10000], loss:0.065956, peak_cuda_gib:8.732
+step [2000/10000], loss:0.068841, peak_cuda_gib:8.732
+val step 2000: {'image_auroc': 0.7362231182795699, 'image_ap': 0.9195855322326864, 'image_f1_max': 0.9299999502450026, 'pixel_auroc': 0.8616394258619909, 'pixel_ap': 0.4844618078233418, 'pixel_f1_max': 0.5703083991416751, 'pixel_aupro': 0.4683089970678297}; best step=2000
+step [2100/10000], loss:0.067883, peak_cuda_gib:8.732
+step [2200/10000], loss:0.070429, peak_cuda_gib:8.732
+step [2300/10000], loss:0.067790, peak_cuda_gib:8.732
+step [2400/10000], loss:0.066399, peak_cuda_gib:8.732
+step [2500/10000], loss:0.064515, peak_cuda_gib:8.732
+step [2600/10000], loss:0.064823, peak_cuda_gib:8.732
+step [2700/10000], loss:0.064322, peak_cuda_gib:8.732
+step [2800/10000], loss:0.065047, peak_cuda_gib:8.732
+step [2900/10000], loss:0.062937, peak_cuda_gib:8.732
+step [3000/10000], loss:0.064218, peak_cuda_gib:8.732
+step [3100/10000], loss:0.063396, peak_cuda_gib:8.732
+step [3200/10000], loss:0.061716, peak_cuda_gib:8.732
+step [3300/10000], loss:0.060279, peak_cuda_gib:8.732
+step [3400/10000], loss:0.062256, peak_cuda_gib:8.732
+step [3500/10000], loss:0.060840, peak_cuda_gib:8.732
+step [3600/10000], loss:0.059535, peak_cuda_gib:8.732
+step [3700/10000], loss:0.060677, peak_cuda_gib:8.732
+step [3800/10000], loss:0.059192, peak_cuda_gib:8.732
+step [3900/10000], loss:0.059246, peak_cuda_gib:8.732
+step [4000/10000], loss:0.058118, peak_cuda_gib:8.732
+val step 4000: {'image_auroc': 0.7567204301075269, 'image_ap': 0.9283705207415633, 'image_f1_max': 0.9269520912562126, 'pixel_auroc': 0.8688428641347091, 'pixel_ap': 0.4979512538197606, 'pixel_f1_max': 0.5802151351763195, 'pixel_aupro': 0.48745061994456623}; best step=4000
+step [4100/10000], loss:0.057892, peak_cuda_gib:8.732
+step [4200/10000], loss:0.057567, peak_cuda_gib:8.732
+step [4300/10000], loss:0.057021, peak_cuda_gib:8.732
+step [4400/10000], loss:0.057936, peak_cuda_gib:8.732
+step [4500/10000], loss:0.056626, peak_cuda_gib:8.732
+step [4600/10000], loss:0.055621, peak_cuda_gib:8.732
+step [4700/10000], loss:0.055459, peak_cuda_gib:8.732
+step [4800/10000], loss:0.055759, peak_cuda_gib:8.732
+step [4900/10000], loss:0.054967, peak_cuda_gib:8.732
+step [5000/10000], loss:0.055107, peak_cuda_gib:8.732
+step [5100/10000], loss:0.055101, peak_cuda_gib:8.732
+step [5200/10000], loss:0.054348, peak_cuda_gib:8.732
+step [5300/10000], loss:0.054120, peak_cuda_gib:8.732
+step [5400/10000], loss:0.053791, peak_cuda_gib:8.732
+step [5500/10000], loss:0.054009, peak_cuda_gib:8.732
+step [5600/10000], loss:0.053472, peak_cuda_gib:8.732
+step [5700/10000], loss:0.053393, peak_cuda_gib:8.732
+step [5800/10000], loss:0.053284, peak_cuda_gib:8.732
+step [5900/10000], loss:0.053184, peak_cuda_gib:8.732
+step [6000/10000], loss:0.053235, peak_cuda_gib:8.732
+val step 6000: {'image_auroc': 0.7644489247311829, 'image_ap': 0.9340749596344092, 'image_f1_max': 0.9289339603081787, 'pixel_auroc': 0.8709955338482372, 'pixel_ap': 0.5047222703027161, 'pixel_f1_max': 0.5834383817763372, 'pixel_aupro': 0.49938479461432744}; best step=6000
+step [6100/10000], loss:0.052270, peak_cuda_gib:8.732
+step [6200/10000], loss:0.052920, peak_cuda_gib:8.732
+step [6300/10000], loss:0.051873, peak_cuda_gib:8.732
+step [6400/10000], loss:0.052047, peak_cuda_gib:8.732
+step [6500/10000], loss:0.050987, peak_cuda_gib:8.732
+step [6600/10000], loss:0.051369, peak_cuda_gib:8.732
+step [6700/10000], loss:0.051613, peak_cuda_gib:8.732
+step [6800/10000], loss:0.051083, peak_cuda_gib:8.732
+step [6900/10000], loss:0.050746, peak_cuda_gib:8.732
+step [7000/10000], loss:0.050078, peak_cuda_gib:8.732
+step [7100/10000], loss:0.050123, peak_cuda_gib:8.732
+step [7200/10000], loss:0.050820, peak_cuda_gib:8.732
+step [7300/10000], loss:0.049861, peak_cuda_gib:8.732
+step [7400/10000], loss:0.049401, peak_cuda_gib:8.732
+step [7500/10000], loss:0.050151, peak_cuda_gib:8.732
+step [7600/10000], loss:0.049686, peak_cuda_gib:8.732
+step [7700/10000], loss:0.049072, peak_cuda_gib:8.732
+step [7800/10000], loss:0.049741, peak_cuda_gib:8.732
+step [7900/10000], loss:0.049319, peak_cuda_gib:8.732
+step [8000/10000], loss:0.049360, peak_cuda_gib:8.732
+val step 8000: {'image_auroc': 0.7570564516129032, 'image_ap': 0.9333430620130043, 'image_f1_max': 0.9269520912562126, 'pixel_auroc': 0.8694210768745536, 'pixel_ap': 0.5005301323055801, 'pixel_f1_max': 0.5805944172129783, 'pixel_aupro': 0.4948206874297967}; best step=6000
+step [8100/10000], loss:0.049117, peak_cuda_gib:8.732
+step [8200/10000], loss:0.049393, peak_cuda_gib:8.732
+step [8300/10000], loss:0.048802, peak_cuda_gib:8.732
+step [8400/10000], loss:0.049209, peak_cuda_gib:8.732
+step [8500/10000], loss:0.049281, peak_cuda_gib:8.732
+step [8600/10000], loss:0.048775, peak_cuda_gib:8.732
+step [8700/10000], loss:0.048654, peak_cuda_gib:8.732
+step [8800/10000], loss:0.049003, peak_cuda_gib:8.732
+step [8900/10000], loss:0.048570, peak_cuda_gib:8.732
+step [9000/10000], loss:0.048556, peak_cuda_gib:8.732
+step [9100/10000], loss:0.048249, peak_cuda_gib:8.732
+step [9200/10000], loss:0.047993, peak_cuda_gib:8.732
+step [9300/10000], loss:0.047992, peak_cuda_gib:8.732
+step [9400/10000], loss:0.047942, peak_cuda_gib:8.732
+step [9500/10000], loss:0.048396, peak_cuda_gib:8.732
+step [9600/10000], loss:0.048423, peak_cuda_gib:8.732
+step [9700/10000], loss:0.048525, peak_cuda_gib:8.732
+step [9800/10000], loss:0.047940, peak_cuda_gib:8.732
+step [9900/10000], loss:0.047976, peak_cuda_gib:8.732
+step [10000/10000], loss:0.048075, peak_cuda_gib:8.732
+val step 10000: {'image_auroc': 0.7538642473118279, 'image_ap': 0.933158347751344, 'image_f1_max': 0.9246230657912706, 'pixel_auroc': 0.8692463677158767, 'pixel_ap': 0.4998758681122163, 'pixel_f1_max': 0.5804447330143878, 'pixel_aupro': 0.48923088267931775}; best step=6000
+Completed: {'best_validation_step': 6000, 'final_step': 10000, 'model_info': {'variant': 'v0', 'added_parameters': 0, 'trainable_parameters': 61425408, 'encoder_frozen': True, 'initialization': 'fresh pretrained encoder and V0 reconstruction initialization; AMCM only for v1_amcm', 'amcm': None}, 'training_seconds': 8765.293581485748, 'peak_cuda_allocated_gib': 8.732234954833984, 'peak_cuda_reserved_gib': 10.19140625, 'test_final': {'metrics': {'image_auroc': 0.6744560838033844, 'image_ap': 0.9023470515300901, 'image_f1_max': 0.912195072336707, 'pixel_auroc': 0.8732329344096479, 'pixel_ap': 0.3974246417779956, 'pixel_f1_max': 0.5060525604308501, 'pixel_aupro': 0.5035073973042251}, 'calibrated': {'primary_fpr10': {'threshold': 0.22928233593702316, 'image_precision': 0.9024390243902439, 'image_recall': 0.2967914438502674, 'image_f1': 0.4466800804828975, 'tp': 111, 'fp': 12, 'tn': 61, 'fn': 263, 'normal': 73, 'anomaly': 374, 'samples': 447, 'false_positive_rate': 0.1643835616438356, 'specificity': 0.8356164383561644, 'balanced_accuracy': 0.5662039411032159}, 'legacy_f1': {'threshold': 0.1413460373878479, 'image_precision': 0.8403755868544601, 'image_recall': 0.9572192513368984, 'image_f1': 0.8949999999999999, 'samples': 447, 'normal': 73, 'anomaly': 374, 'positive_images_with_empty_resized_mask': 0, 'tp': 358, 'fp': 68, 'tn': 5, 'fn': 16, 'false_positive_rate': 0.9315068493150684, 'specificity': 0.0684931506849315, 'balanced_accuracy': 0.512856201010915}, 'threshold': 0.1413460373878479, 'image_precision': 0.8403755868544601, 'image_recall': 0.9572192513368984, 'image_f1': 0.8949999999999999, 'samples': 447, 'normal': 73, 'anomaly': 374, 'positive_images_with_empty_resized_mask': 0, 'tp': 358, 'fp': 68, 'tn': 5, 'fn': 16, 'false_positive_rate': 0.9315068493150684, 'specificity': 0.0684931506849315, 'balanced_accuracy': 0.512856201010915}}, 'test_best_val': {'metrics': {'image_auroc': 0.6653725001831368, 'image_ap': 0.897426184578517, 'image_f1_max': 0.912195072336707, 'pixel_auroc': 0.8745131807619464, 'pixel_ap': 0.40050837057318456, 'pixel_f1_max': 0.5088941562215565, 'pixel_aupro': 0.49893792526080727}, 'calibrated': {'primary_fpr10': {'threshold': 0.20998053997755053, 'image_precision': 0.8872180451127819, 'image_recall': 0.3155080213903743, 'image_f1': 0.4654832347140039, 'tp': 118, 'fp': 15, 'tn': 58, 'fn': 256, 'normal': 73, 'anomaly': 374, 'samples': 447, 'false_positive_rate': 0.2054794520547945, 'specificity': 0.7945205479452054, 'balanced_accuracy': 0.5550142846677899}, 'legacy_f1': {'threshold': 0.13749000430107117, 'image_precision': 0.8457831325301205, 'image_recall': 0.9385026737967914, 'image_f1': 0.8897338403041825, 'samples': 447, 'normal': 73, 'anomaly': 374, 'positive_images_with_empty_resized_mask': 0, 'tp': 351, 'fp': 64, 'tn': 9, 'fn': 23, 'false_positive_rate': 0.8767123287671232, 'specificity': 0.1232876712328767, 'balanced_accuracy': 0.5308951725148341}, 'threshold': 0.13749000430107117, 'image_precision': 0.8457831325301205, 'image_recall': 0.9385026737967914, 'image_f1': 0.8897338403041825, 'samples': 447, 'normal': 73, 'anomaly': 374, 'positive_images_with_empty_resized_mask': 0, 'tp': 351, 'fp': 64, 'tn': 9, 'fn': 23, 'false_positive_rate': 0.8767123287671232, 'specificity': 0.1232876712328767, 'balanced_accuracy': 0.5308951725148341}}, 'total_seconds': 9325.383313655853}

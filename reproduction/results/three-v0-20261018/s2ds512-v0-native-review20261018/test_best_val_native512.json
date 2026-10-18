@@ -1,0 +1,14 @@
+{
+  "step": 6000,
+  "metric_resolution": 512,
+  "mask_resolution": 512,
+  "pixel_anomaly_prevalence": 0.11432151026373742,
+  "positive_images_with_empty_resized_mask": 0,
+  "metrics": {
+    "pixel_auroc": 0.8769091044683708,
+    "pixel_ap": 0.3938722270900492,
+    "pixel_f1_max": 0.5037186814842011,
+    "pixel_aupro": 0.5031660244672889
+  },
+  "note": "Pixel-only supplementary protocol; no checkpoint/threshold selection; compare versions using same evaluator"
+}

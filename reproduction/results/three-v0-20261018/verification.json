@@ -1,0 +1,23 @@
+[
+  {
+    "dataset": "CODEBRIM",
+    "samples": 809,
+    "image_auroc_recomputed": 0.8204085975739519,
+    "confusion_counts_verified": true,
+    "area_partition_verified": true
+  },
+  {
+    "dataset": "S2DS",
+    "samples": 447,
+    "image_auroc_recomputed": 0.6653725001831368,
+    "confusion_counts_verified": true,
+    "area_partition_verified": true
+  },
+  {
+    "dataset": "DACL",
+    "samples": 975,
+    "image_auroc_recomputed": 0.7240513833992095,
+    "confusion_counts_verified": true,
+    "area_partition_verified": true
+  }
+]

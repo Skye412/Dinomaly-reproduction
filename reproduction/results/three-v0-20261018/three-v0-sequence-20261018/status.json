@@ -1,0 +1,10 @@
+{
+  "pid": 2485166,
+  "state": "completed",
+  "commit": "bc107fa9aeab22714b58397036b03268c47c9bf2",
+  "task": 3,
+  "command": "python reproduction/reevaluate_v3.py --config runs/s2ds512-v0-b16-s1-review20261018/config.json --checkpoint runs/s2ds512-v0-b16-s1-review20261018/best_val.pth --output runs/s2ds512-v0-native-review20261018 --native_512",
+  "updated_at": 1792329326.5990534,
+  "free_mib": 15822,
+  "message": "Shared GPU lock acquired; free memory rechecked under lock"
+}

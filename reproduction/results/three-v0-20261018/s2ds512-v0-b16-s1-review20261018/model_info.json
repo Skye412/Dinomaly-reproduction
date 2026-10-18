@@ -1,0 +1,8 @@
+{
+  "variant": "v0",
+  "added_parameters": 0,
+  "trainable_parameters": 61425408,
+  "encoder_frozen": true,
+  "initialization": "fresh pretrained encoder and V0 reconstruction initialization; AMCM only for v1_amcm",
+  "amcm": null
+}

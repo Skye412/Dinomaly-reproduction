@@ -1,0 +1,58 @@
+{
+  "splits": {
+    "train": {
+      "split": "train",
+      "samples": 1561,
+      "categories": {
+        "normal": 267,
+        "annotated": 1294
+      },
+      "sources": {
+        "S2DS": 1561
+      },
+      "parents": 477
+    },
+    "val": {
+      "split": "val",
+      "samples": 218,
+      "categories": {
+        "normal": 32,
+        "annotated": 186
+      },
+      "sources": {
+        "S2DS": 218
+      },
+      "parents": 66
+    },
+    "test": {
+      "split": "test",
+      "samples": 447,
+      "categories": {
+        "normal": 73,
+        "annotated": 374
+      },
+      "sources": {
+        "S2DS": 447
+      },
+      "parents": 135
+    }
+  },
+  "manifest_sha256": {
+    "train": "5b88a8119198860a6fc135cdf32ad1c44a7ec899fcd85ba6d95b72acd09527a4",
+    "val": "4762c8ea635902c993178cacff3ef2a1ab3bd13367f1c83ea7b00d0d448a5433",
+    "test": "b09faa230cd8c48bd1e3ffad92e947aa989022e418873c2e0ec5a725164d1b12"
+  },
+  "dataset_profile": "s2ds512",
+  "split_view": "original",
+  "excluded_samples": {
+    "train": [],
+    "val": [],
+    "test": []
+  },
+  "training_samples": 267,
+  "mask_conversion": "union of nonzero RGB pixels before resizing",
+  "train_filter": "category == normal",
+  "input": "full-frame resize to 392x392",
+  "validation_selection": "max image AUROC; tie-break by pixel AP",
+  "test_usage": "after training only"
+}

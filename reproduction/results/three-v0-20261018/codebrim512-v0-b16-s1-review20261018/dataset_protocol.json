@@ -1,0 +1,58 @@
+{
+  "splits": {
+    "train": {
+      "split": "train",
+      "samples": 2861,
+      "categories": {
+        "annotated": 917,
+        "normal": 1944
+      },
+      "sources": {
+        "CODEBRIM": 2861
+      },
+      "parents": 1040
+    },
+    "val": {
+      "split": "val",
+      "samples": 400,
+      "categories": {
+        "normal": 277,
+        "annotated": 123
+      },
+      "sources": {
+        "CODEBRIM": 400
+      },
+      "parents": 145
+    },
+    "test": {
+      "split": "test",
+      "samples": 809,
+      "categories": {
+        "annotated": 254,
+        "normal": 555
+      },
+      "sources": {
+        "CODEBRIM": 809
+      },
+      "parents": 309
+    }
+  },
+  "manifest_sha256": {
+    "train": "b551f69c0fdea10f51c552de5ef3753978565fbccca85b7ab4b7834ec552cd1f",
+    "val": "39ccad5653bbcfac749491b4b3185373e60aaa366bad70f71e726d250002d4af",
+    "test": "49a98cf680679d06d58dc748b46c982fe09ad86962802be2f3622d26fbd12b10"
+  },
+  "dataset_profile": "codebrim512",
+  "split_view": "original",
+  "excluded_samples": {
+    "train": [],
+    "val": [],
+    "test": []
+  },
+  "training_samples": 1944,
+  "mask_conversion": "union of nonzero RGB pixels before resizing",
+  "train_filter": "category == normal",
+  "input": "full-frame resize to 392x392",
+  "validation_selection": "max image AUROC; tie-break by pixel AP",
+  "test_usage": "after training only"
+}
