@@ -1,5 +1,5 @@
 {
-  "status": "awaiting_code_review_do_not_launch",
+  "status": "authorized_for_sequential_execution",
   "seed": 1,
   "batch_size": 16,
   "total_iters": 10000,
@@ -44,5 +44,7 @@
     "seed2",
     "seed3"
   ],
-  "launch_gate": "User code review approval required. Before launch publish a dated final run plan, verify remote commit and clean server checkout. Sequential GPU use only; no automatic retry."
+  "launch_gate": "Approved by user 2026-10-18; publish and verify commit before launch; sequential GPU use only; no automatic retry.",
+  "approved_at": "2026-10-18",
+  "dacl_definition": "retain historical official 14 damage labels"
 }
