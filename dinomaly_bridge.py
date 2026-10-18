@@ -273,7 +273,7 @@ def main(args):
                 best_values, best_cal = evaluate(model, test_loader, args.device, folder / 'test_best_val_scores.csv', best_threshold)
         else:
             best_values, best_cal = final_values, final_cal
-            if v3_evaluator is not None:
+            if args.v3_evaluation:
                 for suffix in ("scores.csv", "fpr10_scores.csv", "v3.json"):
                     shutil.copyfile(folder / ("test_final_" + suffix), folder / ("test_best_val_" + suffix))
         record_metrics(args, best_step, 'test_best_val', best_values)

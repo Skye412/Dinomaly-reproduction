@@ -51,7 +51,7 @@ def stratified_metrics(dataset, score_rows, y, scores, threshold):
         item = metadata[row['image_path']]
         if item['label'] != int(label):
             raise ValueError('Native metadata/score label mismatch')
-        records.append(dict(item, image_path=row['image_path'], score=float(score)))
+        records.append(dict(item, image_path=row['image_path'], score=float(score), prediction_at_fpr10=int(score >= threshold)))
     def measure(selected):
         index = np.array([r['label'] == 0 or (r['label'] == 1 and selected(r)) for r in records])
         labels = np.asarray(y)[index]; values = np.asarray(scores)[index]

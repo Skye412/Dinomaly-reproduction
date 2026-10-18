@@ -1,0 +1,48 @@
+{
+  "status": "awaiting_code_review_do_not_launch",
+  "seed": 1,
+  "batch_size": 16,
+  "total_iters": 10000,
+  "eval_interval": 2000,
+  "model_variant": "v0",
+  "image_size": 392,
+  "v3_evaluation": true,
+  "protocol": "v3_shared_z_fpr_256_v3",
+  "intended_change": "New frozen dataset profiles and native512 test stratification only; original V0 model/loss/optimizer/scheduler",
+  "sequence": [
+    {
+      "kind": "full_training",
+      "run_id": "codebrim512-v0-b16-s1-review20261018",
+      "command": "python dinomaly_bridge.py --dataset_profile codebrim512 --data_path /home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM --save_name codebrim512-v0-b16-s1-review20261018 --model_variant v0 --image_size 392 --v3_evaluation --seed 1 --batch_size 16 --total_iters 10000 --eval_interval 2000"
+    },
+    {
+      "kind": "full_training",
+      "run_id": "s2ds512-v0-b16-s1-review20261018",
+      "command": "python dinomaly_bridge.py --dataset_profile s2ds512 --data_path /home/skye/data/Skye/databases/Bridge512_balance_S2DS --save_name s2ds512-v0-b16-s1-review20261018 --model_variant v0 --image_size 392 --v3_evaluation --seed 1 --batch_size 16 --total_iters 10000 --eval_interval 2000"
+    },
+    {
+      "kind": "evaluation_only",
+      "dataset": "dacl_v3_seed42",
+      "command": "python reproduction/reevaluate_v3.py --config runs/dacl-v3-seed42-b16-s1-20261015/config.json --checkpoint runs/dacl-v3-seed42-b16-s1-20261015/best_val.pth --output runs/dacl-v0-strata-review20261018"
+    },
+    {
+      "kind": "evaluation_only_after_both_training_success",
+      "dataset": "s2ds512",
+      "command": "python reproduction/reevaluate_v3.py --config runs/s2ds512-v0-b16-s1-review20261018/config.json --checkpoint runs/s2ds512-v0-b16-s1-review20261018/best_val.pth --output runs/s2ds512-v0-native-review20261018 --native_512"
+    }
+  ],
+  "retention_datasets": [
+    "codebrim512",
+    "dacl_v3_seed42"
+  ],
+  "report_only": [
+    "s2ds512"
+  ],
+  "deferred": [
+    "V3b",
+    "CRMC",
+    "seed2",
+    "seed3"
+  ],
+  "launch_gate": "User code review approval required. Before launch publish a dated final run plan, verify remote commit and clean server checkout. Sequential GPU use only; no automatic retry."
+}
