@@ -10,6 +10,7 @@ from dinomaly_bridge import build_model
 from crmc import build_memory_bank,load_bank,forward_with_context,nearest_memory_maps,prepare_map,fuse_maps,sha256_file
 from crmc_diagnostics import diagnostics
 from stratified_evaluation import stratified_metrics
+from v3_evaluation import bootstrap_auc
 from utils import compute_pro,f1_score_max,get_gaussian_kernel
 
 FRACTIONS=(.001,.0025,.005,.01,.02,.05,.1,.2,.5,1.);ALPHAS=(0,.25,.5,.75,1.)
@@ -215,9 +216,33 @@ def main(args):
             if name == 'main':
                 main_map = tm; main_scores = ts
         raw = selections['reconstruction_only']
+        baseline_folder = Path(args.baseline_dir)
+        baseline_summary = json.loads((baseline_folder / 'summary.json').read_text(encoding='utf-8'))
+        expected = (baseline_summary['test_best_val']['metrics']['image_auroc']
+                    if 'test_best_val' in baseline_summary else baseline_summary['metrics'][0])
+        observed = reports['reconstruction_only']['metrics']['image_auroc']
+        archived = list(csv.DictReader((baseline_folder / 'test_best_val_scores.csv').open()))
+        if [r['image_path'] for r in archived] != test[4] or [int(r['label']) for r in archived] != test[3].tolist():
+            raise RuntimeError('V0 archived sample paths/labels do not match')
+        baseline_test = top_score(test[0], raw['top_fraction'])
+        archived_scores = np.array([float(r['score']) for r in archived])
+        baseline_check = dict(expected_image_auroc=expected, observed_image_auroc=observed,
+                              absolute_delta=abs(expected-observed),
+                              maximum_score_difference=float(np.max(np.abs(baseline_test-archived_scores))),
+                              passed=abs(expected-observed) <= 1e-12)
+        write_json(args.output / 'v0_consistency.json', baseline_check)
+        if not baseline_check['passed']:
+            write_json(args.output / 'crmc_report.json', dict(state='failed', v0_consistency=baseline_check))
+            raise RuntimeError('Reconstruction-only AUROC differs from archived V0')
+        main_val_map = fuse_maps(val[0], val[1]['16'], normalizations['16'],
+                                 selections['main']['mode'], selections['main']['alpha'])
+        paired = dict(test=bootstrap_auc(test[3], main_scores, 2000, cfg['seed'], baseline_test),
+                      validation=bootstrap_auc(val[3], top_score(main_val_map, selections['main']['top_fraction']),
+                                               2000, cfg['seed'], top_score(val[0], raw['top_fraction'])))
         baseline_scores = top_score(test[0], raw['top_fraction'])
         norm = normalizations['16']
-        before_display = (test[0] - norm['rec_mean']) / norm['rec_std']
+        before_display = ((test[0] - norm['rec_mean']) / norm['rec_std']
+                          if selections['main']['mode'] == 'weighted_sum' else test[0])
         after_display = main_map
         if selections['main']['mode'] == 'weighted_sum' and selections['main']['alpha'] == 0:
             after_display = before_display
@@ -227,6 +252,7 @@ def main(args):
                            args.output / 'diagnostics', args.s2ds_source_root)
         write_json(args.output / 'crmc_report.json', dict(provenance=provenance,
                    main=reports['main'], ablations=reports, diagnostics=diag,
+                   v0_consistency=baseline_check, paired_auc_delta_ci95=paired,
                    elapsed_seconds=time.time() - started,
                    peak_cuda_allocated_gib=torch.cuda.max_memory_allocated() / 1024**3,
                    note='Fixed V0 checkpoint; no training; all selection on validation'))
@@ -245,5 +271,6 @@ if __name__ == '__main__':
     p.add_argument('--checkpoint', type=Path, required=True)
     p.add_argument('--output', type=Path, required=True)
     p.add_argument('--device', default='cuda:0')
+    p.add_argument('--baseline_dir', type=Path, required=True)
     p.add_argument('--s2ds_source_root', type=Path, default='/home/skye/data/Skye/databases/S2DS')
     main(p.parse_args())

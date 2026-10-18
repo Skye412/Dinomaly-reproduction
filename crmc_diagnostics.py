@@ -71,6 +71,9 @@ def diagnostics(dataset, profile, paths, labels, before_maps, after_maps,
                     resized = np.asarray(Image.fromarray(mask).resize((256, 256), Image.Resampling.NEAREST if hasattr(Image, 'Resampling') else Image.NEAREST))
                     values[name] = float(resized.ravel()[top].mean())
                 record[method] = values
+                area = float(np.asarray(Image.fromarray(masks['union']).resize((256, 256), Image.NEAREST)).mean())
+                record['random_baseline_area_fraction_256'] = area
+                record.setdefault('enrichment', {})[method] = values['union'] / area if area > 0 else None
                 fractions[method].append(values['union'])
         records.append(record)
     normal = np.flatnonzero(labels == 0)
@@ -96,7 +99,12 @@ def diagnostics(dataset, profile, paths, labels, before_maps, after_maps,
             canvas.paste(panel, (j * 512, 28))
         draw.text((8, 5), 'Original | V0 | CRMC   sample=' + rows[i]['sample'], fill='black')
         canvas.save(output / ('normal_%04d.png' % i))
-    report = dict(top_fraction=.01, top_pixels=count, normals=len(normal),
+    containing = [r for r in records if r.get('random_baseline_area_fraction_256', 0) > 0]
+    object_only = dict(images=len(containing), mean_overlap={}, mean_enrichment={})
+    for method in ('before', 'after'):
+        object_only['mean_overlap'][method] = float(np.mean([r[method]['union'] for r in containing])) if containing else None
+        object_only['mean_enrichment'][method] = float(np.mean([r['enrichment'][method] for r in containing])) if containing else None
+    report = dict(object_containing_normals=object_only, top_fraction=.01, top_pixels=count, normals=len(normal),
                   covered_normals=len(fractions['before']),
                   uncovered_normals=len(normal) - len(fractions['before']),
                   records=records, top20_indices=rankings,

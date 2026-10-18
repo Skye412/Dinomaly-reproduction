@@ -163,7 +163,7 @@ def fuse_maps(rec, mem, stats, mode, alpha=None):
         result = (1 - alpha) * r + alpha * m
     elif mode == 'gated':
         from scipy.special import expit
-        result = r * expit(m)
+        result = np.asarray(rec) * expit(m)
     else:
         raise ValueError(mode)
     if not np.isfinite(result).all():
