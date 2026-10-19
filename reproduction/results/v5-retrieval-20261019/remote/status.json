@@ -1,0 +1,39 @@
+{
+  "pid": 3105873,
+  "git_commit": "235b214e92035f36dc08b3e7fea0091e3636b057",
+  "state": "completed",
+  "phase": "supplement_dacl_v3_seed42",
+  "command": [
+    "/home/skye/miniconda3/envs/dinomaly/bin/python",
+    "crmc_evaluate.py",
+    "--config",
+    "/data/Skye/Dinomaly/runs/dacl-v3-seed42-b16-s1-20261015/config.json",
+    "--checkpoint",
+    "/data/Skye/Dinomaly/runs/dacl-v3-seed42-b16-s1-20261015/best_val.pth",
+    "--baseline_dir",
+    "reproduction/results/three-v0-20261018/dacl-v0-strata-review20261018",
+    "--output",
+    "/data/Skye/Dinomaly/runs/v4-supplement-dacl_v3_seed42-20261019",
+    "--supplementary",
+    "--v4_run",
+    "runs/v4-crmc-dacl-eval-20261019-r1"
+  ],
+  "updated_at": 1792450672.8251462,
+  "dataset": "codebrim512",
+  "supplemental": {
+    "codebrim512": {
+      "state": "failed",
+      "error": "CalledProcessError(-9, ['/home/skye/miniconda3/envs/dinomaly/bin/python', 'crmc_evaluate.py', '--config', '/data/Skye/Dinomaly/runs/codebrim512-v0-b16-s1-review20261018/config.json', '--checkpoint', '/data/Skye/Dinomaly/runs/codebrim512-v0-b16-s1-review20261018/best_val.pth', '--baseline_dir', 'reproduction/results/three-v0-20261018/codebrim512-v0-b16-s1-review20261018', '--output', '/data/Skye/Dinomaly/runs/v4-supplement-codebrim512-20261019', '--supplementary', '--v4_run', 'runs/v4-crmc-codebrim512-eval-20261019-r1'])",
+      "traceback": "Traceback (most recent call last):\n  File \"reproduction/run_v5_sequence.py\", line 37, in <module>\n    call([sys.executable,'crmc_evaluate.py','--config',str(v0/'config.json'),'--checkpoint',str(v0/'best_val.pth'),'--baseline_dir',d['baseline_dir'],'--output',str(supp),'--supplementary','--v4_run',d['v4_run']],f'supplement_{name}')\n  File \"reproduction/run_v5_sequence.py\", line 24, in call\n    subprocess.run(cmd,cwd=root,check=True,stdout=log,stderr=subprocess.STDOUT)\n  File \"/home/skye/miniconda3/envs/dinomaly/lib/python3.8/subprocess.py\", line 516, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['/home/skye/miniconda3/envs/dinomaly/bin/python', 'crmc_evaluate.py', '--config', '/data/Skye/Dinomaly/runs/codebrim512-v0-b16-s1-review20261018/config.json', '--checkpoint', '/data/Skye/Dinomaly/runs/codebrim512-v0-b16-s1-review20261018/best_val.pth', '--baseline_dir', 'reproduction/results/three-v0-20261018/codebrim512-v0-b16-s1-review20261018', '--output', '/data/Skye/Dinomaly/runs/v4-supplement-codebrim512-20261019', '--supplementary', '--v4_run', 'runs/v4-crmc-codebrim512-eval-20261019-r1']' died with <Signals.SIGKILL: 9>.\n"
+    },
+    "s2ds512": {
+      "state": "completed",
+      "output": "/data/Skye/Dinomaly/runs/v4-supplement-s2ds512-20261019"
+    },
+    "dacl_v3_seed42": {
+      "state": "completed",
+      "output": "/data/Skye/Dinomaly/runs/v4-supplement-dacl_v3_seed42-20261019"
+    }
+  },
+  "retention_passed": false
+}
