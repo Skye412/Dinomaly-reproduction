@@ -50,6 +50,16 @@ def build_model(device, variant='v0'):
         with torch.random.fork_rng(devices=[]):
             adapter = AMCMTokenAdapter(encoder)
         bottleneck.append(adapter.to(device))
+    if variant == 'v5_retrieval':
+        from models.retrieval_attention import RetrievalCrossAttention
+        with torch.random.fork_rng(devices=[]):
+            adapter = RetrievalCrossAttention()
+            for module in adapter.modules():
+                if isinstance(module, nn.Linear):
+                    trunc_normal_(module.weight, std=.01, a=-.03, b=.03)
+                    nn.init.zeros_(module.bias)
+        model.retrieval_decoder = adapter.to(device)
+        trainable.append(adapter)
     encoder.requires_grad_(False)
     return model, trainable
 
@@ -74,9 +84,11 @@ def main(args):
             logger.info('GPU startup: %s', event)
             state(**event)
         lock = acquire_gpu_lock(Path(args.save_dir) / 'gpu0.lock', gpu_event,
-                                minimum_free_mib=14500 if args.model_variant in {'v1_amcm', 'v2_paired', 'v3'} else 12288)
+                                minimum_free_mib=14500 if args.model_variant in {'v1_amcm', 'v2_paired', 'v3', 'v5_retrieval'} else 12288)
         state(state='running', started_at=time.time())
         setup_seed(args.seed)
+        if args.model_variant == 'v5_retrieval' and (not args.v3_evaluation or args.image_size != 392 or args.context_recenter or args.train_augment or args.encoder_fp16):
+            raise ValueError('V5 requires V0 FP32 392 configuration and v3_evaluation')
         if args.model_variant == 'v3' and not args.v3_evaluation:
             raise ValueError('model_variant v3 requires --v3_evaluation (historical 392-to-256 masks)')
         if args.model_variant == 'v3' and args.encoder_fp16:
@@ -111,26 +123,37 @@ def main(args):
             from paired_denoising import raw_transform, PairedInput, IndexedTrainingDataset
             train.transform = raw_transform()
             pairing = PairedInput(folder, logger)
-        if args.model_variant == 'v3':
+        if args.model_variant in {'v3', 'v5_retrieval'}:
             from paired_denoising import IndexedTrainingDataset
         val = DatasetClass(args.data_path, 'val', image_size=args.image_size, exclude_samples=exclusions['val'], **({'mask_size': 392} if args.v3_evaluation else {}))
-        train_loader = DataLoader(IndexedTrainingDataset(train) if args.model_variant in {'v2_paired', 'v3'} else train, batch_size=args.batch_size, shuffle=True, drop_last=True, num_workers=4)
+        train_loader = DataLoader(IndexedTrainingDataset(train) if args.model_variant in {'v2_paired', 'v3', 'v5_retrieval'} else train, batch_size=args.batch_size, shuffle=True, drop_last=True, num_workers=4)
         if not len(train_loader):
             raise ValueError('Training loader is empty')
-        if args.model_variant in {'v1_amcm', 'v2_paired'} and args.smoke_steps:
-            raise ValueError('V1/V2 are authorized for full runs only; smoke_steps must be zero')
+        if args.model_variant in {'v1_amcm', 'v2_paired', 'v5_retrieval'} and args.smoke_steps:
+            raise ValueError('V1/V2/V5 are authorized for full runs only; smoke_steps must be zero')
         model, trainable = build_model(args.device, args.model_variant)
         model.context_recenter = args.context_recenter
         model.encoder_fp16 = args.encoder_fp16
         model.reconstruction_fp32 = args.fp32_reconstruction
+        if args.model_variant == 'v5_retrieval':
+            from retrieval_v5 import prepare_retrieval
+            with torch.random.fork_rng(devices=[]):
+                prepare_retrieval(model, train, DataLoader(train, batch_size=args.batch_size,
+                    shuffle=False, num_workers=4), folder/'retrieval_bank', args.device,
+                    dict(manifest_sha256=manifests, input_size=392, encoder='dinov2reg_vit_base_14'))
         if args.v3_evaluation:
             from v3_evaluation import V3Evaluator
-            v3_evaluator = V3Evaluator(args, folder)
+            if args.model_variant == 'v5_retrieval':
+                from v5_evaluation import V5Evaluator
+                v3_evaluator = V5Evaluator(args, folder)
+            else:
+                v3_evaluator = V3Evaluator(args, folder)
         optimizer = StableAdamW([{'params': trainable.parameters()}], lr=2e-3, betas=(0.9,0.999),
                                 weight_decay=1e-4, amsgrad=True, eps=1e-10)
         scheduler = WarmCosineScheduler(optimizer, base_value=2e-3, final_value=2e-4,
                                        total_iters=args.total_iters, warmup_iters=100)
-        added = model.bottleneck[-1] if args.model_variant == 'v1_amcm' else None
+        added = (model.bottleneck[-1] if args.model_variant == 'v1_amcm' else
+                 getattr(model, 'retrieval_decoder', None))
         optimized = {id(p) for group in optimizer.param_groups for p in group['params']}
         assert {id(p) for p in model.parameters() if p.requires_grad} == optimized
         if added is not None:
@@ -139,9 +162,9 @@ def main(args):
                           added_parameters=sum(p.numel() for p in added.parameters()) if added else 0,
                           trainable_parameters=sum(p.numel() for p in trainable.parameters()),
                           encoder_frozen=not any(p.requires_grad for p in model.encoder.parameters()),
-                          initialization='fresh pretrained encoder and V0 reconstruction initialization; AMCM only for v1_amcm',
-                          amcm=dict(dim=768, sa_grid_size=5, sa_reduction=2, multiscale_kernels=[5,7,9,11]) if added else None)
-        if args.model_variant == 'v3':
+                          initialization='fresh pretrained encoder and V0 reconstruction initialization; added module initialized afterwards',
+                          amcm=dict(dim=768, sa_grid_size=5, sa_reduction=2, multiscale_kernels=[5,7,9,11]) if args.model_variant == 'v1_amcm' else None)
+        if args.model_variant in {'v3', 'v5_retrieval'}:
             model_info['v3'] = dict(context_recenter=args.context_recenter, encoder_fp16=args.encoder_fp16,
                 fp32_reconstruction=args.fp32_reconstruction, train_augment=args.train_augment,
                 input_size=args.image_size, z_candidates=[0.001,0.0025,0.005,0.01,0.02,0.05,0.10,0.20,0.50,1.0] if args.v3_evaluation else [0.01],
@@ -158,6 +181,8 @@ def main(args):
         last_gradient_norm = None
         while step < args.total_iters:
             model.train()
+            if args.model_variant == 'v5_retrieval':
+                model.retrieval_provider.training = True
             for training_batch in train_loader:
                 image, label = training_batch[:2]
                 if label.any():
@@ -181,10 +206,10 @@ def main(args):
                     assert all(not target.requires_grad for target in en)
                     assert all(target.shape == pred.shape for target, pred in zip(en, de))
                 else:
-                    en, de = model(image.to(args.device))
+                    en, de = model(image.to(args.device), retrieval_ids=training_batch[2]) if args.model_variant == 'v5_retrieval' else model(image.to(args.device))
                 loss = global_cosine_hm_percent(en, de, p=min(0.9 * step / 1000, 0.9), factor=0.1)
                 if not torch.isfinite(loss).item():
-                    if args.model_variant == 'v3':
+                    if args.model_variant in {'v3', 'v5_retrieval'}:
                         from v3_diagnostics import save_failure
                         save_failure(folder, train, training_batch, image, en, de, optimizer, step + 1, last_gradient_norm)
                         save_checkpoint(args, model, optimizer, scheduler, step, 'failure.pth')
@@ -192,10 +217,10 @@ def main(args):
                 optimizer.zero_grad()
                 loss.backward()
                 if step == 0 and added is not None:
-                    assert all(p.grad is not None for p in added.parameters() if p.requires_grad), 'AMCM missing gradients'
+                    assert all(p.grad is not None for p in added.parameters() if p.requires_grad), 'Added module missing gradients'
                 grad_norm = nn.utils.clip_grad_norm_(trainable.parameters(), max_norm=0.1)
                 if not torch.isfinite(grad_norm).item():
-                    if args.model_variant == 'v3':
+                    if args.model_variant in {'v3', 'v5_retrieval'}:
                         from v3_diagnostics import save_failure
                         save_failure(folder, train, training_batch, image, en, de, optimizer, step + 1, float(grad_norm))
                         save_checkpoint(args, model, optimizer, scheduler, step, 'failure.pth')
@@ -274,7 +299,7 @@ def main(args):
         else:
             best_values, best_cal = final_values, final_cal
             if args.v3_evaluation:
-                for suffix in ("scores.csv", "fpr10_scores.csv", "v3.json"):
+                for suffix in ("scores.csv", "fpr10_scores.csv", "v3.json", "reconstruction_only_scores.csv", "reconstruction_only_fpr10_scores.csv", "reconstruction_only_v3.json") if args.model_variant == 'v5_retrieval' else ("scores.csv", "fpr10_scores.csv", "v3.json"):
                     shutil.copyfile(folder / ("test_final_" + suffix), folder / ("test_best_val_" + suffix))
         record_metrics(args, best_step, 'test_best_val', best_values)
         summary['test_best_val'] = dict(metrics=dict(zip(METRIC_NAMES,best_values)), calibrated=best_cal)
@@ -302,7 +327,7 @@ if __name__ == '__main__':
     parser.add_argument('--data_path', default='/home/skye/data/Skye/databases/Bridge2893_split_seed42')
     parser.add_argument('--save_dir', default='runs')
     parser.add_argument('--save_name', required=True)
-    parser.add_argument('--model_variant', choices=['v0', 'v1_amcm', 'v2_paired', 'v3'], default='v0')
+    parser.add_argument('--model_variant', choices=['v0', 'v1_amcm', 'v2_paired', 'v3', 'v5_retrieval'], default='v0')
     parser.add_argument('--image_size', type=int, choices=[392,448], default=392)
     parser.add_argument('--context_recenter', action='store_true')
     parser.add_argument('--train_augment', action='store_true')

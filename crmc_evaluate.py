@@ -273,4 +273,11 @@ if __name__ == '__main__':
     p.add_argument('--device', default='cuda:0')
     p.add_argument('--baseline_dir', type=Path, required=True)
     p.add_argument('--s2ds_source_root', type=Path, default='/home/skye/data/Skye/databases/S2DS')
-    main(p.parse_args())
+    p.add_argument('--supplementary', action='store_true')
+    p.add_argument('--v4_run', type=Path)
+    args = p.parse_args()
+    if args.supplementary:
+        from crmc_supplement import main as supplement
+        supplement(args)
+    else:
+        main(args)

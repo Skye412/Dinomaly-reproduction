@@ -1,0 +1,77 @@
+{
+  "status": "review_required_before_launch",
+  "sequence_id": "v5-retrieval-decoder-sequence-20261019",
+  "seed": 1,
+  "batch_size": 16,
+  "total_iters": 10000,
+  "eval_interval": 2000,
+  "image_size": 392,
+  "model_variant": "v5_retrieval",
+  "v3_evaluation": true,
+  "training": "frozen DINOv2-registers encoder; V0 bottleneck and 8-layer decoder plus trainable linear retrieval cross-attention",
+  "retrieval": "K=16 CLS-context; 2x2 pooled fused target patches; 3136 context tokens; training excludes self and equal manifest parent_id; validation/test use all training normals",
+  "loss_optimizer_scheduler": "unchanged V0",
+  "selection": "validation Image AUROC then Pixel AP; test never selects",
+  "retention": "CODEBRIM and DACL: neither validation Image AUROC nor Pixel AP drops >=0.5pp and at least one >=1.0pp improvement; S2DS report-only",
+  "supplementary_before_training": [
+    "full-bank memory-only external-style report from completed V4",
+    "10% global greedy k-center coreset in seeded Gaussian projection64; full-feature Euclidean scoring; PatchCore-style only",
+    "2x2 native-512 block memory (288 block, 224 stride), max/mean validation-selected fusion"
+  ],
+  "datasets": {
+    "codebrim512": {
+      "data_path": "/home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM",
+      "profile": "codebrim512",
+      "v0_run": "codebrim512-v0-b16-s1-review20261018",
+      "v5_run": "codebrim512-v5-retrieval-b16-s1-20261019",
+      "v4_run": "runs/v4-crmc-codebrim512-eval-20261019-r1",
+      "baseline_dir": "reproduction/results/three-v0-20261018/codebrim512-v0-b16-s1-review20261018",
+      "manifest_sha256": {
+        "train": "b551f69c0fdea10f51c552de5ef3753978565fbccca85b7ab4b7834ec552cd1f",
+        "val": "39ccad5653bbcfac749491b4b3185373e60aaa366bad70f71e726d250002d4af",
+        "test": "49a98cf680679d06d58dc748b46c982fe09ad86962802be2f3622d26fbd12b10"
+      },
+      "supplement_output": "runs/v4-supplement-codebrim512-20261019",
+      "v4_reference": "reproduction/results/v4-crmc-20261019-r1/runs/v4-crmc-codebrim512-eval-20261019-r1",
+      "training_command": "python dinomaly_bridge.py --dataset_profile codebrim512 --data_path /home/skye/data/Skye/databases/Bridge512_balance_CODEBRIM --save_name codebrim512-v5-retrieval-b16-s1-20261019 --model_variant v5_retrieval --image_size 392 --v3_evaluation --seed 1 --batch_size 16 --total_iters 10000 --eval_interval 2000"
+    },
+    "s2ds512": {
+      "data_path": "/home/skye/data/Skye/databases/Bridge512_balance_S2DS",
+      "profile": "s2ds512",
+      "v0_run": "s2ds512-v0-b16-s1-review20261018",
+      "v5_run": "s2ds512-v5-retrieval-b16-s1-20261019",
+      "v4_run": "runs/v4-crmc-s2ds512-eval-20261019-r1",
+      "baseline_dir": "reproduction/results/three-v0-20261018/s2ds512-v0-b16-s1-review20261018",
+      "manifest_sha256": {
+        "train": "5b88a8119198860a6fc135cdf32ad1c44a7ec899fcd85ba6d95b72acd09527a4",
+        "val": "4762c8ea635902c993178cacff3ef2a1ab3bd13367f1c83ea7b00d0d448a5433",
+        "test": "b09faa230cd8c48bd1e3ffad92e947aa989022e418873c2e0ec5a725164d1b12"
+      },
+      "supplement_output": "runs/v4-supplement-s2ds512-20261019",
+      "v4_reference": "reproduction/results/v4-crmc-20261019-r1/runs/v4-crmc-s2ds512-eval-20261019-r1",
+      "training_command": "python dinomaly_bridge.py --dataset_profile s2ds512 --data_path /home/skye/data/Skye/databases/Bridge512_balance_S2DS --save_name s2ds512-v5-retrieval-b16-s1-20261019 --model_variant v5_retrieval --image_size 392 --v3_evaluation --seed 1 --batch_size 16 --total_iters 10000 --eval_interval 2000"
+    },
+    "dacl_v3_seed42": {
+      "data_path": "/home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42",
+      "profile": "dacl_v3_seed42",
+      "v0_run": "dacl-v3-seed42-b16-s1-20261015",
+      "v5_run": "dacl-v3-v5-retrieval-b16-s1-20261019",
+      "v4_run": "runs/v4-crmc-dacl-eval-20261019-r1",
+      "baseline_dir": "reproduction/results/three-v0-20261018/dacl-v0-strata-review20261018",
+      "manifest_sha256": {
+        "train": "2e8ada7e96fbc098e248c46cebdb83d189698c0b8b77bf487dae43a258ba4c43",
+        "val": "2fdcc2fe375325f28c2ec024fb883504fe5737f76496766d7376965f8fa6202f",
+        "test": "455ee1ee784410cbbe51409fc25e503b60f44f147421c0204206adf43d5dd279"
+      },
+      "supplement_output": "runs/v4-supplement-dacl_v3_seed42-20261019",
+      "v4_reference": "reproduction/results/v4-crmc-20261019-r1/runs/v4-crmc-dacl-eval-20261019-r1",
+      "training_command": "python dinomaly_bridge.py --dataset_profile dacl_v3_seed42 --data_path /home/skye/data/Skye/databases/DACL10k_v3_512_split_seed42 --save_name dacl-v3-v5-retrieval-b16-s1-20261019 --model_variant v5_retrieval --image_size 392 --v3_evaluation --seed 1 --batch_size 16 --total_iters 10000 --eval_interval 2000"
+    }
+  },
+  "gate": "no smoke, no short run, no automatic retry; any failure preserves numerical_failure.json and stops sequence",
+  "intended_commit": "filled at launch after review and push",
+  "launch_command": "python reproduction/run_v5_sequence.py --approved_commit <reviewed-full-commit-sha>",
+  "selection_scope": "V5 joint checkpoint/fusion/alpha/z at each scheduled validation; standalone eval repeats same rule at selected best_val checkpoint",
+  "runtime_limit": "No overnight guarantee: global greedy 10% coreset, multiscale nearest-neighbor and repeated pixel/AUPRO metrics may dominate runtime",
+  "parent_limit": "DACL group_id identifies exact content, not verified scene/bridge parent; no stronger parent identity is available in current manifest"
+}

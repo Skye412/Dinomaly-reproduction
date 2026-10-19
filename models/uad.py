@@ -83,7 +83,7 @@ class ViTill(nn.Module):
             return [g.transpose(1, 2).reshape(clean.shape[0], -1, side, side).contiguous().detach()
                     for g in groups]
 
-    def forward(self, x):
+    def forward(self, x, retrieval_ids=None):
         en_list = self.encode_tokens(x)
         side = int(math.sqrt(en_list[0].shape[1] - 1 - self.encoder.num_register_tokens))
 
@@ -93,6 +93,9 @@ class ViTill(nn.Module):
         x = self.fuse_feature(en_list)
         for i, blk in enumerate(self.bottleneck):
             x = blk(x)
+
+        if getattr(self, 'retrieval_decoder', None) is not None:
+            x = self.retrieval_decoder(x, self._retrieval_context(en_list[-1], retrieval_ids))
 
         if self.mask_neighbor_size > 0:
             attn_mask = self.generate_mask(side, x.device)
@@ -115,6 +118,19 @@ class ViTill(nn.Module):
         en = [e.permute(0, 2, 1).reshape([x.shape[0], -1, side, side]).contiguous() for e in en]
         de = [d.permute(0, 2, 1).reshape([x.shape[0], -1, side, side]).contiguous() for d in de]
         return en, de
+
+    def train(self, mode=True):
+        super().train(mode)
+        if getattr(self, 'retrieval_provider', None) is not None:
+            self.retrieval_provider.training = mode
+        return self
+
+    def _retrieval_context(self, encoded_tokens, retrieval_ids=None):
+        provider = getattr(self, 'retrieval_provider', None)
+        if provider is None:
+            raise RuntimeError('V5 retrieval provider is not configured')
+        query_cls = encoded_tokens[:, 0]
+        return provider(query_cls, retrieval_ids)
 
     def fuse_feature(self, feat_list):
         return torch.stack(feat_list, dim=1).mean(dim=1)
