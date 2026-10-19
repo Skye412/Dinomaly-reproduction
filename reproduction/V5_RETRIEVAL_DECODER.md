@@ -15,7 +15,7 @@ All selection and threshold rules remain validation-only. The fixed data profile
 
 This commit is review-only. It does not start a GPU task or install an automation. After user review, launch with `python reproduction/run_v5_sequence.py --approved_commit <full-reviewed-SHA>`. The runner verifies published master/HEAD equality and a clean tracked checkout, preserves independent run directories, logs every subprocess, and stops on the first failure. It never automatically retries.
 
-The queue order is all three V4 supplements, then CODEBRIM V5 train/eval, S2DS V5 train/eval, DACL V5 train/eval. Every full training uses fresh reconstruction initialization, not V0 trained decoder weights. Checkpoint/fusion/alpha/z are jointly selected at each scheduled validation; reconstruction-only is reported at the selected checkpoint. Its own separately selected checkpoint is not claimed.
+The approved queue order is CODEBRIM V5 train/eval, S2DS V5 train/eval, DACL V5 train/eval, then all three V4 supplements. Supplement failures are recorded independently and do not invalidate completed V5 runs or block later supplements. Every full training uses fresh reconstruction initialization, not V0 trained decoder weights. Checkpoint/fusion/alpha/z are jointly selected at each scheduled validation; reconstruction-only is reported at the selected checkpoint. Its own separately selected checkpoint is not claimed.
 
 ## Limits requiring review
 

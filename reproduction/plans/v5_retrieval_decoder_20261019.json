@@ -1,5 +1,5 @@
 {
-  "status": "review_required_before_launch",
+  "status": "authorized_for_sequential_execution",
   "sequence_id": "v5-retrieval-decoder-sequence-20261019",
   "seed": 1,
   "batch_size": 16,
@@ -73,5 +73,7 @@
   "launch_command": "python reproduction/run_v5_sequence.py --approved_commit <reviewed-full-commit-sha>",
   "selection_scope": "V5 joint checkpoint/fusion/alpha/z at each scheduled validation; standalone eval repeats same rule at selected best_val checkpoint",
   "runtime_limit": "No overnight guarantee: global greedy 10% coreset, multiscale nearest-neighbor and repeated pixel/AUPRO metrics may dominate runtime",
-  "parent_limit": "DACL group_id identifies exact content, not verified scene/bridge parent; no stronger parent identity is available in current manifest"
+  "parent_limit": "DACL group_id identifies exact content, not verified scene/bridge parent; no stronger parent identity is available in current manifest",
+  "launch_gate": "User approved V5/V4 queue on 2026-10-19; V5 primary runs before non-blocking V4 supplements; publish and verify commit before launch",
+  "sequence_order": "V5 CODEBRIM->S2DS->DACL train/eval first; V4 supplements afterward and non-blocking"
 }
